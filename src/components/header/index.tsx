@@ -1,24 +1,26 @@
+import { AppBar, Button, Toolbar} from '@material-ui/core';
 import { FunctionalComponent, h } from 'preact';
-import { Link } from 'preact-router/match';
+import Link from '@material-ui/core/Link';
 import style from './style.css';
 
 const Header: FunctionalComponent = () => {
     return (
-        <header class={style.header}>
-            <h1>Preact App</h1>
-            <nav>
-                <Link activeClassName={style.active} href="/">
-                    Home
+      <AppBar position="static">
+        <Toolbar>
+         <Link  href="/">
+           <Button style={{color: '#fff'}}>Home</Button>
                 </Link>
-                <Link activeClassName={style.active} href="/profile">
-                    Me
+                <Link  href="/link1">
+                
+                   <Button style={{color: '#fff'}}>Link 1</Button>
                 </Link>
-                <Link activeClassName={style.active} href="/profile/john">
-                    John
+                <Link  href="/link2">
+               
+                  <Button style={{color: '#fff'}}>Link 2</Button>
                 </Link>
-            </nav>
-        </header>
-    );
+                </Toolbar>
+      </AppBar>
+    )
 };
 
 export default Header;
