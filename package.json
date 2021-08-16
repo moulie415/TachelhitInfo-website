@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "preact build",
+    "build:gh": "GITHUB_PAGES=TachelhitInfo preact build && dot-json ./build/manifest.json start_url \"/TachelhitInfo/\"",
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
@@ -33,6 +34,7 @@
     "@types/jest": "^26.0.8",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "dot-json": "^1.2.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-preact-pure": "^3.1.0",
     "eslint": "^6.8.0",
