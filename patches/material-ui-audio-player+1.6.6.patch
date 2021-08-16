@@ -1,0 +1,15 @@
+diff --git a/node_modules/material-ui-audio-player/dist/components/AudioPlayer.js b/node_modules/material-ui-audio-player/dist/components/AudioPlayer.js
+index 0f2d3aa..f256cd3 100644
+--- a/node_modules/material-ui-audio-player/dist/components/AudioPlayer.js
++++ b/node_modules/material-ui-audio-player/dist/components/AudioPlayer.js
+@@ -59,7 +59,9 @@ var actions_1 = require("./state/actions");
+ var helpers_1 = require("./state/helpers");
+ var player_1 = __importDefault(require("./state/player"));
+ var reducer_1 = __importDefault(require("./state/reducer"));
+-var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
++if (typeof navigator !== "undefined") {
++var isSafari = !!navigator?.userAgent?.match(/Version\/[\d\.]+.*Safari/);
++}
+ var inititalState = {
+     player: {
+         status: player_1.default.STATUS.PAUSE,
