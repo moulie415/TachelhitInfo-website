@@ -1,41 +1,44 @@
 module.exports = {
-  extends: [
-    'plugin:jest/recommended',
-    'prettier',
-    'plugin:prettier/recommended',
+  "extends": [
+    "eslint:recommended",
+    "prettier"
   ],
-  plugins: ['react', 'jest'],
-  env: {
-    browser: true,
-    es6: true,
-    jest: true,
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
   },
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+  "plugins": [
+    "babel",
+    "react",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "h",
+      "version": "preact"
+    }
   },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module',
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  rules: {
-    'linebreak-style': 'off',
-    'prettier/prettier': [
-      'warn',
-      {
-        endOfLine: 'auto',
-      },
-    ],
-    'react/prop-types': 'off',
-    'import/no-cycle': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'global-require': 'off',
-    'react/no-unused-prop-types': 'off',
-    'consistent-return': 'off',
-    'no-param-reassign': 'off',
-    'no-debugger': 'off',
-  },
-};
+  "rules": {
+    "no-console": 1,
+    "no-empty": 0,
+    "semi": 2,
+    "keyword-spacing": 2,
+    "require-atomic-updates": 0,
+    "react/no-string-refs": 2,
+    "react/no-find-dom-node": 2,
+    "react/no-is-mounted": 2,
+    "react/jsx-no-comment-textnodes": 2,
+    "react/jsx-curly-spacing": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2
+  }
+}
