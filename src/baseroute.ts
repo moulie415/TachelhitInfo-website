@@ -1,7 +1,6 @@
 let basename = '';
 
-// if (process.env.GITHUB_PAGES) {
-//   basename = `/${process.env.GITHUB_PAGES}`;
-// }
-console.log(basename, process.env.GITHUB_PAGES);
+if (process.env.GITHUB_PAGES) {
+  basename = `/${process.env.GITHUB_PAGES}`;
+}
 export default basename;
