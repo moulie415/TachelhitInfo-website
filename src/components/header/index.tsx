@@ -15,7 +15,7 @@ const Header: FunctionalComponent = () => {
                 
                    <Button style={{color: '#fff'}}>Link 1</Button>
                 </Link>
-                <Link  href={`${baseroute}/link1`}>
+                <Link  href={`${baseroute}/link2`}>
                
                   <Button style={{color: '#fff'}}>Link 2</Button>
                 </Link>
