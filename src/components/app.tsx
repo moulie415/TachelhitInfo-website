@@ -14,10 +14,9 @@ const App: FunctionalComponent = () => {
           <ThemeProvider theme={theme}>
             <Header />
             <Router>
-                <Route path={`${baseroute}/`} component={Home} />
+                <Route path={`${baseroute}/`} component={Home} default />
                 <Route path={`${baseroute}/link1`} component={Profile} />
                 <Route path={`${baseroute}/link2`} component={Profile} />
-                <NotFoundPage default />
             </Router>
 
             </ThemeProvider>
