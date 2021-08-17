@@ -1,2 +1,2 @@
 
-export default '/TachelhitInfo';
+export default process.env.NODE_ENV === 'development' ? '' : 'TachelhitInfo';
