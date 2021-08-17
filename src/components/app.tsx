@@ -13,14 +13,13 @@ const App: FunctionalComponent = () => {
         <div id="preact_root">
           <ThemeProvider theme={theme}>
             <Header />
-            {(baseroute || (process.env.NODE_ENV && process.env.NODE_ENV === 'development')) && (
             <Router>
                 <Route path={`${baseroute}/`} component={Home} />
                 <Route path={`${baseroute}/link1`} component={Profile} />
                 <Route path={`${baseroute}/link2`} component={Profile} />
                 <NotFoundPage default />
             </Router>
-            )}
+
             </ThemeProvider>
         </div>
     );
