@@ -6,6 +6,7 @@ import NotFoundPage from '../routes/notfound';
 import Header from './header';
 import theme from './theme';
 import { ThemeProvider } from '@material-ui/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import baseroute from '../baseroute';
 
 const App: FunctionalComponent = () => {
@@ -13,11 +14,12 @@ const App: FunctionalComponent = () => {
         <div id="preact_root">
           <ThemeProvider theme={theme}>
             <Header />
-            <Router>
-                <Route path={`${baseroute}/`} component={Home} default />
+            {(baseroute || process.env.NODE_ENV === 'development') ? <Router>
+                <Route path={`${baseroute}/`} component={Home} />
                 <Route path={`${baseroute}/link1`} component={Profile} />
                 <Route path={`${baseroute}/link2`} component={Profile} />
-            </Router>
+                <NotFoundPage default />
+            </Router> : <CircularProgress />}
 
             </ThemeProvider>
         </div>
