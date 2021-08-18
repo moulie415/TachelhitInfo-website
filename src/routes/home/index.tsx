@@ -1,8 +1,10 @@
 import { FunctionalComponent, h } from 'preact';
 import AudioPlayer from 'material-ui-audio-player';
 import styles from './styles';
-import { AZUZD, GODS_STORY, ISEQSITN, JESUS_FILM_URI, MATSSENT, NTHUNA } from '../../constants';
-import { Grid, Typography } from '@material-ui/core';
+import { AZUZD, colors, GODS_STORY, ISEQSITN, JESUS_FILM_URI, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA } from '../../constants';
+import { Button, Grid, Typography } from '@material-ui/core';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import { Link } from 'preact-router';
 
 const Home: FunctionalComponent = () => {
     const classes = styles();
@@ -35,14 +37,19 @@ const Home: FunctionalComponent = () => {
             </Grid>
           </Grid>
           <Typography style={{marginTop: 40, marginBottom: 10}} variant="h5">awal n-rbbi</Typography>
-          <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid justifyContent="space-evenly" container spacing={2}>
+          <Grid  style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
+          <Typography variant="h6" style={{marginBottom: 20}}>injil l-lmasih</Typography>
+       
+          </Grid>
+          <Grid  style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
           <Typography variant="h6" style={{marginBottom: 20}}>lkhbar ifulkin</Typography>
+          <Button><a href={LATIN_NT} target="_blank"><PictureAsPdfIcon style={{color: colors.red}} fontSize="large" /> </a></Button>
 
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid  style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
           <Typography variant="h6" style={{marginBottom: 20}}>arratn l-lanbya</Typography>
-
+          <Button><a href={LATIN_OT} target="_blank"><PictureAsPdfIcon style={{color: colors.red}} fontSize="large" /></a> </Button>
             </Grid>
           </Grid>
           <Typography style={{marginTop: 40, marginBottom: 10}} variant="h5">videos</Typography>

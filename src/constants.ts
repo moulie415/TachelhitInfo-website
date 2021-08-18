@@ -27,6 +27,9 @@ export const ISEQSITN = `${AMSIGGEL_UPLOADS}iseqsitn.mp3`;
 
 export const MATSSENT = `${AMSIGGEL_UPLOADS}ma_tssent.mp3`;
 
+export const LATIN_OT = `${ROOT_URL}pdf/laahd aqdim.pdf`;
+export const LATIN_NT = `${ROOT_URL}pdf/laahd l-ljdid.pdf`;
+
 export const AMSIGGEL_ID = '106801287';
 
 export interface Book {
