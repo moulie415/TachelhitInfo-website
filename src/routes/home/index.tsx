@@ -4,17 +4,18 @@ import styles from './styles';
 import { AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA } from '../../constants';
 import { Button, Grid, Typography } from '@material-ui/core';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import basename from '../../baseroute';
 
 const Home: FunctionalComponent = () => {
     const classes = styles();
-    const qr1 = `/assets/images/16.jpg`;
-    const qr2 = `/assets/images/17.jpg`;
-    const qr3 = `/assets/images/18.jpg`;
-    const qr4 = `/assets/images/19.jpg`;
-    const qr5 = `/assets/images/20.jpg`;
-    const qr6 = `/assets/images/21.jpg`;
-    const rbbi = `}/assets/images/14.jpg`;
-    const amsiggel = `/assets/images/15.png`;
+    const qr1 = `${basename}/assets/images/16.jpg`;
+    const qr2 = `${basename}/assets/images/17.jpg`;
+    const qr3 = `${basename}/assets/images/18.jpg`;
+    const qr4 = `${basename}/assets/images/19.jpg`;
+    const qr5 = `${basename}/assets/images/20.jpg`;
+    const qr6 = `${basename}/assets/images/21.jpg`;
+    const rbbi = `${basename}/assets/images/14.jpg`;
+    const amsiggel = `${basename}/assets/images/15.png`;
     return (
         <div class={classes.root}>
           <Grid container spacing={2}>
