@@ -17,7 +17,7 @@ const Home: FunctionalComponent = () => {
     const qr5 = `/assets/images/20.jpg`;
     const qr6 = `/assets/images/21.jpg`;
     const rbbi = `/assets/images/14.jpg`;
-    const amsiggel = `/assets/images/15.png`;
+    const amsiggel = `/assets/images/15.PNG`;
     const [ready, setReady] = useState(false);
     useEffect(() => {
       setReady(true);
