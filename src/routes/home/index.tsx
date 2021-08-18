@@ -5,6 +5,8 @@ import { AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHU
 import { Button, Grid, Typography } from '@material-ui/core';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { useEffect, useState } from 'preact/hooks';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 const Home: FunctionalComponent = () => {
     const classes = styles();
@@ -22,22 +24,23 @@ const Home: FunctionalComponent = () => {
     }, []);
     return (
         <div class={classes.root}>
+          {ready ? <div>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is-tgit amuslem?</Typography>
-              {ready && <AudioPlayer src={MATSSENT} download />}
+            <AudioPlayer src={MATSSENT} download />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is-tzuzdt laman d-sslamt?</Typography>
-              {ready && <AudioPlayer src={AZUZD} download  />}
+              <AudioPlayer src={AZUZD} download  />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is dark kra n-iseqsitn?</Typography>
-              {ready && <AudioPlayer src={ISEQSITN} download  />}
+            <AudioPlayer src={ISEQSITN} download  />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is-tumnt s-lmasih?</Typography>
-              {ready && <AudioPlayer src={NTHUNA} download  />}
+               <AudioPlayer src={NTHUNA} download  />
             </Grid>
           </Grid>
           <Typography style={{marginTop: 40, marginBottom: 10}} variant="h5">awal n-rbbi</Typography>
@@ -92,7 +95,7 @@ const Home: FunctionalComponent = () => {
               <img  style={{margin: 10}} height={200} width={200} src={qr6} />
             </Grid>
           </Grid>
-       
+       </div> : <div style={{textAlign: 'center'}}><CircularProgress style={{textAlign: 'center'}} /></div>}
         </div>
     );
 };
