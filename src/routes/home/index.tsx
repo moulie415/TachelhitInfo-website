@@ -4,6 +4,7 @@ import styles from './styles';
 import { AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA } from '../../constants';
 import { Button, Grid, Typography } from '@material-ui/core';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import { useEffect, useState } from 'preact/hooks';
 
 const Home: FunctionalComponent = () => {
     const classes = styles();
@@ -15,24 +16,28 @@ const Home: FunctionalComponent = () => {
     const qr6 = `/assets/images/21.jpg`;
     const rbbi = `/assets/images/14.jpg`;
     const amsiggel = `/assets/images/15.png`;
+    const [ready, setReady] = useState(false);
+    useEffect(() => {
+      setReady(true);
+    }, []);
     return (
         <div class={classes.root}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is-tgit amuslem?</Typography>
-              <AudioPlayer src={MATSSENT} download height="100%"  width="100%"/>
+              {ready && <AudioPlayer src={MATSSENT} download />}
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is-tzuzdt laman d-sslamt?</Typography>
-              <AudioPlayer src={AZUZD} download  height="100%"  width="100%"/>
+              {ready && <AudioPlayer src={AZUZD} download  />}
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is dark kra n-iseqsitn?</Typography>
-              <AudioPlayer src={ISEQSITN} download height="100%"  width="100%" />
+              {ready && <AudioPlayer src={ISEQSITN} download  />}
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{marginBottom: 20}}>is-tumnt s-lmasih?</Typography>
-              <AudioPlayer src={NTHUNA} download height="100%"  width="100%" />
+              {ready && <AudioPlayer src={NTHUNA} download  />}
             </Grid>
           </Grid>
           <Typography style={{marginTop: 40, marginBottom: 10}} variant="h5">awal n-rbbi</Typography>
