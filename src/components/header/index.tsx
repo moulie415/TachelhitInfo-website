@@ -1,8 +1,6 @@
 import { AppBar, Button, Toolbar} from '@material-ui/core';
 import { FunctionalComponent, h } from 'preact';
 import Link from '@material-ui/core/Link';
-import baseroute from '../../baseroute';
-import style from './style.css';
 
 const Header: FunctionalComponent = () => {
     return (
@@ -11,11 +9,11 @@ const Header: FunctionalComponent = () => {
          <Link  href="/">
            <Button style={{color: '#fff'}}>Home</Button>
                 </Link>
-                <Link  href={`${baseroute}/link1`}>
+                <Link  href="/link1">
                 
                    <Button style={{color: '#fff'}}>Link 1</Button>
                 </Link>
-                <Link  href={`${baseroute}/link2`}>
+                <Link  href="/link2">
                
                   <Button style={{color: '#fff'}}>Link 2</Button>
                 </Link>
