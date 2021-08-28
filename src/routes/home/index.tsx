@@ -4,10 +4,13 @@ import { Button, Grid, Typography } from '@material-ui/core';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { useEffect, useState } from 'preact/hooks';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { Email, Facebook, WhatsApp } from '@material-ui/icons';
 import {
-  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA,
+  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, PHONE_NUMBER,
 } from '../../constants';
 import styles from './styles.css';
+
+const QR_SIZE = 150;
 
 const Home: FunctionalComponent = () => {
   const qr1 = '/assets/images/16.jpg';
@@ -18,6 +21,7 @@ const Home: FunctionalComponent = () => {
   const qr6 = '/assets/images/21.jpg';
   const rbbi = '/assets/images/14.jpg';
   const amsiggel = '/assets/images/15.png';
+  const jesusFilm = 'assets/images/22.jpg';
   const playStore = '/assets/images/google-play-badge.png';
   const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
   const [ready, setReady] = useState(false);
@@ -87,13 +91,15 @@ const Home: FunctionalComponent = () => {
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">tudert l-lmasih</Typography>
-              <div dangerouslySetInnerHTML={{ __html: '<div class="arc-cont"><iframe src="https://api.arclight.org/videoPlayerUrl?refId=1_507-jf-0-0&apiSessionId=611b7188aaf785.85639629&player=bc.vanilla6&dtm=0&playerStyle=default" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe><style>.arc-cont{position:relative;display:block;margin:10px auto;width:100%}.arc-cont:after{padding-top:59%;display:block;content:""}.arc-cont>iframe{position:absolute;top:0;bottom:0;right:0;left:0;width:98%;height:98%;border:0}</style></div>' }} />
+              <a href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html" target="_blank" rel="noreferrer">
+                <img style={{ maxHeight: 200 }} src={jesusFilm} alt="Jesus Film" />
+              </a>
             </Grid>
           </Grid>
           <Grid container spacing={2} justifyContent="space-evenly">
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <div>
-                <img style={{ margin: 10 }} height={200} width={200} src={qr1} alt="qr code" />
+                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr1} alt="qr code" />
                 <Typography variant="h6">awal i-wass</Typography>
                 <Typography className={styles.appBody}>
                   ass f-wass
@@ -102,11 +108,11 @@ const Home: FunctionalComponent = () => {
                   sfeld-as ar-ttzaamt s-rrja ishan.
                 </Typography>
                 <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
-                  <img src={playStore} width={200} alt="play store" />
+                  <img src={playStore} width={QR_SIZE} alt="play store" />
                 </a>
               </div>
               <div>
-                <img style={{ margin: 10 }} height={200} width={200} src={qr2} alt="qr code" />
+                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr2} alt="qr code" />
                 <Typography variant="h6" className={styles.appTitleArabic} >اوال ءيواسّ</Typography>
                 <Typography  className={styles.appBodyArabic}>
                   اسّ ف-واسّ
@@ -115,13 +121,13 @@ const Home: FunctionalComponent = () => {
                   سفلد-اس ار-تّزعامت س-رّجا ءيصحان.
                 </Typography>
                 <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
-                  <img src={playStoreArabic} width={200} alt="play store arabic" />
+                  <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
                 </a>
               </div>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <div>
-              <img style={{ margin: 10 }} height={200} width={200} src={qr3} alt="qr code" />
+              <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr3} alt="qr code" />
               <Typography variant="h6">amuddu n-umsiggel</Typography>
               <Typography className={styles.appBody}>
                 lqist n-yan igummin 
@@ -129,11 +135,11 @@ const Home: FunctionalComponent = () => {
                 iftu ar-sersn-isiggil.
                 </Typography>
                 <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
-                  <img src={playStore} width={200} alt="play store" />
+                  <img src={playStore} width={QR_SIZE} alt="play store" />
                 </a>
                 </div>
                 <div>
-              <img style={{ margin: 10 }} height={200} width={200} src={qr4} alt="qr code" />
+              <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr4} alt="qr code" />
               <Typography variant="h6" className={styles.appTitleArabic} >امسيگّل</Typography>
                 <Typography  className={styles.appBodyArabic}>
                   لقيست ن-يان ءيگومّين
@@ -141,13 +147,13 @@ const Home: FunctionalComponent = () => {
                   ءيفتو ار-سرسن-يسيگّيل.
                 </Typography>
                 <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
-                  <img src={playStoreArabic} width={200} alt="play store arabic" />
+                  <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
                 </a>
                 </div>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <div>
-                <img style={{ margin: 10 }} height={200} width={200} src={qr5} alt="qr code" />
+                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr5} alt="qr code" />
                 <Typography variant="h6">tachelhit info</Typography>
                 <Typography  className={styles.appBody}>
                   kchem s-tgmmi-negh tsunfut, 
@@ -156,11 +162,11 @@ const Home: FunctionalComponent = () => {
                   ar-tssmuqqult lfidyuwat fulkinin. 
                 </Typography>
                 <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
-                  <img src={playStore} width={200} alt="play store" />
+                  <img src={playStore} width={QR_SIZE} alt="play store" />
                 </a>
               </div>
               <div>
-                <img style={{ margin: 10 }} height={200} width={200} src={qr6} alt="qr code" />
+                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr6} alt="qr code" />
                 <Typography variant="h6" className={styles.appTitleArabic} >تاشلحيت ءينفو</Typography>
                 <Typography  className={styles.appBodyArabic}>
                   كشم س-تگمّي-نغ تسونفوت،
@@ -169,10 +175,28 @@ const Home: FunctionalComponent = () => {
                   ار-تسّموقولت لفيديوات فولكينين.
                 </Typography>
                 <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
-                  <img src={playStoreArabic} width={200} alt="play store arabic" />
+                  <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
                 </a>
               </div>
             </Grid>
+          </Grid>
+          <Grid  container style={{ margin: '20px'}} alignItems="center" justifyContent="center" spacing={3}>
+            <Grid item>
+            <a href="https://www.facebook.com/tachelhit.info/" target="_blank" rel="noreferrer">
+              
+             <Facebook style={{color: '#4267B2'}} fontSize="large" />
+             </a>
+             </Grid>
+             <Grid item>
+               <a href={`whatsapp://send?phone=${PHONE_NUMBER}`}> 
+             <WhatsApp style={{color: '#075e54'}}  fontSize="large" />
+             </a>
+             </Grid>
+             <Grid item>
+                <a style={{color: 'inherit'}} href="mailto:RD113267@swissmail.org">
+                  <Email fontSize="large" />
+                </a>
+             </Grid>
           </Grid>
         </div>
       ) : <div style={{ textAlign: 'center' }}><CircularProgress style={{ textAlign: 'center' }} /></div>}

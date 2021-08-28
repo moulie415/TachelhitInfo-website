@@ -32,6 +32,8 @@ export const LATIN_NT = `${ROOT_URL}pdf/laahd l-ljdid.pdf`;
 
 export const AMSIGGEL_ID = '106801287';
 
+export const PHONE_NUMBER = '+212642596841';
+
 export interface Book {
   name: string;
   chapters: number[];
