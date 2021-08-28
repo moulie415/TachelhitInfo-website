@@ -18,6 +18,8 @@ const Home: FunctionalComponent = () => {
     const qr6 = `/assets/images/21.jpg`;
     const rbbi = `/assets/images/14.jpg`;
     const amsiggel = `/assets/images/15.png`;
+    const playStore = '/assets/images/google-play-badge.png'
+    const playStoreArabic = '/assets/images/google-play-badge-arabic.png'
     const [ready, setReady] = useState(false);
     useEffect(() => {
       setReady(true);
@@ -80,9 +82,28 @@ const Home: FunctionalComponent = () => {
           </Grid>
           <Grid container spacing={2} justifyContent="space-evenly">
             <Grid style={{textAlign: 'center'}}  item xs={12} sm={6} md={3}>
-              <Typography variant="h6">awal i-wass</Typography>
-              <img style={{margin: 10}} height={200} width={200} src={qr1} />
-              <img style={{margin: 10}} height={200} width={200}  src={qr2} />
+              <div>
+                <img style={{margin: 10}} height={200} width={200} src={qr1} />
+                <Typography variant="h6">awal i-wass</Typography>
+                <Typography>ass f-wass 
+rad-ak-ntazn awal imimn
+gh-warratn n-sidi rbbi.
+sfeld-as ar-ttzaamt s-rrja ishan.</Typography>
+                <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
+                  <img src={playStore} width={200} />
+                </a>
+              </div>
+              <div>
+                <img style={{margin: 10}} height={200} width={200}  src={qr2} />
+                <Typography variant="h6">اوال ءيواسّ</Typography>
+                <Typography>اسّ ف-واسّ
+راد-اك-نتازن اوال ءيميمن
+غ-وارّاتن ن-سيدي ربّي.
+سفلد-اس ار-تّزعامت س-رّجا ءيصحان.</Typography>
+<a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
+                  <img src={playStoreArabic} width={200} />
+                </a>
+              </div>
             </Grid>
             <Grid style={{textAlign: 'center'}}    item xs={12} sm={6} md={3}>
               <Typography variant="h6">amuddu n-umsiggel</Typography>
