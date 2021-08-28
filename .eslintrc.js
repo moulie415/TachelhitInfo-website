@@ -1,7 +1,15 @@
 module.exports = {
   "extends": [
     "eslint:recommended",
-    "prettier"
+    "prettier",
+    'airbnb',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'prettier',
   ],
   "parser": "babel-eslint",
   "env": {
@@ -12,7 +20,8 @@ module.exports = {
   "plugins": [
     "babel",
     "react",
-    "prettier"
+    "prettier",
+    '@typescript-eslint',
   ],
   "settings": {
     "react": {
@@ -27,6 +36,8 @@ module.exports = {
     }
   },
   "rules": {
+    'react/jsx-filename-extension': [1, {extensions: ['.ts', '.tsx']}],
+    'import/extensions': 'off',
     "no-console": 1,
     "no-empty": 0,
     "semi": 2,
