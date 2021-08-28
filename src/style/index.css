@@ -18,3 +18,8 @@ html, body {
 #app {
 	height: 100%;
 }
+
+@font-face {
+	font-family: Scheherazade;
+	src: url('../assets/fonts/ScheherazadeOTM2A.ttf') format('truetype');
+}

@@ -1,7 +1,7 @@
 import { FunctionalComponent, h } from 'preact';
 import { Route, Router } from 'preact-router';
 import Home from '../routes/home';
-import Profile from '../routes/profile';
+// import Profile from '../routes/profile';
 import NotFoundPage from '../routes/notfound';
 import Header from './header';
 import theme from './theme';
@@ -14,8 +14,8 @@ const App: FunctionalComponent = () => {
             <Header />
              <Router>
                 <Route path="/" component={Home} />
-                <Route path="/link1" component={Profile} />
-                <Route path="/link2" component={Profile} />
+                {/* <Route path="/link1" component={Profile} />
+                <Route path="/link2" component={Profile} /> */}
                 <NotFoundPage default />
             </Router> 
 
