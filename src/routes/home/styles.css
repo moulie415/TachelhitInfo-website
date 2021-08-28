@@ -7,3 +7,27 @@
 .arabic {
 	font-family: Scheherazade;
 }
+
+.appBody {
+	min-height: 125px;
+}
+
+.appTitleArabic {
+	font-family: Scheherazade;
+	font-size: 30px;
+}
+
+.appBodyArabic {
+	font-family: Scheherazade;
+	font-size: 20px;
+	min-height: 125px;
+}
+
+@media only screen and (max-width: 600px) {
+	.appBody {
+		min-height: auto;
+	}
+	.appBodyArabic {
+		min-height: auto;
+	}
+}

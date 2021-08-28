@@ -95,7 +95,7 @@ const Home: FunctionalComponent = () => {
               <div>
                 <img style={{ margin: 10 }} height={200} width={200} src={qr1} alt="qr code" />
                 <Typography variant="h6">awal i-wass</Typography>
-                <Typography>
+                <Typography className={styles.appBody}>
                   ass f-wass
                   rad-ak-ntazn awal imimn
                   gh-warratn n-sidi rbbi.
@@ -107,8 +107,8 @@ const Home: FunctionalComponent = () => {
               </div>
               <div>
                 <img style={{ margin: 10 }} height={200} width={200} src={qr2} alt="qr code" />
-                <Typography variant="h6" className={styles.arabic} >اوال ءيواسّ</Typography>
-                <Typography  className={styles.arabic}>
+                <Typography variant="h6" className={styles.appTitleArabic} >اوال ءيواسّ</Typography>
+                <Typography  className={styles.appBodyArabic}>
                   اسّ ف-واسّ
                   راد-اك-نتازن اوال ءيميمن
                   غ-وارّاتن ن-سيدي ربّي.
@@ -120,14 +120,58 @@ const Home: FunctionalComponent = () => {
               </div>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">amuddu n-umsiggel</Typography>
+              <div>
               <img style={{ margin: 10 }} height={200} width={200} src={qr3} alt="qr code" />
+              <Typography variant="h6">amuddu n-umsiggel</Typography>
+              <Typography className={styles.appBody}>
+                lqist n-yan igummin 
+                lehna d-tayri d-sslamt,
+                iftu ar-sersn-isiggil.
+                </Typography>
+                <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
+                  <img src={playStore} width={200} alt="play store" />
+                </a>
+                </div>
+                <div>
               <img style={{ margin: 10 }} height={200} width={200} src={qr4} alt="qr code" />
+              <Typography variant="h6" className={styles.appTitleArabic} >امسيگّل</Typography>
+                <Typography  className={styles.appBodyArabic}>
+                  لقيست ن-يان ءيگومّين
+                  لهنا ت-تايري د-سّلامت،
+                  ءيفتو ار-سرسن-يسيگّيل.
+                </Typography>
+                <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
+                  <img src={playStoreArabic} width={200} alt="play store arabic" />
+                </a>
+                </div>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">tachelhit info</Typography>
-              <img style={{ margin: 10 }} height={200} width={200} src={qr5} alt="qr code" />
-              <img style={{ margin: 10 }} height={200} width={200} src={qr6} alt="qr code" />
+              <div>
+                <img style={{ margin: 10 }} height={200} width={200} src={qr5} alt="qr code" />
+                <Typography variant="h6">tachelhit info</Typography>
+                <Typography  className={styles.appBody}>
+                  kchem s-tgmmi-negh tsunfut, 
+                  ar-tsflidt i-lkhbar issfrahn, 
+                  ar-taqrat iwaliwn mimnin, 
+                  ar-tssmuqqult lfidyuwat fulkinin. 
+                </Typography>
+                <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
+                  <img src={playStore} width={200} alt="play store" />
+                </a>
+              </div>
+              <div>
+                <img style={{ margin: 10 }} height={200} width={200} src={qr6} alt="qr code" />
+                <Typography variant="h6" className={styles.appTitleArabic} >تاشلحيت ءينفو</Typography>
+                <Typography  className={styles.appBodyArabic}>
+                  كشم س-تگمّي-نغ تسونفوت،
+                  ار-تسفليدت ءي-لخبار ءيسّفراحن،
+                  ار-تاقرات ءيواليون ميمنين،
+                  ار-تسّموقولت لفيديوات فولكينين.
+                </Typography>
+                <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
+                  <img src={playStoreArabic} width={200} alt="play store arabic" />
+                </a>
+              </div>
             </Grid>
           </Grid>
         </div>
