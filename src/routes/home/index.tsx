@@ -96,7 +96,7 @@ const Home: FunctionalComponent = () => {
               </a>
             </Grid>
           </Grid>
-          <Grid container spacing={2} justifyContent="space-evenly">
+          <Grid container spacing={2} justifyContent="space-evenly" style={{marginBottom: 20}}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <div>
                 <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr1} alt="qr code" />
@@ -180,7 +180,7 @@ const Home: FunctionalComponent = () => {
               </div>
             </Grid>
           </Grid>
-          <Grid  container style={{ margin: '20px'}} alignItems="center" justifyContent="center" spacing={3}>
+          <Grid  style={{marginBottom: 20}} container alignItems="center" justifyContent="center" spacing={3}>
             <Grid item>
             <a href="https://www.facebook.com/tachelhit.info/" target="_blank" rel="noreferrer">
               
