@@ -38,6 +38,7 @@ module.exports = {
   "rules": {
     'react/jsx-filename-extension': [1, {extensions: ['.ts', '.tsx']}],
     'import/extensions': 'off',
+    'jsx-a11y/media-has-caption': 'off',
     "no-console": 1,
     "no-empty": 0,
     "semi": 2,

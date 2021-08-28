@@ -7,10 +7,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import {
   AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA,
 } from '../../constants';
-import styles from './styles';
+import styles from './styles.css';
 
 const Home: FunctionalComponent = () => {
-  const classes = styles();
   const qr1 = '/assets/images/16.jpg';
   const qr2 = '/assets/images/17.jpg';
   const qr3 = '/assets/images/18.jpg';
@@ -26,7 +25,10 @@ const Home: FunctionalComponent = () => {
     setReady(true);
   }, []);
   return (
-    <div className={classes.root}>
+    <div style={{
+      minHeight: '100%',
+      margin: 32,
+    }}>
       {ready ? (
         <div>
           <Grid container spacing={2}>
@@ -58,7 +60,6 @@ const Home: FunctionalComponent = () => {
               <Button>
                 <a href={LATIN_NT} target="_blank" rel="noreferrer">
                   <PictureAsPdfIcon style={{ color: colors.red }} fontSize="large" />
-                  {' '}
                 </a>
               </Button>
 
@@ -66,8 +67,7 @@ const Home: FunctionalComponent = () => {
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6" style={{ marginBottom: 20 }}>arratn l-lanbya</Typography>
               <Button>
-                <a href={LATIN_OT} target="_blank" rel="noreferrer"><PictureAsPdfIcon style={{ color: colors.red }} fontSize="large" /></a>
-                {' '}
+                <a href={LATIN_OT} target="_blank" rel="noreferrer" label="latin old testament"><PictureAsPdfIcon style={{ color: colors.red }} fontSize="large" /></a>
               </Button>
             </Grid>
           </Grid>
@@ -107,8 +107,8 @@ const Home: FunctionalComponent = () => {
               </div>
               <div>
                 <img style={{ margin: 10 }} height={200} width={200} src={qr2} alt="qr code" />
-                <Typography variant="h6">اوال ءيواسّ</Typography>
-                <Typography>
+                <Typography variant="h6" className={styles.arabic} >اوال ءيواسّ</Typography>
+                <Typography  className={styles.arabic}>
                   اسّ ف-واسّ
                   راد-اك-نتازن اوال ءيميمن
                   غ-وارّاتن ن-سيدي ربّي.

@@ -1,14 +1,13 @@
 import { FunctionalComponent, h } from 'preact';
 import { Route, Router } from 'preact-router';
+import { ThemeProvider } from '@material-ui/styles';
 import Home from '../routes/home';
 // import Profile from '../routes/profile';
 import NotFoundPage from '../routes/notfound';
 import Header from './header';
 import theme from './theme';
-import { ThemeProvider } from '@material-ui/styles';
 
-const App: FunctionalComponent = () => {
-    return (
+const App: FunctionalComponent = () => (
         <div id="preact_root">
           <ThemeProvider theme={theme}>
             <Header />
@@ -22,6 +21,5 @@ const App: FunctionalComponent = () => {
             </ThemeProvider>
         </div>
     );
-};
 
 export default App;
