@@ -20,7 +20,7 @@ const Home: FunctionalComponent = () => {
   const qr5 = '/assets/images/20.jpg';
   const qr6 = '/assets/images/21.jpg';
   const rbbi = '/assets/images/14.jpg';
-  const amsiggel = '/assets/images/15.png';
+  const amsiggel = '/assets/images/15.PNG';
   const jesusFilm = 'assets/images/22.jpg';
   const playStore = '/assets/images/google-play-badge.png';
   const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
