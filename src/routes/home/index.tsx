@@ -4,7 +4,7 @@ import { Button, Grid, Typography } from '@material-ui/core';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { useEffect, useState } from 'preact/hooks';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Email, Facebook, WhatsApp } from '@material-ui/icons';
+import { Book, Email, Facebook, WhatsApp } from '@material-ui/icons';
 import {
   AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, PHONE_NUMBER,
 } from '../../constants';
@@ -13,6 +13,8 @@ import styles from './styles.css';
 const QR_SIZE = 150;
 
 const Home: FunctionalComponent = () => {
+  const ikhbar = '/assets/images/11.jpg';
+  const arratn = '/assets/images/12.png';
   const qr1 = '/assets/images/16.jpg';
   const qr2 = '/assets/images/17.jpg';
   const qr3 = '/assets/images/18.jpg';
@@ -57,49 +59,64 @@ const Home: FunctionalComponent = () => {
               <AudioPlayer src={NTHUNA} download />
             </Grid>
           </Grid>
-          <Typography style={{ marginTop: 40, marginBottom: 10 }} variant="h5">awal n-rbbi</Typography>
+          <Typography style={{ marginTop: 40 }} variant="h5">awal n-rbbi</Typography>
+          <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">اوال ن-ربّي</Typography>
           <Grid justifyContent="space-evenly" container spacing={2}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6" style={{ marginBottom: 20 }}>injil l-lmasih</Typography>
-
-            </Grid>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6" style={{ marginBottom: 20 }}>lkhbar ifulkin</Typography>
+              <Typography variant="h6">injil l-lmasih</Typography>
+              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
               <Button>
-                <a href={LATIN_NT} target="_blank" rel="noreferrer">
-                  <PictureAsPdfIcon style={{ color: colors.red }} fontSize="large" />
+                <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
+                  <Book style={{ color: colors.red, fontSize: 100 }} />
                 </a>
               </Button>
-
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6" style={{ marginBottom: 20 }}>arratn l-lanbya</Typography>
+              <Typography variant="h6">lkhbar ifulkin</Typography>
+              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
               <Button>
-                <a href={LATIN_OT} target="_blank" rel="noreferrer" label="latin old testament"><PictureAsPdfIcon style={{ color: colors.red }} fontSize="large" /></a>
+                <a href={LATIN_NT} target="_blank" rel="noreferrer">
+                  <img src={arratn} width={150} alt="bible pdf" />
+                </a>
+              </Button>
+            </Grid>
+            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+              <Typography variant="h6">arratn l-lanbya</Typography>
+              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
+              <Button>
+                <a href={LATIN_OT} target="_blank" rel="noreferrer" label="latin old testament">
+                  <img src={ikhbar} width={150} alt="bible pdf" />
+                </a>
               </Button>
             </Grid>
           </Grid>
-          <Typography style={{ marginTop: 40, marginBottom: 10 }} variant="h5">videos</Typography>
+          <Typography style={{ marginTop: 40 }} variant="h5">videos</Typography>
+          <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">فيديو</Typography>
           <Grid justifyContent="space-evenly" container spacing={2}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">maylli iqsad rbbi</Typography>
+              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h5">مايلّي ءيقصاد ربّي</Typography>
               <video style={{ maxHeight: 200 }} poster={rbbi} controls>
                 <source src={GODS_STORY} type="video/mp4" />
               </video>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">amuddu n-umsiggel</Typography>
+              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h5">امودّو ن-ومسيگّل</Typography>
               <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
                 <img style={{ maxHeight: 200 }} src={amsiggel} alt="Amsiggel" />
               </a>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">tudert l-lmasih</Typography>
+              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h5">تودرت لّماسيح</Typography>
               <a href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html" target="_blank" rel="noreferrer">
                 <img style={{ maxHeight: 200 }} src={jesusFilm} alt="Jesus Film" />
               </a>
             </Grid>
           </Grid>
+          <Typography style={{ marginTop: 40 }} variant="h5">applications</Typography>
+          <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">تطبيقات</Typography>
           <Grid container spacing={2} justifyContent="space-evenly" style={{marginBottom: 20}}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <div>
@@ -129,6 +146,7 @@ const Home: FunctionalComponent = () => {
                 </a>
               </div>
             </Grid>
+
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <div>
               <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr3} alt="qr code" />
@@ -187,7 +205,6 @@ const Home: FunctionalComponent = () => {
           <Grid  style={{marginBottom: 20}} container alignItems="center" justifyContent="center" spacing={3}>
             <Grid item>
             <a href="https://www.facebook.com/tachelhit.info/" target="_blank" rel="noreferrer">
-              
              <Facebook style={{color: '#4267B2'}} fontSize="large" />
              </a>
              </Grid>

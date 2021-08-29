@@ -9,7 +9,8 @@
 }
 
 .appBody {
-	min-height: 125px;
+	min-height: calc(150px - 3vw);
+
 }
 
 .appTitleArabic {
@@ -20,7 +21,7 @@
 .appBodyArabic {
 	font-family: Scheherazade;
 	font-size: 20px;
-	min-height: 125px;
+	min-height: calc(150px - 3vw);
 }
 
 @media only screen and (max-width: 600px) {
