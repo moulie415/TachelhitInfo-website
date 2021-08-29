@@ -1,11 +1,10 @@
-import React from 'react'
+import { FunctionalComponent, h } from 'preact';
+
 
 function Psalms() {
   return (
-    <div>
-      
-    </div>
-  )
+    <div ></div>
+  );
 }
 
-export default Psalms
+export default Psalms;

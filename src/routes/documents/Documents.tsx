@@ -1,8 +1,9 @@
-import React from 'react';
+import { FunctionalComponent, h } from 'preact';
+
 
 function Documents() {
   return (
-    <div ></div>
+    <div  ></div>
   );
 }
 

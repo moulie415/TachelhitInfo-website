@@ -1,11 +1,9 @@
-import React from 'react'
+import { FunctionalComponent, h } from 'preact';
 
 function Questions() {
   return (
-    <div>
-      
-    </div>
-  )
+    <div ></div>
+  );
 }
 
-export default Questions
+export default Questions;
