@@ -6,6 +6,9 @@ import Home from '../routes/home';
 import NotFoundPage from '../routes/notfound';
 import Header from './header';
 import theme from './theme';
+import Psalms from '../routes/psalms/Psalms';
+import Questions from '../routes/questions/Questions';
+import Documents from '../routes/documents/Documents';
 
 const App: FunctionalComponent = () => (
         <div id="preact_root">
@@ -13,8 +16,9 @@ const App: FunctionalComponent = () => (
             <Header />
              <Router>
                 <Route path="/" component={Home} />
-                {/* <Route path="/link1" component={Profile} />
-                <Route path="/link2" component={Profile} /> */}
+                <Route path="psalms" component={Psalms} />
+                <Route path="questions" component={Questions} />
+                <Route path="documents" component={Documents} />
                 <NotFoundPage default />
             </Router> 
 

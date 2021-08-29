@@ -4,10 +4,24 @@
   text-transform: lowercase;
   margin-right: 10px;
   font-size: 20px;
+  line-height: 25px;
 }
 
 .titleArabic {
   font-family: Scheherazade;
   font-size: 30px;
+  line-height: 25px;
+}
+
+.link {
+  text-transform: lowercase;
+  line-height: 20px;
+
+}
+
+.linkArabic {
+  font-family: Scheherazade;
+  font-size: 20px;
+  line-height: 20px;
 }
 
