@@ -1,16 +1,31 @@
 import { FunctionalComponent, h } from 'preact';
 import AudioPlayer from 'material-ui-audio-player';
 import { Button, Grid, Typography } from '@material-ui/core';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { useEffect, useState } from 'preact/hooks';
+import PDFViewer from 'pdf-viewer-reactjs';
+import Modal from 'react-modal';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Book, Email, Facebook, WhatsApp } from '@material-ui/icons';
 import {
-  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, PHONE_NUMBER,
+  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, MATSSENT, NTHUNA, PHONE_NUMBER,
 } from '../../constants';
 import styles from './styles.css';
 
 const QR_SIZE = 150;
+
+Modal.setAppElement('#preact_root');
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
 
 const Home: FunctionalComponent = () => {
   const ikhbar = '/assets/images/11.jpg';
@@ -26,10 +41,27 @@ const Home: FunctionalComponent = () => {
   const jesusFilm = 'assets/images/22.jpg';
   const playStore = '/assets/images/google-play-badge.png';
   const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
+  const injil = '/assets/images/23.jpg';
+
   const [ready, setReady] = useState(false);
   useEffect(() => {
     setReady(true);
   }, []);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+
   return (
     <div style={{
       minHeight: '100%',
@@ -67,9 +99,10 @@ const Home: FunctionalComponent = () => {
               <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
               <Button>
                 <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
-                  <Book style={{ color: colors.red, fontSize: 100 }} />
+                  <img style={{ maxHeight: 200 }} src={injil} alt="injil l-lmasih" />  
                 </a>
               </Button>
+              
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">lkhbar ifulkin</Typography>
@@ -83,13 +116,24 @@ const Home: FunctionalComponent = () => {
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">arratn l-lanbya</Typography>
               <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
-              <Button>
-                <a href={LATIN_OT} target="_blank" rel="noreferrer" label="latin old testament">
+              <Button onClick={openModal}>
                   <img src={ikhbar} width={150} alt="bible pdf" />
-                </a>
               </Button>
             </Grid>
           </Grid>
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="pdf modal"
+          >
+            <PDFViewer
+              document={{
+                url: 'https://arxiv.org/pdf/quant-ph/0410100.pdf',
+              }}
+            />
+          </Modal>
           <Typography style={{ marginTop: 40 }} variant="h5">videos</Typography>
           <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">فيديو</Typography>
           <Grid justifyContent="space-evenly" container spacing={2}>
