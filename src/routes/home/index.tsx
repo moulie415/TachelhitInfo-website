@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Book, Email, Facebook, WhatsApp } from '@material-ui/icons';
 import {
-  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, MATSSENT, NTHUNA, PHONE_NUMBER,
+  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, PHONE_NUMBER,
 } from '../../constants';
 import styles from './styles.css';
 
@@ -130,7 +130,7 @@ const Home: FunctionalComponent = () => {
           >
             <PDFViewer
               document={{
-                url: 'https://arxiv.org/pdf/quant-ph/0410100.pdf',
+                url: LATIN_OT,
               }}
             />
           </Modal>
