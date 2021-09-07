@@ -124,7 +124,7 @@ const Home: FunctionalComponent = () => {
           <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">اوال ن-ربّي</Typography>
           <Grid justifyContent="space-evenly" container spacing={2}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">injil l-lmasih</Typography>
+              <Typography variant="h6">injil l-lmasih (video)</Typography>
               <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
               <Button>
                 <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
