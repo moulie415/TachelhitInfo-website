@@ -198,9 +198,9 @@ const Home: FunctionalComponent = () => {
                 ))}
                 
           </div> </div> */}
-           <div style={{overflowY: 'scroll', height: '80vh'}}>
-              <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" />
-              {/* <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
+           <div style={{}}>
+              {/* <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
+              <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" />
             </div>
           </Modal>
           <Typography style={{ marginTop: 40 }} variant="h5">videos</Typography>

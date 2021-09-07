@@ -51,6 +51,7 @@ module.exports = {
     "react/jsx-curly-spacing": 2,
     "react/jsx-no-undef": 2,
     "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2
+    "react/jsx-uses-vars": 2,
+    '@typescript-eslint/ban-ts-ignore': 'off'
   }
 }
