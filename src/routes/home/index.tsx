@@ -1,15 +1,19 @@
 import { FunctionalComponent, h } from 'preact';
 import AudioPlayer from 'material-ui-audio-player';
-import { Button, Grid, Typography } from '@material-ui/core';
-import { useEffect, useState } from 'preact/hooks';
-import PDFViewer from 'pdf-viewer-reactjs';
+import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Grid, Typography } from '@material-ui/core';
+import { useEffect, useRef, useState } from 'preact/hooks';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import PlayArrow from '@material-ui/icons/PlayArrow';
+import Pause from "@material-ui/icons/Pause";
 import Modal from 'react-modal';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Book, Email, Facebook, WhatsApp } from '@material-ui/icons';
 import {
-  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, PHONE_NUMBER,
+  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, oldTestament, PHONE_NUMBER,
 } from '../../constants';
 import styles from './styles.css';
+import AllPages from '../../components/pdfviewer/allPages';
+import SinglePage from '../../components/pdfviewer/SinglePage';
 
 const QR_SIZE = 150;
 
@@ -25,6 +29,8 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
   },
 };
+
+const IS_DEV  = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 
 const Home: FunctionalComponent = () => {
@@ -42,6 +48,12 @@ const Home: FunctionalComponent = () => {
   const playStore = '/assets/images/google-play-badge.png';
   const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
   const injil = '/assets/images/23.jpg';
+  const [book, setBook] = useState<number>();
+  const [chapter, setChapter] = useState<number>();
+  const [playingBible, setPlayingBible] = useState(false);
+  const bibleURL = `https://raw.githubusercontent.com/moulie415/WordOfGodForEachDay/master/files/bible/${book}/${chapter}.mp3`;
+  const audioRef = useRef<HTMLAudioElement>(null);
+
 
   const [ready, setReady] = useState(false);
   useEffect(() => {
@@ -59,7 +71,20 @@ const Home: FunctionalComponent = () => {
 
   function closeModal() {
     setIsOpen(false);
+    setPlayingBible(false);
   }
+
+  useEffect(() => {
+    if (playingBible) {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.load();
+        audioRef.current.play();
+      }
+    } else if (audioRef.current) {
+        audioRef.current.pause();
+    }
+  }, [playingBible]);
 
 
   return (
@@ -108,16 +133,18 @@ const Home: FunctionalComponent = () => {
               <Typography variant="h6">lkhbar ifulkin</Typography>
               <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
               <Button>
-                <a href={LATIN_NT} target="_blank" rel="noreferrer">
+                {/* <a href={IS_DEV ? '/' : LATIN_NT} target="_blank" rel="noreferrer"> */}
                   <img src={arratn} width={150} alt="bible pdf" />
-                </a>
+                {/* </a> */}
               </Button>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">arratn l-lanbya</Typography>
               <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
               <Button onClick={openModal}>
+                {/* <a href={IS_DEV ? '/' : LATIN_OT} target="_blank" rel="noreferrer"> */}
                   <img src={ikhbar} width={150} alt="bible pdf" />
+                {/* </a> */}
               </Button>
             </Grid>
           </Grid>
@@ -128,11 +155,53 @@ const Home: FunctionalComponent = () => {
             style={customStyles}
             contentLabel="pdf modal"
           >
-            <PDFViewer
-              document={{
-                url: LATIN_OT,
-              }}
-            />
+          {/*
+          <div style={{width: '30%'. backgroundColor: colors.red}} >
+          <div style={{overflowY: 'scroll', height: '80vh'}}>
+       
+              {Object.keys(oldTestament).map(item => (
+                  <Accordion  key={item}>
+                    <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
+                      <Typography>{oldTestament[Number(item)].name}</Typography>
+                    </AccordionSummary>
+                      {oldTestament[Number(item)].chapters.map((c, index) => (
+                        <div key={`${item}-${c}`}>
+                          <AccordionDetails style={{padding: 0}}>
+                            <button
+                              onClick={() => {
+                                if (Number(item) === book && index + 1 === chapter) {
+                                  setPlayingBible(!playingBible);
+                                } else {
+                                  setChapter(index + 1);
+                                  setBook(Number(item));
+                                  setPlayingBible(true);
+                                }
+                              //   if (audioRef.current){
+                              //     audioRef.current.pause();
+                              //     audioRef.current.load();
+                              //     audioRef.current.play();
+                              // }
+                              }}
+                              className={styles.menuButton}
+                              type="button"
+                            >
+                              {Number(item) === book &&
+                                index + 1 === chapter &&
+                                playingBible ?<Pause /> : <PlayArrow />}
+                              <Typography>{c}</Typography>
+                            </button>
+                          </AccordionDetails>
+                          <Divider />
+                        </div>
+                        ))}
+                  </Accordion>
+                ))}
+                
+          </div> </div> */}
+           <div style={{overflowY: 'scroll', height: '80vh'}}>
+              <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" />
+              {/* <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
+            </div>
           </Modal>
           <Typography style={{ marginTop: 40 }} variant="h5">videos</Typography>
           <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">فيديو</Typography>
@@ -263,6 +332,9 @@ const Home: FunctionalComponent = () => {
                 </a>
              </Grid>
           </Grid>
+          {book && chapter && <audio style={{display: 'none'}} controls ref={audioRef}>
+            <source src={bibleURL} type='audio/mpeg' />
+          </audio>}
         </div>
       ) : <div style={{ textAlign: 'center' }}><CircularProgress style={{ textAlign: 'center' }} /></div>}
     </div>

@@ -24,6 +24,23 @@
 	min-height: calc(150px - 3vw);
 }
 
+.menuButton {
+	border: none;
+	background-color: #fff;
+	padding: 10px;
+	width: 100%;
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+}
+
+.menuButton:hover {
+	background-color: #999;
+	/* transition: background-color .5s ease; */
+	cursor: pointer;
+
+}
+
 @media only screen and (max-width: 600px) {
 	.appBody {
 		min-height: auto;
