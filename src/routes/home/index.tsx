@@ -101,12 +101,12 @@ const Home: FunctionalComponent = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6">is-tgit amuslem?</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تگيت اموسلم؟</Typography>
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تگيت اموسلم؟</Typography>
               <AudioPlayer src={MATSSENT} download />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6">is-tzuzdt laman d-sslamt?</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تژوژضت لامان د-سّلامت؟</Typography>
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تژوژضت لامان د-سّلامت؟</Typography>
               <AudioPlayer src={AZUZD} download />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
@@ -116,7 +116,7 @@ const Home: FunctionalComponent = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6">is-tumnt s-lmasih?</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تومنت س-لماسيح؟</Typography>
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تومنت س-لماسيح؟</Typography>
               <AudioPlayer src={NTHUNA} download />
             </Grid>
           </Grid>
@@ -125,7 +125,7 @@ const Home: FunctionalComponent = () => {
           <Grid justifyContent="space-evenly" container spacing={2}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">injil l-lmasih (video)</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
               <Button>
                 <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
                   <img style={{ maxHeight: 200 }} src={injil} alt="injil l-lmasih" />  
@@ -135,7 +135,7 @@ const Home: FunctionalComponent = () => {
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">lkhbar ifulkin</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
               <Button>
                 <a href={LATIN_NT} target="_blank" rel="noreferrer">
                   <img src={arratn} width={150} alt="bible pdf" />
@@ -144,7 +144,7 @@ const Home: FunctionalComponent = () => {
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">arratn l-lanbya</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
               <Button onClick={openModal}>
                 {/* <a href={IS_DEV ? '/' : LATIN_OT} target="_blank" rel="noreferrer"> */}
                   <img src={ikhbar} width={150} alt="bible pdf" />
@@ -212,21 +212,21 @@ const Home: FunctionalComponent = () => {
           <Grid justifyContent="space-evenly" container spacing={2}>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">maylli iqsad rbbi</Typography>
-              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h5">مايلّي ءيقصاد ربّي</Typography>
+              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">مايلّي ءيقصاد ربّي</Typography>
               <video style={{ maxHeight: 200 }} poster={rbbi} controls>
                 <source src={GODS_STORY} type="video/mp4" />
               </video>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">amuddu n-umsiggel</Typography>
-              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h5">امودّو ن-ومسيگّل</Typography>
+              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">امودّو ن-ومسيگّل</Typography>
               <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
                 <img style={{ maxHeight: 200 }} src={amsiggel} alt="Amsiggel" />
               </a>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
               <Typography variant="h6">tudert l-lmasih</Typography>
-              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h5">تودرت لّماسيح</Typography>
+              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">تودرت لّماسيح</Typography>
               <a href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html" target="_blank" rel="noreferrer">
                 <img style={{ maxHeight: 200 }} src={jesusFilm} alt="Jesus Film" />
               </a>
