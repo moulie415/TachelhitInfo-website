@@ -13,7 +13,7 @@ const AllPages: FunctionalComponent<{pdf: string}> = ({ pdf }) => {
   return (
     <Document
       file={pdf}
-      options={{ workerSrc: "pdf.worker.js" }}
+      options={{ workerSrc: "./pdf.worker.js" }}
       onLoadSuccess={onDocumentLoadSuccess}
     >
       {Array.from(new Array(numPages), (el, index) => (
