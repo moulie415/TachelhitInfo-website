@@ -1,6 +1,8 @@
 import { FunctionalComponent, h } from 'preact';
 import AudioPlayer from 'material-ui-audio-player';
-import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Grid, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Grid, Typography, useMediaQuery } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close'
 import { useEffect, useRef, useState } from 'preact/hooks';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PlayArrow from '@material-ui/icons/PlayArrow';
@@ -27,6 +29,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    width: '90%'
   },
 };
 
@@ -86,6 +89,7 @@ const Home: FunctionalComponent = () => {
     }
   }, [playingBible]);
 
+  const matches = useMediaQuery('(min-width:600px)');
 
   return (
     <div style={{
@@ -133,9 +137,9 @@ const Home: FunctionalComponent = () => {
               <Typography variant="h6">lkhbar ifulkin</Typography>
               <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
               <Button>
-                {/* <a href={IS_DEV ? '/' : LATIN_NT} target="_blank" rel="noreferrer"> */}
+                <a href={LATIN_NT} target="_blank" rel="noreferrer">
                   <img src={arratn} width={150} alt="bible pdf" />
-                {/* </a> */}
+                </a>
               </Button>
             </Grid>
             <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
@@ -155,52 +159,52 @@ const Home: FunctionalComponent = () => {
             style={customStyles}
             contentLabel="pdf modal"
           >
-          {/*
-          <div style={{width: '30%'. backgroundColor: colors.red}} >
-          <div style={{overflowY: 'scroll', height: '80vh'}}>
-       
-              {Object.keys(oldTestament).map(item => (
-                  <Accordion  key={item}>
-                    <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
-                      <Typography>{oldTestament[Number(item)].name}</Typography>
-                    </AccordionSummary>
-                      {oldTestament[Number(item)].chapters.map((c, index) => (
-                        <div key={`${item}-${c}`}>
-                          <AccordionDetails style={{padding: 0}}>
-                            <button
-                              onClick={() => {
-                                if (Number(item) === book && index + 1 === chapter) {
-                                  setPlayingBible(!playingBible);
-                                } else {
-                                  setChapter(index + 1);
-                                  setBook(Number(item));
-                                  setPlayingBible(true);
-                                }
-                              //   if (audioRef.current){
-                              //     audioRef.current.pause();
-                              //     audioRef.current.load();
-                              //     audioRef.current.play();
-                              // }
-                              }}
-                              className={styles.menuButton}
-                              type="button"
-                            >
-                              {Number(item) === book &&
-                                index + 1 === chapter &&
-                                playingBible ?<Pause /> : <PlayArrow />}
-                              <Typography>{c}</Typography>
-                            </button>
-                          </AccordionDetails>
-                          <Divider />
-                        </div>
+            <div>
+            <IconButton aria-label="close" onClick={closeModal} style={{position: 'absolute', top: 0, right: 0, zIndex: 9}}>
+              <CloseIcon />
+            </IconButton>
+              <Grid container style={{overflowY: 'scroll'}}>
+                <Grid xs={12} sm={4} item style={{textAlign: 'center'}} >
+                  <div style={{overflowY: 'scroll', height: matches ? '80vh' : '30vh'}}>
+                      {Object.keys(oldTestament).map(item => (
+                          <Accordion  key={item}>
+                            <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
+                              <Typography style={{fontFamily: 'Tashelhayt'}}>{oldTestament[Number(item)].name}</Typography>
+                            </AccordionSummary>
+                              {oldTestament[Number(item)].chapters.map((c, index) => (
+                                <div key={`${item}-${c}`}>
+                                  <AccordionDetails style={{padding: 0}}>
+                                    <button
+                                      onClick={() => {
+                                        if (Number(item) === book && index + 1 === chapter) {
+                                          setPlayingBible(!playingBible);
+                                        } else {
+                                          setChapter(index + 1);
+                                          setBook(Number(item));
+                                          setPlayingBible(true);
+                                        }
+                                      }}
+                                      className={styles.menuButton}
+                                      type="button"
+                                    >
+                                      {Number(item) === book &&
+                                        index + 1 === chapter &&
+                                        playingBible ?<Pause /> : <PlayArrow />}
+                                      <Typography>{c}</Typography>
+                                    </button>
+                                  </AccordionDetails>
+                                  <Divider />
+                                </div>
+                                ))}
+                          </Accordion>
                         ))}
-                  </Accordion>
-                ))}
-                
-          </div> </div> */}
-           <div style={{}}>
-              {/* <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
-              <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" />
+                      </div>
+                    </Grid>
+                  <Grid item  xs={12} sm={8}>
+                    {/* <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
+                    <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" />
+                  </Grid>
+              </Grid>
             </div>
           </Modal>
           <Typography style={{ marginTop: 40 }} variant="h5">videos</Typography>

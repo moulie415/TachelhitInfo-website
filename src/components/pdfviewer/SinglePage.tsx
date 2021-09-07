@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@material-ui/core';
 import { FunctionalComponent, h } from 'preact';
 import { useState } from 'preact/hooks';
 import { Document, Page } from "react-pdf";
@@ -23,20 +24,22 @@ const SinglePage: FunctionalComponent<{pdf: string}> = ({ pdf }) => {
     changePage(1);
   }
 
+  const matches = useMediaQuery('(min-width:600px)');
+
 
   return (
     <div>
-      <div style={{height: '60vh', overflowY: 'scroll'}}>
+      <div style={{height: matches ? '60vh' : '30vh', overflowY: 'scroll'}}>
         <Document
           file={pdf}
           options={{ workerSrc: "pdf.worker.js" }}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page pageNumber={pageNumber} />
+          <Page  pageNumber={pageNumber} className="pdfPage" scale={matches ? 1.3 : 1}  />
         </Document>
     
       </div>
-        <div style={{position: 'absolte', bottom: 0}}>
+        <div style={{textAlign: 'center'}}>
         <p>
           Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
         </p>
