@@ -190,7 +190,7 @@ const Home: FunctionalComponent = () => {
                                       {Number(item) === book &&
                                         index + 1 === chapter &&
                                         playingBible ?<Pause /> : <PlayArrow />}
-                                      <Typography>{c}</Typography>
+                                      <Typography style={{marginLeft: 10}}>{c}</Typography>
                                     </button>
                                   </AccordionDetails>
                                   <Divider />
