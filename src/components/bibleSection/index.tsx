@@ -35,7 +35,9 @@ const BibleSection: FunctionalComponent = () => {
   const [playingBible, setPlayingBible] = useState(false);
   const bibleURL = `https://raw.githubusercontent.com/moulie415/WordOfGodForEachDay/master/files/bible/${book}/${chapter}.mp3`;
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [newTestament, setNewTestament] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf')
 
   function openModal() {
     setIsOpen(true);
@@ -71,7 +73,7 @@ const BibleSection: FunctionalComponent = () => {
       <Card style={{marginTop: 40, paddingBottom: 20}}>
         <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20}}>
           <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">awal n-rbbi</Typography>
-          <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">اوال ن-ربّي</Typography>
+          <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">اوال ءي‑واسّ</Typography>
         </div>
         <Grid justifyContent="space-evenly" container spacing={2}>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
@@ -82,25 +84,50 @@ const BibleSection: FunctionalComponent = () => {
                 <img style={{ maxHeight: 200 }} src={injil} alt="injil l-lmasih" />  
               </a>
             </Button>
-            
           </Grid>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-            <Typography variant="h6">lkhbar ifulkin</Typography>
-            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين</Typography>
-            <Button>
-              <a href={LATIN_NT} target="_blank" rel="noreferrer">
-                <img src={arratn} width={150} alt="bible pdf" />
-              </a>
+            <Button
+              onClick={() => {
+                openModal();
+                setNewTestament(true);
+                setPdfSrc('../../assets/pdfs/nt_lat.pdf')
+              }}
+              style={{textTransform: 'inherit'}}
+            >
+              <Typography variant="h6">lkhbar ifulkin</Typography>
             </Button>
+            <Button
+              onClick={() => {
+                openModal();
+                setNewTestament(true);
+                setPdfSrc('../../assets/pdfs/nt_abc.pdf')
+              }}
+            >
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين</Typography>
+            </Button>
+            <img src={arratn} width={150} alt="bible pdf" />
           </Grid>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+          <Button
+              onClick={() => {
+                openModal();
+                setNewTestament(false);
+                setPdfSrc('../../assets/pdfs/ot_abc.pdf')
+              }}
+              style={{textTransform: 'inherit'}}
+            >
             <Typography variant="h6">arratn l-lanbya</Typography>
-            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا</Typography>
-            <Button onClick={openModal}>
-              {/* <a href={IS_DEV ? '/' : LATIN_OT} target="_blank" rel="noreferrer"> */}
-                <img src={ikhbar} width={150} alt="bible pdf" />
-              {/* </a> */}
             </Button>
+            <Button
+              onClick={() => {
+                openModal();
+                setNewTestament(false);
+                setPdfSrc('../../assets/pdfs/ot_abc.pdf')
+              }}
+            >
+              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا</Typography>
+            </Button>
+            <img src={ikhbar} width={150} alt="bible pdf" />
           </Grid>
         </Grid>
       </Card>
@@ -112,7 +139,7 @@ const BibleSection: FunctionalComponent = () => {
           contentLabel="pdf modal"
         >
           <div>
-          <IconButton aria-label="close" onClick={closeModal} style={{position: 'absolute', top: -7, right: -7, zIndex: 9}}>
+          <IconButton aria-label="close" onClick={closeModal} style={{position: 'absolute', top: -11, right: -11, zIndex: 9}}>
             <CloseIcon />
           </IconButton>
             <Grid container style={{overflowY: 'scroll'}}>
@@ -152,8 +179,8 @@ const BibleSection: FunctionalComponent = () => {
                       ))}
                     </div>
                   </Grid>
-                <Grid item  xs={12} sm={10}>
-                  <iframe src={LATIN_OT} width="100%" height="100%" />
+                <Grid item xs={12} sm={10}>
+                  <iframe src={pdfSrc} width="100%" height="100%" />
                 </Grid>
             </Grid>
           </div>

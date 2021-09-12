@@ -2,7 +2,7 @@ import { Grid, Typography, Card } from '@material-ui/core';
 import { FunctionalComponent, h } from 'preact';
 import styles from '../../routes/home/styles.css';
 
-const QR_SIZE = 150;
+const QR_SIZE = 100;
 
 const playStore = '/assets/images/google-play-badge.png';
 const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
@@ -20,9 +20,8 @@ const Applications: FunctionalComponent = () => (
       <Typography  style={{color: '#fff', marginRight: 10}} variant="h5">applications</Typography>
       <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">تطبيقات</Typography>
     </div>
-    <Grid container spacing={2} justifyContent="space-evenly" style={{marginBottom: 20}}>
-      <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-        <div>
+    <Grid container justifyContent="space-evenly" style={{marginBottom: 20}}>
+      <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
           <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr1} alt="qr code" />
           <Typography variant="h6">awal i-wass</Typography>
           <Typography className={styles.appBody}>
@@ -34,8 +33,9 @@ const Applications: FunctionalComponent = () => (
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
             <img src={playStore} width={QR_SIZE} alt="play store" />
           </a>
-        </div>
-        <div>
+      </Grid>
+      <Grid  style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
+
           <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr2} alt="qr code" />
           <Typography variant="h6" className={styles.appTitleArabic} >اوال ءيواسّ</Typography>
           <Typography  className={styles.appBodyArabic}>
@@ -47,11 +47,11 @@ const Applications: FunctionalComponent = () => (
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
             <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
           </a>
-        </div>
-      </Grid>
+          </Grid>
+      
 
-      <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-        <div>
+      <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
+  
         <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr3} alt="qr code" />
         <Typography variant="h6">amuddu n-umsiggel</Typography>
         <Typography className={styles.appBody}>
@@ -62,8 +62,10 @@ const Applications: FunctionalComponent = () => (
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
             <img src={playStore} width={QR_SIZE} alt="play store" />
           </a>
-          </div>
-          <div>
+    
+          </Grid>
+          <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
+
         <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr4} alt="qr code" />
         <Typography variant="h6" className={styles.appTitleArabic} >امسيگّل</Typography>
           <Typography  className={styles.appBodyArabic}>
@@ -74,10 +76,8 @@ const Applications: FunctionalComponent = () => (
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
             <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
           </a>
-          </div>
-      </Grid>
-      <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-        <div>
+        </Grid>
+      <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
           <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr5} alt="qr code" />
           <Typography variant="h6">tachelhit info</Typography>
           <Typography  className={styles.appBody}>
@@ -89,8 +89,8 @@ const Applications: FunctionalComponent = () => (
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
             <img src={playStore} width={QR_SIZE} alt="play store" />
           </a>
-        </div>
-        <div>
+        </Grid>
+        <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
           <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr6} alt="qr code" />
           <Typography variant="h6" className={styles.appTitleArabic} >تاشلحيت ءينفو</Typography>
           <Typography  className={styles.appBodyArabic}>
@@ -102,8 +102,7 @@ const Applications: FunctionalComponent = () => (
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
             <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
           </a>
-        </div>
-      </Grid>
+          </Grid>
     </Grid>
   </Card>
   );
