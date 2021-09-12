@@ -86,47 +86,53 @@ const BibleSection: FunctionalComponent = () => {
             </Button>
           </Grid>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-            <Button
-              onClick={() => {
-                openModal();
-                setNewTestament(true);
-                setPdfSrc('../../assets/pdfs/nt_lat.pdf')
-              }}
-              style={{textTransform: 'inherit'}}
-            >
-              <Typography variant="h6">lkhbar ifulkin</Typography>
-            </Button>
-            <Button
-              onClick={() => {
-                openModal();
-                setNewTestament(true);
-                setPdfSrc('../../assets/pdfs/nt_abc.pdf')
-              }}
-            >
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين</Typography>
-            </Button>
+            <div style={{display: 'grid'}}>
+              <Button
+                onClick={() => {
+                  openModal();
+                  setNewTestament(true);
+                  setPdfSrc('../../assets/pdfs/nt_lat.pdf')
+                }}
+                style={{textTransform: 'inherit', padding: 0}}
+              >
+                <Typography variant="h6">lkhbar ifulkin</Typography>
+              </Button>
+              <Button
+                onClick={() => {
+                  openModal();
+                  setNewTestament(true);
+                  setPdfSrc('../../assets/pdfs/nt_abc.pdf')
+                }}
+                style={{ marginBottom: 20 }}
+              >
+                <Typography variant="h4"  className={styles.arabic}>لخبار ءيفولكين</Typography>
+              </Button>
+            </div>
             <img src={arratn} width={150} alt="bible pdf" />
           </Grid>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-          <Button
-              onClick={() => {
-                openModal();
-                setNewTestament(false);
-                setPdfSrc('../../assets/pdfs/ot_abc.pdf')
-              }}
-              style={{textTransform: 'inherit'}}
-            >
-            <Typography variant="h6">arratn l-lanbya</Typography>
-            </Button>
+          <div style={{display: 'grid'}}>
             <Button
-              onClick={() => {
-                openModal();
-                setNewTestament(false);
-                setPdfSrc('../../assets/pdfs/ot_abc.pdf')
-              }}
-            >
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا</Typography>
-            </Button>
+                onClick={() => {
+                  openModal();
+                  setNewTestament(false);
+                  setPdfSrc('../../assets/pdfs/ot_abc.pdf')
+                }}
+                style={{textTransform: 'inherit', padding: 0}}
+              >
+              <Typography variant="h6">arratn l-lanbya</Typography>
+              </Button>
+              <Button
+                onClick={() => {
+                  openModal();
+                  setNewTestament(false);
+                  setPdfSrc('../../assets/pdfs/ot_abc.pdf')
+                }}
+                style={{ marginBottom: 20 }}
+              >
+                <Typography variant="h4"  className={styles.arabic}>ارّتن لّانبيا</Typography>
+              </Button>
+            </div>
             <img src={ikhbar} width={150} alt="bible pdf" />
           </Grid>
         </Grid>

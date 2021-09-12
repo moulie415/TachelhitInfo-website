@@ -20,7 +20,7 @@ const Applications: FunctionalComponent = () => (
       <Typography  style={{color: '#fff', marginRight: 10}} variant="h5">applications</Typography>
       <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">تطبيقات</Typography>
     </div>
-    <Grid container justifyContent="space-evenly" style={{marginBottom: 20}}>
+    <Grid container justifyContent="space-evenly" style={{padding: 20}}>
       <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
           <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr1} alt="qr code" />
           <Typography variant="h6">awal i-wass</Typography>

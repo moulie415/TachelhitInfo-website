@@ -11,22 +11,22 @@ const AudioSection: FunctionalComponent = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">is-tgit amuslem?</Typography>
           <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تگيت اموسلم؟</Typography>
-          <AudioPlayer src={MATSSENT} download />
+          <AudioPlayer src={MATSSENT} download volume={false} />
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">is-tzuzdt laman d-sslamt?</Typography>
           <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تژوژضت لامان د-سّلامت؟</Typography>
-          <AudioPlayer src={AZUZD} download />
+          <AudioPlayer src={AZUZD} download  volume={false} />
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">is dark kra n-iseqsitn?</Typography>
           <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-دارك كرا ن-يسقسيتن؟</Typography>
-          <AudioPlayer src={ISEQSITN} download />
+          <AudioPlayer src={ISEQSITN} download  volume={false} />
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">is-tumnt s-lmasih?</Typography>
           <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تومنت س-لماسيح؟</Typography>
-          <AudioPlayer src={NTHUNA} download />
+          <AudioPlayer src={NTHUNA} download  volume={false} />
         </Grid>
       </Grid>
     </Card>
