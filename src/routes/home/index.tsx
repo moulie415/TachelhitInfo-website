@@ -1,44 +1,21 @@
 import { FunctionalComponent, h } from 'preact';
-import AudioPlayer from 'material-ui-audio-player';
-import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Grid, Typography, useMediaQuery } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close'
-import { useEffect, useRef, useState } from 'preact/hooks';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import PlayArrow from '@material-ui/icons/PlayArrow';
-import Pause from "@material-ui/icons/Pause";
-import Modal from 'react-modal';
+import {  Grid, Typography, Card } from '@material-ui/core';
+import { useEffect, useState } from 'preact/hooks';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Book, Email, Facebook, WhatsApp } from '@material-ui/icons';
+import { Email, Facebook, WhatsApp } from '@material-ui/icons';
 import {
-  AZUZD, colors, GODS_STORY, ISEQSITN, LATIN_NT, LATIN_OT, MATSSENT, NTHUNA, oldTestament, PHONE_NUMBER,
+  colors, GODS_STORY, PHONE_NUMBER,
 } from '../../constants';
 import styles from './styles.css';
-import AllPages from '../../components/pdfviewer/allPages';
-import SinglePage from '../../components/pdfviewer/SinglePage';
+import AudioSection from '../../components/audioSection';
+import BibleSection from '../../components/bibleSection';
 
 const QR_SIZE = 150;
-
-Modal.setAppElement('#preact_root');
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    width: '90%'
-  },
-};
 
 const IS_DEV  = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 
 const Home: FunctionalComponent = () => {
-  const ikhbar = '/assets/images/11.jpg';
-  const arratn = '/assets/images/12.png';
   const qr1 = '/assets/images/16.jpg';
   const qr2 = '/assets/images/17.jpg';
   const qr3 = '/assets/images/18.jpg';
@@ -50,275 +27,143 @@ const Home: FunctionalComponent = () => {
   const jesusFilm = 'assets/images/22.jpg';
   const playStore = '/assets/images/google-play-badge.png';
   const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
-  const injil = '/assets/images/23.jpg';
-  const [book, setBook] = useState<number>();
-  const [chapter, setChapter] = useState<number>();
-  const [playingBible, setPlayingBible] = useState(false);
-  const bibleURL = `https://raw.githubusercontent.com/moulie415/WordOfGodForEachDay/master/files/bible/${book}/${chapter}.mp3`;
-  const audioRef = useRef<HTMLAudioElement>(null);
-
 
   const [ready, setReady] = useState(false);
   useEffect(() => {
     setReady(true);
   }, []);
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-    setPlayingBible(false);
-  }
-
-  useEffect(() => {
-    if (playingBible) {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.load();
-        audioRef.current.play();
-      }
-    } else if (audioRef.current) {
-        audioRef.current.pause();
-    }
-  }, [playingBible]);
-
-  const matches = useMediaQuery('(min-width:600px)');
 
   return (
     <div style={{
       minHeight: '100%',
-      margin: 32,
+      padding: 32,
+      backgroundColor: '#f2f3f4'
     }}>
       {ready ? (
         <div>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6">is-tgit amuslem?</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تگيت اموسلم؟</Typography>
-              <AudioPlayer src={MATSSENT} download />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6">is-tzuzdt laman d-sslamt?</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تژوژضت لامان د-سّلامت؟</Typography>
-              <AudioPlayer src={AZUZD} download />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6">is dark kra n-iseqsitn?</Typography>
-              <Typography variant="h5" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-دارك كرا ن-يسقسيتن؟</Typography>
-              <AudioPlayer src={ISEQSITN} download />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Typography variant="h6">is-tumnt s-lmasih?</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تومنت س-لماسيح؟</Typography>
-              <AudioPlayer src={NTHUNA} download />
-            </Grid>
-          </Grid>
-          <Typography style={{ marginTop: 40 }} variant="h5">awal n-rbbi</Typography>
-          <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">اوال ن-ربّي</Typography>
-          <Grid justifyContent="space-evenly" container spacing={2}>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">injil l-lmasih (video)</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
-              <Button>
-                <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
-                  <img style={{ maxHeight: 200 }} src={injil} alt="injil l-lmasih" />  
-                </a>
-              </Button>
-              
-            </Grid>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">lkhbar ifulkin</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
-              <Button>
-                <a href={LATIN_NT} target="_blank" rel="noreferrer">
-                  <img src={arratn} width={150} alt="bible pdf" />
-                </a>
-              </Button>
-            </Grid>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">arratn l-lanbya</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
-              <Button onClick={openModal}>
-                {/* <a href={IS_DEV ? '/' : LATIN_OT} target="_blank" rel="noreferrer"> */}
-                  <img src={ikhbar} width={150} alt="bible pdf" />
-                {/* </a> */}
-              </Button>
-            </Grid>
-          </Grid>
-          <Modal
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            style={customStyles}
-            contentLabel="pdf modal"
-          >
-            <div>
-            <IconButton aria-label="close" onClick={closeModal} style={{position: 'absolute', top: 0, right: 0, zIndex: 9}}>
-              <CloseIcon />
-            </IconButton>
-              <Grid container style={{overflowY: 'scroll'}}>
-                <Grid xs={12} sm={4} item style={{textAlign: 'center'}} >
-                  <div style={{overflowY: 'scroll', height: matches ? '80vh' : '30vh'}}>
-                      {Object.keys(oldTestament).map(item => (
-                          <Accordion  key={item}>
-                            <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
-                              <Typography style={{fontFamily: 'Tashelhayt'}}>{oldTestament[Number(item)].name}</Typography>
-                            </AccordionSummary>
-                              {oldTestament[Number(item)].chapters.map((c, index) => (
-                                <div key={`${item}-${c}`}>
-                                  <AccordionDetails style={{padding: 0}}>
-                                    <button
-                                      onClick={() => {
-                                        if (Number(item) === book && index + 1 === chapter) {
-                                          setPlayingBible(!playingBible);
-                                        } else {
-                                          setChapter(index + 1);
-                                          setBook(Number(item));
-                                          setPlayingBible(true);
-                                        }
-                                      }}
-                                      className={styles.menuButton}
-                                      type="button"
-                                    >
-                                      {Number(item) === book &&
-                                        index + 1 === chapter &&
-                                        playingBible ?<Pause /> : <PlayArrow />}
-                                      <Typography style={{marginLeft: 10}}>{c}</Typography>
-                                    </button>
-                                  </AccordionDetails>
-                                  <Divider />
-                                </div>
-                                ))}
-                          </Accordion>
-                        ))}
-                      </div>
-                    </Grid>
-                  <Grid item  xs={12} sm={8}>
-                    {/* <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
-                    <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" />
-                  </Grid>
-              </Grid>
-            </div>
-          </Modal>
-          <Typography style={{ marginTop: 40 }} variant="h5">videos</Typography>
-          <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">فيديو</Typography>
-          <Grid justifyContent="space-evenly" container spacing={2}>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">maylli iqsad rbbi</Typography>
-              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">مايلّي ءيقصاد ربّي</Typography>
-              <video style={{ maxHeight: 200 }} poster={rbbi} controls>
-                <source src={GODS_STORY} type="video/mp4" />
-              </video>
-            </Grid>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">amuddu n-umsiggel</Typography>
-              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">امودّو ن-ومسيگّل</Typography>
-              <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
-                <img style={{ maxHeight: 200 }} src={amsiggel} alt="Amsiggel" />
-              </a>
-            </Grid>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <Typography variant="h6">tudert l-lmasih</Typography>
-              <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">تودرت لّماسيح</Typography>
-              <a href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html" target="_blank" rel="noreferrer">
-                <img style={{ maxHeight: 200 }} src={jesusFilm} alt="Jesus Film" />
-              </a>
-            </Grid>
-          </Grid>
-          <Typography style={{ marginTop: 40 }} variant="h5">applications</Typography>
-          <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">تطبيقات</Typography>
-          <Grid container spacing={2} justifyContent="space-evenly" style={{marginBottom: 20}}>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <div>
-                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr1} alt="qr code" />
-                <Typography variant="h6">awal i-wass</Typography>
-                <Typography className={styles.appBody}>
-                  ass f-wass
-                  rad-ak-ntazn awal imimn
-                  gh-warratn n-sidi rbbi.
-                  sfeld-as ar-ttzaamt s-rrja ishan.
-                </Typography>
-                <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
-                  <img src={playStore} width={QR_SIZE} alt="play store" />
-                </a>
-              </div>
-              <div>
-                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr2} alt="qr code" />
-                <Typography variant="h6" className={styles.appTitleArabic} >اوال ءيواسّ</Typography>
-                <Typography  className={styles.appBodyArabic}>
-                  اسّ ف-واسّ
-                  راد-اك-نتازن اوال ءيميمن
-                  غ-وارّاتن ن-سيدي ربّي.
-                  سفلد-اس ار-تّزعامت س-رّجا ءيصحان.
-                </Typography>
-                <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
-                  <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
-                </a>
-              </div>
-            </Grid>
+          <AudioSection />
+          <BibleSection />
 
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <div>
-              <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr3} alt="qr code" />
-              <Typography variant="h6">amuddu n-umsiggel</Typography>
-              <Typography className={styles.appBody}>
-                lqist n-yan igummin 
-                lehna d-tayri d-sslamt,
-                iftu ar-sersn-isiggil.
-                </Typography>
-                <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
-                  <img src={playStore} width={QR_SIZE} alt="play store" />
+          <Card style={{ marginTop: 40, paddingBottom: 20 }} >
+            <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20}}>
+              <Typography style={{color: '#fff', marginRight: 10}} variant="h5">videos</Typography>
+              <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">فيديو</Typography>
+            </div>
+            <Grid justifyContent="space-evenly" container spacing={2}>
+              <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+                <Typography variant="h6">maylli iqsad rbbi</Typography>
+                <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">مايلّي ءيقصاد ربّي</Typography>
+                <video style={{ maxHeight: 200 }} poster={rbbi} controls>
+                  <source src={GODS_STORY} type="video/mp4" />
+                </video>
+              </Grid>
+              <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+                <Typography variant="h6">amuddu n-umsiggel</Typography>
+                <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">امودّو ن-ومسيگّل</Typography>
+                <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
+                  <img style={{ maxHeight: 200 }} src={amsiggel} alt="Amsiggel" />
                 </a>
+              </Grid>
+              <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+                <Typography variant="h6">tudert l-lmasih</Typography>
+                <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">تودرت لّماسيح</Typography>
+                <a href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html" target="_blank" rel="noreferrer">
+                  <img style={{ maxHeight: 200 }} src={jesusFilm} alt="Jesus Film" />
+                </a>
+              </Grid>
+            </Grid>
+          </Card>
+          <Card style={{ marginTop: 40, marginBottom: 20 }}>
+            <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20}}>
+              <Typography  style={{color: '#fff', marginRight: 10}} variant="h5">applications</Typography>
+              <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">تطبيقات</Typography>
+            </div>
+            <Grid container spacing={2} justifyContent="space-evenly" style={{marginBottom: 20}}>
+              <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+                <div>
+                  <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr1} alt="qr code" />
+                  <Typography variant="h6">awal i-wass</Typography>
+                  <Typography className={styles.appBody}>
+                    ass f-wass
+                    rad-ak-ntazn awal imimn
+                    gh-warratn n-sidi rbbi.
+                    sfeld-as ar-ttzaamt s-rrja ishan.
+                  </Typography>
+                  <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
+                    <img src={playStore} width={QR_SIZE} alt="play store" />
+                  </a>
                 </div>
                 <div>
-              <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr4} alt="qr code" />
-              <Typography variant="h6" className={styles.appTitleArabic} >امسيگّل</Typography>
-                <Typography  className={styles.appBodyArabic}>
-                  لقيست ن-يان ءيگومّين
-                  لهنا ت-تايري د-سّلامت،
-                  ءيفتو ار-سرسن-يسيگّيل.
-                </Typography>
-                <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
-                  <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
-                </a>
+                  <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr2} alt="qr code" />
+                  <Typography variant="h6" className={styles.appTitleArabic} >اوال ءيواسّ</Typography>
+                  <Typography  className={styles.appBodyArabic}>
+                    اسّ ف-واسّ
+                    راد-اك-نتازن اوال ءيميمن
+                    غ-وارّاتن ن-سيدي ربّي.
+                    سفلد-اس ار-تّزعامت س-رّجا ءيصحان.
+                  </Typography>
+                  <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
+                    <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
+                  </a>
                 </div>
+              </Grid>
+
+              <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+                <div>
+                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr3} alt="qr code" />
+                <Typography variant="h6">amuddu n-umsiggel</Typography>
+                <Typography className={styles.appBody}>
+                  lqist n-yan igummin 
+                  lehna d-tayri d-sslamt,
+                  iftu ar-sersn-isiggil.
+                  </Typography>
+                  <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
+                    <img src={playStore} width={QR_SIZE} alt="play store" />
+                  </a>
+                  </div>
+                  <div>
+                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr4} alt="qr code" />
+                <Typography variant="h6" className={styles.appTitleArabic} >امسيگّل</Typography>
+                  <Typography  className={styles.appBodyArabic}>
+                    لقيست ن-يان ءيگومّين
+                    لهنا ت-تايري د-سّلامت،
+                    ءيفتو ار-سرسن-يسيگّيل.
+                  </Typography>
+                  <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
+                    <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
+                  </a>
+                  </div>
+              </Grid>
+              <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+                <div>
+                  <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr5} alt="qr code" />
+                  <Typography variant="h6">tachelhit info</Typography>
+                  <Typography  className={styles.appBody}>
+                    kchem s-tgmmi-negh tsunfut, 
+                    ar-tsflidt i-lkhbar issfrahn, 
+                    ar-taqrat iwaliwn mimnin, 
+                    ar-tssmuqqult lfidyuwat fulkinin. 
+                  </Typography>
+                  <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
+                    <img src={playStore} width={QR_SIZE} alt="play store" />
+                  </a>
+                </div>
+                <div>
+                  <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr6} alt="qr code" />
+                  <Typography variant="h6" className={styles.appTitleArabic} >تاشلحيت ءينفو</Typography>
+                  <Typography  className={styles.appBodyArabic}>
+                    كشم س-تگمّي-نغ تسونفوت،
+                    ار-تسفليدت ءي-لخبار ءيسّفراحن،
+                    ار-تاقرات ءيواليون ميمنين،
+                    ار-تسّموقولت لفيديوات فولكينين.
+                  </Typography>
+                  <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
+                    <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
+                  </a>
+                </div>
+              </Grid>
             </Grid>
-            <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-              <div>
-                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr5} alt="qr code" />
-                <Typography variant="h6">tachelhit info</Typography>
-                <Typography  className={styles.appBody}>
-                  kchem s-tgmmi-negh tsunfut, 
-                  ar-tsflidt i-lkhbar issfrahn, 
-                  ar-taqrat iwaliwn mimnin, 
-                  ar-tssmuqqult lfidyuwat fulkinin. 
-                </Typography>
-                <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
-                  <img src={playStore} width={QR_SIZE} alt="play store" />
-                </a>
-              </div>
-              <div>
-                <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr6} alt="qr code" />
-                <Typography variant="h6" className={styles.appTitleArabic} >تاشلحيت ءينفو</Typography>
-                <Typography  className={styles.appBodyArabic}>
-                  كشم س-تگمّي-نغ تسونفوت،
-                  ار-تسفليدت ءي-لخبار ءيسّفراحن،
-                  ار-تاقرات ءيواليون ميمنين،
-                  ار-تسّموقولت لفيديوات فولكينين.
-                </Typography>
-                <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
-                  <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
-                </a>
-              </div>
-            </Grid>
-          </Grid>
+          </Card>
           <Grid  style={{marginBottom: 20}} container alignItems="center" justifyContent="center" spacing={3}>
             <Grid item>
             <a href="https://www.facebook.com/tachelhit.info/" target="_blank" rel="noreferrer">
@@ -336,9 +181,6 @@ const Home: FunctionalComponent = () => {
                 </a>
              </Grid>
           </Grid>
-          {book && chapter && <audio style={{display: 'none'}} controls ref={audioRef}>
-            <source src={bibleURL} type='audio/mpeg' />
-          </audio>}
         </div>
       ) : <div style={{ textAlign: 'center' }}><CircularProgress style={{ textAlign: 'center' }} /></div>}
     </div>
