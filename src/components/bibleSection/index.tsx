@@ -75,8 +75,8 @@ const BibleSection: FunctionalComponent = () => {
         </div>
         <Grid justifyContent="space-evenly" container spacing={2}>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
-            <Typography variant="h6">injil l-lmasih (video)</Typography>
-            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح (فيديو)</Typography>
+            <Typography variant="h6">injil l-lmasih</Typography>
+            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح</Typography>
             <Button>
               <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
                 <img style={{ maxHeight: 200 }} src={injil} alt="injil l-lmasih" />  
@@ -86,7 +86,7 @@ const BibleSection: FunctionalComponent = () => {
           </Grid>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
             <Typography variant="h6">lkhbar ifulkin</Typography>
-            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين (ارّتن / اسفليد) </Typography>
+            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>لخبار ءيفولكين</Typography>
             <Button>
               <a href={LATIN_NT} target="_blank" rel="noreferrer">
                 <img src={arratn} width={150} alt="bible pdf" />
@@ -95,7 +95,7 @@ const BibleSection: FunctionalComponent = () => {
           </Grid>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
             <Typography variant="h6">arratn l-lanbya</Typography>
-            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا (ارّتن / اسفليد)</Typography>
+            <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ارّتن لّانبيا</Typography>
             <Button onClick={openModal}>
               {/* <a href={IS_DEV ? '/' : LATIN_OT} target="_blank" rel="noreferrer"> */}
                 <img src={ikhbar} width={150} alt="bible pdf" />

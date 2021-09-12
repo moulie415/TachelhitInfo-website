@@ -4,13 +4,14 @@ import AudioPlayer from 'material-ui-audio-player';
 import styles from '../../routes/home/styles.css';
 import { AZUZD, ISEQSITN, MATSSENT, NTHUNA } from '../../constants';
 
-const AudioSection: FunctionalComponent = () => (
+const AudioSection: FunctionalComponent = () => {
+   return (
     <Card style={{padding: 20, paddingBottom: 50}}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">is-tgit amuslem?</Typography>
           <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تگيت اموسلم؟</Typography>
-          <AudioPlayer  src={MATSSENT} download />
+          <AudioPlayer src={MATSSENT} download />
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6">is-tzuzdt laman d-sslamt?</Typography>
@@ -30,5 +31,6 @@ const AudioSection: FunctionalComponent = () => (
       </Grid>
     </Card>
   );
+}
 
 export default AudioSection;
