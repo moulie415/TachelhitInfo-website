@@ -4,9 +4,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import CloseIcon from '@material-ui/icons/Close'
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from "@material-ui/icons/Pause";
-import { LATIN_NT, oldTestament } from '../../constants';
+import { LATIN_NT, LATIN_OT, oldTestament } from '../../constants';
 import styles from '../../routes/home/styles.css';
-import SinglePage from '../pdfviewer/SinglePage';
 import Modal from 'react-modal';
 import { useEffect, useRef, useState } from 'preact/hooks';
 
@@ -63,6 +62,7 @@ const BibleSection: FunctionalComponent = () => {
     }
   }, [playingBible]);
 
+
   const matches = useMediaQuery('(min-width:600px)');
 
 
@@ -112,11 +112,11 @@ const BibleSection: FunctionalComponent = () => {
           contentLabel="pdf modal"
         >
           <div>
-          <IconButton aria-label="close" onClick={closeModal} style={{position: 'absolute', top: 0, right: 0, zIndex: 9}}>
+          <IconButton aria-label="close" onClick={closeModal} style={{position: 'absolute', top: -7, right: -7, zIndex: 9}}>
             <CloseIcon />
           </IconButton>
             <Grid container style={{overflowY: 'scroll'}}>
-              <Grid xs={12} sm={4} item style={{textAlign: 'center'}} >
+              <Grid xs={12} sm={2} item style={{textAlign: 'center'}} >
                 <div style={{overflowY: 'scroll', height: matches ? '80vh' : '30vh'}}>
                     {Object.keys(oldTestament).map(item => (
                         <Accordion  key={item}>
@@ -152,9 +152,8 @@ const BibleSection: FunctionalComponent = () => {
                       ))}
                     </div>
                   </Grid>
-                <Grid item  xs={12} sm={8}>
-                  {/* <AllPages pdf="/assets/pdfs/laahd_aqdim.pdf" /> */}
-                  <SinglePage pdf="/assets/pdfs/laahd_aqdim.pdf" />
+                <Grid item  xs={12} sm={10}>
+                  <iframe src={LATIN_OT} width="100%" height="100%" />
                 </Grid>
             </Grid>
           </div>
