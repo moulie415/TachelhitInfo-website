@@ -16,7 +16,7 @@ const qr6 = '/assets/images/21.jpg';
 
 const Applications: FunctionalComponent = () => (
   <Card style={{ marginTop: 40, marginBottom: 20 }}>
-    <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20}}>
+    <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20, justifyContent: 'center'}}>
       <Typography  style={{color: '#fff', marginRight: 10}} variant="h5">applications</Typography>
       <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">تطبيقات</Typography>
     </div>

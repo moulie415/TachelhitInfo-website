@@ -9,7 +9,7 @@ const jesusFilm = 'assets/images/22.jpg';
 
 const Videos: FunctionalComponent = () => (
   <Card style={{ marginTop: 40, paddingBottom: 20 }} >
-    <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20}}>
+    <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20, justifyContent: 'center'}}>
       <Typography style={{color: '#fff', marginRight: 10}} variant="h5">videos</Typography>
       <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">فيديو</Typography>
     </div>

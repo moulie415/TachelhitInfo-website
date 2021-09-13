@@ -36,12 +36,14 @@ export const PHONE_NUMBER = '+212642596841';
 
 export interface Book {
   name: string;
+  arabicName: string;
   chapters: number[];
 }
 
 export const oldTestament: {[book: number]: Book} = {
   1: {
     name: 'isizwur',
+    arabicName: 'ءيسيزوور',
     chapters: [
       1,
       2,
@@ -93,6 +95,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   2: {
     name: 'ufuå',
+    arabicName: 'ءوفوغ',
     chapters: [
       1,
       2,
@@ -124,14 +127,17 @@ export const oldTestament: {[book: number]: Book} = {
   },
   3: {
     name: 'ayt-lawi',
+    arabicName: 'ايت-لاوي',
     chapters: [1, 3, 4, 10, 11, 13, 16, 17, 19, 20, 24, 26, 27],
   },
   4: {
     name: 'tasutin',
+    arabicName: 'تاسوتين',
     chapters: [1, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20, 21, 22, 23, 27, 28],
   },
   5: {
     name: 'tinbaãin',
+    arabicName: 'تينباضين',
     chapters: [
       1,
       4,
@@ -156,18 +162,22 @@ export const oldTestament: {[book: number]: Book} = {
   },
   6: {
     name: 'yahušuø',
+    arabicName: 'ياهوشوع',
     chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 18, 21, 23, 24],
   },
   7: {
     name: 'iriyasn',
+    arabicName: 'ءيريياسن',
     chapters: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
   },
   8: {
     name: 'raøut',
+    arabicName: 'راعوت',
     chapters: [1, 2, 3, 4],
   },
   9: {
     name: '1 œamwil',
+    arabicName: "1 صامويل",
     chapters: [
       1,
       2,
@@ -195,38 +205,47 @@ export const oldTestament: {[book: number]: Book} = {
   },
   10: {
     name: '2 œamwil',
+    arabicName: "2 صامويل",
     chapters: [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
   },
   11: {
     name: '1 igldan',
+    arabicName: '1 ءيگلدان',
     chapters: [2, 3, 4, 6, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21, 22],
   },
   12: {
     name: '2 igldan',
+    arabicName: '2 ءوسّان ',
     chapters: [2, 4, 5, 6, 16, 17, 18, 19, 20, 21, 22, 23],
   },
   13: {
     name: '1 ussan',
+    arabicName: "1 ءوسّان",
     chapters: [4],
   },
   14: {
     name: '2 ussan',
+    arabicName: "2 ءوسّان",
     chapters: [35, 36],
   },
   15: {
     name: 'øazra',
+    arabicName: 'عازرا',
     chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   16: {
     name: 'naæamyah',
+    arabicName: 'ناحامياه',
     chapters: [1, 2, 4, 5, 6, 7, 8, 9, 10, 12, 13],
   },
   17: {
     name: 'astir',
+    arabicName: 'استير',
     chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   },
   18: {
     name: 'ayyub',
+    arabicName: 'ايّوب',
     chapters: [
       1,
       2,
@@ -262,6 +281,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   19: {
     name: 'imurign',
+    arabicName: 'ءيموريگن',
     chapters: [
       1,
       4,
@@ -315,6 +335,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   20: {
     name: 'imrwasn',
+    arabicName: 'ءيمرواسن',
     chapters: [
       1,
       2,
@@ -348,14 +369,17 @@ export const oldTestament: {[book: number]: Book} = {
   },
   21: {
     name: 'amslmd',
+    arabicName: 'امسلمد',
     chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12],
   },
   22: {
     name: 'tallåat',
+    arabicName: 'تالّغات',
     chapters: [8],
   },
   23: {
     name: 'išaøyah',
+    arabicName: 'ءيشاعياه',
     chapters: [
       1,
       2,
@@ -399,6 +423,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   24: {
     name: 'irmiyah',
+    arabicName: 'ءيرميياه',
     chapters: [
       1,
       2,
@@ -430,63 +455,216 @@ export const oldTestament: {[book: number]: Book} = {
   },
   25: {
     name: 'ismummÐin',
+    arabicName: 'ءيسمومّين',
     chapters: [1, 3, 5],
   },
   26: {
     name: 'iæazqyal',
+    arabicName: 'ءيحازقيال',
     chapters: [1, 2, 3, 4, 5, 6, 18, 33, 34, 36, 37],
   },
   27: {
     name: 'danyal',
+    arabicName: 'دانيال',
     chapters: [1, 2, 3, 4, 5, 6, 7, 9, 12],
   },
   28: {
     name: 'hušaø',
+    arabicName: 'هوشاع',
     chapters: [1, 3, 4, 6, 11, 14],
   },
   29: {
     name: 'yuwil',
+    arabicName: 'يوويل',
     chapters: [2],
   },
   30: {
     name: 'øamus',
+    arabicName: 'عاموس',
     chapters: [3],
   },
   31: {
     name: 'øubadyah',
+    arabicName: 'عوبادياه',
     chapters: [1],
   },
   32: {
     name: 'yunah',
+    arabicName: 'يوناه',
     chapters: [1, 2, 3, 4],
   },
   33: {
     name: 'miçah',
+    arabicName: 'ميخاه',
     chapters: [5, 6],
   },
   34: {
     name: 'naæum',
+    arabicName: 'ناحوم',
     chapters: [1, 3],
   },
   35: {
     name: 'æabaqquq',
+    arabicName: 'حاباقّوق',
     chapters: [1, 2, 3],
   },
   36: {
     name: 'œafanyah',
+    arabicName: 'صافانياه',
     chapters: [1, 3],
   },
   37: {
     name: 'æaggay',
+    arabicName: 'حاگّاي',
     chapters: [1],
   },
   38: {
     name: 'zakaryah',
+    arabicName: 'زاكارياه',
     chapters: [2, 3, 4, 8, 9],
   },
   39: {
     name: 'malaçi',
+    arabicName: 'مالاخي',
     chapters: [3, 4],
   },
 };
+
+export const newTestament: {[book: number]: Book} = {
+  40: {
+    name: 'matta',
+    arabicName: 'ماتّا',
+    chapters: [1],
+  },
+  41: {
+    name: 'marqus',
+    arabicName: 'مارقوس',
+    chapters: [],
+  },
+  42: {
+    name: 'luqa',
+    arabicName: 'لوقا',
+    chapters: [],
+  },
+  43: {
+    name: 'yuæanna',
+    arabicName: 'يوحانّا',
+    chapters: [],
+  },
+  44: {
+    name: 'rqqasn',
+    arabicName: 'ءيرقّاسن',
+    chapters: [],
+  },
+  45: {
+    name: 'ruma',
+    arabicName: 'روما',
+    chapters: [],
+  },
+  46: {
+    name: '1 kurintus',
+    arabicName: '1 كورينتوس',
+    chapters: [],
+  },
+  47: {
+    name: '2 kurintus',
+    arabicName: '2 كورينتوس',
+    chapters: [],
+  },
+  48: {
+    name: 'gala¡iyya',
+    arabicName: 'گالاطيّا',
+    chapters: [],
+  },
+  49: {
+    name: 'afsus',
+    arabicName: '',
+    chapters: [],
+  },
+  50: {
+    name: 'filibbi',
+    arabicName: '',
+    chapters: [],
+  },
+  51: {
+    name: 'kulussi',
+    arabicName: 'كولوسّي',
+    chapters: [],
+  },
+  52: {
+    name: '1 tasaluniki',
+    arabicName: '1 تاسالونيكي',
+    chapters: [],
+  },
+  53: {
+    name: '2 tasaluniki',
+    arabicName: '2 تاسالونيكي',
+    chapters: [],
+  },
+  54: {
+    name: '1 timutaws',
+    arabicName: '1 تيموتاوس',
+    chapters: [],
+  },
+  55: {
+    name: '2 timutaws',
+    arabicName: '2 تيموتاوس',
+    chapters: [],
+  },
+  56: {
+    name: 'ti¡us',
+    arabicName: 'تيطوس',
+    chapters: [],
+  },
+  57: {
+    name: 'filimun',
+    arabicName: 'فيليمون',
+    chapters: [],
+  },
+  58: {
+    name: 'iøbrin',
+    arabicName: 'ءيعبرين',
+    chapters: [],
+  },
+  59: {
+    name: 'yaøqub',
+    arabicName: 'ياعقوب',
+    chapters: [],
+  },
+  60: {
+    name: '1 b¡rus',
+    arabicName: '1 بطرُس',
+    chapters: [],
+  },
+  61: {
+    name: 'b¡rus',
+    arabicName: '2 بطرُس',
+    chapters: [],
+  },
+  62: {
+    name: '1 yuæanna',
+    arabicName: '1 يوحانّ',
+    chapters: [],
+  },
+  63: {
+    name: '2 yuæanna',
+    arabicName: '2 يوحانّا',
+    chapters: [],
+  },
+  64: {
+    name: '3 yuæanna',
+    arabicName: '3 يوحا',
+    chapters: [],
+  },
+  65: {
+    name: 'huda',
+    arabicName: 'ياهود',
+    chapters: [],
+  },
+  66: {
+    name: 'anurñm',
+    arabicName: 'انورژم',
+    chapters: [],
+  },
+}
 
