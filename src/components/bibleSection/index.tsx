@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import CloseIcon from '@material-ui/icons/Close'
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from "@material-ui/icons/Pause";
-import { LATIN_NT, LATIN_OT, oldTestament } from '../../constants';
+import { LATIN_NT, LATIN_OT, newTestament, oldTestament } from '../../constants';
 import styles from '../../routes/home/styles.css';
 import Modal from 'react-modal';
 import { useEffect, useRef, useState } from 'preact/hooks';
@@ -38,6 +38,7 @@ const BibleSection: FunctionalComponent = () => {
   const [arabic, setArabic] = useState(false)
   const [modalIsOpen, setIsOpen] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf')
+  const bookType = pdfSrc.includes('nt') ? newTestament : oldTestament;
 
   function openModal() {
     setIsOpen(true);
@@ -151,14 +152,14 @@ const BibleSection: FunctionalComponent = () => {
             <Grid container style={{overflowY: 'scroll'}}>
               <Grid xs={12} sm={2} item style={{textAlign: 'center'}} >
                 <div style={{overflowY: 'scroll', height: matches ? '80vh' : '30vh'}}>
-                    {Object.keys(oldTestament).map(item => (
+                    {Object.keys(bookType).map(item =>  (
                         <Accordion  key={item}>
                           <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
                             <Typography style={{fontFamily: arabic ? 'Scheherazade' : 'Tashelhayt', fontSize: arabic ? 25 : 'inherit'}}>
-                              {arabic ? oldTestament[Number(item)].arabicName : oldTestament[Number(item)].name}
+                              {arabic ? bookType[Number(item)].arabicName : bookType[Number(item)].name}
                             </Typography>
                           </AccordionSummary>
-                            {oldTestament[Number(item)].chapters.map((c, index) => (
+                            {bookType[Number(item)].chapters.map((c, index) => (
                               <div key={`${item}-${c}`}>
                                 <AccordionDetails style={{padding: 0}}>
                                   <button
