@@ -74,7 +74,7 @@ const BibleSection: FunctionalComponent = () => {
       <Card style={{marginTop: 40, paddingBottom: 20}}>
         <div style={{display: 'flex', backgroundColor: 'rgb(238, 28, 37)', alignItems: 'center', padding: 10, width: '100%', marginBottom: 20, justifyContent: 'center'}}>
           <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">awal n-rbbi</Typography>
-          <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">اوال ءي‑واسّ</Typography>
+          <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">اوال ن-ربّي</Typography>
         </div>
         <Grid justifyContent="space-evenly" container spacing={2}>
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>

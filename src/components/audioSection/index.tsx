@@ -9,8 +9,8 @@ const AudioSection: FunctionalComponent = () => {
     <Card style={{padding: 20, paddingBottom: 50}}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={3}>
-          <Typography variant="h6">is-tgit amuslem?</Typography>
-          <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءيس-تگيت اموسلم؟</Typography>
+          <Typography variant="h6">ma-tssent f-walli ra-d-yašk?</Typography>
+          <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ما-تسّنت ف-والّي را-د-ياشك؟</Typography>
           <AudioPlayer src={MATSSENT} download volume={false} />
         </Grid>
         <Grid item xs={12} sm={6} md={3}>

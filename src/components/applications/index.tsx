@@ -37,7 +37,7 @@ const Applications: FunctionalComponent = () => (
       <Grid  style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
 
           <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr2} alt="qr code" />
-          <Typography variant="h6" className={styles.appTitleArabic} >اوال ءيواسّ</Typography>
+          <Typography variant="h6" className={styles.appTitleArabic} >اوال ءي-واسّ</Typography>
           <Typography  className={styles.appBodyArabic}>
             اسّ ف&#8209;واسّ
             راد&#8209;اك&#8209;نتازن اوال ءيميمن
@@ -67,7 +67,7 @@ const Applications: FunctionalComponent = () => (
           <Grid style={{ textAlign: 'center' }} item xs={12} sm={3} md={3}>
 
         <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr4} alt="qr code" />
-        <Typography variant="h6" className={styles.appTitleArabic} >امسيگّل</Typography>
+        <Typography variant="h6" className={styles.appTitleArabic} >امودّو ن-ومسيگّل</Typography>
           <Typography  className={styles.appBodyArabic}>
             لقيست ن&#8209;يان ءيگومّين
             لهنا ت&#8209;تايري د&#8209;سّلامت،
