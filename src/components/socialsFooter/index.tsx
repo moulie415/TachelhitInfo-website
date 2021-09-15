@@ -7,7 +7,7 @@ import { PHONE_NUMBER } from '../../constants';
 
 const SocialsFooter: FunctionalComponent = () => {
   return (
-    <Grid  style={{marginBottom: 20}} container alignItems="center" justifyContent="center" spacing={3}>
+    <Grid  style={{marginBottom: 20}} container alignItems="center" justifyContent="center">
       <Grid item>
         <Button>
           <a href="https://www.facebook.com/tachelhit.info/" target="_blank" rel="noreferrer">

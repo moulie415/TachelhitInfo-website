@@ -563,7 +563,7 @@ export const newTestament: {[book: number]: Book} = {
   },
   46: {
     name: '1 kurintus',
-    arabicName: '1 كورينتوس',
+    arabicName: 'كورينتوس 1',
     chapters: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
   },
   47: {

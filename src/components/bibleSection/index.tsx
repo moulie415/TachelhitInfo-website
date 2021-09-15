@@ -76,13 +76,13 @@ const BibleSection: FunctionalComponent = () => {
           <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">awal n-rbbi</Typography>
           <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">اوال ن-ربّي</Typography>
         </div>
-        <Grid justifyContent="space-evenly" container spacing={2}>
-          <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+        <Grid justifyContent="space-evenly" container>
+          <Grid style={{ textAlign: 'center', marginLeft: '2%', marginRight: '2%' }} item xs={12} sm={6} md={3}>
             <Typography variant="h6">injil l-lmasih</Typography>
             <Typography variant="h4" style={{ marginBottom: 20 }} className={styles.arabic}>ءينجيل لّماسيح</Typography>
             <Button>
               <a href='https://live.bible.is/bible/SHIRBD/MRK/1' target="_blank" rel="noreferrer">
-                <img style={{ maxHeight: 200 }} src={injil} alt="injil l-lmasih" />  
+                <img style={{width: '100%'}} src={injil} alt="injil l-lmasih" />  
               </a>
             </Button>
           </Grid>
@@ -155,7 +155,13 @@ const BibleSection: FunctionalComponent = () => {
                     {Object.keys(bookType).map(item =>  (
                         <Accordion  key={item}>
                           <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
-                            <Typography style={{fontFamily: arabic ? 'Scheherazade' : 'Tashelhayt', fontSize: arabic ? 25 : 'inherit'}}>
+                            <Typography 
+                              style={{
+                                fontFamily: arabic ? 'Scheherazade' : 'Tashelhayt',
+                                fontSize: arabic ? 25 : 'inherit',
+                                direction: arabic ? 'rtl' : 'inherit'
+                              }}
+                            >
                               {arabic ? bookType[Number(item)].arabicName : bookType[Number(item)].name}
                             </Typography>
                           </AccordionSummary>

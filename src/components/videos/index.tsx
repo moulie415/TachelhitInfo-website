@@ -13,26 +13,26 @@ const Videos: FunctionalComponent = () => (
       <Typography style={{color: '#fff', marginRight: 10}} variant="h5">videos</Typography>
       <Typography className={styles.arabic} style={{ color: '#fff' }} variant="h4">فيديو</Typography>
     </div>
-    <Grid justifyContent="space-evenly" container spacing={2}>
-      <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+    <Grid justifyContent="space-evenly" container>
+      <Grid style={{ textAlign: 'center', marginLeft: '2%', marginRight: '2%' }} item xs={12} sm={6} md={3}>
         <Typography variant="h6">maylli iqsad rbbi</Typography>
         <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">مايلّي ءيقصاد ربّي</Typography>
-        <video style={{ maxHeight: 200 }} poster={rbbi} controls>
+        <video style={{width: '100%'}} poster={rbbi} controls>
           <source src={GODS_STORY} type="video/mp4" />
         </video>
       </Grid>
-      <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+      <Grid style={{ textAlign: 'center', marginLeft: '2%', marginRight: '2%' }} item xs={12} sm={6} md={3}>
         <Typography variant="h6">amuddu n-umsiggel</Typography>
         <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">امودّو ن-ومسيگّل</Typography>
         <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
-          <img style={{ maxHeight: 200 }} src={amsiggel} alt="Amsiggel" />
+          <img style={{width: '100%'}} src={amsiggel} alt="Amsiggel" />
         </a>
       </Grid>
-      <Grid style={{ textAlign: 'center' }} item xs={12} sm={6} md={3}>
+      <Grid style={{ textAlign: 'center', marginLeft: '2%', marginRight: '2%' }} item xs={12} sm={6} md={3}>
         <Typography variant="h6">tudert l-lmasih</Typography>
         <Typography className={styles.arabic} style={{ marginBottom: 10 }} variant="h4">تودرت لّماسيح</Typography>
         <a href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html" target="_blank" rel="noreferrer">
-          <img style={{ maxHeight: 200 }} src={jesusFilm} alt="Jesus Film" />
+          <img style={{width: '100%'}} src={jesusFilm} alt="Jesus Film" />
         </a>
       </Grid>
     </Grid>
