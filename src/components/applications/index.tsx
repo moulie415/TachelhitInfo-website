@@ -38,10 +38,10 @@ const Applications: FunctionalComponent = () => (
         <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr2} alt="qr code" />
         <Typography variant="h6" className={styles.appTitleArabic} >اوال ءي-واسّ</Typography>
         <Typography  className={styles.appBodyArabic}>
-          اسّ ف&#8209;واسّ
+          .اسّ ف&#8209;واسّ
           راد&#8209;اك&#8209;نتازن اوال ءيميمن
           غ&#8209;وارّاتن ن&#8209;سيدي ربّي.
-          سفلد&#8209;اس ار&#8209;تّزعامت س&#8209;رّجا ءيصحان.
+          سفلد&#8209;اس ار&#8209;تّزعامت س&#8209;رّجا ءيصحان
         </Typography>
         <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
           <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
@@ -63,9 +63,9 @@ const Applications: FunctionalComponent = () => (
         <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr4} alt="qr code" />
         <Typography variant="h6" className={styles.appTitleArabic} >امودّو ن-ومسيگّل</Typography>
         <Typography  className={styles.appBodyArabic}>
-          لقيست ن&#8209;يان ءيگومّين
+          .لقيست ن&#8209;يان ءيگومّين
           لهنا ت&#8209;تايري د&#8209;سّلامت،
-          ءيفتو ار&#8209;سرسن&#8209;يسيگّيل.
+          ءيفتو ار&#8209;سرسن&#8209;يسيگّيل
         </Typography>
         <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
           <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
@@ -88,10 +88,10 @@ const Applications: FunctionalComponent = () => (
         <img style={{ margin: 10 }} height={QR_SIZE} width={QR_SIZE} src={qr6} alt="qr code" />
         <Typography variant="h6" className={styles.appTitleArabic} >تاشلحيت ءينفو</Typography>
         <Typography  className={styles.appBodyArabic}>
-          كشم س&#8209;تگمّي&#8209;نغ تسونفوت،
+          .كشم س&#8209;تگمّي&#8209;نغ تسونفوت،
           ار&#8209;تسفليدت ءي&#8209;لخبار ءيسّفراحن،
           ار&#8209;تاقرات ءيواليون ميمنين،
-          ار&#8209;تسّموقولت لفيديوات فولكينين.
+          ار&#8209;تسّموقولت لفيديوات فولكينين
         </Typography>
         <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
           <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />

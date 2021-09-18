@@ -131,7 +131,7 @@ const BibleSection: FunctionalComponent = () => {
                 }}
                 style={{ marginBottom: 20 }}
               >
-                <Typography variant="h4"  className={styles.arabic}>ارّتن لّانبيا</Typography>
+                <Typography variant="h4"  className={styles.arabic}>ارّاتن لّانبيا</Typography>
               </Button>
             </div>
             <img src={ikhbar} width={150} alt="bible pdf" />

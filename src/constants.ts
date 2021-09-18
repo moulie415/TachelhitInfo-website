@@ -525,7 +525,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   39: {
     name: 'malaçi',
-    arabicName: 'مالاخي',
+    arabicName: 'مالاخيf',
     chapters: [3, 4],
   },
 };
@@ -563,7 +563,7 @@ export const newTestament: {[book: number]: Book} = {
   },
   46: {
     name: '1 kurintus',
-    arabicName: 'كورينتوس 1',
+    arabicName: '1 كورينتوس',
     chapters: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
   },
   47: {
@@ -578,12 +578,12 @@ export const newTestament: {[book: number]: Book} = {
   },
   49: {
     name: 'afsus',
-    arabicName: '',
+    arabicName: 'افسوس',
     chapters: [1,2,3,4,5,6],
   },
   50: {
     name: 'filibbi',
-    arabicName: '',
+    arabicName: 'فيليبّي',
     chapters: [1,2,3,4],
   },
   51: {
