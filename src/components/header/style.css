@@ -11,6 +11,7 @@
   font-family: Scheherazade;
   font-size: 32px;
   line-height: 25px;
+  direction: rtl;
 }
 
 .link {
@@ -23,5 +24,6 @@
   font-family: Scheherazade;
   font-size: 22px;
   line-height: 20px;
+  direction: rtl;
 }
 
