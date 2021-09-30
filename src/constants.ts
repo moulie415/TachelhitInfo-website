@@ -525,7 +525,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   39: {
     name: 'malaçi',
-    arabicName: 'مالاخيf',
+    arabicName: 'مالاخي',
     chapters: [3, 4],
   },
 };

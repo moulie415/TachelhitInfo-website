@@ -32,6 +32,7 @@ canvas {
 @font-face {
   font-family: Scheherazade;
   src: url('../assets/fonts/ScheherazadeOTM2A.ttf') format('truetype');
+  /* unicode-range: U+0-2f, U+40-10FFFF; */
 }
 
 @font-face {

@@ -69,7 +69,6 @@ const BibleSection: FunctionalComponent = () => {
 
   const getArabicBookText = (str: string) => {
     const split = str.split(' ');
-    console.log(split)
     return <div style={{display: 'flex'}}>
       {split.map(str => {
       return (
