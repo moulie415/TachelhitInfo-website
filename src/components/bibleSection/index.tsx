@@ -53,6 +53,8 @@ const BibleSection: FunctionalComponent = () => {
     setPlayingBible(false);
   }
 
+  
+
   useEffect(() => {
     if (playingBible) {
       if (audioRef.current) {
@@ -64,6 +66,26 @@ const BibleSection: FunctionalComponent = () => {
         audioRef.current.pause();
     }
   }, [playingBible]);
+
+  const getArabicBookText = (str: string) => {
+    const split = str.split(' ');
+    console.log(split)
+    return <div style={{display: 'flex'}}>
+      {split.map(str => {
+      return (
+        <Typography 
+          style={{
+            fontFamily: isNaN(Number(str)) ? 'Scheherazade' : 'inherit',
+            fontSize: 25,
+            direction: 'rtl',
+            marginRight: 5
+          }}
+        >
+          {str}
+        </Typography>
+      )
+    })}</div>
+  }
 
 
   const matches = useMediaQuery('(min-width:600px)');
@@ -162,7 +184,7 @@ const BibleSection: FunctionalComponent = () => {
                                 direction: arabic ? 'rtl' : 'inherit'
                               }}
                             >
-                              {arabic ? bookType[Number(item)].arabicName : bookType[Number(item)].name}
+                              {arabic ? getArabicBookText(bookType[Number(item)].arabicName) : bookType[Number(item)].name}
                             </Typography>
                           </AccordionSummary>
                             {bookType[Number(item)].chapters.map((c, index) => (
