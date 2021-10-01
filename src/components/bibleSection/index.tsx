@@ -1,13 +1,13 @@
 import { Grid, Typography, Card, Button, Accordion, AccordionDetails, AccordionSummary, useMediaQuery, IconButton, Divider } from '@material-ui/core';
 import { FunctionalComponent, h } from 'preact';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CloseIcon from '@material-ui/icons/Close'
+import CloseIcon from '@material-ui/icons/Close';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from "@material-ui/icons/Pause";
-import { LATIN_NT, LATIN_OT, newTestament, oldTestament } from '../../constants';
-import styles from '../../routes/home/styles.css';
 import Modal from 'react-modal';
 import { useEffect, useRef, useState } from 'preact/hooks';
+import { LATIN_NT, LATIN_OT, newTestament, oldTestament } from '../../constants';
+import styles from '../../routes/home/styles.css';
 
 
 const ikhbar = '/assets/images/11.jpg';
@@ -35,9 +35,9 @@ const BibleSection: FunctionalComponent = () => {
   const [playingBible, setPlayingBible] = useState(false);
   const bibleURL = `https://raw.githubusercontent.com/moulie415/WordOfGodForEachDay/master/files/bible/${book}/${chapter}.mp3`;
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [arabic, setArabic] = useState(false)
+  const [arabic, setArabic] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf')
+  const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf');
   const bookType = pdfSrc.includes('nt') ? newTestament : oldTestament;
 
   function openModal() {
@@ -70,21 +70,20 @@ const BibleSection: FunctionalComponent = () => {
   const getArabicBookText = (str: string) => {
     const split = str.split(' ');
     return <div style={{display: 'flex'}}>
-      {split.map(str => {
-      return (
-        <Typography 
+      {split.map(s => (
+        <Typography
+          key={s}
           style={{
-            fontFamily: isNaN(Number(str)) ? 'Scheherazade' : 'inherit',
+            fontFamily: isNaN(Number(s)) ? 'Scheherazade' : 'inherit',
             fontSize: 25,
             direction: 'rtl',
             marginRight: 5
           }}
         >
-          {str}
+          {s}
         </Typography>
-      )
-    })}</div>
-  }
+      ))}</div>;
+  };
 
 
   const matches = useMediaQuery('(min-width:600px)');
@@ -112,7 +111,7 @@ const BibleSection: FunctionalComponent = () => {
               <Button
                 onClick={() => {
                   openModal();
-                  setPdfSrc('../../assets/pdfs/nt_lat.pdf')
+                  setPdfSrc('../../assets/pdfs/nt_lat.pdf');
                   setArabic(false);
                 }}
                 style={{textTransform: 'inherit', padding: 0}}
@@ -122,7 +121,7 @@ const BibleSection: FunctionalComponent = () => {
               <Button
                 onClick={() => {
                   openModal();
-                  setPdfSrc('../../assets/pdfs/nt_abc.pdf')
+                  setPdfSrc('../../assets/pdfs/nt_abc.pdf');
                   setArabic(true);
                 }}
                 style={{ marginBottom: 20 }}
@@ -137,7 +136,7 @@ const BibleSection: FunctionalComponent = () => {
             <Button
                 onClick={() => {
                   openModal();
-                  setPdfSrc('../../assets/pdfs/ot_lat.pdf')
+                  setPdfSrc('../../assets/pdfs/ot_lat.pdf');
                   setArabic(false);
                 }}
                 style={{textTransform: 'inherit', padding: 0}}
@@ -147,7 +146,7 @@ const BibleSection: FunctionalComponent = () => {
               <Button
                 onClick={() => {
                   openModal();
-                  setPdfSrc('../../assets/pdfs/ot_abc.pdf')
+                  setPdfSrc('../../assets/pdfs/ot_abc.pdf');
                   setArabic(true);
                 }}
                 style={{ marginBottom: 20 }}
@@ -226,6 +225,6 @@ const BibleSection: FunctionalComponent = () => {
           </audio>}
     </div>
     );
-  }
+  };
 
 export default BibleSection;

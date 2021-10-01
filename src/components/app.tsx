@@ -9,6 +9,7 @@ import theme from './theme';
 import Psalms from '../routes/psalms/Psalms';
 import Questions from '../routes/questions/Questions';
 import Documents from '../routes/documents/Documents';
+import Email from '../routes/email/Email';
 
 const App: FunctionalComponent = () => (
         <div id="preact_root">
@@ -19,6 +20,7 @@ const App: FunctionalComponent = () => (
                 <Route path="psalms" component={Psalms} />
                 <Route path="questions" component={Questions} />
                 <Route path="documents" component={Documents} />
+                <Route path="email" component={Email} />
                 <NotFoundPage default />
             </Router> 
 
