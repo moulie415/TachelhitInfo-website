@@ -1,5 +1,5 @@
 import { FunctionalComponent, h } from 'preact';
-import {  Button, Grid } from '@material-ui/core';
+import {  Button, Grid, Link } from '@material-ui/core';
 import { Email, Facebook, WhatsApp } from '@material-ui/icons';
 import { PHONE_NUMBER } from '../../constants';
 
@@ -23,11 +23,13 @@ const SocialsFooter: FunctionalComponent = () => {
           </Button>
         </Grid>
         <Grid item style={{marginRight: 10, marginLeft: 10}}>
+          <Link href="email">
            <Button>
               <a style={{color: 'inherit'}} href="mailto:RD113267@swissmail.org">
                 <Email style={{fontSize: 50}} />
               </a>
           </Button>
+          </Link>
         </Grid>
     </Grid>
 

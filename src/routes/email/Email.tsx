@@ -1,6 +1,8 @@
 import { FunctionalComponent, h } from 'preact';
 import axios from 'axios';
 import { useState } from 'preact/hooks';
+import { Snackbar } from '@material-ui/core';
+import { colors } from '../../constants';
 
 
 function Email() {
@@ -8,10 +10,18 @@ function Email() {
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
   const [message, setMessage] = useState('');
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
 
   const handleSubmit = async (event: Event) => {
       event.preventDefault();
       try {
+      if (!name) {
+        setSnackbarMessage('Please enter a name');
+        setSnackbarOpen(true);
+        return;
+      }
       const formData = new FormData();
       formData.append('name', name);
       formData.append('email', email);
@@ -51,6 +61,12 @@ function Email() {
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+        <Snackbar
+          open={snackbarOpen}
+          autoHideDuration={3000}
+          onClose={() => setSnackbarOpen(false)}
+          message={snackbarMessage}
+        />
       </div>
   );
 }
