@@ -75,19 +75,17 @@ function Email() {
       <Card style={{marginTop: 40, marginBottom: 20}}>
         <div
           style={{
-            display: 'flex',
             backgroundColor: 'rgb(238, 28, 37)',
-            alignItems: 'center',
             padding: 10,
             width: '100%',
             marginBottom: 20,
-            justifyContent: 'center',
+            textAlign: 'center',
           }}>
-          <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">
-            imurign
+          <Typography style={{marginRight: 10, color: '#fff'}} variant="h4">
+            Ara-yaghd - ⴰⵔⴰ ⵢⴰⵖⴷ
           </Typography>
-          <Typography style={{color: '#fff'}} variant="h4">
-            ءيموريگن
+          <Typography style={{color: '#fff'}} variant="h6">
+            Contact us - Contactez-nous - اتصل بنا
           </Typography>
         </div>
         <div className="email-form" style={{padding: 20}}>
