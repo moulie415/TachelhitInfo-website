@@ -58,7 +58,8 @@ function Email() {
       setEmail('');
       setCountry('');
       setMessage('');
-    } catch (e: any) {
+    } catch (e) {
+      // @ts-ignore
       setSnackbarMessage(e.message);
       setSnackbarOpen(true);
     }
