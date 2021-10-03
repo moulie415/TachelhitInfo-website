@@ -4,7 +4,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #fafafa;
+  background: #f2f3f4;
   font-family: 'Helvetica Neue', arial, sans-serif;
   font-weight: 400;
   color: #444;
@@ -37,5 +37,10 @@ canvas {
 
 @font-face {
   font-family: Tashelhayt;
-  src: url('../assets/fonts//TashelhaytSILDoulos.ttf') format('truetype');
+  src: url('../assets/fonts/TashelhaytSILDoulos.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Tifinagh;
+  src: url('../assets/fonts/Tifinagh.ttf') format('truetype');
 }
