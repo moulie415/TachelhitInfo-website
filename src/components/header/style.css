@@ -8,7 +8,7 @@
 }
 
 .titleArabic {
-  font-family: Scheherazade !important;
+  /* font-family: Scheherazade !important; */
   font-size: 32px !important;
   line-height: 25px;
   direction: rtl;
@@ -21,7 +21,7 @@
 }
 
 .linkArabic {
-  font-family: Scheherazade  !important;
+  /* font-family: Scheherazade  !important; */
   font-size: 22px !important;
   line-height: 20px;
   direction: rtl;

@@ -1,8 +1,65 @@
-import {Button, Card, Grid, Typography} from '@material-ui/core';
+import {
+  Button,
+  Card,
+  Grid,
+  Tab,
+  Tabs,
+  Typography,
+  IconButton,
+  useMediaQuery,
+} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
+import {useState} from 'preact/hooks';
+import CloseIcon from '@material-ui/icons/Close';
+import Modal from 'react-modal';
+import {colors, psalmData} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '50%',
+  },
+};
+
 function Psalms() {
+  const [tab, setTab] = useState(0);
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [pdfSrc, setPdfSrc] = useState('');
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {}
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+    setTab(newValue);
+  };
+
+  const handleClick = (arabic: string, tif: string) => {
+    if (tab === 0) {
+      setPdfSrc('');
+    }
+    if (tab === 1) {
+      setPdfSrc(tif);
+    }
+    if (tab === 2) {
+      setPdfSrc(arabic);
+    }
+    openModal();
+  };
+
+  const matches = useMediaQuery('(min-width:600px)');
+
   return (
     <div
       style={{
@@ -30,30 +87,79 @@ function Psalms() {
             ءيموريگن
           </Typography>
         </div>
-        <Grid justifyContent="center" container>
-          <Grid item xs={12} sm={4}>
-            <Button
-              onClick={() => 0}
-              style={{marginBottom: 20, textTransform: 'inherit', flex: 1}}>
-              <Typography variant="h6">imurign i-sidi rbbi</Typography>
-            </Button>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Button onClick={() => 0} style={{marginBottom: 20, flex: 1}}>
-              <Typography variant="h6" className={styles.tifinagh}>
-                imurign i-sidi rbbi
-              </Typography>
-            </Button>
-          </Grid>
-          <Grid>
-            <Button onClick={() => 0} style={{marginBottom: 20, flex: 1}}>
-              <Typography variant="h4" className={styles.arabic}>
-                لخبار ءيفولكين
-              </Typography>
-            </Button>
-          </Grid>
-        </Grid>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <Tabs
+            value={tab}
+            indicatorColor="primary"
+            textColor="primary"
+            onChange={handleChange}
+            aria-label="disabled tabs example">
+            <Tab
+              style={{textTransform: 'inherit', fontSize: 20}}
+              label="imurign i-sidi rbbi"
+            />
+            <Tab
+              style={{fontSize: 20}}
+              className={styles.tifinagh}
+              label="imurign i-sidi rbbi"
+            />
+            <Tab
+              style={{fontSize: 30}}
+              className={styles.arabic}
+              label="لخبار ءيفولكين"
+            />
+          </Tabs>
+        </div>
+        <div
+          style={{display: 'flex', justifyContent: 'space-evenly', margin: 10}}>
+          <div>
+            {psalmData
+              .slice(0, psalmData.length / 2)
+              .map(({psalm, name, pdfArabic, pdfTif}) => {
+                return (
+                  <div key={psalm}>
+                    <Button
+                      onClick={() => handleClick(pdfArabic, pdfTif)}
+                      style={{textTransform: 'inherit'}}>
+                      <span style={{color: colors.red}}>{psalm}</span>
+                      <span>&nbsp;</span>
+                      <span> </span>
+                      <span>{name}</span>
+                    </Button>
+                  </div>
+                );
+              })}
+          </div>
+          <div>
+            {psalmData
+              .slice(psalmData.length / 2 + 1)
+              .map(({psalm, name, pdfArabic, pdfTif}) => {
+                return (
+                  <div key={psalm}>
+                    <Button
+                      onClick={() => handleClick(pdfArabic, pdfTif)}
+                      style={{textTransform: 'inherit'}}>
+                      <span style={{color: colors.red}}>{psalm}</span>
+                      <span>&nbsp;</span>
+                      <span> </span>
+                      <span>{name}</span>
+                    </Button>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </Card>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="pdf modal">
+        <div style={{height: matches ? '80vh' : '30vh'}}>
+          <iframe src={pdfSrc} width="100%" height="100%" />
+        </div>
+      </Modal>
     </div>
   );
 }

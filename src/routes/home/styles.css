@@ -5,7 +5,7 @@
 }
 
 .arabic {
-	font-family: Scheherazade  !important;
+	/* font-family: Scheherazade  !important; */
 	direction: rtl;
 }
 
@@ -19,13 +19,13 @@
 } 
 
 .appTitleArabic {
-	font-family: Scheherazade  !important;
+	/* font-family: Scheherazade  !important; */
 	font-size: 34px !important;
 	direction: rtl;
 }
 
 .appBodyArabic {
-	font-family: Scheherazade  !important;
+	/* font-family: Scheherazade  !important; */
 	font-size: 24px !important;
 	direction: rtl;
 	/* min-height: calc(150px - 3vw); */

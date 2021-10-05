@@ -80,7 +80,9 @@ const BibleSection: FunctionalComponent = () => {
           <Typography
             key={s}
             style={{
-              fontFamily: isNaN(Number(s)) ? 'Scheherazade' : 'inherit',
+              fontFamily: isNaN(Number(s))
+                ? /*'Scheherazade'*/ 'inherit'
+                : 'inherit',
               fontSize: 25,
               direction: 'rtl',
               marginRight: 5,
@@ -217,7 +219,9 @@ const BibleSection: FunctionalComponent = () => {
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                       <Typography
                         style={{
-                          fontFamily: arabic ? 'Scheherazade' : 'Tashelhayt',
+                          fontFamily: arabic
+                            ? /*'Scheherazade'*/ 'inherit'
+                            : 'Tashelhayt',
                           fontSize: arabic ? 25 : 'inherit',
                           direction: arabic ? 'rtl' : 'inherit',
                         }}>
