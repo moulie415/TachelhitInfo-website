@@ -14,6 +14,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Modal from 'react-modal';
 import {colors, psalmData} from '../../constants';
 import styles from '../../routes/home/styles.css';
+import SocialsFooter from '../../components/socialsFooter';
 
 const customStyles = {
   content: {
@@ -177,6 +178,7 @@ function Psalms() {
           <source src={audio} type="audio/mpeg" />
         </audio>
       </Modal>
+      <SocialsFooter />
     </div>
   );
 }

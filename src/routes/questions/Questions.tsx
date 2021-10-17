@@ -1,8 +1,11 @@
-import { FunctionalComponent, h } from 'preact';
+import {FunctionalComponent, h} from 'preact';
+import SocialsFooter from '../../components/socialsFooter';
 
 function Questions() {
   return (
-    <div ></div>
+    <div>
+      <SocialsFooter />
+    </div>
   );
 }
 
