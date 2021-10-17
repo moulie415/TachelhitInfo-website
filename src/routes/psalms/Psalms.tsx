@@ -32,7 +32,7 @@ function Psalms() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
   const player = useRef<HTMLAudioElement>(null);
-  const [audio, setAudio] = useState();
+  const [audio, setAudio] = useState('');
 
   function openModal() {
     setIsOpen(true);
