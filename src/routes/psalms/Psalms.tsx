@@ -9,7 +9,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
-import {useState} from 'preact/hooks';
+import {useRef, useState} from 'preact/hooks';
 import CloseIcon from '@material-ui/icons/Close';
 import Modal from 'react-modal';
 import {colors, psalmData} from '../../constants';
@@ -31,12 +31,16 @@ function Psalms() {
   const [tab, setTab] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
+  const player = useRef<HTMLAudioElement>(null);
+  const [audio, setAudio] = useState();
 
   function openModal() {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {}
+  function afterOpenModal() {
+    player.current?.play();
+  }
 
   function closeModal() {
     setIsOpen(false);
@@ -45,9 +49,14 @@ function Psalms() {
     setTab(newValue);
   };
 
-  const handleClick = (arabic: string, tif: string) => {
+  const handleClick = (
+    lat: string,
+    arabic: string,
+    tif: string,
+    audio: string,
+  ) => {
     if (tab === 0) {
-      setPdfSrc('');
+      setPdfSrc(lat);
     }
     if (tab === 1) {
       setPdfSrc(tif);
@@ -55,6 +64,7 @@ function Psalms() {
     if (tab === 2) {
       setPdfSrc(arabic);
     }
+    setAudio(audio);
     openModal();
   };
 
@@ -115,11 +125,13 @@ function Psalms() {
           <div>
             {psalmData
               .slice(0, psalmData.length / 2)
-              .map(({psalm, name, pdfArabic, pdfTif}) => {
+              .map(({psalm, name, pdfLat, pdfArabic, pdfTif, audio}) => {
                 return (
                   <div key={psalm}>
                     <Button
-                      onClick={() => handleClick(pdfArabic, pdfTif)}
+                      onClick={() =>
+                        handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                      }
                       style={{textTransform: 'inherit'}}>
                       <span style={{color: colors.red}}>{psalm}</span>
                       <span>&nbsp;</span>
@@ -133,11 +145,13 @@ function Psalms() {
           <div>
             {psalmData
               .slice(psalmData.length / 2 + 1)
-              .map(({psalm, name, pdfArabic, pdfTif}) => {
+              .map(({psalm, name, pdfLat, pdfArabic, pdfTif, audio}) => {
                 return (
                   <div key={psalm}>
                     <Button
-                      onClick={() => handleClick(pdfArabic, pdfTif)}
+                      onClick={() =>
+                        handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                      }
                       style={{textTransform: 'inherit'}}>
                       <span style={{color: colors.red}}>{psalm}</span>
                       <span>&nbsp;</span>
@@ -156,9 +170,12 @@ function Psalms() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="pdf modal">
-        <div style={{height: matches ? '80vh' : '30vh'}}>
+        <div style={{height: matches ? '70vh' : '30vh'}}>
           <iframe src={pdfSrc} width="100%" height="100%" />
         </div>
+        <audio style={{width: '100%'}} controls ref={player}>
+          <source src={audio} type="audio/mpeg" />
+        </audio>
       </Modal>
     </div>
   );

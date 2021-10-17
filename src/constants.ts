@@ -401,7 +401,7 @@ export const newTestament: {[book: number]: Book} = {
   65: {
     name: 'yahuda',
     arabicName: 'ياهود',
-    chapters: [],
+    chapters: [1],
   },
   66: {
     name: 'anurñm',
@@ -457,10 +457,41 @@ const names = [
   'tawassna',
 ];
 
+const getPageNumber = (index: number) => {
+  if (index < 4) {
+    return 2;
+  }
+  if (index < 7) {
+    return 3;
+  }
+  if (index < 9) {
+    return 4;
+  }
+  if (index < 11) {
+    return 5;
+  }
+  if (index < 13) {
+    return 6;
+  }
+  if (index < 15) {
+    return 7;
+  }
+  if (index < 16) {
+    return 8;
+  }
+  if (index < 22) {
+    return 9;
+  }
+  return 10;
+};
+
 export const psalmData = psalms.map((psalm, index) => {
   const audio = `./assets/audio/psalms/Ps ${psalm}.mp3`;
+  const pdfLat = `./assets/pdfs/psalms/tch-psalms-lat.pdf#page=${getPageNumber(
+    index,
+  )}`;
   const pdfArabic = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}A.pdf`;
   const pdfTif = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}Tif.pdf`;
 
-  return {psalm, audio, pdfArabic, pdfTif, name: names[index]};
+  return {psalm, audio, pdfLat, pdfArabic, pdfTif, name: names[index]};
 });
