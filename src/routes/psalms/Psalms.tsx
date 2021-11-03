@@ -46,6 +46,7 @@ function Psalms() {
   function closeModal() {
     setIsOpen(false);
   }
+
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setTab(newValue);
   };
