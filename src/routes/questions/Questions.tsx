@@ -1,5 +1,7 @@
 import {
+  Button,
   Card,
+  IconButton,
   List,
   ListItem,
   Typography,
@@ -7,6 +9,7 @@ import {
 } from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import {useRef, useState} from 'preact/hooks';
+import CloseIcon from '@material-ui/icons/Close';
 import Modal from 'react-modal';
 import SocialsFooter from '../../components/socialsFooter';
 import {colors, questionList} from '../../constants';
@@ -95,9 +98,14 @@ function Questions() {
         style={customStyles}
         contentLabel="question modal">
         <div style={{maxHeight: '70vh'}}>
-          <audio style={{width: '100%'}} controls ref={player}>
-            <source src={audio} type="audio/mpeg" />
-          </audio>
+          <div style={{display: 'flex'}}>
+            <audio style={{width: '100%'}} controls ref={player}>
+              <source src={audio} type="audio/mpeg" />
+            </audio>
+            <IconButton onClick={closeModal}>
+              <CloseIcon />
+            </IconButton>
+          </div>
           <Typography variant="h4" gutterBottom>{`Aseqsi ${
             question + 1
           }`}</Typography>
