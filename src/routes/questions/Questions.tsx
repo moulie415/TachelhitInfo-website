@@ -1,4 +1,4 @@
-import {Card, List, ListItem} from '@material-ui/core';
+import {Card, List, ListItem, Typography} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import {useRef, useState} from 'preact/hooks';
 import Modal from 'react-modal';
@@ -19,7 +19,7 @@ const customStyles = {
 
 function Questions() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [question, setQuestion] = useState<number>();
+  const [question, setQuestion] = useState<number>(0);
   const player = useRef<HTMLAudioElement>(null);
   const [audio, setAudio] = useState('');
 
@@ -52,6 +52,7 @@ function Questions() {
                   setQuestion(index);
                   setModalIsOpen(true);
                   openModal();
+                  setAudio(`../../assets/audio/questions/Q${index + 1}.mp3`);
                 }}>
                 <div
                   style={{
@@ -62,7 +63,7 @@ function Questions() {
                     margin: 'auto',
                     padding: 5,
                     textAlign: 'center',
-                    fontFamily: 'Tashelhayt',
+                    // fontFamily: 'Tashelhayt',
                   }}>
                   <div
                     style={{
@@ -88,6 +89,13 @@ function Questions() {
         <audio style={{width: '100%'}} controls ref={player}>
           <source src={audio} type="audio/mpeg" />
         </audio>
+        <Typography variant="h4" gutterBottom>{`Aseqsi ${
+          question + 1
+        }`}</Typography>
+        <Typography variant="h6" style={{color: colors.red}} gutterBottom>
+          {questionList[question].question}
+        </Typography>
+        <Typography gutterBottom>{questionList[question].body}</Typography>
       </Modal>
       <SocialsFooter />
     </div>
