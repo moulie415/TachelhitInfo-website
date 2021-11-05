@@ -78,7 +78,7 @@ function Psalms() {
         minHeight: '100%',
         padding: 32,
       }}>
-      <Card style={{marginTop: 40, marginBottom: 20}}>
+      <Card style={{ marginBottom: 20}}>
         <div
           style={{
             display: 'flex',
