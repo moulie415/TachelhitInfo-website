@@ -457,6 +457,62 @@ const names = [
   'tawassna',
 ];
 
+const arabicNames = [
+  'امباركي',
+  'وا-ربّي سيديتنّغ',
+  'اشك-يد تنجّات-اغ',
+  'وا-ربّي ما-را-ن-يكشم؟',
+  'تيموغرا ن-ربّي',
+  'ربّي ا-يّي-يكسان',
+  'اگلّيد ءيمقّورن',
+  'ما-زغ-راد-يكساضغ؟',
+  'تاساعت ن-تاغوفت',
+  'ا-ول-ينو',
+  'ءور-سار-اسوسغ',
+  'نكرغ زيكّ',
+  'ار-زراين-ووسّان-نّغ',
+  'راد-اسيغ امارگ',
+  'حمد ءي-ربّي',
+  'ءيسكّيرن ن-ربّي',
+  'ءيگنوان د-واكال',
+  'سبّحات ءي-ربّي',
+  'غوالّي-ك-يگابلن',
+  'تاضصا د-يمطّاون',
+  'تاوافكا ن-ربّي ',
+  'ءيمباركين',
+  'ءيسكراف',
+  'ءودرغ ءي-يخف-ينو',
+  'تاواسّنا',
+];
+
+const tifNames = [
+  'ambarki',
+  'wa-rbbi siditnnv',
+  'ack-id tnjjat-av',
+  'wa-rbbi ma-ra-n-ikcm?',
+  'timuvra n-rbbi',
+  'rbbi a-yyi-iksan',
+  'agllid imqqurn',
+  'ma-zv-rad-iksaÄv?',
+  'tasaOt n-tavuft',
+  'a-ul-inu',
+  'ur-sar-asusv',
+  'nkrv zikk',
+  'ar-zrayn-uwssan-nnv',
+  'rad-asiv amarg',
+  'pmd i-rbbi',
+  'iskkirn n-rbbi',
+  'ignwan d-wakal',
+  'sbbpat i-rbbi',
+  'vwalli-k-igabln',
+  'taÄãa d-imÏÏawn',
+  'tawafka n-rbbi',
+  'imbarkin',
+  'iskraf',
+  'udrv i-ixf-inu',
+  'tawassna',
+];
+
 const getPageNumber = (index: number) => {
   if (index < 4) {
     return 2;
@@ -493,7 +549,16 @@ export const psalmData = psalms.map((psalm, index) => {
   const pdfArabic = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}A.pdf`;
   const pdfTif = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}Tif.pdf`;
 
-  return {psalm, audio, pdfLat, pdfArabic, pdfTif, name: names[index]};
+  return {
+    psalm,
+    audio,
+    pdfLat,
+    pdfArabic,
+    pdfTif,
+    name: names[index],
+    tifName: tifNames[index],
+    arabicName: arabicNames[index],
+  };
 });
 
 export const questionList: {question: string; body: string}[] = [
