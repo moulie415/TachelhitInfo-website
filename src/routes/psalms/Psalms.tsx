@@ -70,7 +70,26 @@ function Psalms() {
     openModal();
   };
 
+  const getName = (
+    tab: number,
+    name: string,
+    arabicName: string,
+    tifName: string,
+  ) => {
+    if (tab === 0) {
+      return name;
+    }
+    if (tab === 1) {
+      return tifName;
+    }
+    return arabicName;
+  };
+
   const matches = useMediaQuery('(min-width:600px)');
+
+  const getFontSize = () => (tab === 2 ? 20 : 'inherit');
+
+  const getFontFamily = () => (tab === 1 ? 'Tifinagh' : 'inherit');
 
   return (
     <div
@@ -78,7 +97,7 @@ function Psalms() {
         minHeight: '100%',
         padding: 32,
       }}>
-      <Card style={{marginTop: 40, marginBottom: 20}}>
+      <Card style={{marginBottom: 20}}>
         <div
           style={{
             display: 'flex',
@@ -127,42 +146,82 @@ function Psalms() {
           <div>
             {psalmData
               .slice(0, psalmData.length / 2)
-              .map(({psalm, name, pdfLat, pdfArabic, pdfTif, audio}) => {
-                return (
-                  <div key={psalm}>
-                    <Button
-                      onClick={() =>
-                        handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                      }
-                      style={{textTransform: 'inherit'}}>
-                      <span style={{color: colors.red}}>{psalm}</span>
-                      <span>&nbsp;</span>
-                      <span> </span>
-                      <span>{name}</span>
-                    </Button>
-                  </div>
-                );
-              })}
+              .map(
+                ({
+                  psalm,
+                  name,
+                  arabicName,
+                  tifName,
+                  pdfLat,
+                  pdfArabic,
+                  pdfTif,
+                  audio,
+                }) => {
+                  return (
+                    <div key={psalm}>
+                      <Button
+                        onClick={() =>
+                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                        }
+                        style={{
+                          textTransform: 'inherit',
+                        }}>
+                        <span style={{color: colors.red}}>{psalm}</span>
+                        <span>&nbsp;</span>
+                        <span> </span>
+                        <span
+                          style={{
+                            fontSize: getFontSize(),
+                            fontFamily: getFontFamily(),
+                          }}>
+                          {getName(tab, name, arabicName, tifName)}
+                        </span>
+                      </Button>
+                    </div>
+                  );
+                },
+              )}
           </div>
           <div>
             {psalmData
               .slice(psalmData.length / 2 + 1)
-              .map(({psalm, name, pdfLat, pdfArabic, pdfTif, audio}) => {
-                return (
-                  <div key={psalm}>
-                    <Button
-                      onClick={() =>
-                        handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                      }
-                      style={{textTransform: 'inherit'}}>
-                      <span style={{color: colors.red}}>{psalm}</span>
-                      <span>&nbsp;</span>
-                      <span> </span>
-                      <span>{name}</span>
-                    </Button>
-                  </div>
-                );
-              })}
+              .map(
+                ({
+                  psalm,
+                  name,
+                  arabicName,
+                  tifName,
+                  pdfLat,
+                  pdfArabic,
+                  pdfTif,
+                  audio,
+                }) => {
+                  return (
+                    <div
+                      key={psalm}
+                      style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                      <Button
+                        onClick={() =>
+                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                        }
+                        style={{
+                          textTransform: 'inherit',
+                        }}>
+                        <span style={{color: colors.red}}>{psalm}</span>
+                        <span>&nbsp;</span>
+                        <span> </span>
+                        <span
+                          style={{
+                            fontSize: getFontSize(),
+                            fontFamily: getFontFamily(),
+                          }}>
+                          {getName(tab, name, arabicName, tifName)}
+                        </span>
+                      </Button>
+                    </div>
+                  );
+                },
+              )}
           </div>
         </div>
       </Card>
