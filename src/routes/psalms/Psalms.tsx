@@ -141,87 +141,133 @@ function Psalms() {
             />
           </Tabs>
         </div>
-        <div
-          style={{display: 'flex', justifyContent: 'space-evenly', margin: 10}}>
-          <div>
-            {psalmData
-              .slice(0, psalmData.length / 2)
-              .map(
-                ({
-                  psalm,
-                  name,
-                  arabicName,
-                  tifName,
-                  pdfLat,
-                  pdfArabic,
-                  pdfTif,
-                  audio,
-                }) => {
-                  return (
-                    <div key={psalm}>
-                      <Button
-                        onClick={() =>
-                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                        }
-                        style={{
-                          textTransform: 'inherit',
-                        }}>
-                        <span style={{color: colors.red}}>{psalm}</span>
-                        <span>&nbsp;</span>
-                        <span> </span>
-                        <span
+        <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-evenly',
+              margin: 10,
+              flex: 1
+            }}>
+            <div>
+              {psalmData
+                .slice(0, psalmData.length / 2)
+                .map(
+                  ({
+                    psalm,
+                    name,
+                    arabicName,
+                    tifName,
+                    pdfLat,
+                    pdfArabic,
+                    pdfTif,
+                    audio,
+                  }) => {
+                    return (
+                      <div key={psalm}>
+                        <Button
+                          onClick={() =>
+                            handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                          }
                           style={{
-                            fontSize: getFontSize(),
-                            fontFamily: getFontFamily(),
+                            textTransform: 'inherit',
                           }}>
-                          {getName(tab, name, arabicName, tifName)}
-                        </span>
-                      </Button>
-                    </div>
-                  );
-                },
-              )}
+                          <span style={{color: colors.red}}>{psalm}</span>
+                          <span>&nbsp;</span>
+                          <span> </span>
+                          <span
+                            style={{
+                              fontSize: getFontSize(),
+                              fontFamily: getFontFamily(),
+                            }}>
+                            {getName(tab, name, arabicName, tifName)}
+                          </span>
+                        </Button>
+                      </div>
+                    );
+                  },
+                )}
+            </div>
+            <div>
+              {psalmData
+                .slice(psalmData.length / 2 + 1)
+                .map(
+                  ({
+                    psalm,
+                    name,
+                    arabicName,
+                    tifName,
+                    pdfLat,
+                    pdfArabic,
+                    pdfTif,
+                    audio,
+                  }) => {
+                    return (
+                      <div
+                        key={psalm}
+                        style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                        <Button
+                          onClick={() =>
+                            handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                          }
+                          style={{
+                            textTransform: 'inherit',
+                          }}>
+                          <span style={{color: colors.red}}>{psalm}</span>
+                          <span>&nbsp;</span>
+                          <span> </span>
+                          <span
+                            style={{
+                              fontSize: getFontSize(),
+                              fontFamily: getFontFamily(),
+                            }}>
+                            {getName(tab, name, arabicName, tifName)}
+                          </span>
+                        </Button>
+                      </div>
+                    );
+                  },
+                )}
+            </div>
           </div>
-          <div>
-            {psalmData
-              .slice(psalmData.length / 2 + 1)
-              .map(
-                ({
-                  psalm,
-                  name,
-                  arabicName,
-                  tifName,
-                  pdfLat,
-                  pdfArabic,
-                  pdfTif,
-                  audio,
-                }) => {
-                  return (
-                    <div
-                      key={psalm}
-                      style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                      <Button
-                        onClick={() =>
-                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                        }
+          <div style={{margin: 10}}>
+            {psalmData.map(
+              ({
+                psalm,
+                name,
+                arabicName,
+                tifName,
+                pdfLat,
+                pdfArabic,
+                pdfTif,
+                audio,
+              }) => {
+                return (
+                  <div
+                    key={psalm}
+                    style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                    <Button
+                      onClick={() =>
+                        handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                      }
+                      style={{
+                        textTransform: 'inherit',
+                      }}>
+                      <span style={{color: colors.red}}>{psalm}</span>
+                      <span>&nbsp;</span>
+                      <span> </span>
+                      <span
                         style={{
-                          textTransform: 'inherit',
+                          fontSize: getFontSize(),
+                          fontFamily: getFontFamily(),
                         }}>
-                        <span style={{color: colors.red}}>{psalm}</span>
-                        <span>&nbsp;</span>
-                        <span> </span>
-                        <span
-                          style={{
-                            fontSize: getFontSize(),
-                            fontFamily: getFontFamily(),
-                          }}>
-                          {getName(tab, name, arabicName, tifName)}
-                        </span>
-                      </Button>
-                    </div>
-                  );
-                },
-              )}
+                        {getName(tab, name, arabicName, tifName)}
+                      </span>
+                    </Button>
+                  </div>
+                );
+              },
+            )}
           </div>
         </div>
       </Card>
