@@ -293,7 +293,7 @@ function Psalms() {
           <source src={audio} type="audio/mpeg" />
         </audio>
       </Modal>
-      {/* <audio
+      <audio
         style={{display: 'none'}}
         controls
         ref={musicPlayer}
@@ -306,7 +306,7 @@ function Psalms() {
           }
         }}>
         <source src={music} type="audio/mpeg" />
-      </audio> */}
+      </audio>
       <SocialsFooter />
     </div>
   );
