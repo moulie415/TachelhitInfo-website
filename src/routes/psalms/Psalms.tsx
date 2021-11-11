@@ -1,18 +1,18 @@
 import {
   Button,
   Card,
-  Grid,
   Tab,
   Tabs,
   Typography,
-  IconButton,
   useMediaQuery,
 } from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
-import {useRef, useState} from 'preact/hooks';
+import {useEffect, useRef, useState} from 'preact/hooks';
 import CloseIcon from '@material-ui/icons/Close';
+import PlayArrow from '@material-ui/icons/PlayArrow';
+import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
-import {colors, psalmData} from '../../constants';
+import {colors, psalmData, psalms} from '../../constants';
 import styles from '../../routes/home/styles.css';
 import SocialsFooter from '../../components/socialsFooter';
 
@@ -33,7 +33,11 @@ function Psalms() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
   const player = useRef<HTMLAudioElement>(null);
+  const musicPlayer = useRef<HTMLAudioElement>(null);
   const [audio, setAudio] = useState('');
+  const [musicPlaying, setMusicPlaying] = useState(true);
+  const [musicIndex, setMusicIndex] = useState(0);
+  const music = `./assets/audio/psalms/musical/ps${psalms[musicIndex]}.mp3`;
 
   function openModal() {
     setIsOpen(true);
@@ -50,6 +54,18 @@ function Psalms() {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setTab(newValue);
   };
+
+  useEffect(() => {
+    if (musicPlaying) {
+      if (musicPlayer.current) {
+        musicPlayer.current.pause();
+        musicPlayer.current.load();
+        musicPlayer.current.play();
+      }
+    } else if (musicPlayer.current) {
+      musicPlayer.current.pause();
+    }
+  }, [musicPlaying, musicIndex]);
 
   const handleClick = (
     lat: string,
@@ -147,7 +163,7 @@ function Psalms() {
               display: 'flex',
               justifyContent: 'space-evenly',
               margin: 10,
-              flex: 1
+              flex: 1,
             }}>
             <div>
               {psalmData
@@ -231,43 +247,40 @@ function Psalms() {
             </div>
           </div>
           <div style={{margin: 10}}>
-            {psalmData.map(
-              ({
-                psalm,
-                name,
-                arabicName,
-                tifName,
-                pdfLat,
-                pdfArabic,
-                pdfTif,
-                audio,
-              }) => {
-                return (
-                  <div
-                    key={psalm}
-                    style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                    <Button
-                      onClick={() =>
-                        handleClick(pdfLat, pdfArabic, pdfTif, audio)
+            {psalmData.map(({psalm, name, arabicName, tifName}, index) => {
+              return (
+                <div key={psalm} style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                  <Button
+                    onClick={() => {
+                      if (index === musicIndex) {
+                        setMusicPlaying(!musicPlaying);
+                      } else {
+                        setMusicIndex(index);
+                        setMusicPlaying(true);
                       }
+                    }}
+                    style={{
+                      textTransform: 'inherit',
+                    }}>
+                    {index === musicIndex && musicPlaying ? (
+                      <Pause />
+                    ) : (
+                      <PlayArrow />
+                    )}
+                    <span style={{color: colors.red}}>{psalm}</span>
+                    <span>&nbsp;</span>
+                    <span> </span>
+                    <span
                       style={{
-                        textTransform: 'inherit',
+                        fontSize: getFontSize(),
+                        fontFamily: getFontFamily(),
                       }}>
-                      <span style={{color: colors.red}}>{psalm}</span>
-                      <span>&nbsp;</span>
-                      <span> </span>
-                      <span
-                        style={{
-                          fontSize: getFontSize(),
-                          fontFamily: getFontFamily(),
-                        }}>
-                        {getName(tab, name, arabicName, tifName)}
-                      </span>
-                    </Button>
-                  </div>
-                );
-              },
-            )}
+                      {getName(tab, name, arabicName, tifName)}
+                    </span>
+                  </Button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Card>
@@ -284,6 +297,9 @@ function Psalms() {
           <source src={audio} type="audio/mpeg" />
         </audio>
       </Modal>
+      <audio style={{display: 'none'}} controls ref={musicPlayer} autoPlay>
+        <source src={music} type="audio/mpeg" autoPlay />
+      </audio>
       <SocialsFooter />
     </div>
   );

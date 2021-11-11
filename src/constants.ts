@@ -413,7 +413,7 @@ export const newTestament: {[book: number]: Book} = {
   },
 };
 
-const psalms = [
+export const psalms = [
   1, 8, 12, 15, 19, 23, 24, 27, 32, 42, 62, 63, 90, 101, 103, 107, 113, 117,
   121, 126, 127, 128, 130, 131, 139,
 ];
