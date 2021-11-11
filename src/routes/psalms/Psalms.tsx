@@ -1,6 +1,7 @@
 import {
   Button,
   Card,
+  Grid,
   Tab,
   Tabs,
   Typography,
@@ -142,111 +143,106 @@ function Psalms() {
             onChange={handleChange}
             aria-label="disabled tabs example">
             <Tab
-              style={{textTransform: 'inherit', fontSize: 20}}
+              style={{textTransform: 'inherit', fontSize: 20, maxWidth: '33%'}}
               label="imurign i-sidi rbbi"
             />
             <Tab
-              style={{fontSize: 20}}
+              style={{fontSize: 20, maxWidth: '33%'}}
               className={styles.tifinagh}
               label="imurign i-sidi rbbi"
             />
             <Tab
-              style={{fontSize: 30}}
+              style={{fontSize: 30, maxWidth: '33%'}}
               className={styles.arabic}
               label="لخبار ءيفولكين"
             />
           </Tabs>
         </div>
-        <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-evenly',
-              margin: 10,
-              flex: 1,
-            }}>
-            <div>
-              {psalmData
-                .slice(0, psalmData.length / 2)
-                .map(
-                  ({
-                    psalm,
-                    name,
-                    arabicName,
-                    tifName,
-                    pdfLat,
-                    pdfArabic,
-                    pdfTif,
-                    audio,
-                  }) => {
-                    return (
-                      <div key={psalm}>
-                        <Button
-                          onClick={() =>
-                            handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                          }
+        <Grid
+          style={{padding: 20, textAlign: 'center'}}
+          justifyContent="space-evenly"
+          container>
+          <Grid xs={12} sm={4} md={4} item>
+            {psalmData
+              .slice(0, psalmData.length / 2)
+              .map(
+                ({
+                  psalm,
+                  name,
+                  arabicName,
+                  tifName,
+                  pdfLat,
+                  pdfArabic,
+                  pdfTif,
+                  audio,
+                }) => {
+                  return (
+                    <div key={psalm}>
+                      <Button
+                        onClick={() =>
+                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                        }
+                        style={{
+                          textTransform: 'inherit',
+                        }}>
+                        <span style={{color: colors.red}}>{psalm}</span>
+                        <span>&nbsp;</span>
+                        <span> </span>
+                        <span
                           style={{
-                            textTransform: 'inherit',
+                            fontSize: getFontSize(),
+                            fontFamily: getFontFamily(),
                           }}>
-                          <span style={{color: colors.red}}>{psalm}</span>
-                          <span>&nbsp;</span>
-                          <span> </span>
-                          <span
-                            style={{
-                              fontSize: getFontSize(),
-                              fontFamily: getFontFamily(),
-                            }}>
-                            {getName(tab, name, arabicName, tifName)}
-                          </span>
-                        </Button>
-                      </div>
-                    );
-                  },
-                )}
-            </div>
-            <div>
-              {psalmData
-                .slice(psalmData.length / 2 + 1)
-                .map(
-                  ({
-                    psalm,
-                    name,
-                    arabicName,
-                    tifName,
-                    pdfLat,
-                    pdfArabic,
-                    pdfTif,
-                    audio,
-                  }) => {
-                    return (
-                      <div
-                        key={psalm}
-                        style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                        <Button
-                          onClick={() =>
-                            handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                          }
+                          {getName(tab, name, arabicName, tifName)}
+                        </span>
+                      </Button>
+                    </div>
+                  );
+                },
+              )}
+          </Grid>
+          <Grid xs={12} sm={4} md={4} item style={{paddingBottom: 40}}>
+            {psalmData
+              .slice(psalmData.length / 2 + 1)
+              .map(
+                ({
+                  psalm,
+                  name,
+                  arabicName,
+                  tifName,
+                  pdfLat,
+                  pdfArabic,
+                  pdfTif,
+                  audio,
+                }) => {
+                  return (
+                    <div
+                      key={psalm}
+                      style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                      <Button
+                        onClick={() =>
+                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
+                        }
+                        style={{
+                          textTransform: 'inherit',
+                        }}>
+                        <span style={{color: colors.red}}>{psalm}</span>
+                        <span>&nbsp;</span>
+                        <span> </span>
+                        <span
                           style={{
-                            textTransform: 'inherit',
+                            fontSize: getFontSize(),
+                            fontFamily: getFontFamily(),
                           }}>
-                          <span style={{color: colors.red}}>{psalm}</span>
-                          <span>&nbsp;</span>
-                          <span> </span>
-                          <span
-                            style={{
-                              fontSize: getFontSize(),
-                              fontFamily: getFontFamily(),
-                            }}>
-                            {getName(tab, name, arabicName, tifName)}
-                          </span>
-                        </Button>
-                      </div>
-                    );
-                  },
-                )}
-            </div>
-          </div>
-          <div style={{margin: 10}}>
+                          {getName(tab, name, arabicName, tifName)}
+                        </span>
+                      </Button>
+                    </div>
+                  );
+                },
+              )}
+          </Grid>
+          <Grid xs={12} sm={4} md={4} item>
             {psalmData.map(({psalm, name, arabicName, tifName}, index) => {
               return (
                 <div key={psalm} style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
@@ -281,8 +277,8 @@ function Psalms() {
                 </div>
               );
             })}
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </Card>
       <Modal
         isOpen={modalIsOpen}
@@ -297,7 +293,7 @@ function Psalms() {
           <source src={audio} type="audio/mpeg" />
         </audio>
       </Modal>
-      <audio
+      {/* <audio
         style={{display: 'none'}}
         controls
         ref={musicPlayer}
@@ -310,7 +306,7 @@ function Psalms() {
           }
         }}>
         <source src={music} type="audio/mpeg" />
-      </audio>
+      </audio> */}
       <SocialsFooter />
     </div>
   );
