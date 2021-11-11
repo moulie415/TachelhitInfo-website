@@ -297,8 +297,19 @@ function Psalms() {
           <source src={audio} type="audio/mpeg" />
         </audio>
       </Modal>
-      <audio style={{display: 'none'}} controls ref={musicPlayer} autoPlay>
-        <source src={music} type="audio/mpeg" autoPlay />
+      <audio
+        style={{display: 'none'}}
+        controls
+        ref={musicPlayer}
+        autoPlay
+        onEnded={() => {
+          if (musicIndex === psalms[psalms.length] - 1) {
+            setMusicIndex(0);
+          } else {
+            setMusicIndex(musicIndex + 1);
+          }
+        }}>
+        <source src={music} type="audio/mpeg" />
       </audio>
       <SocialsFooter />
     </div>
