@@ -543,9 +543,7 @@ const getPageNumber = (index: number) => {
 
 export const psalmData = psalms.map((psalm, index) => {
   const audio = `./assets/audio/psalms/Ps ${psalm}.mp3`;
-  const pdfLat = `./assets/pdfs/psalms/tch-psalms-lat.pdf#page=${getPageNumber(
-    index,
-  )}`;
+  const pdfLat = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}Lat.pdf`;
   const pdfArabic = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}A.pdf`;
   const pdfTif = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}Tif.pdf`;
 

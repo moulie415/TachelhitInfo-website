@@ -143,16 +143,29 @@ function Psalms() {
             onChange={handleChange}
             aria-label="disabled tabs example">
             <Tab
-              style={{textTransform: 'inherit', fontSize: 20, maxWidth: '33%'}}
+              style={{
+                textTransform: 'inherit',
+                fontSize: 20,
+                maxWidth: '33%',
+                width: '30vw',
+              }}
               label="imurign i-sidi rbbi"
             />
             <Tab
-              style={{fontSize: 20, maxWidth: '33%'}}
+              style={{
+                fontSize: 20,
+                maxWidth: '33%',
+                width: '30vw',
+              }}
               className={styles.tifinagh}
               label="imurign i-sidi rbbi"
             />
             <Tab
-              style={{fontSize: 30, maxWidth: '33%'}}
+              style={{
+                fontSize: 30,
+                maxWidth: '33%',
+                width: '30vw',
+              }}
               className={styles.arabic}
               label="لخبار ءيفولكين"
             />
