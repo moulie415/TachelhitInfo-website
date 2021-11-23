@@ -122,7 +122,6 @@ function Psalms() {
             alignItems: 'center',
             padding: 10,
             width: '100%',
-            marginBottom: 20,
             justifyContent: 'center',
           }}>
           <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">
@@ -167,7 +166,7 @@ function Psalms() {
                 width: '30vw',
               }}
               className={styles.arabic}
-              label="لخبار ءيفولكين"
+              label="ءيموريگن ءي-سيدي ربّي"
             />
           </Tabs>
         </div>
@@ -216,7 +215,7 @@ function Psalms() {
           </Grid>
           <Grid xs={12} sm={4} md={4} item style={{paddingBottom: 40}}>
             {psalmData
-              .slice(psalmData.length / 2 + 1)
+              .slice(psalmData.length / 2)
               .map(
                 ({
                   psalm,
@@ -255,7 +254,16 @@ function Psalms() {
                 },
               )}
           </Grid>
-          <Grid xs={12} sm={4} md={4} item>
+          <Grid
+            style={{
+              border: '1px solid',
+              borderColor: colors.red,
+              backgroundColor: colors.cream,
+            }}
+            xs={12}
+            sm={4}
+            md={4}
+            item>
             {psalmData.map(({psalm, name, arabicName, tifName}, index) => {
               return (
                 <div key={psalm} style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
