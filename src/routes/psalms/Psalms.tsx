@@ -1,6 +1,7 @@
 import {
   Button,
   Card,
+  Divider,
   Grid,
   Tab,
   Tabs,
@@ -134,7 +135,13 @@ function Psalms() {
             ءيموريگن
           </Typography>
         </div>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            backgroundColor: '#d7d7d7',
+            marginBottom: 10,
+          }}>
           <Tabs
             value={tab}
             indicatorColor="primary"
@@ -171,7 +178,11 @@ function Psalms() {
           </Tabs>
         </div>
         <Grid
-          style={{padding: 20, textAlign: 'center'}}
+          style={{
+            padding: 20,
+            paddingTop: 0,
+            textAlign: 'center',
+          }}
           justifyContent="space-evenly"
           container>
           <Grid xs={12} sm={4} md={4} item>

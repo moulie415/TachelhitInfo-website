@@ -541,7 +541,18 @@ const getPageNumber = (index: number) => {
   return 10;
 };
 
-export const psalmData = psalms.map((psalm, index) => {
+export interface PsalmData {
+  psalm: number;
+  audio: string;
+  pdfLat: string;
+  pdfArabic: string;
+  pdfTif: string;
+  name: string;
+  tifName: string;
+  arabicName: string;
+}
+
+export const psalmData: PsalmData[] = psalms.map((psalm, index) => {
   const audio = `./assets/audio/psalms/Ps ${psalm}.mp3`;
   const pdfLat = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}Lat.pdf`;
   const pdfArabic = `./assets/pdfs/psalms/Ps${getPsalmPdfNumber(psalm)}A.pdf`;
