@@ -272,43 +272,98 @@ function Psalms() {
               backgroundColor: colors.cream,
             }}
             xs={12}
-            sm={4}
-            md={4}
+            sm={2}
+            md={2}
             item>
-            {psalmData.map(({psalm, name, arabicName, tifName}, index) => {
-              return (
-                <div key={psalm} style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                  <Button
-                    onClick={() => {
-                      if (index === musicIndex) {
-                        setMusicPlaying(!musicPlaying);
-                      } else {
-                        setMusicIndex(index);
-                        setMusicPlaying(true);
-                      }
-                    }}
-                    style={{
-                      textTransform: 'inherit',
-                    }}>
-                    {index === musicIndex && musicPlaying ? (
-                      <Pause />
-                    ) : (
-                      <PlayArrow />
-                    )}
-                    <span style={{color: colors.red}}>{psalm}</span>
-                    <span>&nbsp;</span>
-                    <span> </span>
-                    <span
+            {psalmData
+              .slice(0, psalmData.length / 2)
+              .map(({psalm, name, arabicName, tifName}, index) => {
+                return (
+                  <div
+                    key={psalm}
+                    style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                    <Button
+                      onClick={() => {
+                        if (index === musicIndex) {
+                          setMusicPlaying(!musicPlaying);
+                        } else {
+                          setMusicIndex(index);
+                          setMusicPlaying(true);
+                        }
+                      }}
                       style={{
-                        fontSize: getFontSize(),
-                        fontFamily: getFontFamily(),
+                        textTransform: 'inherit',
                       }}>
-                      {getName(tab, name, arabicName, tifName)}
-                    </span>
-                  </Button>
-                </div>
-              );
-            })}
+                      {index === musicIndex && musicPlaying ? (
+                        <Pause />
+                      ) : (
+                        <PlayArrow />
+                      )}
+                      <span style={{color: colors.red}}>{psalm}</span>
+                      <span>&nbsp;</span>
+                      <span> </span>
+                      <span
+                        style={{
+                          fontSize: getFontSize(),
+                          fontFamily: getFontFamily(),
+                        }}>
+                        {getName(tab, name, arabicName, tifName)}
+                      </span>
+                    </Button>
+                  </div>
+                );
+              })}
+          </Grid>
+          <Grid
+            style={{
+              border: '1px solid',
+              borderColor: colors.red,
+              backgroundColor: colors.cream,
+            }}
+            xs={12}
+            sm={2}
+            md={2}
+            item>
+            {psalmData
+              .slice(psalmData.length / 2)
+              .map(({psalm, name, arabicName, tifName}, index) => {
+                const actualIndex = index + 12;
+                console.log(actualIndex)
+                return (
+                  <div
+                    key={psalm}
+                    style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
+                    <Button
+                      onClick={() => {
+                        if (actualIndex === musicIndex) {
+                          setMusicPlaying(!musicPlaying);
+                        } else {
+                          setMusicIndex(actualIndex);
+                          setMusicPlaying(true);
+                        }
+                      }}
+                      style={{
+                        textTransform: 'inherit',
+                      }}>
+                      {actualIndex === musicIndex && musicPlaying ? (
+                        <Pause />
+                      ) : (
+                        <PlayArrow />
+                      )}
+                      <span style={{color: colors.red}}>{psalm}</span>
+                      <span>&nbsp;</span>
+                      <span> </span>
+                      <span
+                        style={{
+                          fontSize: getFontSize(),
+                          fontFamily: getFontFamily(),
+                        }}>
+                        {getName(tab, name, arabicName, tifName)}
+                      </span>
+                    </Button>
+                  </div>
+                );
+              })}
           </Grid>
         </Grid>
       </Card>
