@@ -20,8 +20,8 @@ import {useEffect, useRef, useState} from 'preact/hooks';
 import {LATIN_NT, LATIN_OT, newTestament, oldTestament} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
-const ikhbar = '/assets/images/11.jpg';
-const arratn = '/assets/images/12.png';
+const arratn = '/assets/images/11.jpg';
+const ikhbar = '/assets/images/12.png';
 const injil = '/assets/images/23.jpg';
 
 const customStyles = {
