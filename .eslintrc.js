@@ -22,5 +22,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
   },
 };
