@@ -107,7 +107,15 @@ function Psalms() {
 
   const getFontSize = () => (tab === 2 ? 20 : 'inherit');
 
-  const getFontFamily = () => (tab === 1 ? 'Tifinagh' : 'inherit');
+  const getFontFamily = () => {
+    if (tab === 1) {
+      return 'Tifinagh';
+    }
+    if (tab === 2) {
+      return 'Scheherazade';
+    }
+    return 'inherit';
+  };
 
   return (
     <div
@@ -215,6 +223,7 @@ function Psalms() {
                           style={{
                             fontSize: getFontSize(),
                             fontFamily: getFontFamily(),
+                            direction: tab === 2 ? 'rtl' : 'inherit',
                           }}>
                           {getName(tab, name, arabicName, tifName)}
                         </span>
@@ -256,6 +265,7 @@ function Psalms() {
                           style={{
                             fontSize: getFontSize(),
                             fontFamily: getFontFamily(),
+                            direction: tab === 2 ? 'rtl' : 'inherit',
                           }}>
                           {getName(tab, name, arabicName, tifName)}
                         </span>
@@ -306,6 +316,7 @@ function Psalms() {
                         style={{
                           fontSize: getFontSize(),
                           fontFamily: getFontFamily(),
+                          direction: tab === 2 ? 'rtl' : 'inherit',
                         }}>
                         {getName(tab, name, arabicName, tifName)}
                       </span>
@@ -356,6 +367,7 @@ function Psalms() {
                         style={{
                           fontSize: getFontSize(),
                           fontFamily: getFontFamily(),
+                          direction: tab === 2 ? 'rtl' : 'inherit',
                         }}>
                         {getName(tab, name, arabicName, tifName)}
                       </span>
