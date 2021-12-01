@@ -34,6 +34,9 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     width: '90%',
   },
+  overlay: {
+    zIndex: 9999,
+  },
 };
 
 Modal.setAppElement('#preact_root');

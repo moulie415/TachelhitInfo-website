@@ -26,7 +26,10 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '50%',
+    width: '75%',
+  },
+  overlay: {
+    zIndex: 9999,
   },
 };
 
@@ -384,7 +387,7 @@ function Psalms() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="pdf modal">
-        <div style={{height: matches ? '70vh' : '30vh'}}>
+        <div style={{height: matches ? '80vh' : '30vh'}}>
           <iframe src={pdfSrc} width="100%" height="100%" />
         </div>
         <audio style={{width: '100%'}} controls ref={player}>
