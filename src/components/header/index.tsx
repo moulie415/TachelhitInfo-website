@@ -35,6 +35,12 @@ const Header: FunctionalComponent = () => (
           <div className={styles.linkArabic}>ارّاتن</div>
         </Button>
       </Link>
+      <Link href="applications">
+        <Button style={{color: '#fff', display: 'block'}}>
+          <div className={styles.link}>izdayn</div>
+          <div className={styles.linkArabic}>ءيزداين</div>
+        </Button>
+      </Link>
     </Toolbar>
   </AppBar>
 );

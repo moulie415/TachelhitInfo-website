@@ -115,7 +115,6 @@ function Questions() {
           <Typography gutterBottom>{questionList[question].body}</Typography>
         </div>
       </Modal>
-      <SocialsFooter />
     </div>
   );
 }

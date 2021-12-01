@@ -328,7 +328,6 @@ function Psalms() {
               .slice(psalmData.length / 2)
               .map(({psalm, name, arabicName, tifName}, index) => {
                 const actualIndex = index + 12;
-                console.log(actualIndex)
                 return (
                   <div
                     key={psalm}
@@ -394,7 +393,6 @@ function Psalms() {
         }}>
         <source src={music} type="audio/mpeg" />
       </audio>
-      <SocialsFooter />
     </div>
   );
 }

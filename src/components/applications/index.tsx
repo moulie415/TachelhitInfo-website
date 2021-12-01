@@ -1,6 +1,7 @@
 import {Grid, Typography, Card} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import styles from '../../routes/home/styles.css';
+import SocialsFooter from '../socialsFooter';
 
 const QR_SIZE = 100;
 
@@ -15,140 +16,161 @@ const qr5 = '/assets/images/20.jpg';
 const qr6 = '/assets/images/21.jpg';
 
 const Applications: FunctionalComponent = () => (
-  <Card style={{marginTop: 40, marginBottom: 20}}>
-    <div
-      style={{
-        display: 'flex',
-        backgroundColor: 'rgb(238, 28, 37)',
-        alignItems: 'center',
-        padding: 10,
-        width: '100%',
-        marginBottom: 20,
-        justifyContent: 'center',
-      }}>
-      <Typography style={{color: '#fff', marginRight: 10}} variant="h5">
-        applications
-      </Typography>
-      <Typography
-        className={styles.arabic}
-        style={{color: '#fff'}}
-        variant="h4">
-        تطبيقات
-      </Typography>
-    </div>
-    <Grid container justifyContent="space-evenly" style={{padding: 20}}>
-      <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
-        <img
-          style={{margin: 10}}
-          height={QR_SIZE}
-          width={QR_SIZE}
-          src={qr1}
-          alt="qr code"
-        />
-        <Typography variant="h6">awal i&#8209;wass</Typography>
-        <Typography className={styles.appBody}>
-          ass f&#8209;wass rad&#8209;ak&#8209;ntazn awal imimn gh&#8209;warratn
-          n&#8209;sidi rbbi. sfeld&#8209;as ar&#8209;ttzaamt s&#8209;rrja ishan.
+  <div
+    style={{
+      minHeight: '100%',
+      padding: 32,
+    }}>
+    <Card style={{marginBottom: 20}}>
+      <div
+        style={{
+          display: 'flex',
+          backgroundColor: 'rgb(238, 28, 37)',
+          alignItems: 'center',
+          padding: 10,
+          width: '100%',
+          marginBottom: 20,
+          justifyContent: 'center',
+        }}>
+        <Typography style={{color: '#fff', marginRight: 10}} variant="h5">
+          applications
         </Typography>
-        <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
-          <img src={playStore} width={QR_SIZE} alt="play store" />
-        </a>
+        <Typography
+          className={styles.arabic}
+          style={{color: '#fff'}}
+          variant="h4">
+          تطبيقات
+        </Typography>
+      </div>
+      <Grid container justifyContent="space-evenly" style={{padding: 20}}>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
+          <img
+            style={{margin: 10}}
+            height={QR_SIZE}
+            width={QR_SIZE}
+            src={qr1}
+            alt="qr code"
+          />
+          <Typography variant="h6">awal i&#8209;wass</Typography>
+          <Typography className={styles.appBody}>
+            ass f&#8209;wass rad&#8209;ak&#8209;ntazn awal imimn
+            gh&#8209;warratn n&#8209;sidi rbbi. sfeld&#8209;as ar&#8209;ttzaamt
+            s&#8209;rrja ishan.
+          </Typography>
+          <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
+            <img src={playStore} width={QR_SIZE} alt="play store" />
+          </a>
+        </Grid>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
+          <img
+            style={{margin: 10}}
+            height={QR_SIZE}
+            width={QR_SIZE}
+            src={qr2}
+            alt="qr code"
+          />
+          <Typography variant="h6" className={styles.appTitleArabic}>
+            اوال ءي-واسّ
+          </Typography>
+          <Typography className={styles.appBodyArabic}>
+            .اسّ ف&#8209;واسّ راد&#8209;اك&#8209;نتازن اوال ءيميمن
+            غ&#8209;وارّاتن ن&#8209;سيدي ربّي. سفلد&#8209;اس ار&#8209;تّزعامت
+            س&#8209;رّجا ءيصحان
+          </Typography>
+          <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
+            <img
+              src={playStoreArabic}
+              width={QR_SIZE}
+              alt="play store arabic"
+            />
+          </a>
+        </Grid>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
+          <img
+            style={{margin: 10}}
+            height={QR_SIZE}
+            width={QR_SIZE}
+            src={qr3}
+            alt="qr code"
+          />
+          <Typography variant="h6">amuddu n&#8209;umsiggel</Typography>
+          <Typography className={styles.appBody}>
+            lqist n&#8209;yan igummin lehna d&#8209;tayri d&#8209;sslamt, iftu
+            ar&#8209;sersn&#8209;isiggil.
+          </Typography>
+          <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
+            <img src={playStore} width={QR_SIZE} alt="play store" />
+          </a>
+        </Grid>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
+          <img
+            style={{margin: 10}}
+            height={QR_SIZE}
+            width={QR_SIZE}
+            src={qr4}
+            alt="qr code"
+          />
+          <Typography variant="h6" className={styles.appTitleArabic}>
+            امودّو ن-ومسيگّل
+          </Typography>
+          <Typography className={styles.appBodyArabic}>
+            .لقيست ن&#8209;يان ءيگومّين لهنا ت&#8209;تايري د&#8209;سّلامت، ءيفتو
+            ار&#8209;سرسن&#8209;يسيگّيل
+          </Typography>
+          <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
+            <img
+              src={playStoreArabic}
+              width={QR_SIZE}
+              alt="play store arabic"
+            />
+          </a>
+        </Grid>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
+          <img
+            style={{margin: 10}}
+            height={QR_SIZE}
+            width={QR_SIZE}
+            src={qr5}
+            alt="qr code"
+          />
+          <Typography variant="h6">tachelhit info</Typography>
+          <Typography className={styles.appBody}>
+            kchem s&#8209;tgmmi&#8209;negh tsunfut, ar&#8209;tsflidt
+            i&#8209;lkhbar issfrahn, ar&#8209;taqrat iwaliwn mimnin,
+            ar&#8209;tssmuqqult lfidyuwat fulkinin.
+          </Typography>
+          <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
+            <img src={playStore} width={QR_SIZE} alt="play store" />
+          </a>
+        </Grid>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
+          <img
+            style={{margin: 10}}
+            height={QR_SIZE}
+            width={QR_SIZE}
+            src={qr6}
+            alt="qr code"
+          />
+          <Typography variant="h6" className={styles.appTitleArabic}>
+            تاشلحيت ءينفو
+          </Typography>
+          <Typography className={styles.appBodyArabic}>
+            .كشم س&#8209;تگمّي&#8209;نغ تسونفوت، ار&#8209;تسفليدت ءي&#8209;لخبار
+            ءيسّفراحن، ار&#8209;تاقرات ءيواليون ميمنين، ار&#8209;تسّموقولت
+            لفيديوات فولكينين
+          </Typography>
+          <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
+            <img
+              src={playStoreArabic}
+              width={QR_SIZE}
+              alt="play store arabic"
+            />
+          </a>
+        </Grid>
       </Grid>
-      <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
-        <img
-          style={{margin: 10}}
-          height={QR_SIZE}
-          width={QR_SIZE}
-          src={qr2}
-          alt="qr code"
-        />
-        <Typography variant="h6" className={styles.appTitleArabic}>
-          اوال ءي-واسّ
-        </Typography>
-        <Typography className={styles.appBodyArabic}>
-          .اسّ ف&#8209;واسّ راد&#8209;اك&#8209;نتازن اوال ءيميمن غ&#8209;وارّاتن
-          ن&#8209;سيدي ربّي. سفلد&#8209;اس ار&#8209;تّزعامت س&#8209;رّجا ءيصحان
-        </Typography>
-        <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
-          <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
-        </a>
-      </Grid>
-      <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
-        <img
-          style={{margin: 10}}
-          height={QR_SIZE}
-          width={QR_SIZE}
-          src={qr3}
-          alt="qr code"
-        />
-        <Typography variant="h6">amuddu n&#8209;umsiggel</Typography>
-        <Typography className={styles.appBody}>
-          lqist n&#8209;yan igummin lehna d&#8209;tayri d&#8209;sslamt, iftu
-          ar&#8209;sersn&#8209;isiggil.
-        </Typography>
-        <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
-          <img src={playStore} width={QR_SIZE} alt="play store" />
-        </a>
-      </Grid>
-      <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
-        <img
-          style={{margin: 10}}
-          height={QR_SIZE}
-          width={QR_SIZE}
-          src={qr4}
-          alt="qr code"
-        />
-        <Typography variant="h6" className={styles.appTitleArabic}>
-          امودّو ن-ومسيگّل
-        </Typography>
-        <Typography className={styles.appBodyArabic}>
-          .لقيست ن&#8209;يان ءيگومّين لهنا ت&#8209;تايري د&#8209;سّلامت، ءيفتو
-          ار&#8209;سرسن&#8209;يسيگّيل
-        </Typography>
-        <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
-          <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
-        </a>
-      </Grid>
-      <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
-        <img
-          style={{margin: 10}}
-          height={QR_SIZE}
-          width={QR_SIZE}
-          src={qr5}
-          alt="qr code"
-        />
-        <Typography variant="h6">tachelhit info</Typography>
-        <Typography className={styles.appBody}>
-          kchem s&#8209;tgmmi&#8209;negh tsunfut, ar&#8209;tsflidt
-          i&#8209;lkhbar issfrahn, ar&#8209;taqrat iwaliwn mimnin,
-          ar&#8209;tssmuqqult lfidyuwat fulkinin.
-        </Typography>
-        <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
-          <img src={playStore} width={QR_SIZE} alt="play store" />
-        </a>
-      </Grid>
-      <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
-        <img
-          style={{margin: 10}}
-          height={QR_SIZE}
-          width={QR_SIZE}
-          src={qr6}
-          alt="qr code"
-        />
-        <Typography variant="h6" className={styles.appTitleArabic}>
-          تاشلحيت ءينفو
-        </Typography>
-        <Typography className={styles.appBodyArabic}>
-          .كشم س&#8209;تگمّي&#8209;نغ تسونفوت، ار&#8209;تسفليدت ءي&#8209;لخبار
-          ءيسّفراحن، ار&#8209;تاقرات ءيواليون ميمنين، ار&#8209;تسّموقولت
-          لفيديوات فولكينين
-        </Typography>
-        <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
-          <img src={playStoreArabic} width={QR_SIZE} alt="play store arabic" />
-        </a>
-      </Grid>
-    </Grid>
-  </Card>
+    </Card>
+    <SocialsFooter />
+  </div>
 );
 
 export default Applications;

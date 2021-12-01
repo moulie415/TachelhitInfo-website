@@ -4,7 +4,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import AudioSection from '../../components/audioSection';
 import BibleSection from '../../components/bibleSection';
 import Videos from '../../components/videos';
-import Applications from '../../components/applications';
 import SocialsFooter from '../../components/socialsFooter';
 
 const Home: FunctionalComponent = () => {
@@ -24,8 +23,6 @@ const Home: FunctionalComponent = () => {
           <AudioSection />
           <BibleSection />
           <Videos />
-          <Applications />
-          <SocialsFooter />
         </div>
       ) : (
         <div style={{textAlign: 'center'}}>
