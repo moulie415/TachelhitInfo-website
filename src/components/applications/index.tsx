@@ -1,5 +1,6 @@
 import {Grid, Typography, Card} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
+import {CustomHistory} from 'preact-router';
 import styles from '../../routes/home/styles.css';
 import SocialsFooter from '../socialsFooter';
 
@@ -15,7 +16,9 @@ const qr4 = '/assets/images/19.jpg';
 const qr5 = '/assets/images/20.jpg';
 const qr6 = '/assets/images/21.jpg';
 
-const Applications: FunctionalComponent = () => (
+const Applications: FunctionalComponent<{history: CustomHistory}> = ({
+  history,
+}) => (
   <div
     style={{
       minHeight: '100%',
@@ -169,7 +172,7 @@ const Applications: FunctionalComponent = () => (
         </Grid>
       </Grid>
     </Card>
-    <SocialsFooter />
+    <SocialsFooter history={history} />
   </div>
 );
 
