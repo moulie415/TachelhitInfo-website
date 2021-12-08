@@ -1,8 +1,39 @@
-import {Button, Card, Grid, Typography} from '@material-ui/core';
+import {Button, Card, Grid, Typography, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
+import {useState} from 'preact/hooks';
+import Modal from 'react-modal';
 import SocialsFooter from '../../components/socialsFooter';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '75%',
+  },
+  overlay: {
+    zIndex: 9999,
+  },
+};
+
 function Documents() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [pdfSrc, setPdfSrc] = useState('');
+  const matches = useMediaQuery('(min-width:600px)');
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {}
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <div
       style={{
@@ -33,7 +64,11 @@ function Documents() {
               هؤلاء يؤمنون؟
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/afrique-du-nord.pdf');
+                  setIsOpen(true);
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   L'héritage chrétien en Afrique du Nord
                 </Typography>
@@ -51,7 +86,11 @@ function Documents() {
               une partie fondamentale de notre héritage culturel et religieux.
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/this-holy-seed.pdf');
+                  setIsOpen(true);
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   This Holy Seed
                 </Typography>
@@ -239,6 +278,16 @@ function Documents() {
           </Card>
         </Grid>
       </Grid>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="pdf modal">
+        <div style={{height: matches ? '80vh' : '30vh'}}>
+          <iframe src={pdfSrc} width="100%" height="100%" />
+        </div>
+      </Modal>
     </div>
   );
 }

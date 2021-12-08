@@ -1,7 +1,6 @@
 import {
   Button,
   Card,
-  Divider,
   Grid,
   Tab,
   Tabs,
@@ -10,13 +9,11 @@ import {
 } from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import {useEffect, useRef, useState} from 'preact/hooks';
-import CloseIcon from '@material-ui/icons/Close';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {colors, psalmData, psalms} from '../../constants';
 import styles from '../../routes/home/styles.css';
-import SocialsFooter from '../../components/socialsFooter';
 
 const customStyles = {
   content: {
