@@ -152,7 +152,7 @@ function Documents() {
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
-                  setPdfSrc('../../assets/pdfs/amuddu-n-umsiggel.pdf');
+                  setPdfSrc('../../assets/pdfs/amsiggel-tif.pdf');
                   openModal();
                 }}>
                 <Typography
