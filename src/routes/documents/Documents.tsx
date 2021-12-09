@@ -67,7 +67,7 @@ function Documents() {
               <Button
                 onClick={() => {
                   setPdfSrc('../../assets/pdfs/afrique-du-nord.pdf');
-                  setIsOpen(true);
+                  openModal();
                 }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   L'héritage chrétien en Afrique du Nord
@@ -89,7 +89,7 @@ function Documents() {
               <Button
                 onClick={() => {
                   setPdfSrc('../../assets/pdfs/this-holy-seed.pdf');
-                  setIsOpen(true);
+                  openModal();
                 }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   This Holy Seed
@@ -114,7 +114,11 @@ function Documents() {
               height: '100%',
             }}>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/امودّو ن-ومسيكّل.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   امودّو نومسيگّل
                 </Typography>
@@ -126,7 +130,11 @@ function Documents() {
               ءيفتو ار-سرسن-يسيگّيل
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/amuddu-n-umsiggel.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   amuddu n-umsiggel
                 </Typography>
@@ -138,7 +146,11 @@ function Documents() {
               iftu ar-sersn-isiggil.
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/amuddu-n-umsiggel.pdf');
+                  openModal();
+                }}>
                 <Typography
                   variant="h5"
                   style={{textTransform: 'none', fontFamily: 'Tifinagh'}}>
@@ -157,7 +169,11 @@ function Documents() {
               iftu ar-sersn-isiggil.
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/le-voyage-dAmsiggel.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   Le voyage d’Amsiggel
                 </Typography>
@@ -169,7 +185,11 @@ function Documents() {
               sécurité, et qui se met en route à leur recherche.
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/the-seekers-quest.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   The Seeker’s Quest
                 </Typography>
@@ -192,7 +212,11 @@ function Documents() {
               height: '100%',
             }}>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/awal-i-wass-abc.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   اوال ءي-واسّ
                 </Typography>
@@ -203,7 +227,11 @@ function Documents() {
               اوال نربّي ءيكرايگاتّ اسّ
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/awal-i-wass-lat.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   awal i-wass
                 </Typography>
@@ -214,7 +242,11 @@ function Documents() {
               awal nrbbi ikraygatt ass
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/awal-i-wass-tif.pdf');
+                  openModal();
+                }}>
                 <Typography
                   variant="h5"
                   style={{textTransform: 'none', fontFamily: 'Tifinagh'}}>
@@ -241,35 +273,54 @@ function Documents() {
               height: '100%',
             }}>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/المرشد.pdf');
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   المرشد للإيمان المسيحي والحياة المسيحية
                 </Typography>
               </Button>
             </div>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/هل أنت مُستَعِدٌّ ؟.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   هل أنت مُستَعِدٌّ ؟
                 </Typography>
               </Button>
             </div>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/دروس من التاريخ.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   المسيحية في شمال إفريقيا: دروس من التاريخ
                 </Typography>
               </Button>
             </div>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/taalim-el-kitab.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   taølim el-kitâb el-mqaddas
                 </Typography>
               </Button>
             </div>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/حياتي بحال زربية.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   حياتي بحال زربية
                 </Typography>
