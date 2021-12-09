@@ -49,7 +49,11 @@ function Documents() {
               height: '100%',
             }}>
             <div style={{width: '100%', textAlign: 'center'}}>
-              <Button>
+              <Button
+                onClick={() => {
+                  setPdfSrc('../../assets/pdfs/التراث المسيحي.pdf');
+                  openModal();
+                }}>
                 <Typography variant="h5">
                   التراث المسيحي في شمال إفريقيا
                 </Typography>
@@ -276,6 +280,7 @@ function Documents() {
               <Button
                 onClick={() => {
                   setPdfSrc('../../assets/pdfs/المرشد.pdf');
+                  openModal();
                 }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   المرشد للإيمان المسيحي والحياة المسيحية
