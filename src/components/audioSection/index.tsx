@@ -17,7 +17,7 @@ const AudioSection: FunctionalComponent = () => {
   };
 
   return (
-    <Card style={{padding: 20, paddingBottom: 50}}>
+    <Card style={{padding: 15}}>
       <Grid container>
         <Grid item xs={12} sm={6} md={3}>
           <Button

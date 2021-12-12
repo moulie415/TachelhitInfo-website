@@ -25,26 +25,6 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
       padding: 32,
     }}>
     <Card style={{marginBottom: 20}}>
-      <div
-        style={{
-          display: 'flex',
-          backgroundColor: 'rgb(238, 28, 37)',
-          alignItems: 'center',
-          padding: 10,
-          width: '100%',
-          marginBottom: 20,
-          justifyContent: 'center',
-        }}>
-        <Typography style={{color: '#fff', marginRight: 10}} variant="h5">
-          applications
-        </Typography>
-        <Typography
-          className={styles.arabic}
-          style={{color: '#fff'}}
-          variant="h4">
-          تطبيقات
-        </Typography>
-      </div>
       <Grid container justifyContent="space-evenly" style={{padding: 20}}>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
           <img

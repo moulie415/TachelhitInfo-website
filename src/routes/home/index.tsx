@@ -17,14 +17,13 @@ const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
     <div
       style={{
         minHeight: '100%',
-        padding: 32,
+        padding: 15,
       }}>
       {ready ? (
         <div>
           <AudioSection />
           <BibleSection />
           <Videos />
-          <SocialsFooter history={history} />
         </div>
       ) : (
         <div style={{textAlign: 'center'}}>

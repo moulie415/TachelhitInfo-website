@@ -99,7 +99,7 @@ const BibleSection: FunctionalComponent = () => {
 
   return (
     <div>
-      <Card style={{marginTop: 40, paddingBottom: 20}}>
+      <Card style={{marginTop: 15, paddingBottom: 15}}>
         <div
           style={{
             display: 'flex',

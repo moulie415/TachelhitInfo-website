@@ -11,7 +11,7 @@ const jesusFilm = 'assets/images/22.jpg';
 const Videos: FunctionalComponent = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   return (
-    <Card style={{marginTop: 40, paddingBottom: 20, marginBottom: 20}}>
+    <Card style={{marginTop: 15, paddingBottom: 15}}>
       <div
         style={{
           display: 'flex',
@@ -19,7 +19,7 @@ const Videos: FunctionalComponent = () => {
           alignItems: 'center',
           padding: 10,
           width: '100%',
-          marginBottom: 20,
+          marginBottom: 15,
           justifyContent: 'center',
         }}>
         <Typography style={{color: '#fff', marginRight: 10}} variant="h5">

@@ -1,12 +1,4 @@
-import {
-  Button,
-  Card,
-  Grid,
-  Tab,
-  Tabs,
-  Typography,
-  useMediaQuery,
-} from '@material-ui/core';
+import {Button, Card, Grid, Tab, Tabs, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import {useEffect, useRef, useState} from 'preact/hooks';
 import PlayArrow from '@material-ui/icons/PlayArrow';
@@ -121,28 +113,9 @@ function Psalms() {
     <div
       style={{
         minHeight: '100%',
-        padding: 32,
+        padding: 15,
       }}>
-      <Card style={{marginBottom: 20}}>
-        <div
-          style={{
-            display: 'flex',
-            backgroundColor: 'rgb(238, 28, 37)',
-            alignItems: 'center',
-            padding: 10,
-            width: '100%',
-            justifyContent: 'center',
-          }}>
-          <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">
-            imurign
-          </Typography>
-          <Typography
-            className={styles.arabic}
-            style={{color: '#fff'}}
-            variant="h4">
-            ءيموريگن
-          </Typography>
-        </div>
+      <Card>
         <div
           style={{
             display: 'flex',
@@ -189,11 +162,11 @@ function Psalms() {
           style={{
             padding: 20,
             paddingTop: 0,
-            textAlign: 'center',
+            textAlign: 'left',
           }}
           justifyContent="space-evenly"
           container>
-          <Grid xs={12} sm={4} md={4} item>
+          <Grid xs={12} sm={3} md={3} item>
             {psalmData
               .slice(0, psalmData.length / 2)
               .map(
@@ -233,7 +206,7 @@ function Psalms() {
                 },
               )}
           </Grid>
-          <Grid xs={12} sm={4} md={4} item style={{paddingBottom: 40}}>
+          <Grid xs={12} sm={3} md={3} item style={{paddingBottom: 40}}>
             {psalmData
               .slice(psalmData.length / 2)
               .map(
@@ -280,10 +253,11 @@ function Psalms() {
               border: '1px solid',
               borderColor: colors.red,
               backgroundColor: colors.cream,
+              textAlign: 'center',
             }}
             xs={12}
-            sm={2}
-            md={2}
+            sm={3}
+            md={3}
             item>
             {psalmData
               .slice(0, psalmData.length / 2)
@@ -330,10 +304,11 @@ function Psalms() {
               border: '1px solid',
               borderColor: colors.red,
               backgroundColor: colors.cream,
+              textAlign: 'center',
             }}
             xs={12}
-            sm={2}
-            md={2}
+            sm={3}
+            md={3}
             item>
             {psalmData
               .slice(psalmData.length / 2)
