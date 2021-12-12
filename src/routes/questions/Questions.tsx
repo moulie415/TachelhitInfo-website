@@ -50,7 +50,7 @@ function Questions() {
     <div
       style={{
         minHeight: '100%',
-        padding: 32,
+        padding: 15,
       }}>
       <Card style={{marginBottom: 20}}>
         <List style={{alignItems: 'center', textAlign: 'center', padding: 10}}>

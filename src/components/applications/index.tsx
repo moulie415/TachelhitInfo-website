@@ -5,6 +5,7 @@ import styles from '../../routes/home/styles.css';
 import SocialsFooter from '../socialsFooter';
 
 const QR_SIZE = 100;
+const GOOGLE_PLAY_SIZE = 50;
 
 const playStore = '/assets/images/google-play-badge.png';
 const playStoreArabic = '/assets/images/google-play-badge-arabic.png';
@@ -22,9 +23,10 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
   <div
     style={{
       minHeight: '100%',
-      padding: 32,
+      padding: 15,
     }}>
-    <Card style={{marginBottom: 20}}>
+    <SocialsFooter history={history} />
+    <Card>
       <Grid container justifyContent="space-evenly" style={{padding: 20}}>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
           <img
@@ -41,7 +43,7 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             s&#8209;rrja ishan.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
-            <img src={playStore} width={QR_SIZE} alt="play store" />
+            <img src={playStore} height={GOOGLE_PLAY_SIZE} alt="play store" />
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
@@ -63,7 +65,7 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
             <img
               src={playStoreArabic}
-              width={QR_SIZE}
+              height={GOOGLE_PLAY_SIZE}
               alt="play store arabic"
             />
           </a>
@@ -82,7 +84,7 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             ar&#8209;sersn&#8209;isiggil.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
-            <img src={playStore} width={QR_SIZE} alt="play store" />
+            <img src={playStore} height={GOOGLE_PLAY_SIZE} alt="play store" />
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
@@ -103,7 +105,7 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
             <img
               src={playStoreArabic}
-              width={QR_SIZE}
+              height={GOOGLE_PLAY_SIZE}
               alt="play store arabic"
             />
           </a>
@@ -123,7 +125,7 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             ar&#8209;tssmuqqult lfidyuwat fulkinin.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
-            <img src={playStore} width={QR_SIZE} alt="play store" />
+            <img src={playStore} height={GOOGLE_PLAY_SIZE} alt="play store" />
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={2}>
@@ -145,14 +147,13 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
             <img
               src={playStoreArabic}
-              width={QR_SIZE}
+              height={GOOGLE_PLAY_SIZE}
               alt="play store arabic"
             />
           </a>
         </Grid>
       </Grid>
     </Card>
-    <SocialsFooter history={history} />
   </div>
 );
 

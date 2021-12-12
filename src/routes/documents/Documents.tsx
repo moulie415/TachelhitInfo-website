@@ -153,7 +153,7 @@ function Documents() {
             </div>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={5} md={5}>
+        <Grid item xs={12} sm={4} md={4}>
           <Card
             style={{
               padding: 5,
@@ -247,7 +247,7 @@ function Documents() {
             </Typography>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={2} md={2}>
+        <Grid item xs={12} sm={3} md={3}>
           <Card
             style={{
               padding: 5,
@@ -262,18 +262,19 @@ function Documents() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  margin: '0 2%',
+                  margin: '2% 2%',
                   cursor: 'pointer',
                 }}>
                 <img src="../../assets/images/Awal Abc.jpg" height={150} />
               </a>
-              <div style={{display: 'flex'}}>
+              <div style={{display: 'flex', width: '100%'}}>
                 <div
                   style={{
                     textAlign: 'center',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
+                    width: '100%',
                   }}>
                   <Button
                     onClick={() => {
@@ -288,7 +289,6 @@ function Documents() {
                       اوال ءي-واسّ
                     </Typography>
                   </Button>
-
                   <Typography
                     style={{
                       margin: '0 2%',
@@ -301,13 +301,14 @@ function Documents() {
                 </div>
               </div>
             </div>
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', width: '100%'}}>
               <div
                 style={{
                   textAlign: 'center',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
+                  width: '100%',
                 }}>
                 <Button
                   onClick={() => {
@@ -320,7 +321,7 @@ function Documents() {
                 <Typography
                   style={{
                     paddingBottom: 10,
-                    margin: '0 2%',
+                    margin: '2% 2%',
                     textAlign: 'center',
                   }}>
                   awal n-rbbi i-kraygatt ass
@@ -340,7 +341,6 @@ function Documents() {
                 <img src="../../assets/images/Awal Lat.jpg" height={150} />
               </a>
             </div>
-
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
@@ -374,7 +374,6 @@ function Documents() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  // margin: '0 2%',
                   cursor: 'pointer',
                 }}>
                 <img src="../../assets/images/Murshid cover.png" height={150} />
