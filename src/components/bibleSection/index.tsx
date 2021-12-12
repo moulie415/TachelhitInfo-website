@@ -107,7 +107,7 @@ const BibleSection: FunctionalComponent = () => {
             alignItems: 'center',
             padding: 10,
             width: '100%',
-            marginBottom: 20,
+            marginBottom: 5,
             justifyContent: 'center',
           }}>
           <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">
@@ -127,13 +127,24 @@ const BibleSection: FunctionalComponent = () => {
             xs={12}
             sm={6}
             md={3}>
-            <Typography variant="h6">injil l-lmasih</Typography>
-            <Typography
-              variant="h4"
-              style={{marginBottom: 20}}
-              className={styles.arabic}>
-              ءينجيل لّماسيح
-            </Typography>
+            <Button
+              style={{textTransform: 'inherit'}}
+              onClick={() =>
+                window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
+              }>
+              <Typography variant="h6">injil l-lmasih</Typography>
+            </Button>
+            <Button
+              onClick={() =>
+                window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
+              }>
+              <Typography
+                variant="h4"
+                style={{marginBottom: 20}}
+                className={styles.arabic}>
+                ءينجيل لّماسيح
+              </Typography>
+            </Button>
             <Button>
               <a
                 href="https://live.bible.is/bible/SHIRBD/MRK/1"
@@ -144,53 +155,50 @@ const BibleSection: FunctionalComponent = () => {
             </Button>
           </Grid>
           <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-            <div style={{display: 'grid'}}>
-              <Button
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/nt_lat.pdf');
-                  setArabic(false);
-                }}
-                style={{textTransform: 'inherit', padding: 0}}>
-                <Typography variant="h6">lkhbar ifulkin</Typography>
-              </Button>
-              <Button
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/nt_abc.pdf');
-                  setArabic(true);
-                }}
-                style={{marginBottom: 20}}>
-                <Typography variant="h4" className={styles.arabic}>
-                  لخبار ءيفولكين
-                </Typography>
-              </Button>
-            </div>
+            <Button
+              onClick={() => {
+                openModal();
+                setPdfSrc('../../assets/pdfs/nt_lat.pdf');
+                setArabic(false);
+              }}
+              style={{textTransform: 'inherit'}}>
+              <Typography variant="h6">lkhbar ifulkin</Typography>
+            </Button>
+            <Button
+              onClick={() => {
+                openModal();
+                setPdfSrc('../../assets/pdfs/nt_abc.pdf');
+                setArabic(true);
+              }}
+              style={{marginBottom: 20}}>
+              <Typography variant="h4" className={styles.arabic}>
+                لخبار ءيفولكين
+              </Typography>
+            </Button>
+
             <img src={arratn} width={150} alt="bible pdf" />
           </Grid>
           <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-            <div style={{display: 'grid'}}>
-              <Button
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/ot_lat.pdf');
-                  setArabic(false);
-                }}
-                style={{textTransform: 'inherit', padding: 0}}>
-                <Typography variant="h6">arratn l-lanbya</Typography>
-              </Button>
-              <Button
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/ot_abc.pdf');
-                  setArabic(true);
-                }}
-                style={{marginBottom: 20}}>
-                <Typography variant="h4" className={styles.arabic}>
-                  ارّاتن لّانبيا
-                </Typography>
-              </Button>
-            </div>
+            <Button
+              onClick={() => {
+                openModal();
+                setPdfSrc('../../assets/pdfs/ot_lat.pdf');
+                setArabic(false);
+              }}
+              style={{textTransform: 'inherit', padding: 0}}>
+              <Typography variant="h6">arratn l-lanbya</Typography>
+            </Button>
+            <Button
+              onClick={() => {
+                openModal();
+                setPdfSrc('../../assets/pdfs/ot_abc.pdf');
+                setArabic(true);
+              }}
+              style={{marginBottom: 20}}>
+              <Typography variant="h4" className={styles.arabic}>
+                ارّاتن لّانبيا
+              </Typography>
+            </Button>
             <img src={ikhbar} width={150} alt="bible pdf" />
           </Grid>
         </Grid>

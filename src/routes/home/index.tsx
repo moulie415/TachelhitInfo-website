@@ -4,7 +4,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import AudioSection from '../../components/audioSection';
 import BibleSection from '../../components/bibleSection';
 import Videos from '../../components/videos';
-import SocialsFooter from '../../components/socialsFooter';
 import {CustomHistory} from 'preact-router';
 
 const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
