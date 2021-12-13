@@ -68,15 +68,15 @@ function Psalms() {
     audio: string,
   ) => {
     if (tab === 0) {
-      window.open(lat);
+      // window.open(lat);
       setPdfSrc(lat);
     }
     if (tab === 1) {
-      window.open(tif);
+      // window.open(tif);
       setPdfSrc(tif);
     }
     if (tab === 2) {
-      window.open(arabic);
+      // window.open(arabic);
       setPdfSrc(arabic);
     }
     setAudio(audio);
@@ -362,9 +362,9 @@ function Psalms() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="pdf modal">
-        {/* <div style={{height: matches ? '80vh' : '30vh'}}>
+        <div style={{height: matches ? '80vh' : '30vh'}}>
           <iframe src={pdfSrc} width="100%" height="100%" />
-        </div> */}
+        </div>
         <audio style={{width: '100%'}} controls ref={player}>
           <source src={audio} type="audio/mpeg" />
         </audio>
