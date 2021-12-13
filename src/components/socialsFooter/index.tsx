@@ -8,7 +8,7 @@ const SocialsFooter: FunctionalComponent<{history: CustomHistory}> = ({
   history,
 }) => {
   return (
-    <Grid container alignItems="center" justifyContent="center">
+    <Grid container alignItems="center" justifyContent="space-evenly">
       <Grid item style={{marginRight: 10, marginLeft: 10}}>
         <Button>
           <Typography style={{textTransform: 'lowercase', marginRight: 5}}>
