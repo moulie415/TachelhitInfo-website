@@ -175,8 +175,9 @@ const BibleSection: FunctionalComponent = () => {
                 لخبار ءيفولكين
               </Typography>
             </Button>
-
-            <img src={arratn} width={150} alt="bible pdf" />
+            <div>
+              <img src={arratn} width={150} alt="bible pdf" />
+            </div>
           </Grid>
           <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
             <Button
@@ -199,7 +200,9 @@ const BibleSection: FunctionalComponent = () => {
                 ارّاتن لّانبيا
               </Typography>
             </Button>
-            <img src={ikhbar} width={150} alt="bible pdf" />
+            <div>
+              <img src={ikhbar} width={150} alt="bible pdf" />
+            </div>
           </Grid>
         </Grid>
       </Card>
