@@ -58,7 +58,7 @@ function Documents() {
                   margin: '0 2%',
                   cursor: 'pointer',
                 }}>
-                <img src="../../assets/images/13.PNG" height={100} />
+                <img src="../../assets/images/13.png" height={100} />
               </a>
             </div>
             <div

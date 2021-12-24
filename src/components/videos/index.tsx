@@ -5,7 +5,7 @@ import {GODS_STORY} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
 const rbbi = '/assets/images/14.jpg';
-const amsiggel = '/assets/images/15.PNG';
+const amsiggel = '/assets/images/15.png';
 const jesusFilm = 'assets/images/22.jpg';
 
 const Videos: FunctionalComponent = () => {
