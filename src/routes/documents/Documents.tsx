@@ -313,7 +313,9 @@ function Documents() {
                   onClick={() => {
                     window.open('../../assets/pdfs/awal-i-wass-lat.pdf');
                   }}>
-                  <Typography variant="h5" style={{textTransform: 'none'}}>
+                  <Typography
+                    variant="h5"
+                    style={{textTransform: 'none', fontFamily: 'Tashelhayt'}}>
                     awal i-wass
                   </Typography>
                 </Button>
@@ -322,6 +324,7 @@ function Documents() {
                     paddingBottom: 10,
                     margin: '2% 2%',
                     textAlign: 'center',
+                    fontFamily: 'Tashelhayt',
                   }}>
                   ass f-wass a-taqrat yan-wawal imimn å-warratn n-sidi rbbi,
                   ar-ttzøamt s-rrja isæan. ar-tsflid ula tmåart d-tarwa
