@@ -1,6 +1,5 @@
 import {Button, Card, Grid, Typography, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
-import {useState} from 'preact/hooks';
 
 function Documents() {
   const matches = useMediaQuery('(min-width:600px)');
@@ -39,6 +38,7 @@ function Documents() {
                     paddingBottom: 20,
                     textAlign: 'center',
                     marginLeft: '5%',
+                    fontSize: 20,
                   }}>
                   في كثير من أجزاء شمال إفريقيا توجد أطلال بنايات مسيحية عريقة.
                   ترى ماذا نعرف عن الحضارة المتقدِّمة والدِّين المتطور الذين
@@ -58,7 +58,7 @@ function Documents() {
                   margin: '0 2%',
                   cursor: 'pointer',
                 }}>
-                <img src="../../assets/images/13.png" height={100} />
+                <img src="../../assets/images/13.png" height={150} />
               </a>
             </div>
             <div
@@ -72,7 +72,7 @@ function Documents() {
                   onClick={() => {
                     window.open('../../assets/pdfs/afrique-du-nord.pdf');
                   }}>
-                  <Typography variant="h5" style={{textTransform: 'none'}}>
+                  <Typography variant="h6" style={{textTransform: 'none'}}>
                     L'héritage chrétien en Afrique du Nord
                   </Typography>
                 </Button>
@@ -82,6 +82,7 @@ function Documents() {
                     paddingBottom: 20,
                     textAlign: 'center',
                     marginLeft: '5%',
+                    fontSize: 14,
                   }}>
                   Dans bien des régions de l’Afrique du Nord subsistent des
                   ruines d’anciens édifices chrétiens. Que savons-nous de la
@@ -105,7 +106,7 @@ function Documents() {
                   margin: '0 2%',
                   cursor: 'pointer',
                 }}>
-                <img src="../../assets/images/L'heritage.png" height={100} />
+                <img src="../../assets/images/L'heritage.png" height={150} />
               </a>
             </div>
             <div
@@ -119,7 +120,7 @@ function Documents() {
                   onClick={() => {
                     window.open('../../assets/pdfs/this-holy-seed.pdf');
                   }}>
-                  <Typography variant="h5" style={{textTransform: 'none'}}>
+                  <Typography variant="h6" style={{textTransform: 'none'}}>
                     This Holy Seed
                   </Typography>
                 </Button>
@@ -129,6 +130,7 @@ function Documents() {
                     paddingBottom: 20,
                     marginLeft: '5%',
                     textAlign: 'center',
+                    fontSize: 14,
                   }}>
                   One of the great centres of evangelical Christianity in the
                   age after the apostles, NORTH AFRICA has become “the land of
@@ -148,7 +150,7 @@ function Documents() {
                   margin: '0 2%',
                   cursor: 'pointer',
                 }}>
-                <img src="../../assets/images/THS png.png" height={100} />
+                <img src="../../assets/images/THS png.png" height={150} />
               </a>
             </div>
           </Card>
@@ -168,13 +170,21 @@ function Documents() {
                 onClick={() => {
                   window.open('../../assets/pdfs/امودّو ن-ومسيكّل.pdf');
                 }}>
-                <Typography variant="h5" style={{textTransform: 'none'}}>
+                <Typography
+                  variant="h4"
+                  style={{textTransform: 'none', fontFamily: 'Scheherazade'}}>
                   امودّو نومسيگّل
                 </Typography>
               </Button>
             </div>
             <Typography
-              style={{paddingBottom: 10, margin: '0 2%', textAlign: 'center'}}>
+              style={{
+                paddingBottom: 10,
+                margin: '0 2%',
+                textAlign: 'center',
+                fontSize: 23,
+                fontFamily: 'Scheherazade',
+              }}>
               لقيست-اد، اي-ايتما، تگا تين يان ءيگومّين لهنا ت-تايري د-سّلامت،
               ءيفتو ار-سرسن-يسيگّيل
             </Typography>
@@ -254,19 +264,6 @@ function Documents() {
               marginBottom: 10,
             }}>
             <div style={{display: 'flex'}}>
-              <a
-                onClick={() =>
-                  window.open('../../assets/pdfs/awal-i-wass-abc.pdf')
-                }
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '2% 2%',
-                  cursor: 'pointer',
-                }}>
-                <img src="../../assets/images/Awal Abc.jpg" height={150} />
-              </a>
               <div style={{display: 'flex', width: '100%'}}>
                 <div
                   style={{
@@ -296,7 +293,9 @@ function Documents() {
                       fontFamily: 'Scheherazade',
                       fontSize: 20,
                     }}>
-                    اوال نربّي ءيكرايگاتّ اسّ
+                    اسّ ف-واسّ ا-تاقرات يان-واوال ءيميمن غ-وارّاتن ن-سيدي ربّي،
+                    ار-تّزعامت س-رّجا ءيصحان. ار-تسفليد ولا تمغارت د-تاروا،
+                    ار-كولّو-تّفراحم ءي-نگراتون س-تايري ن-ربّي.
                   </Typography>
                 </div>
               </div>
@@ -324,22 +323,11 @@ function Documents() {
                     margin: '2% 2%',
                     textAlign: 'center',
                   }}>
-                  awal n-rbbi i-kraygatt ass
+                  ass f-wass a-taqrat yan-wawal imimn å-warratn n-sidi rbbi,
+                  ar-ttzøamt s-rrja isæan. ar-tsflid ula tmåart d-tarwa
+                  ar-kullu-ttfraæm i-ngratun s-tayri n-rbbi.
                 </Typography>
               </div>
-              <a
-                onClick={() =>
-                  window.open('../../assets/pdfs/awal-i-wass-lat.pdf')
-                }
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '0 2%',
-                  cursor: 'pointer',
-                }}>
-                <img src="../../assets/images/Awal Lat.jpg" height={150} />
-              </a>
             </div>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
@@ -348,7 +336,10 @@ function Documents() {
                 }}>
                 <Typography
                   variant="h5"
-                  style={{textTransform: 'none', fontFamily: 'Tifinagh'}}>
+                  style={{
+                    textTransform: 'none',
+                    fontFamily: 'Tifinagh',
+                  }}>
                   awal i-wass
                 </Typography>
               </Button>
@@ -356,11 +347,13 @@ function Documents() {
             <Typography
               style={{
                 paddingBottom: 10,
-                margin: '0 20%',
+                margin: '2% 2%',
                 fontFamily: 'Tifinagh',
                 textAlign: 'center',
               }}>
-              awal n-rbbi i-kraygatt ass
+              ass f-wass a-taqrat yan-wawal imimn v-warratn n-sidi rbbi,
+              ar-ttzoamt s-rrja ispan. ar-tsflid ula tmvart d-tarwa
+              ar-kullu-ttfrapm i-ngratun s-tayri n-rbbi.
             </Typography>
           </Card>
           <Card
@@ -429,7 +422,7 @@ function Documents() {
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
-                  window.open('../../assets/pdfs/حياتي بحال زربية.pdf');
+                  window.open('../../assets/pdfs/الدرّاز.pdf');
                 }}>
                 <Typography variant="h5" style={{textTransform: 'none'}}>
                   حياتي بحال زربية
