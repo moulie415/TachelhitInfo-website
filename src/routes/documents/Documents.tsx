@@ -446,7 +446,6 @@ function Documents() {
           <Card
             style={{
               padding: 5,
-              marginBottom: 10,
             }}>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
