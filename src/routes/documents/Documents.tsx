@@ -359,9 +359,11 @@ function Documents() {
               ar-kullu-ttfrapm i-ngratun s-tayri n-rbbi.
             </Typography>
           </Card>
+
           <Card
             style={{
               padding: 5,
+              marginBottom: 10,
             }}>
             <div style={{display: 'flex'}}>
               <a
@@ -390,6 +392,12 @@ function Documents() {
                 </Button>
               </div>
             </div>
+          </Card>
+          <Card
+            style={{
+              padding: 5,
+              marginBottom: 10,
+            }}>
             <div style={{textAlign: 'center'}}>
               <Button
                 onClick={() => {
@@ -400,6 +408,12 @@ function Documents() {
                 </Typography>
               </Button>
             </div>
+          </Card>
+          <Card
+            style={{
+              padding: 5,
+              marginBottom: 10,
+            }}>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
@@ -410,6 +424,12 @@ function Documents() {
                 </Typography>
               </Button>
             </div>
+          </Card>
+          <Card
+            style={{
+              padding: 5,
+              marginBottom: 10,
+            }}>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
@@ -417,11 +437,17 @@ function Documents() {
                 }}>
                 <Typography
                   variant="h5"
-                  style={{textTransform: 'none', fontFamily: 'Tifinagh'}}>
+                  style={{textTransform: 'none', fontFamily: 'Tashelhayt'}}>
                   taølim el-kitâb el-mqaddas
                 </Typography>
               </Button>
             </div>
+          </Card>
+          <Card
+            style={{
+              padding: 5,
+              marginBottom: 10,
+            }}>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
