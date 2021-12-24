@@ -156,6 +156,7 @@ function Email() {
                 message - رسالتك
               </div>
               <textarea
+                style={{width: '25%'}}
                 className="form-control"
                 rows={5}
                 id="message"

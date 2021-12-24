@@ -11,38 +11,41 @@ const SocialsFooter: FunctionalComponent<{history: CustomHistory}> = ({
     <Grid container alignItems="center" justifyContent="space-evenly">
       <Grid item style={{marginRight: 10, marginLeft: 10}}>
         <Button>
-          <Typography style={{textTransform: 'lowercase', marginRight: 5}}>
+          <Typography
+            style={{textTransform: 'lowercase', marginRight: 5, fontSize: 20}}>
             facebook
           </Typography>
           <a
             href="https://www.facebook.com/tachelhit.info/"
             target="_blank"
             rel="noreferrer">
-            <Facebook style={{color: '#4267B2', fontSize: 50}} />
+            <Facebook style={{color: '#4267B2', fontSize: 75}} />
           </a>
-          <Typography style={{marginLeft: 5, fontSize: 20}}>فيسبوك</Typography>
+          <Typography style={{marginLeft: 5, fontSize: 25}}>فيسبوك</Typography>
         </Button>
       </Grid>
       <Grid item style={{marginRight: 10, marginLeft: 10}}>
         <Button>
-          <Typography style={{textTransform: 'lowercase', marginRight: 5}}>
+          <Typography
+            style={{textTransform: 'lowercase', marginRight: 5, fontSize: 20}}>
             whatsapp
           </Typography>
           <a href={`whatsapp://send?phone=${PHONE_NUMBER}`}>
-            <WhatsApp style={{color: '#075e54', fontSize: 50}} />
+            <WhatsApp style={{color: '#075e54', fontSize: 75}} />
           </a>
-          <Typography style={{marginLeft: 5, fontSize: 20}}>واتساب</Typography>
+          <Typography style={{marginLeft: 5, fontSize: 25}}>واتساب</Typography>
         </Button>
       </Grid>
       <Grid item style={{marginRight: 10, marginLeft: 10}}>
         <Button onClick={() => history.push('Email')}>
-          <Typography style={{textTransform: 'lowercase', marginRight: 5}}>
+          <Typography
+            style={{textTransform: 'lowercase', marginRight: 5, fontSize: 20}}>
             email
           </Typography>
           <a style={{color: 'inherit'}} href="email">
-            <Email style={{fontSize: 50}} />
+            <Email style={{fontSize: 75}} />
           </a>
-          <Typography style={{marginLeft: 5, fontSize: 20}}>تابرات</Typography>
+          <Typography style={{marginLeft: 5, fontSize: 25}}>تابرات</Typography>
         </Button>
       </Grid>
     </Grid>
