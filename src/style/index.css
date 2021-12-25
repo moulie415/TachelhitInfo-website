@@ -32,15 +32,18 @@ canvas {
 @font-face {
   font-family: Scheherazade;
   src: url('../assets/fonts/ScheherazadeOTM2A.ttf') format('truetype');
+  font-display: swap;
   /* unicode-range: U+0-2f, U+40-10FFFF; */
 }
 
 @font-face {
   font-family: Tashelhayt;
   src: url('../assets/fonts/TashelhaytSILDoulos.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: Tifinagh;
   src: url('../assets/fonts/Tifinagh.ttf') format('truetype');
+  font-display: swap;
 }
