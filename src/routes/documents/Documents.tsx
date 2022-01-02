@@ -173,7 +173,7 @@ function Documents() {
                 <Typography
                   variant="h4"
                   style={{textTransform: 'none', fontFamily: 'Scheherazade'}}>
-                  امودّو نومسيگّل
+                  امودّو ن ومسيگّل
                 </Typography>
               </Button>
             </div>
