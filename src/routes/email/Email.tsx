@@ -2,6 +2,7 @@ import {FunctionalComponent, h} from 'preact';
 import axios from 'axios';
 import {useState} from 'preact/hooks';
 import {Button, Card, Snackbar, Typography} from '@material-ui/core';
+import {colors} from '../../constants';
 
 function validEmail(email: string) {
   const regex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
@@ -74,7 +75,7 @@ function Email() {
       <Card>
         <div
           style={{
-            backgroundColor: 'rgb(238, 28, 37)',
+            backgroundColor: colors.red,
             padding: 10,
             width: '100%',
             marginBottom: 20,

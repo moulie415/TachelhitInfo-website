@@ -12,26 +12,15 @@ const Videos: FunctionalComponent = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   return (
     <Card style={{marginTop: 15, paddingBottom: 15}}>
-      <div
+      <Typography
+        variant="h4"
         style={{
-          display: 'flex',
-          backgroundColor: 'rgb(238, 28, 37)',
-          alignItems: 'center',
-          padding: 10,
-          width: '100%',
-          marginBottom: 10,
-          justifyContent: 'center',
+          fontFamily: 'Scheherazade',
+          textAlign: 'center',
+          marginTop: 15,
         }}>
-        <Typography style={{color: '#fff', marginRight: 10}} variant="h5">
-          videos
-        </Typography>
-        <Typography
-          className={styles.arabic}
-          style={{color: '#fff'}}
-          variant="h4">
-          فيديو
-        </Typography>
-      </div>
+        سّموقّل غ-فيديوات، تيسّانت ءوگّار ف-تودرت-اد ءيفولكين
+      </Typography>
       <Grid justifyContent="space-evenly" container>
         <Grid
           style={{textAlign: 'center', marginLeft: '2%', marginRight: '2%'}}

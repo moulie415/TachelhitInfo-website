@@ -5,6 +5,8 @@ import AudioSection from '../../components/audioSection';
 import BibleSection from '../../components/bibleSection';
 import Videos from '../../components/videos';
 import {CustomHistory} from 'preact-router';
+import Welcome from './welcome';
+import {colors} from '../../constants';
 
 const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
   const [ready, setReady] = useState(false);
@@ -17,10 +19,12 @@ const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
       style={{
         minHeight: '100%',
         padding: 15,
+        backgroundColor: colors.paleTurquoise,
       }}>
       {ready ? (
         <div>
-          <AudioSection />
+          <Welcome />
+          {/* <AudioSection /> */}
           <BibleSection />
           <Videos />
         </div>

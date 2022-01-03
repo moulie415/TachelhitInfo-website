@@ -17,7 +17,16 @@ import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {useEffect, useRef, useState} from 'preact/hooks';
-import {LATIN_NT, LATIN_OT, newTestament, oldTestament} from '../../constants';
+import {
+  AZUZD,
+  ISEQSITN,
+  LATIN_NT,
+  LATIN_OT,
+  MATSSENT,
+  newTestament,
+  NTHUNA,
+  oldTestament,
+} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
 const arratn = '/assets/images/11.jpg';
@@ -99,50 +108,15 @@ const BibleSection: FunctionalComponent = () => {
 
   return (
     <div>
-      <Card style={{marginTop: 15, paddingBottom: 15}}>
-        <div
-          style={{
-            display: 'flex',
-            backgroundColor: 'rgb(238, 28, 37)',
-            alignItems: 'center',
-            padding: 10,
-            width: '100%',
-            marginBottom: 5,
-            justifyContent: 'center',
-          }}>
-          <Typography style={{marginRight: 10, color: '#fff'}} variant="h5">
-            awal n-rbbi
-          </Typography>
-          <Typography
-            className={styles.arabic}
-            style={{color: '#fff'}}
-            variant="h4">
-            اوال ن-ربّي
-          </Typography>
-        </div>
+      <Card style={{marginTop: 15}}>
         <Grid justifyContent="space-evenly" container>
-          <Grid
-            style={{textAlign: 'center', marginLeft: '2%', marginRight: '2%'}}
-            item
-            xs={12}
-            sm={6}
-            md={3}>
-            <Button
-              style={{textTransform: 'inherit'}}
-              onClick={() =>
-                window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
-              }>
-              <Typography variant="h6">injil l-lmasih</Typography>
-            </Button>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
             <Button
               onClick={() =>
                 window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
               }>
-              <Typography
-                variant="h4"
-                style={{marginBottom: 20}}
-                className={styles.arabic}>
-                ءينجيل لّماسيح
+              <Typography variant="h4" className={styles.arabic}>
+                سّموقّل غ-تودرت ن-لماسيح، ار-تسفليدت ءي-واوال-نس
               </Typography>
             </Button>
             <Button>
@@ -154,16 +128,7 @@ const BibleSection: FunctionalComponent = () => {
               </a>
             </Button>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-            <Button
-              onClick={() => {
-                openModal();
-                setPdfSrc('../../assets/pdfs/nt_lat.pdf');
-                setArabic(false);
-              }}
-              style={{textTransform: 'inherit'}}>
-              <Typography variant="h6">lkhbar ifulkin</Typography>
-            </Button>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
             <Button
               onClick={() => {
                 openModal();
@@ -172,23 +137,14 @@ const BibleSection: FunctionalComponent = () => {
               }}
               style={{marginBottom: 20}}>
               <Typography variant="h4" className={styles.arabic}>
-                لخبار ءيفولكين
+                اقرا ءينجيل ن-لماسيح
               </Typography>
             </Button>
             <div>
               <img src={arratn} width={150} alt="bible pdf" />
             </div>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-            <Button
-              onClick={() => {
-                openModal();
-                setPdfSrc('../../assets/pdfs/ot_lat.pdf');
-                setArabic(false);
-              }}
-              style={{textTransform: 'inherit', padding: 0}}>
-              <Typography variant="h6">arratn l-lanbya</Typography>
-            </Button>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
             <Button
               onClick={() => {
                 openModal();
@@ -197,12 +153,30 @@ const BibleSection: FunctionalComponent = () => {
               }}
               style={{marginBottom: 20}}>
               <Typography variant="h4" className={styles.arabic}>
-                ارّاتن لّانبيا
+                اقرا ءيواليون ن-لانبيا
               </Typography>
             </Button>
             <div>
               <img src={ikhbar} width={150} alt="bible pdf" />
             </div>
+          </Grid>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
+            <Typography
+              style={{fontSize: 25, margin: 10, fontFamily: 'Scheherazade'}}>
+              سفلد ءي-يواليون ميمنين ف-تودرت-اد لّجديد
+            </Typography>
+            <audio style={{marginBottom: 5, width: '90%'}} controls>
+              <source src={MATSSENT} type="audio/mpeg" />
+            </audio>
+            <audio style={{marginBottom: 5, width: '90%'}} controls>
+              <source src={AZUZD} type="audio/mpeg" />
+            </audio>
+            <audio style={{marginBottom: 5, width: '90%'}} controls>
+              <source src={ISEQSITN} type="audio/mpeg" />
+            </audio>
+            <audio style={{marginBottom: 5, width: '90%'}} controls>
+              <source src={NTHUNA} type="audio/mpeg" />
+            </audio>
           </Grid>
         </Grid>
       </Card>

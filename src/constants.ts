@@ -1,5 +1,6 @@
 export const colors = {
-  red: '#dc3832',
+  red: '#009d94',
+  paleTurquoise: '#afeeee',
   green: '#307155',
   gold: 'gold',
   black: '#000',
