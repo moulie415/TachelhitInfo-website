@@ -1,5 +1,6 @@
 import {Button, Card, Grid, Typography, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
+import {colors} from '../../constants';
 
 function Documents() {
   const matches = useMediaQuery('(min-width:600px)');
@@ -9,151 +10,179 @@ function Documents() {
       style={{
         minHeight: '100%',
         padding: 10,
+        backgroundColor: colors.paleTurquoise,
       }}>
       <Grid container style={{marginBottom: 20}}>
         <Grid item xs={12} sm={5} md={5}>
-          <Card
-            style={{
-              padding: 5,
-              marginRight: 10,
-              height: '100%',
-            }}>
-            <div
+          <div style={{height: '100%'}}>
+            <Card
               style={{
-                width: '100%',
-                textAlign: 'center',
-                display: 'flex',
+                padding: 5,
+                marginRight: 10,
               }}>
-              <div>
-                <Button
-                  onClick={() => {
-                    window.open('../../assets/pdfs/التراث المسيحي.pdf');
-                  }}>
-                  <Typography variant="h5">
-                    التراث المسيحي في شمال إفريقيا
-                  </Typography>
-                </Button>
-                <Typography
-                  style={{
-                    paddingBottom: 20,
-                    textAlign: 'center',
-                    marginLeft: '5%',
-                    fontSize: 20,
-                  }}>
-                  في كثير من أجزاء شمال إفريقيا توجد أطلال بنايات مسيحية عريقة.
-                  ترى ماذا نعرف عن الحضارة المتقدِّمة والدِّين المتطور الذين
-                  تشهد لهما هذه الآثار؟ وعلى رفوف خزاناتنا كتابات علماء مسيحيين
-                  من شمال إفريقيا كأُغسطينوس وكبريانوس وترتوليانوس. ترى بماذا
-                  كان أسلافنا هؤلاء يؤمنون؟
-                </Typography>
-              </div>
-              <a
-                onClick={() =>
-                  window.open('../../assets/pdfs/التراث المسيحي.pdf')
-                }
+              <div
                 style={{
+                  width: '100%',
+                  textAlign: 'center',
                   display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '0 2%',
-                  cursor: 'pointer',
                 }}>
-                <img src="../../assets/images/13.png" height={150} />
-              </a>
-            </div>
-            <div
-              style={{
-                width: '100%',
-                textAlign: 'center',
-                display: 'flex',
-              }}>
-              <div>
-                <Button
-                  onClick={() => {
-                    window.open('../../assets/pdfs/afrique-du-nord.pdf');
-                  }}>
-                  <Typography variant="h6" style={{textTransform: 'none'}}>
-                    L'héritage chrétien en Afrique du Nord
+                <div>
+                  <Button
+                    onClick={() => {
+                      window.open('../../assets/pdfs/التراث المسيحي.pdf');
+                    }}>
+                    <Typography variant="h5" style={{fontSize: 28}}>
+                      التراث المسيحي في شمال إفريقيا
+                    </Typography>
+                  </Button>
+                  <Typography
+                    style={{
+                      paddingBottom: 20,
+                      textAlign: 'center',
+                      marginLeft: '5%',
+                      fontSize: 21,
+                    }}>
+                    في كثير من أجزاء شمال إفريقيا توجد أطلال بنايات مسيحية
+                    عريقة. ترى ماذا نعرف عن الحضارة المتقدِّمة والدِّين المتطور
+                    الذين تشهد لهما هذه الآثار؟ وعلى رفوف خزاناتنا كتابات علماء
+                    مسيحيين من شمال إفريقيا كأُغسطينوس وكبريانوس وترتوليانوس.
+                    ترى بماذا كان أسلافنا هؤلاء يؤمنون؟
                   </Typography>
-                </Button>
+                </div>
+                <a
+                  onClick={() =>
+                    window.open('../../assets/pdfs/التراث المسيحي.pdf')
+                  }
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '0 2%',
+                    cursor: 'pointer',
+                  }}>
+                  <img src="../../assets/images/13.png" height={160} />
+                </a>
+              </div>
+              <div
+                style={{
+                  width: '100%',
+                  textAlign: 'center',
+                  display: 'flex',
+                }}>
+                <div>
+                  <Button
+                    onClick={() => {
+                      window.open('../../assets/pdfs/afrique-du-nord.pdf');
+                    }}>
+                    <Typography
+                      variant="h6"
+                      style={{textTransform: 'none', fontSize: 24}}>
+                      L'héritage chrétien en Afrique du Nord
+                    </Typography>
+                  </Button>
 
-                <Typography
+                  <Typography
+                    style={{
+                      paddingBottom: 20,
+                      textAlign: 'center',
+                      marginLeft: '5%',
+                      fontSize: 16,
+                    }}>
+                    Dans bien des régions de l’Afrique du Nord subsistent des
+                    ruines d’anciens édifices chrétiens. Que savons-nous de la
+                    civilisation complexe et la religion élaborée dont
+                    témoignent si clairement ces restes ? Sur les rayons de nos
+                    bibliothèques nous rencontrons bon nombre d’œuvres écrites
+                    par des savants nord-africains tels Augustin, Cyprien et
+                    Tertullien.  Quelles étaient les croyances de nos célèbres
+                    ancêtres ? Ce livre fascinant nous éclaire sur une partie
+                    fondamentale de notre héritage culturel et religieux.
+                  </Typography>
+                </div>
+                <a
+                  onClick={() =>
+                    window.open('../../assets/pdfs/afrique-du-nord.pdf')
+                  }
                   style={{
-                    paddingBottom: 20,
-                    textAlign: 'center',
-                    marginLeft: '5%',
-                    fontSize: 14,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '0 2%',
+                    cursor: 'pointer',
                   }}>
-                  Dans bien des régions de l’Afrique du Nord subsistent des
-                  ruines d’anciens édifices chrétiens. Que savons-nous de la
-                  civilisation complexe et la religion élaborée dont témoignent
-                  si clairement ces restes ? Sur les rayons de nos bibliothèques
-                  nous rencontrons bon nombre d’œuvres écrites par des savants
-                  nord-africains tels Augustin, Cyprien et Tertullien.  Quelles
-                  étaient les croyances de nos célèbres ancêtres ? Ce livre
-                  fascinant nous éclaire sur une partie fondamentale de notre
-                  héritage culturel et religieux.
-                </Typography>
+                  <img src="../../assets/images/L'heritage.png" height={160} />
+                </a>
               </div>
-              <a
-                onClick={() =>
-                  window.open('../../assets/pdfs/afrique-du-nord.pdf')
-                }
+              <div
                 style={{
+                  width: '100%',
+                  textAlign: 'center',
                   display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '0 2%',
-                  cursor: 'pointer',
                 }}>
-                <img src="../../assets/images/L'heritage.png" height={150} />
-              </a>
-            </div>
-            <div
+                <div>
+                  <Button
+                    onClick={() => {
+                      window.open('../../assets/pdfs/this-holy-seed.pdf');
+                    }}>
+                    <Typography
+                      variant="h6"
+                      style={{textTransform: 'none', fontSize: 24}}>
+                      This Holy Seed
+                    </Typography>
+                  </Button>
+
+                  <Typography
+                    style={{
+                      paddingBottom: 20,
+                      marginLeft: '5%',
+                      textAlign: 'center',
+                      fontSize: 16,
+                    }}>
+                    One of the great centres of evangelical Christianity in the
+                    age after the apostles, NORTH AFRICA has become “the land of
+                    the vanished church”. Four hundred years of dramatic
+                    Christian growth gave way to slow decay and death. What were
+                    the secrets of success? And what were the eventual causes of
+                    failure?
+                  </Typography>
+                </div>
+                <a
+                  onClick={() =>
+                    window.open('../../assets/pdfs/this-holy-seed.pdf')
+                  }
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '0 2%',
+                    cursor: 'pointer',
+                  }}>
+                  <img src="../../assets/images/THS png.png" height={160} />
+                </a>
+              </div>
+            </Card>
+            <Card
               style={{
-                width: '100%',
-                textAlign: 'center',
-                display: 'flex',
+                //  padding: 5,
+                marginTop: 10,
+
+                marginRight: 10,
+                padding: '23px 5px',
               }}>
-              <div>
+              <div style={{width: '100%', textAlign: 'center'}}>
                 <Button
                   onClick={() => {
-                    window.open('../../assets/pdfs/this-holy-seed.pdf');
+                    window.open('../../assets/pdfs/دروس من التاريخ.pdf');
                   }}>
-                  <Typography variant="h6" style={{textTransform: 'none'}}>
-                    This Holy Seed
+                  <Typography
+                    variant="h5"
+                    style={{textTransform: 'none', fontSize: 30}}>
+                    المسيحية في شمال إفريقيا: دروس من التاريخ
                   </Typography>
                 </Button>
-
-                <Typography
-                  style={{
-                    paddingBottom: 20,
-                    marginLeft: '5%',
-                    textAlign: 'center',
-                    fontSize: 14,
-                  }}>
-                  One of the great centres of evangelical Christianity in the
-                  age after the apostles, NORTH AFRICA has become “the land of
-                  the vanished church”. Four hundred years of dramatic Christian
-                  growth gave way to slow decay and death. What were the secrets
-                  of success? And what were the eventual causes of failure?
-                </Typography>
               </div>
-              <a
-                onClick={() =>
-                  window.open('../../assets/pdfs/this-holy-seed.pdf')
-                }
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '0 2%',
-                  cursor: 'pointer',
-                }}>
-                <img src="../../assets/images/THS png.png" height={150} />
-              </a>
-            </div>
-          </Card>
+            </Card>
+          </div>
         </Grid>
         <Grid item xs={12} sm={4} md={4}>
           <Card
@@ -172,7 +201,11 @@ function Documents() {
                 }}>
                 <Typography
                   variant="h4"
-                  style={{textTransform: 'none', fontFamily: 'Scheherazade'}}>
+                  style={{
+                    textTransform: 'none',
+                    fontFamily: 'Scheherazade',
+                    fontSize: 36,
+                  }}>
                   امودّو ن ومسيگّل
                 </Typography>
               </Button>
@@ -182,7 +215,7 @@ function Documents() {
                 paddingBottom: 10,
                 margin: '0 2%',
                 textAlign: 'center',
-                fontSize: 23,
+                fontSize: 26,
                 fontFamily: 'Scheherazade',
               }}>
               لقيست-اد، اي-ايتما، تگا تين يان ءيگومّين لهنا ت-تايري د-سّلامت،
@@ -282,6 +315,7 @@ function Documents() {
                       style={{
                         textTransform: 'none',
                         fontFamily: 'Scheherazade',
+                        fontSize: 36,
                       }}>
                       اوال ءي-واسّ
                     </Typography>
@@ -291,7 +325,7 @@ function Documents() {
                       margin: '0 2%',
                       textAlign: 'center',
                       fontFamily: 'Scheherazade',
-                      fontSize: 20,
+                      fontSize: 23,
                     }}>
                     اسّ ف-واسّ ا-تاقرات يان-واوال ءيميمن غ-وارّاتن ن-سيدي ربّي،
                     ار-تّزعامت س-رّجا ءيصحان. ار-تسفليد ولا تمغارت د-تاروا،
@@ -386,7 +420,9 @@ function Documents() {
                   onClick={() => {
                     window.open('../../assets/pdfs/المرشد.pdf');
                   }}>
-                  <Typography variant="h5" style={{textTransform: 'none'}}>
+                  <Typography
+                    variant="h5"
+                    style={{textTransform: 'none', fontSize: 30}}>
                     المرشد للإيمان المسيحي والحياة المسيحية
                   </Typography>
                 </Button>
@@ -403,42 +439,10 @@ function Documents() {
                 onClick={() => {
                   window.open('../../assets/pdfs/هل أنت مُستَعِدٌّ ؟.pdf');
                 }}>
-                <Typography variant="h5" style={{textTransform: 'none'}}>
-                  هل أنت مُستَعِدٌّ ؟
-                </Typography>
-              </Button>
-            </div>
-          </Card>
-          <Card
-            style={{
-              padding: 5,
-              marginBottom: 10,
-            }}>
-            <div style={{width: '100%', textAlign: 'center'}}>
-              <Button
-                onClick={() => {
-                  window.open('../../assets/pdfs/دروس من التاريخ.pdf');
-                }}>
-                <Typography variant="h5" style={{textTransform: 'none'}}>
-                  المسيحية في شمال إفريقيا: دروس من التاريخ
-                </Typography>
-              </Button>
-            </div>
-          </Card>
-          <Card
-            style={{
-              padding: 5,
-              marginBottom: 10,
-            }}>
-            <div style={{width: '100%', textAlign: 'center'}}>
-              <Button
-                onClick={() => {
-                  window.open('../../assets/pdfs/taalim-el-kitab.pdf');
-                }}>
                 <Typography
                   variant="h5"
-                  style={{textTransform: 'none', fontFamily: 'Tashelhayt'}}>
-                  taølim el-kitâb el-mqaddas
+                  style={{textTransform: 'none', fontSize: 30}}>
+                  هل أنت مُستَعِدٌّ ؟
                 </Typography>
               </Button>
             </div>
@@ -452,7 +456,9 @@ function Documents() {
                 onClick={() => {
                   window.open('../../assets/pdfs/الدرّاز.pdf');
                 }}>
-                <Typography variant="h5" style={{textTransform: 'none'}}>
+                <Typography
+                  variant="h5"
+                  style={{textTransform: 'none', fontSize: 30}}>
                   حياتي بحال زربية
                 </Typography>
               </Button>
