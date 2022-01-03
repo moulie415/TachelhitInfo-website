@@ -4,7 +4,7 @@ import {useRef} from 'preact/hooks';
 import {GODS_STORY} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
-const rbbi = '/assets/images/14.jpg';
+const rbbi = '/assets/images/14.png';
 const amsiggel = '/assets/images/15.png';
 const jesusFilm = 'assets/images/22.jpg';
 
