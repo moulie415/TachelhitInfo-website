@@ -4,7 +4,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import BibleSection from '../../components/bibleSection';
 import Videos from '../../components/videos';
 import {CustomHistory} from 'preact-router';
-import Welcome from './welcome';
+import Welcome from './Welcome';
 import {colors} from '../../constants';
 import MusicPlayer from '../../components/MusicPlayer';
 
