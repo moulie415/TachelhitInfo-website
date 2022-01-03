@@ -1,19 +1,19 @@
 import {FunctionalComponent, h} from 'preact';
-import {useEffect, useState} from 'preact/hooks';
+import {useEffect, useRef, useState} from 'preact/hooks';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import AudioSection from '../../components/audioSection';
 import BibleSection from '../../components/bibleSection';
 import Videos from '../../components/videos';
 import {CustomHistory} from 'preact-router';
 import Welcome from './welcome';
 import {colors} from '../../constants';
+import MusicPlayer from '../../components/MusicPlayer';
 
 const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
   const [ready, setReady] = useState(false);
   useEffect(() => {
     setReady(true);
   }, []);
-
+  const musicPlayer = useRef<HTMLAudioElement>(null);
   return (
     <div
       style={{
@@ -24,9 +24,12 @@ const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
       {ready ? (
         <div>
           <Welcome />
-          {/* <AudioSection /> */}
-          <BibleSection />
+          <BibleSection ref={musicPlayer} />
           <Videos />
+          {/* <MusicPlayer
+            ref={musicPlayer}
+            src="../../assets/audio/homepage_intro.mp3"
+          /> */}
         </div>
       ) : (
         <div style={{textAlign: 'center'}}>

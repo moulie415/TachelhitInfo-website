@@ -10,7 +10,7 @@ import {
   IconButton,
   Divider,
 } from '@material-ui/core';
-import {FunctionalComponent, h} from 'preact';
+import {FunctionalComponent, h, RefObject} from 'preact';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import CloseIcon from '@material-ui/icons/Close';
 import PlayArrow from '@material-ui/icons/PlayArrow';
@@ -50,7 +50,9 @@ const customStyles = {
 
 Modal.setAppElement('#preact_root');
 
-const BibleSection: FunctionalComponent = () => {
+const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
+  ref,
+}) => {
   const [book, setBook] = useState<number>();
   const [chapter, setChapter] = useState<number>();
   const [playingBible, setPlayingBible] = useState(false);
@@ -166,16 +168,32 @@ const BibleSection: FunctionalComponent = () => {
               سفلد ءي-يواليون ميمنين ف-تودرت-اد لّجديد
             </Typography>
             <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source src={MATSSENT} type="audio/mpeg" />
+              <source
+                // onPlay={() => ref.current.pause()}
+                src={MATSSENT}
+                type="audio/mpeg"
+              />
             </audio>
             <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source src={AZUZD} type="audio/mpeg" />
+              <source
+                // onPlay={() => ref.current.pause()}
+                src={AZUZD}
+                type="audio/mpeg"
+              />
             </audio>
             <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source src={ISEQSITN} type="audio/mpeg" />
+              <source
+                // onPlaying={() => ref.current.pause()}
+                src={ISEQSITN}
+                type="audio/mpeg"
+              />
             </audio>
             <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source src={NTHUNA} type="audio/mpeg" />
+              <source
+                // onPlay={() => ref.current.pause()}
+                src={NTHUNA}
+                type="audio/mpeg"
+              />
             </audio>
           </Grid>
         </Grid>
