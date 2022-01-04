@@ -11,7 +11,7 @@ const jesusFilm = 'assets/images/22.jpg';
 const Videos: FunctionalComponent = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   return (
-    <Card style={{marginTop: 15, paddingBottom: 15}}>
+    <div style={{marginTop: 15, paddingBottom: 15}}>
       <Typography
         variant="h4"
         style={{
@@ -109,7 +109,7 @@ const Videos: FunctionalComponent = () => {
           </a>
         </Grid>
       </Grid>
-    </Card>
+    </div>
   );
 };
 

@@ -110,7 +110,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
 
   return (
     <div>
-      <Card style={{marginTop: 15}}>
+      <div style={{marginTop: 15}}>
         <Grid justifyContent="space-evenly" container>
           <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
             <Button
@@ -197,7 +197,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             </audio>
           </Grid>
         </Grid>
-      </Card>
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

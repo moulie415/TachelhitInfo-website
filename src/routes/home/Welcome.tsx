@@ -1,9 +1,9 @@
-import {Card, Typography} from '@material-ui/core';
-import {FunctionalComponent, h} from 'preact';
+import {Typography} from '@material-ui/core';
+import {Fragment, FunctionalComponent, h} from 'preact';
 
 const Welcome: FunctionalComponent = () => {
   return (
-    <Card style={{padding: 15}}>
+    <Fragment>
       <Typography style={{fontFamily: 'Scheherazade', fontSize: 25, textAlign: 'center'}}>
         اشكيد ا-گما ءولا كمّي ا-ولّتما، تكشمت س-تگمّي-نغ تسونفوت، تافت دارنغ
         رّاحت د-سّلامت، ار-تسفليدت ءي-لخبار ءيفولكين.
@@ -15,7 +15,7 @@ const Welcome: FunctionalComponent = () => {
         ءينّا: «نكّين ا-يگان تيفاوت ن-دّونيت. وانّا ديدي ءيتمونون راد-اس-تيلي
         تيفاوت ن-تودرت، ءور-را-سار-يفتّو غ-تيلّاس.»
       </Typography>
-    </Card>
+    </Fragment>
   );
 };
 
