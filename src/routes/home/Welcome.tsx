@@ -13,16 +13,17 @@ const Welcome: FunctionalComponent = () => {
         اشكيد ا-ݣما ءولا كمّي ا-ولّتما، تكشمت س-تݣمّي-نغ تسونفوت، تافت دارنغ
         رّاحت د-سّلامت، ار-تسفليدت ءي-لخبار ءيفولكين.
       </Typography>
-      <Typography
-        style={{
-          fontFamily: 'ScheherazadeNew',
-          fontSize: 25,
-          textAlign: 'center',
-          border: '1px solid #000',
-          alignSelf: 'center',
-        }}>
-        اشكو ءيلّا ديدنغ يان ءيسّيتّين تيكساض د-شّكّ، ءيݣ-اغ غ-لامان ءيدومن.
-      </Typography>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Typography
+          style={{
+            fontFamily: 'ScheherazadeNew',
+            fontSize: 25,
+            border: '1px solid #000',
+            padding: 5,
+          }}>
+          اشكو ءيلّا ديدنغ يان ءيسّيتّين تيكساض د-شّكّ، ءيݣ-اغ غ-لامان ءيدومن.
+        </Typography>
+      </div>
       <Typography
         style={{
           fontFamily: 'ScheherazadeNew',

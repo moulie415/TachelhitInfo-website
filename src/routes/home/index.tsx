@@ -17,7 +17,7 @@ const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
   return (
     <div
       style={{
-        height: '100vh',
+        minHeight: '100vh',
         padding: 15,
         backgroundColor: colors.paleTurquoise,
       }}>

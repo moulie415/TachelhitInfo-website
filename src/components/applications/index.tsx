@@ -25,7 +25,7 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
     style={{
       padding: 15,
       backgroundColor: colors.paleTurquoise,
-      height: '100vh',
+      minHeight: '100vh',
     }}>
     <SocialsFooter history={history} />
     <Card style={{marginTop: 15}}>

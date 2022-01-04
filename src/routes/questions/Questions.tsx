@@ -58,7 +58,7 @@ function Questions() {
       style={{
         padding: 15,
         backgroundColor: colors.paleTurquoise,
-        height: '100vh',
+        minHeight: '100vh',
       }}>
       <Card style={{marginBottom: 20}}>
         <List style={{alignItems: 'center', textAlign: 'center', padding: 10}}>

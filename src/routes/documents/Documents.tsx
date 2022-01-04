@@ -11,7 +11,7 @@ function Documents() {
   return (
     <div
       style={{
-        height: '100vh',
+        minHeight: '100vh',
         padding: 10,
         backgroundColor: colors.paleTurquoise,
       }}>

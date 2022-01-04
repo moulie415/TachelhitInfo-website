@@ -123,7 +123,7 @@ function Psalms() {
     <div
       style={{
         padding: 15,
-        height: '100vh',
+        minHeight: '100vh',
         backgroundColor: colors.paleTurquoise,
       }}>
       <Card>
