@@ -17,6 +17,7 @@ const Videos: FunctionalComponent = () => {
       videoRef.current?.play();
     } else {
       setFullScreen(false);
+      videoRef.current?.pause();
     }
   }, []);
   useEffect(() => {
@@ -63,7 +64,11 @@ const Videos: FunctionalComponent = () => {
           <a
             style={{cursor: 'pointer'}}
             onClick={() => videoRef.current?.requestFullscreen()}>
-            <img style={{width: '100%'}} src={rbbi} alt="maylli iqsad rbbi" />
+            <img
+              style={{width: '100%', height: 225}}
+              src={rbbi}
+              alt="maylli iqsad rbbi"
+            />
           </a>
         </Grid>
         <Grid
@@ -86,7 +91,11 @@ const Videos: FunctionalComponent = () => {
             </Typography>
           </Button>
           <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
-            <img style={{width: '100%'}} src={amsiggel} alt="Amsiggel" />
+            <img
+              style={{width: '100%', height: 225}}
+              src={amsiggel}
+              alt="Amsiggel"
+            />
           </a>
         </Grid>
         <Grid
@@ -121,7 +130,11 @@ const Videos: FunctionalComponent = () => {
             href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html"
             target="_blank"
             rel="noreferrer">
-            <img style={{width: '100%'}} src={jesusFilm} alt="Jesus Film" />
+            <img
+              style={{width: '100%', height: 225}}
+              src={jesusFilm}
+              alt="Jesus Film"
+            />
           </a>
         </Grid>
       </Grid>

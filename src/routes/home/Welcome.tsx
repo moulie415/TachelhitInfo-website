@@ -1,9 +1,9 @@
 import {Typography} from '@material-ui/core';
-import {Fragment, FunctionalComponent, h} from 'preact';
+import {FunctionalComponent, h} from 'preact';
 
 const Welcome: FunctionalComponent = () => {
   return (
-    <div style={{margin: 10}}>
+    <div style={{margin: 10, marginTop: 0}}>
       <Typography
         style={{
           fontFamily: 'ScheherazadeNew',
@@ -20,6 +20,7 @@ const Welcome: FunctionalComponent = () => {
             fontSize: 25,
             border: '1px solid #000',
             padding: 5,
+            margin: 5,
           }}>
           اشكو ءيلّا ديدنغ يان ءيسّيتّين تيكساض د-شّكّ، ءيݣ-اغ غ-لامان ءيدومن.
         </Typography>
