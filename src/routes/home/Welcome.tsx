@@ -18,6 +18,8 @@ const Welcome: FunctionalComponent = () => {
           fontFamily: 'ScheherazadeNew',
           fontSize: 25,
           textAlign: 'center',
+          border: '1px solid #000',
+          alignSelf: 'center',
         }}>
         اشكو ءيلّا ديدنغ يان ءيسّيتّين تيكساض د-شّكّ، ءيݣ-اغ غ-لامان ءيدومن.
       </Typography>
