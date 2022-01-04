@@ -8,7 +8,7 @@ function Documents() {
   return (
     <div
       style={{
-        minHeight: '100%',
+        height: '100vh',
         padding: 10,
         backgroundColor: colors.paleTurquoise,
       }}>
