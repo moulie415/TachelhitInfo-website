@@ -154,9 +154,17 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
               </Typography>
             </Button>
-            <div>
-              <img src={arratn} width={150} alt="bible pdf" />
-            </div>
+            <img
+              style={{cursor: 'pointer'}}
+              onClick={() => {
+                openModal();
+                setPdfSrc('../../assets/pdfs/nt_abc.pdf');
+                setArabic(true);
+              }}
+              src={arratn}
+              width={150}
+              alt="bible pdf"
+            />
           </Grid>
           <Grid style={{textAlign: 'center'}} item xs={12} sm={2} md={2}>
             <Button
@@ -170,9 +178,17 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
               </Typography>
             </Button>
-            <div>
-              <img src={ikhbar} width={150} alt="bible pdf" />
-            </div>
+            <img
+              style={{cursor: 'pointer'}}
+              onClick={() => {
+                openModal();
+                setPdfSrc('../../assets/pdfs/ot_abc.pdf');
+                setArabic(true);
+              }}
+              src={ikhbar}
+              width={150}
+              alt="bible pdf"
+            />
           </Grid>
           <Grid style={{textAlign: 'center'}} item xs={12} sm={5} md={5}>
             <Typography
