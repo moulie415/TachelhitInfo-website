@@ -37,6 +37,12 @@ canvas {
 }
 
 @font-face {
+  font-family: ScheherazadeNew;
+  src: url('../assets/fonts/ScheherazadeNew-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
   font-family: Tashelhayt;
   src: url('../assets/fonts/TashelhaytSILDoulos.ttf') format('truetype');
   font-display: swap;

@@ -3,19 +3,34 @@ import {Fragment, FunctionalComponent, h} from 'preact';
 
 const Welcome: FunctionalComponent = () => {
   return (
-    <Fragment>
-      <Typography style={{fontFamily: 'Scheherazade', fontSize: 25, textAlign: 'center'}}>
-        اشكيد ا-گما ءولا كمّي ا-ولّتما، تكشمت س-تگمّي-نغ تسونفوت، تافت دارنغ
+    <div style={{margin: 10}}>
+      <Typography
+        style={{
+          fontFamily: 'ScheherazadeNew',
+          fontSize: 25,
+          textAlign: 'center',
+        }}>
+        اشكيد ا-ݣما ءولا كمّي ا-ولّتما، تكشمت س-تݣمّي-نغ تسونفوت، تافت دارنغ
         رّاحت د-سّلامت، ار-تسفليدت ءي-لخبار ءيفولكين.
       </Typography>
-      <Typography style={{fontFamily: 'Scheherazade', fontSize: 25, textAlign: 'center'}}>
-        اشكو ءيلّا دارنغ يان ءيسّيتّين تيكساض د-شّكّ، ءيگ-اغ غ-لامان ءيدومن.
+      <Typography
+        style={{
+          fontFamily: 'ScheherazadeNew',
+          fontSize: 25,
+          textAlign: 'center',
+        }}>
+        اشكو ءيلّا ديدنغ يان ءيسّيتّين تيكساض د-شّكّ، ءيݣ-اغ غ-لامان ءيدومن.
       </Typography>
-      <Typography style={{fontFamily: 'Scheherazade', fontSize: 25, textAlign: 'center'}}>
-        ءينّا: «نكّين ا-يگان تيفاوت ن-دّونيت. وانّا ديدي ءيتمونون راد-اس-تيلي
-        تيفاوت ن-تودرت، ءور-را-سار-يفتّو غ-تيلّاس.»
+      <Typography
+        style={{
+          fontFamily: 'ScheherazadeNew',
+          fontSize: 25,
+          textAlign: 'center',
+        }}>
+        ءينّا: «نكّين ايݣان تيفاوت ندّونيت. وانّا ديدي ءيتمونون راداستيلي تيفاوت
+        نتودرت، ءورراساريفتّو غتيلّاس.»
       </Typography>
-    </Fragment>
+    </div>
   );
 };
 
