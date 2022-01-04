@@ -1,6 +1,6 @@
 import {Grid, Typography, Card, Button} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
-import {useRef} from 'preact/hooks';
+import {useCallback, useEffect, useRef, useState} from 'preact/hooks';
 import {GODS_STORY} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
@@ -10,6 +10,18 @@ const jesusFilm = 'assets/images/22.jpg';
 
 const Videos: FunctionalComponent = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [fullScreen, setFullScreen] = useState(false);
+  const onFullScreenChange = useCallback(() => {
+    if (document.fullscreenElement) {
+      setFullScreen(true);
+      videoRef.current?.play();
+    } else {
+      setFullScreen(false);
+    }
+  }, []);
+  useEffect(() => {
+    document.addEventListener('fullscreenchange', onFullScreenChange);
+  }, [onFullScreenChange]);
   return (
     <div style={{marginTop: 15, paddingBottom: 15}}>
       <Typography
@@ -29,11 +41,11 @@ const Videos: FunctionalComponent = () => {
           sm={6}
           md={3}>
           <Button
-            onClick={() => videoRef.current?.play()}
+            onClick={() => videoRef.current?.requestFullscreen()}
             style={{textTransform: 'inherit'}}>
             <Typography variant="h6">maylli iqsad rbbi</Typography>
           </Button>
-          <Button onClick={() => videoRef.current?.play()}>
+          <Button onClick={() => videoRef.current?.requestFullscreen()}>
             <Typography
               className={styles.arabic}
               style={{marginBottom: 10}}
@@ -43,12 +55,16 @@ const Videos: FunctionalComponent = () => {
           </Button>
           <video
             ref={videoRef}
-            onPlay={() => videoRef.current?.requestFullscreen()}
-            style={{width: '100%'}}
+            style={{width: '100%', display: fullScreen ? 'inherit' : 'none'}}
             poster={rbbi}
-            controls>
+            controls={fullScreen}>
             <source src={GODS_STORY} type="video/mp4" />
           </video>
+          <a
+            style={{cursor: 'pointer'}}
+            onClick={() => videoRef.current?.requestFullscreen()}>
+            <img style={{width: '100%'}} src={rbbi} alt="maylli iqsad rbbi" />
+          </a>
         </Grid>
         <Grid
           style={{textAlign: 'center', marginLeft: '2%', marginRight: '2%'}}
