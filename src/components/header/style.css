@@ -4,14 +4,19 @@
   text-transform: lowercase;
   margin-right: 10px;
   font-size: 20px  !important;
-  line-height: 25px;
 }
 
 .titleArabic {
   font-family: Scheherazade !important;
   font-size: 32px !important;
-  line-height: 25px;
+  margin-right: 10px;
   direction: rtl;
+}
+
+.titleTif {
+  font-family: Tifinagh;
+  margin-right: 10px;
+  font-size: 20px  !important;
 }
 
 .link {
