@@ -1,9 +1,12 @@
 import {Button, Card, Grid, Typography, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
+import useMusicPlayer from '../../components/useMusicPlayer';
 import {colors} from '../../constants';
 
 function Documents() {
   const matches = useMediaQuery('(min-width:600px)');
+
+  const {Player} = useMusicPlayer('../../assets/audio/documents_intro.mp3');
 
   return (
     <div
@@ -14,7 +17,7 @@ function Documents() {
       }}>
       <Grid container style={{marginBottom: 20}}>
         <Grid item xs={12} sm={5} md={5}>
-          <div style={{height: '100%'}}>
+          <div>
             <Card
               style={{
                 padding: 5,
@@ -163,11 +166,9 @@ function Documents() {
             </Card>
             <Card
               style={{
-                //  padding: 5,
+                padding: 5,
                 marginTop: 10,
-
                 marginRight: 10,
-                padding: '23px 5px',
               }}>
               <div style={{width: '100%', textAlign: 'center'}}>
                 <Button
@@ -189,7 +190,6 @@ function Documents() {
             style={{
               padding: 5,
               marginRight: 10,
-              height: '100%',
             }}>
             <div style={{textAlign: 'center'}}>
               <img src="../../assets/images/15.png" height={200} />
@@ -466,6 +466,7 @@ function Documents() {
           </Card>
         </Grid>
       </Grid>
+      <Player />
     </div>
   );
 }

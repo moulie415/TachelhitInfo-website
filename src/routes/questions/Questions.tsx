@@ -13,6 +13,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Modal from 'react-modal';
 import SocialsFooter from '../../components/socialsFooter';
 import {colors, questionList} from '../../constants';
+import useMusicPlayer from '../../components/useMusicPlayer';
 
 const customStyles = {
   content: {
@@ -31,6 +32,11 @@ function Questions() {
   const [question, setQuestion] = useState<number>(0);
   const player = useRef<HTMLAudioElement>(null);
   const [audio, setAudio] = useState('');
+  const [autoPlay, setAutoPlay] = useState(true);
+  const {Player} = useMusicPlayer(
+    '../../assets/audio/questions_intro.mp3',
+    autoPlay,
+  );
 
   function openModal() {
     setModalIsOpen(true);
@@ -38,6 +44,7 @@ function Questions() {
 
   function afterOpenModal() {
     player.current?.play();
+    setAutoPlay(false);
   }
 
   function closeModal() {
@@ -116,6 +123,7 @@ function Questions() {
           <Typography gutterBottom>{questionList[question].body}</Typography>
         </div>
       </Modal>
+      <Player />
     </div>
   );
 }
