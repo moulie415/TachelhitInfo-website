@@ -62,6 +62,18 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
   const [modalIsOpen, setIsOpen] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf');
   const bookType = pdfSrc.includes('nt') ? newTestament : oldTestament;
+  const player1 = useRef<HTMLAudioElement>(null);
+  const player2 = useRef<HTMLAudioElement>(null);
+  const player3 = useRef<HTMLAudioElement>(null);
+  const player4 = useRef<HTMLAudioElement>(null);
+  const [_, setState] = useState(0);
+
+  const toggle = (ref: RefObject<HTMLAudioElement | null>) => {
+    if (ref.current) {
+      ref.current.paused ? ref.current.play() : ref.current.pause();
+      setState(Math.random());
+    }
+  };
 
   function openModal() {
     setIsOpen(true);
@@ -130,7 +142,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               </a>
             </Button>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={2} md={2}>
             <Button
               onClick={() => {
                 openModal();
@@ -139,14 +151,14 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               }}
               style={{marginBottom: 20}}>
               <Typography variant="h4" className={styles.arabic}>
-                اقرا ءينجيل ن-لماسيح
+                اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
               </Typography>
             </Button>
             <div>
               <img src={arratn} width={150} alt="bible pdf" />
             </div>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={2} md={2}>
             <Button
               onClick={() => {
                 openModal();
@@ -155,45 +167,90 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               }}
               style={{marginBottom: 20}}>
               <Typography variant="h4" className={styles.arabic}>
-                اقرا ءيواليون ن-لانبيا
+                اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
               </Typography>
             </Button>
             <div>
               <img src={ikhbar} width={150} alt="bible pdf" />
             </div>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={5} md={5}>
             <Typography
-              style={{fontSize: 25, margin: 10, fontFamily: 'Scheherazade'}}>
+              variant="h4"
+              style={{
+                margin: 10,
+                fontFamily: 'Scheherazade',
+                marginBottom: 0,
+              }}>
               سفلد ءي-يواليون ميمنين ف-تودرت-اد لّجديد
             </Typography>
-            <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source
-                // onPlay={() => ref.current.pause()}
-                src={MATSSENT}
-                type="audio/mpeg"
-              />
+            <Button
+              style={{textTransform: 'inherit'}}
+              onClick={() => toggle(player1)}>
+              {player1.current?.paused ? <PlayArrow /> : <Pause />}
+              <Typography style={{marginRight: 10}} variant="h6">
+                is-tgit amuslem?
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
+                ءيس-تگيت اموسلم؟
+              </Typography>
+            </Button>
+            <audio
+              ref={player1}
+              style={{marginBottom: 5, width: '90%', display: 'none'}}
+              controls>
+              <source src={MATSSENT} type="audio/mpeg" />
             </audio>
-            <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source
-                // onPlay={() => ref.current.pause()}
-                src={AZUZD}
-                type="audio/mpeg"
-              />
+            <Button
+              style={{textTransform: 'inherit'}}
+              onClick={() => toggle(player2)}>
+              {player2.current?.paused ? <PlayArrow /> : <Pause />}
+              <Typography style={{marginRight: 10}} variant="h6">
+                is-tzuzdt laman d-sslamt?
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
+                ءيس-تژوژضت لامان د-سّلامت؟
+              </Typography>
+            </Button>
+            <audio
+              ref={player2}
+              style={{marginBottom: 5, width: '90%', display: 'none'}}
+              controls>
+              <source src={AZUZD} type="audio/mpeg" />
             </audio>
-            <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source
-                // onPlaying={() => ref.current.pause()}
-                src={ISEQSITN}
-                type="audio/mpeg"
-              />
+            <Button
+              style={{textTransform: 'inherit'}}
+              onClick={() => toggle(player3)}>
+              {player3.current?.paused ? <PlayArrow /> : <Pause />}
+              <Typography style={{marginRight: 10}} variant="h6">
+                is dark kra n-iseqsitn?
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
+                ءيس-دارك كرا ن-يسقسيتن؟
+              </Typography>
+            </Button>
+            <audio
+              ref={player3}
+              style={{marginBottom: 5, width: '90%', display: 'none'}}
+              controls>
+              <source src={ISEQSITN} type="audio/mpeg" />
             </audio>
-            <audio style={{marginBottom: 5, width: '90%'}} controls>
-              <source
-                // onPlay={() => ref.current.pause()}
-                src={NTHUNA}
-                type="audio/mpeg"
-              />
+            <Button
+              style={{textTransform: 'inherit'}}
+              onClick={() => toggle(player4)}>
+              {player4.current?.paused ? <PlayArrow /> : <Pause />}
+              <Typography style={{marginRight: 10}} variant="h6">
+                is-tumnt s-lmasih?
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
+                ءيس-تومنت س-لماسيح؟
+              </Typography>
+            </Button>
+            <audio
+              ref={player4}
+              style={{marginBottom: 5, width: '90%', display: 'none'}}
+              controls>
+              <source src={NTHUNA} type="audio/mpeg" />
             </audio>
           </Grid>
         </Grid>
