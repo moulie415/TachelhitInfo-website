@@ -1,6 +1,7 @@
-import {Grid, Typography, Card, Button} from '@material-ui/core';
+import {Grid, Typography, Card, Button, IconButton} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import {useCallback, useEffect, useRef, useState} from 'preact/hooks';
+import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
 import {GODS_STORY} from '../../constants';
 import styles from '../../routes/home/styles.css';
 
@@ -25,22 +26,11 @@ const Videos: FunctionalComponent = () => {
   }, [onFullScreenChange]);
   return (
     <div style={{marginTop: 15, paddingBottom: 15}}>
-      <Typography
-        variant="h4"
-        style={{
-          fontFamily: 'Scheherazade',
-          textAlign: 'center',
-          marginTop: 15,
-        }}>
-        سّموقّل غ-فيديوات، تيسّانت ءوگّار ف-تودرت-اد ءيفولكين
-      </Typography>
       <Grid justifyContent="space-evenly" container>
-        <Grid
-          style={{textAlign: 'center', marginLeft: '2%', marginRight: '2%'}}
-          item
-          xs={12}
-          sm={6}
-          md={3}>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
+          <IconButton onClick={() => videoRef.current?.requestFullscreen()}>
+            <VideocamOutlinedIcon style={{fontSize: 30, color: '#000'}} />
+          </IconButton>
           <Button
             onClick={() => videoRef.current?.requestFullscreen()}
             style={{textTransform: 'inherit'}}>
@@ -71,16 +61,14 @@ const Videos: FunctionalComponent = () => {
             />
           </a>
         </Grid>
-        <Grid
-          style={{textAlign: 'center', marginLeft: '2%', marginRight: '2%'}}
-          item
-          xs={12}
-          sm={6}
-          md={3}>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
+          <IconButton onClick={() => window.open('https://www.amsiggel.com')}>
+            <VideocamOutlinedIcon style={{fontSize: 30, color: '#000'}} />
+          </IconButton>
           <Button
             style={{textTransform: 'inherit'}}
             onClick={() => window.open('https://www.amsiggel.com')}>
-            <Typography variant="h6">amuddu n-umsiggel</Typography>
+            <Typography variant="h6">amuddu n-u msiggel</Typography>
           </Button>
           <Button onClick={() => window.open('https://www.amsiggel.com')}>
             <Typography
@@ -98,12 +86,15 @@ const Videos: FunctionalComponent = () => {
             />
           </a>
         </Grid>
-        <Grid
-          style={{textAlign: 'center', marginLeft: '2%', marginRight: '2%'}}
-          item
-          xs={12}
-          sm={6}
-          md={3}>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
+          <IconButton
+            onClick={() =>
+              window.open(
+                'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
+              )
+            }>
+            <VideocamOutlinedIcon style={{fontSize: 30, color: '#000'}} />
+          </IconButton>
           <Button
             style={{textTransform: 'inherit'}}
             onClick={() =>

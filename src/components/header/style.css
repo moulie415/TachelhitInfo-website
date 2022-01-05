@@ -2,21 +2,20 @@
 
 .title {
   text-transform: lowercase;
-  margin-right: 10px;
-  font-size: 20px  !important;
+  margin-right: 20px;
+  font-size: 30px  !important;
 }
 
 .titleArabic {
   font-family: Scheherazade !important;
-  font-size: 32px !important;
-  margin-right: 10px;
+  font-size: 40px !important;
   direction: rtl;
 }
 
 .titleTif {
   font-family: Tifinagh;
-  margin-right: 10px;
-  font-size: 20px  !important;
+  margin-right: 20px;
+  font-size: 30px  !important;
 }
 
 .link {
