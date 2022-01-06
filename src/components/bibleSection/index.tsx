@@ -142,55 +142,63 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               </a>
             </Button>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={2} md={2}>
-            <Button
-              onClick={() => {
-                openModal();
-                setPdfSrc('../../assets/pdfs/nt_abc.pdf');
-                setArabic(true);
-              }}
-              style={{marginBottom: 20}}>
-              <Typography variant="h4" className={styles.arabic}>
-                اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
-              </Typography>
-            </Button>
-            <img
-              style={{cursor: 'pointer'}}
-              onClick={() => {
-                openModal();
-                setPdfSrc('../../assets/pdfs/nt_abc.pdf');
-                setArabic(true);
-              }}
-              src={arratn}
-              width={150}
-              alt="bible pdf"
-            />
+          <Grid
+            style={{textAlign: 'center'}}
+            item
+            xs={12}
+            sm={5}
+            md={5}
+            container>
+            <Grid item >
+              <Button
+                onClick={() => {
+                  openModal();
+                  setPdfSrc('../../assets/pdfs/nt_abc.pdf');
+                  setArabic(true);
+                }}
+                style={{marginBottom: 20}}>
+                <Typography variant="h4" className={styles.arabic}>
+                  اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
+                </Typography>
+              </Button>
+              <img
+                style={{cursor: 'pointer'}}
+                onClick={() => {
+                  openModal();
+                  setPdfSrc('../../assets/pdfs/nt_abc.pdf');
+                  setArabic(true);
+                }}
+                src={arratn}
+                width={150}
+                alt="bible pdf"
+              />
+            </Grid>
+            <Grid item>
+              <Button
+                onClick={() => {
+                  openModal();
+                  setPdfSrc('../../assets/pdfs/ot_abc.pdf');
+                  setArabic(true);
+                }}
+                style={{marginBottom: 20}}>
+                <Typography variant="h4" className={styles.arabic}>
+                  اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
+                </Typography>
+              </Button>
+              <img
+                style={{cursor: 'pointer'}}
+                onClick={() => {
+                  openModal();
+                  setPdfSrc('../../assets/pdfs/ot_abc.pdf');
+                  setArabic(true);
+                }}
+                src={ikhbar}
+                width={150}
+                alt="bible pdf"
+              />
+            </Grid>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={2} md={2}>
-            <Button
-              onClick={() => {
-                openModal();
-                setPdfSrc('../../assets/pdfs/ot_abc.pdf');
-                setArabic(true);
-              }}
-              style={{marginBottom: 20}}>
-              <Typography variant="h4" className={styles.arabic}>
-                اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
-              </Typography>
-            </Button>
-            <img
-              style={{cursor: 'pointer'}}
-              onClick={() => {
-                openModal();
-                setPdfSrc('../../assets/pdfs/ot_abc.pdf');
-                setArabic(true);
-              }}
-              src={ikhbar}
-              width={150}
-              alt="bible pdf"
-            />
-          </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={5} md={5}>
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
             <Typography
               variant="h4"
               style={{
