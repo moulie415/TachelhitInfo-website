@@ -54,11 +54,7 @@ const Videos: FunctionalComponent = () => {
           <a
             style={{cursor: 'pointer'}}
             onClick={() => videoRef.current?.requestFullscreen()}>
-            <img
-              style={{width: '100%', height: 225}}
-              src={rbbi}
-              alt="maylli iqsad rbbi"
-            />
+            <img style={{height: 225}} src={rbbi} alt="maylli iqsad rbbi" />
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
@@ -79,11 +75,7 @@ const Videos: FunctionalComponent = () => {
             </Typography>
           </Button>
           <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
-            <img
-              style={{width: '100%', height: 225}}
-              src={amsiggel}
-              alt="Amsiggel"
-            />
+            <img style={{height: 225}} src={amsiggel} alt="Amsiggel" />
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
@@ -121,11 +113,7 @@ const Videos: FunctionalComponent = () => {
             href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html"
             target="_blank"
             rel="noreferrer">
-            <img
-              style={{width: '100%', height: 225}}
-              src={jesusFilm}
-              alt="Jesus Film"
-            />
+            <img style={{height: 225}} src={jesusFilm} alt="Jesus Film" />
           </a>
         </Grid>
       </Grid>

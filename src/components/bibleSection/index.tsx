@@ -16,12 +16,12 @@ import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {useEffect, useRef, useState} from 'preact/hooks';
-import {newTestament, oldTestament} from '../../constants';
+import {colors, newTestament, oldTestament} from '../../constants';
 import styles from '../../routes/home/styles.css';
 import AudioSection from '../audioSection';
 import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
 import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
-import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import ImportContactsTwoToneIcon from '@material-ui/icons/ImportContactsTwoTone';
 
 const arratn = '/assets/images/11.jpg';
 const ikhbar = '/assets/images/12.png';
@@ -111,8 +111,17 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               onClick={() =>
                 window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
               }>
+              <VolumeMuteIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
+              <ImportContactsTwoToneIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
+              <VideocamOutlinedIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
               <Typography variant="h4" className={styles.arabic}>
-                سّموقّل غ-تودرت ن-لماسيح، ار-تسفليدت ءي-واوال-نس
+                لعهد لّجدي
               </Typography>
             </Button>
             <Button>
@@ -124,7 +133,17 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               </a>
             </Button>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={5} md={5}>
+          <Grid
+            style={{
+              textAlign: 'center',
+              border: '5px solid #fff',
+              paddingBottom: 10,
+              backgroundColor: colors.palerTurquoise,
+            }}
+            item
+            xs={12}
+            sm={5}
+            md={5}>
             <Grid container>
               <Grid item xs={12} sm={6} md={6}>
                 <Button
@@ -134,8 +153,14 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     setArabic(true);
                   }}
                   style={{marginBottom: 20}}>
+                  <VolumeMuteIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                  <ImportContactsTwoToneIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
                   <Typography variant="h4" className={styles.arabic}>
-                    اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
+                    ءينجيل لّماسيح – اغاراس ن-تودرت
                   </Typography>
                 </Button>
                 <img
@@ -158,8 +183,14 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     setArabic(true);
                   }}
                   style={{marginBottom: 20}}>
+                  <VolumeMuteIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                  <ImportContactsTwoToneIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
                   <Typography variant="h4" className={styles.arabic}>
-                    اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
+                    ارّاتن لّانبيا – سّفجّيجات ف-مدّن-ينو
                   </Typography>
                 </Button>
                 <img
