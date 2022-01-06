@@ -1,114 +1,116 @@
-import {Grid, Typography, Card, Button} from '@material-ui/core';
+import {Grid, Typography, Button} from '@material-ui/core';
 import {FunctionalComponent, h, RefObject} from 'preact';
 import styles from '../../routes/home/styles.css';
 import {AZUZD, ISEQSITN, MATSSENT, NTHUNA} from '../../constants';
-import {useRef} from 'preact/hooks';
+import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import {useRef, useState} from 'preact/hooks';
 
 const AudioSection: FunctionalComponent = () => {
   const player1 = useRef<HTMLAudioElement>(null);
   const player2 = useRef<HTMLAudioElement>(null);
   const player3 = useRef<HTMLAudioElement>(null);
   const player4 = useRef<HTMLAudioElement>(null);
+  const [_, setState] = useState(0);
 
   const toggle = (ref: RefObject<HTMLAudioElement | null>) => {
     if (ref.current) {
       ref.current.paused ? ref.current.play() : ref.current.pause();
     }
+    setState(Math.random());
   };
 
   return (
-    <Card style={{padding: 15}}>
-      <Grid container>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            style={{
-              textTransform: 'inherit',
-              display: 'block',
-              margin: 'auto',
-              width: '80%',
-            }}
-            onClick={() => toggle(player1)}>
-            <Typography variant="subtitle2">
-              ma-tssent f-walli ra-d-yašk?
-            </Typography>
-            <Typography
-              variant="h5"
-              style={{marginBottom: 20}}
-              className={styles.arabic}>
-              ما-تسّنت ف-والّي را-د-ياشك؟
-            </Typography>
-            <audio style={{width: '100%'}} controls ref={player1}>
-              <source src={MATSSENT} type="audio/mpeg" />
-            </audio>
-          </Button>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            style={{
-              textTransform: 'inherit',
-              display: 'block',
-              margin: 'auto',
-              width: '80%',
-            }}
-            onClick={() => toggle(player2)}>
-            <Typography variant="subtitle2">
-              is-tzuzdt laman d-sslamt?
-            </Typography>
-            <Typography
-              variant="h5"
-              style={{marginBottom: 20}}
-              className={styles.arabic}>
-              ءيس-تژوژضت لامان د-سّلامت؟
-            </Typography>
-            <audio style={{width: '100%'}} controls ref={player2}>
-              <source src={AZUZD} type="audio/mpeg" />
-            </audio>
-          </Button>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            style={{
-              textTransform: 'inherit',
-              display: 'block',
-              margin: 'auto',
-              width: '80%',
-            }}
-            onClick={() => toggle(player3)}>
-            <Typography variant="subtitle2">is dark kra n-iseqsitn?</Typography>
-            <Typography
-              variant="h5"
-              style={{marginBottom: 20}}
-              className={styles.arabic}>
-              ءيس-دارك كرا ن-يسقسيتن؟
-            </Typography>
-            <audio style={{width: '100%'}} controls ref={player3}>
-              <source src={ISEQSITN} type="audio/mpeg" />
-            </audio>
-          </Button>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            style={{
-              textTransform: 'inherit',
-              display: 'block',
-              margin: 'auto',
-              width: '80%',
-            }}
-            onClick={() => toggle(player4)}>
-            <Typography variant="subtitle2">is-tumnt s-lmasih?</Typography>
-            <Typography
-              variant="h5"
-              style={{marginBottom: 20}}
-              className={styles.arabic}>
-              ءيس-تومنت س-لماسيح؟
-            </Typography>
-            <audio style={{width: '100%'}} controls ref={player4}>
-              <source src={NTHUNA} type="audio/mpeg" />
-            </audio>
-          </Button>
-        </Grid>
-      </Grid>
-    </Card>
+    <Grid item xs={12} sm={3} md={3}>
+      <Button
+        style={{textTransform: 'inherit', width: '100%'}}
+        onClick={() => toggle(player1)}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}>
+          {player1.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+          <Typography className={styles.arabic} variant="h4">
+            ما-تسّنت ف-والّي را-د-ياشك؟
+          </Typography>
+        </div>
+      </Button>
+      <audio
+        ref={player1}
+        style={{marginBottom: 5, width: '90%', display: 'none'}}
+        controls>
+        <source src={MATSSENT} type="audio/mpeg" />
+      </audio>
+      <Button
+        style={{textTransform: 'inherit', width: '100%'}}
+        onClick={() => toggle(player2)}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}>
+          {player2.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+          <Typography className={styles.arabic} variant="h4">
+            اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
+          </Typography>
+        </div>
+      </Button>
+      <audio
+        ref={player2}
+        style={{marginBottom: 5, width: '90%', display: 'none'}}
+        controls>
+        <source src={AZUZD} type="audio/mpeg" />
+      </audio>
+      <Button
+        style={{textTransform: 'inherit', width: '100%'}}
+        onClick={() => toggle(player3)}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}>
+          {player3.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+          <Typography className={styles.arabic} variant="h4">
+            ءيسقسيتن ف-وغاراس لّماسيح
+          </Typography>
+        </div>
+      </Button>
+      <audio
+        ref={player3}
+        style={{marginBottom: 5, width: '90%', display: 'none'}}
+        controls>
+        <source src={ISEQSITN} type="audio/mpeg" />
+      </audio>
+      <Button
+        style={{textTransform: 'inherit', width: '100%'}}
+        onClick={() => toggle(player4)}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}>
+          {player4.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+          <Typography className={styles.arabic} variant="h4">
+            سّا ن-تحونا غ-تگمّي-نك لّجديد
+          </Typography>
+        </div>
+      </Button>
+      <audio
+        ref={player4}
+        style={{marginBottom: 5, width: '90%', display: 'none'}}
+        controls>
+        <source src={NTHUNA} type="audio/mpeg" />
+      </audio>
+    </Grid>
   );
 };
 

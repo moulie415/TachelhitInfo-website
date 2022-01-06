@@ -1,7 +1,6 @@
 import {
   Grid,
   Typography,
-  Card,
   Button,
   Accordion,
   AccordionDetails,
@@ -17,17 +16,12 @@ import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {useEffect, useRef, useState} from 'preact/hooks';
-import {
-  AZUZD,
-  ISEQSITN,
-  LATIN_NT,
-  LATIN_OT,
-  MATSSENT,
-  newTestament,
-  NTHUNA,
-  oldTestament,
-} from '../../constants';
+import {newTestament, oldTestament} from '../../constants';
 import styles from '../../routes/home/styles.css';
+import AudioSection from '../audioSection';
+import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
+import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
+import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 
 const arratn = '/assets/images/11.jpg';
 const ikhbar = '/assets/images/12.png';
@@ -62,18 +56,6 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
   const [modalIsOpen, setIsOpen] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf');
   const bookType = pdfSrc.includes('nt') ? newTestament : oldTestament;
-  const player1 = useRef<HTMLAudioElement>(null);
-  const player2 = useRef<HTMLAudioElement>(null);
-  const player3 = useRef<HTMLAudioElement>(null);
-  const player4 = useRef<HTMLAudioElement>(null);
-  const [_, setState] = useState(0);
-
-  const toggle = (ref: RefObject<HTMLAudioElement | null>) => {
-    if (ref.current) {
-      ref.current.paused ? ref.current.play() : ref.current.pause();
-      setState(Math.random());
-    }
-  };
 
   function openModal() {
     setIsOpen(true);
@@ -142,141 +124,59 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               </a>
             </Button>
           </Grid>
-          <Grid
-            style={{textAlign: 'center'}}
-            item
-            xs={12}
-            sm={5}
-            md={5}
-            container>
-            <Grid item >
-              <Button
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/nt_abc.pdf');
-                  setArabic(true);
-                }}
-                style={{marginBottom: 20}}>
-                <Typography variant="h4" className={styles.arabic}>
-                  اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
-                </Typography>
-              </Button>
-              <img
-                style={{cursor: 'pointer'}}
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/nt_abc.pdf');
-                  setArabic(true);
-                }}
-                src={arratn}
-                width={150}
-                alt="bible pdf"
-              />
-            </Grid>
-            <Grid item>
-              <Button
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/ot_abc.pdf');
-                  setArabic(true);
-                }}
-                style={{marginBottom: 20}}>
-                <Typography variant="h4" className={styles.arabic}>
-                  اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
-                </Typography>
-              </Button>
-              <img
-                style={{cursor: 'pointer'}}
-                onClick={() => {
-                  openModal();
-                  setPdfSrc('../../assets/pdfs/ot_abc.pdf');
-                  setArabic(true);
-                }}
-                src={ikhbar}
-                width={150}
-                alt="bible pdf"
-              />
+          <Grid style={{textAlign: 'center'}} item xs={12} sm={5} md={5}>
+            <Grid container>
+              <Grid item xs={12} sm={6} md={6}>
+                <Button
+                  onClick={() => {
+                    openModal();
+                    setPdfSrc('../../assets/pdfs/nt_abc.pdf');
+                    setArabic(true);
+                  }}
+                  style={{marginBottom: 20}}>
+                  <Typography variant="h4" className={styles.arabic}>
+                    اقرا ءينجيل ن-لماسيح ار-اس-تسفليدت
+                  </Typography>
+                </Button>
+                <img
+                  style={{cursor: 'pointer'}}
+                  onClick={() => {
+                    openModal();
+                    setPdfSrc('../../assets/pdfs/nt_abc.pdf');
+                    setArabic(true);
+                  }}
+                  src={arratn}
+                  width={150}
+                  alt="bible pdf"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6} md={6}>
+                <Button
+                  onClick={() => {
+                    openModal();
+                    setPdfSrc('../../assets/pdfs/ot_abc.pdf');
+                    setArabic(true);
+                  }}
+                  style={{marginBottom: 20}}>
+                  <Typography variant="h4" className={styles.arabic}>
+                    اقرا ءيواليون ن-لانبيا ار-اسن-تسفليدت
+                  </Typography>
+                </Button>
+                <img
+                  style={{cursor: 'pointer'}}
+                  onClick={() => {
+                    openModal();
+                    setPdfSrc('../../assets/pdfs/ot_abc.pdf');
+                    setArabic(true);
+                  }}
+                  src={ikhbar}
+                  width={150}
+                  alt="bible pdf"
+                />
+              </Grid>
             </Grid>
           </Grid>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
-            <Typography
-              variant="h4"
-              style={{
-                margin: 10,
-                fontFamily: 'Scheherazade',
-                marginBottom: 0,
-              }}>
-              سفلد ءي-يواليون ميمنين ف-تودرت-اد لّجديد
-            </Typography>
-            <Button
-              style={{textTransform: 'inherit'}}
-              onClick={() => toggle(player1)}>
-              {player1.current?.paused ? <PlayArrow /> : <Pause />}
-              <Typography style={{marginRight: 10}} variant="h6">
-                is-tgit amuslem?
-              </Typography>
-              <Typography className={styles.arabic} variant="h4">
-                ءيس-تگيت اموسلم؟
-              </Typography>
-            </Button>
-            <audio
-              ref={player1}
-              style={{marginBottom: 5, width: '90%', display: 'none'}}
-              controls>
-              <source src={MATSSENT} type="audio/mpeg" />
-            </audio>
-            <Button
-              style={{textTransform: 'inherit'}}
-              onClick={() => toggle(player2)}>
-              {player2.current?.paused ? <PlayArrow /> : <Pause />}
-              <Typography style={{marginRight: 10}} variant="h6">
-                is-tzuzdt laman d-sslamt?
-              </Typography>
-              <Typography className={styles.arabic} variant="h4">
-                ءيس-تژوژضت لامان د-سّلامت؟
-              </Typography>
-            </Button>
-            <audio
-              ref={player2}
-              style={{marginBottom: 5, width: '90%', display: 'none'}}
-              controls>
-              <source src={AZUZD} type="audio/mpeg" />
-            </audio>
-            <Button
-              style={{textTransform: 'inherit'}}
-              onClick={() => toggle(player3)}>
-              {player3.current?.paused ? <PlayArrow /> : <Pause />}
-              <Typography style={{marginRight: 10}} variant="h6">
-                is dark kra n-iseqsitn?
-              </Typography>
-              <Typography className={styles.arabic} variant="h4">
-                ءيس-دارك كرا ن-يسقسيتن؟
-              </Typography>
-            </Button>
-            <audio
-              ref={player3}
-              style={{marginBottom: 5, width: '90%', display: 'none'}}
-              controls>
-              <source src={ISEQSITN} type="audio/mpeg" />
-            </audio>
-            <Button
-              style={{textTransform: 'inherit'}}
-              onClick={() => toggle(player4)}>
-              {player4.current?.paused ? <PlayArrow /> : <Pause />}
-              <Typography style={{marginRight: 10}} variant="h6">
-                is-tumnt s-lmasih?
-              </Typography>
-              <Typography className={styles.arabic} variant="h4">
-                ءيس-تومنت س-لماسيح؟
-              </Typography>
-            </Button>
-            <audio
-              ref={player4}
-              style={{marginBottom: 5, width: '90%', display: 'none'}}
-              controls>
-              <source src={NTHUNA} type="audio/mpeg" />
-            </audio>
-          </Grid>
+          <AudioSection />
         </Grid>
       </div>
       <Modal
