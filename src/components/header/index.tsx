@@ -14,7 +14,7 @@ const Header: FunctionalComponent = () => (
       <Link href="/" style={{flexGrow: 1}}>
         <Button style={{color: '#fff', padding: 0}}>
           <div className={styles.title}>tachelhit info</div>
-          <div className={styles.titleTif}>tacelhit info</div>
+          <div className={styles.titleTif}>tacelhit</div>
           <div className={styles.titleArabic}>تاشلحيت ءينفو</div>
         </Button>
       </Link>

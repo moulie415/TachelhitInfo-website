@@ -40,7 +40,7 @@ function Documents() {
                   </Button>
                   <Typography
                     style={{
-                      paddingBottom: 20,
+                      paddingBottom: 10,
                       textAlign: 'center',
                       marginLeft: '5%',
                       fontSize: 21,
@@ -86,7 +86,7 @@ function Documents() {
 
                   <Typography
                     style={{
-                      paddingBottom: 20,
+                      paddingBottom: 10,
                       textAlign: 'center',
                       marginLeft: '5%',
                       fontSize: 16,
@@ -136,7 +136,7 @@ function Documents() {
 
                   <Typography
                     style={{
-                      paddingBottom: 20,
+                      paddingBottom: 10,
                       marginLeft: '5%',
                       textAlign: 'center',
                       fontSize: 16,
@@ -164,25 +164,6 @@ function Documents() {
                 </a>
               </div>
             </Card>
-            <Card
-              style={{
-                padding: 5,
-                marginTop: 10,
-                marginRight: 10,
-              }}>
-              <div style={{width: '100%', textAlign: 'center'}}>
-                <Button
-                  onClick={() => {
-                    window.open('../../assets/pdfs/دروس من التاريخ.pdf');
-                  }}>
-                  <Typography
-                    variant="h5"
-                    style={{textTransform: 'none', fontSize: 30}}>
-                    المسيحية في شمال إفريقيا: دروس من التاريخ
-                  </Typography>
-                </Button>
-              </div>
-            </Card>
           </div>
         </Grid>
         <Grid item xs={12} sm={4} md={4}>
@@ -203,20 +184,20 @@ function Documents() {
                   variant="h4"
                   style={{
                     textTransform: 'none',
-                    fontFamily: 'Scheherazade',
-                    fontSize: 36,
+                    fontFamily: 'ScheherazadeNew',
+                    fontSize: 28,
                   }}>
-                  امودّو ن ومسيگّل
+                  امودّو ن-ومسيگّل
                 </Typography>
               </Button>
             </div>
             <Typography
               style={{
-                paddingBottom: 10,
+                paddingBottom: 5,
                 margin: '0 2%',
                 textAlign: 'center',
-                fontSize: 26,
-                fontFamily: 'Scheherazade',
+                fontSize: 18,
+                fontFamily: 'ScheherazadeNew',
               }}>
               لقيست-اد، اي-ايتما، تگا تين يان ءيگومّين لهنا ت-تايري د-سّلامت،
               ءيفتو ار-سرسن-يسيگّيل
@@ -232,7 +213,7 @@ function Documents() {
               </Button>
             </div>
             <Typography
-              style={{paddingBottom: 10, margin: '0 2%', textAlign: 'center'}}>
+              style={{paddingBottom: 5, margin: '0 2%', textAlign: 'center'}}>
               lqist-ad, ay-aytma, tga tin yan igummin lhna t-tayri d-sslamt,
               iftu ar-sersn-isiggil.
             </Typography>
@@ -250,7 +231,7 @@ function Documents() {
             </div>
             <Typography
               style={{
-                paddingBottom: 10,
+                paddingBottom: 5,
                 margin: '0 20%',
                 fontFamily: 'Tifinagh',
                 textAlign: 'center',
@@ -269,7 +250,7 @@ function Documents() {
               </Button>
             </div>
             <Typography
-              style={{paddingBottom: 10, margin: '0 2%', textAlign: 'center'}}>
+              style={{paddingBottom: 5, margin: '0 2%', textAlign: 'center'}}>
               L’histoire d’un jeune qui désire ardemment la paix, la bonté et la
               sécurité, et qui se met en route à leur recherche.
             </Typography>
@@ -284,7 +265,7 @@ function Documents() {
               </Button>
             </div>
             <Typography
-              style={{paddingBottom: 10, margin: '0 2%', textAlign: 'center'}}>
+              style={{paddingBottom: 5, margin: '0 2%', textAlign: 'center'}}>
               A story about a young man who longs for peace, kindness and
               security, and sets out on a journey in search of them.
             </Typography>
@@ -293,8 +274,7 @@ function Documents() {
         <Grid item xs={12} sm={3} md={3}>
           <Card
             style={{
-              padding: 5,
-              marginBottom: 10,
+              marginBottom: 5,
             }}>
             <div style={{display: 'flex'}}>
               <div style={{display: 'flex', width: '100%'}}>
@@ -328,8 +308,7 @@ function Documents() {
                       fontSize: 23,
                     }}>
                     اسّ ف-واسّ ا-تاقرات يان-واوال ءيميمن غ-وارّاتن ن-سيدي ربّي،
-                    ار-تّزعامت س-رّجا ءيصحان. ار-تسفليد ولا تمغارت د-تاروا،
-                    ار-كولّو-تّفراحم ءي-نگراتون س-تايري ن-ربّي.
+                    ار-تّزعامت س-رّجا ءيصحان.
                   </Typography>
                 </div>
               </div>
@@ -355,14 +334,13 @@ function Documents() {
                 </Button>
                 <Typography
                   style={{
-                    paddingBottom: 10,
+                    paddingBottom: 5,
                     margin: '2% 2%',
                     textAlign: 'center',
                     fontFamily: 'Tashelhayt',
                   }}>
                   ass f-wass a-taqrat yan-wawal imimn å-warratn n-sidi rbbi,
-                  ar-ttzøamt s-rrja isæan. ar-tsflid ula tmåart d-tarwa
-                  ar-kullu-ttfraæm i-ngratun s-tayri n-rbbi.
+                  ar-ttzøamt s-rrja isæan.
                 </Typography>
               </div>
             </div>
@@ -383,21 +361,19 @@ function Documents() {
             </div>
             <Typography
               style={{
-                paddingBottom: 10,
+                paddingBottom: 5,
                 margin: '2% 2%',
                 fontFamily: 'Tifinagh',
                 textAlign: 'center',
               }}>
               ass f-wass a-taqrat yan-wawal imimn v-warratn n-sidi rbbi,
-              ar-ttzoamt s-rrja ispan. ar-tsflid ula tmvart d-tarwa
-              ar-kullu-ttfrapm i-ngratun s-tayri n-rbbi.
+              ar-ttzoamt s-rrja ispan.
             </Typography>
           </Card>
 
           <Card
             style={{
-              padding: 5,
-              marginBottom: 10,
+              marginBottom: 5,
             }}>
             <div style={{display: 'flex'}}>
               <a
@@ -431,8 +407,7 @@ function Documents() {
           </Card>
           <Card
             style={{
-              padding: 5,
-              marginBottom: 10,
+              marginBottom: 5,
             }}>
             <div style={{textAlign: 'center'}}>
               <Button
@@ -447,10 +422,7 @@ function Documents() {
               </Button>
             </div>
           </Card>
-          <Card
-            style={{
-              padding: 5,
-            }}>
+          <Card style={{}}>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
                 onClick={() => {
@@ -460,6 +432,23 @@ function Documents() {
                   variant="h5"
                   style={{textTransform: 'none', fontSize: 30}}>
                   حياتي بحال زربية
+                </Typography>
+              </Button>
+            </div>
+          </Card>
+          <Card
+            style={{
+              marginTop: 5,
+            }}>
+            <div style={{width: '100%', textAlign: 'center'}}>
+              <Button
+                onClick={() => {
+                  window.open('../../assets/pdfs/دروس من التاريخ.pdf');
+                }}>
+                <Typography
+                  variant="h5"
+                  style={{textTransform: 'none', fontSize: 30}}>
+                  المسيحية في شمال إفريقيا: دروس من التاريخ
                 </Typography>
               </Button>
             </div>
