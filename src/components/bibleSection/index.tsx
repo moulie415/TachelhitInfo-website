@@ -111,18 +111,32 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
               onClick={() =>
                 window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
               }>
-              <VolumeMuteIcon
-                style={{fontSize: 30, color: '#000', marginRight: 10}}
-              />
-              <ImportContactsTwoToneIcon
-                style={{fontSize: 30, color: '#000', marginRight: 10}}
-              />
-              <VideocamOutlinedIcon
-                style={{fontSize: 30, color: '#000', marginRight: 10}}
-              />
-              <Typography variant="h4" className={styles.arabic}>
-                لعهد لّجدي
-              </Typography>
+              <div>
+                <div>
+                  <VolumeMuteIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                  <ImportContactsTwoToneIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                  <VideocamOutlinedIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                </div>
+                <div style={{display: 'flex'}}>
+                  <Typography
+                    style={{textTransform: 'initial', marginRight: 10}}
+                    variant="h6">
+                    lɛhd l-ljdid
+                  </Typography>
+                  <Typography
+                    style={{marginLeft: 10}}
+                    variant="h4"
+                    className={styles.arabic}>
+                    لعهد لّجدي
+                  </Typography>
+                </div>
+              </div>
             </Button>
             <Button>
               <a

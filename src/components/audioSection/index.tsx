@@ -23,7 +23,12 @@ const AudioSection: FunctionalComponent = () => {
   return (
     <Grid item xs={12} sm={3} md={3}>
       <Button
-        style={{textTransform: 'inherit', width: '100%'}}
+        style={{
+          textTransform: 'inherit',
+          width: '100%',
+          border: '1px solid #000',
+          marginBottom: 5,
+        }}
         onClick={() => toggle(player1)}>
         <div
           style={{
@@ -33,7 +38,10 @@ const AudioSection: FunctionalComponent = () => {
             width: '100%',
           }}>
           {player1.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography className={styles.arabic} variant="h4">
+          <Typography
+            style={{textAlign: 'right'}}
+            className={styles.arabic}
+            variant="h4">
             ما-تسّنت ف-والّي را-د-ياشك؟
           </Typography>
         </div>
@@ -45,7 +53,12 @@ const AudioSection: FunctionalComponent = () => {
         <source src={MATSSENT} type="audio/mpeg" />
       </audio>
       <Button
-        style={{textTransform: 'inherit', width: '100%'}}
+        style={{
+          textTransform: 'inherit',
+          width: '100%',
+          border: '1px solid #000',
+          marginBottom: 5,
+        }}
         onClick={() => toggle(player2)}>
         <div
           style={{
@@ -55,7 +68,10 @@ const AudioSection: FunctionalComponent = () => {
             width: '100%',
           }}>
           {player2.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography className={styles.arabic} variant="h4">
+          <Typography
+            style={{textAlign: 'right'}}
+            className={styles.arabic}
+            variant="h4">
             اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
           </Typography>
         </div>
@@ -67,7 +83,12 @@ const AudioSection: FunctionalComponent = () => {
         <source src={AZUZD} type="audio/mpeg" />
       </audio>
       <Button
-        style={{textTransform: 'inherit', width: '100%'}}
+        style={{
+          textTransform: 'inherit',
+          width: '100%',
+          border: '1px solid #000',
+          marginBottom: 5,
+        }}
         onClick={() => toggle(player3)}>
         <div
           style={{
@@ -77,7 +98,10 @@ const AudioSection: FunctionalComponent = () => {
             width: '100%',
           }}>
           {player3.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography className={styles.arabic} variant="h4">
+          <Typography
+            style={{textAlign: 'right'}}
+            className={styles.arabic}
+            variant="h4">
             ءيسقسيتن ف-وغاراس لّماسيح
           </Typography>
         </div>
@@ -89,7 +113,11 @@ const AudioSection: FunctionalComponent = () => {
         <source src={ISEQSITN} type="audio/mpeg" />
       </audio>
       <Button
-        style={{textTransform: 'inherit', width: '100%'}}
+        style={{
+          textTransform: 'inherit',
+          width: '100%',
+          border: '1px solid #000',
+        }}
         onClick={() => toggle(player4)}>
         <div
           style={{
@@ -99,7 +127,10 @@ const AudioSection: FunctionalComponent = () => {
             width: '100%',
           }}>
           {player4.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography className={styles.arabic} variant="h4">
+          <Typography
+            style={{textAlign: 'right'}}
+            className={styles.arabic}
+            variant="h4">
             سّا ن-تحونا غ-تگمّي-نك لّجديد
           </Typography>
         </div>
