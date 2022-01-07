@@ -165,29 +165,43 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     openModal();
                     setPdfSrc('../../assets/pdfs/nt_abc.pdf');
                     setArabic(true);
-                  }}
-                  style={{marginBottom: 20}}>
-                  <VolumeMuteIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
-                  />
-                  <ImportContactsTwoToneIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
-                  />
-                  <Typography variant="h4" className={styles.arabic}>
+                  }}>
+                  <Typography
+                    variant="h4"
+                    style={{
+                      fontFamily: 'ScheherazadeNew',
+                      direction: 'rtl',
+                      fontSize: 20,
+                    }}>
                     ءينجيل لّماسيح – اغاراس ن-تودرت
                   </Typography>
                 </Button>
-                <img
-                  style={{cursor: 'pointer'}}
+                <Button
                   onClick={() => {
                     openModal();
-                    setPdfSrc('../../assets/pdfs/nt_abc.pdf');
-                    setArabic(true);
-                  }}
-                  src={arratn}
-                  width={150}
-                  alt="bible pdf"
-                />
+                    setPdfSrc('../../assets/pdfs/nt_lat.pdf');
+                    setArabic(false);
+                  }}>
+                  <Typography
+                    style={{
+                      textTransform: 'initial',
+                      fontSize: 18,
+                    }}>
+                    injil l-masiæ – aåaras n-tudert
+                  </Typography>
+                </Button>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-evenly',
+                  }}>
+                  <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
+                  <img src={arratn} width={150} alt="bible pdf" />
+                  <ImportContactsTwoToneIcon
+                    style={{fontSize: 30, color: '#000'}}
+                  />
+                </div>
               </Grid>
               <Grid item xs={12} sm={6} md={6}>
                 <Button
@@ -195,29 +209,43 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     openModal();
                     setPdfSrc('../../assets/pdfs/ot_abc.pdf');
                     setArabic(true);
-                  }}
-                  style={{marginBottom: 20}}>
-                  <VolumeMuteIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
-                  />
-                  <ImportContactsTwoToneIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
-                  />
-                  <Typography variant="h4" className={styles.arabic}>
+                  }}>
+                  <Typography
+                    variant="h4"
+                    style={{
+                      fontFamily: 'ScheherazadeNew',
+                      direction: 'rtl',
+                      fontSize: 20,
+                    }}>
                     ارّاتن لّانبيا – سّفجّيجات ف-مدّن-ينو
                   </Typography>
                 </Button>
-                <img
-                  style={{cursor: 'pointer'}}
+                <Button
                   onClick={() => {
                     openModal();
-                    setPdfSrc('../../assets/pdfs/ot_abc.pdf');
-                    setArabic(true);
-                  }}
-                  src={ikhbar}
-                  width={150}
-                  alt="bible pdf"
-                />
+                    setPdfSrc('../../assets/pdfs/ot_lat.pdf');
+                    setArabic(false);
+                  }}>
+                  <Typography
+                    style={{
+                      textTransform: 'initial',
+                      fontSize: 18,
+                    }}>
+                    arratn l-lanbya – ssfijjat f-mddn-inu
+                  </Typography>
+                </Button>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-evenly',
+                  }}>
+                  <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
+                  <img src={ikhbar} width={150} alt="bible pdf" />
+                  <ImportContactsTwoToneIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                </div>
               </Grid>
             </Grid>
           </Grid>
