@@ -25,22 +25,21 @@ const Videos: FunctionalComponent = () => {
     document.addEventListener('fullscreenchange', onFullScreenChange);
   }, [onFullScreenChange]);
   return (
-    <div style={{marginTop: 15, paddingBottom: 15}}>
+    <div style={{paddingBottom: 15, marginTop: 5}}>
       <Grid justifyContent="space-evenly" container>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-          <IconButton onClick={() => videoRef.current?.requestFullscreen()}>
-            <VideocamOutlinedIcon style={{fontSize: 30, color: '#000'}} />
-          </IconButton>
           <Button
             onClick={() => videoRef.current?.requestFullscreen()}
-            style={{textTransform: 'inherit'}}>
+            style={{textTransform: 'inherit', padding: 2}}>
+            <VideocamOutlinedIcon
+              style={{fontSize: 30, color: '#000', marginRight: 10}}
+            />
             <Typography variant="h6">maylli iqsad rbbi</Typography>
           </Button>
-          <Button onClick={() => videoRef.current?.requestFullscreen()}>
-            <Typography
-              className={styles.arabic}
-              style={{marginBottom: 10}}
-              variant="h4">
+          <Button
+            onClick={() => videoRef.current?.requestFullscreen()}
+            style={{textTransform: 'inherit', padding: 5}}>
+            <Typography className={styles.arabic} style={{}} variant="h4">
               مايلّي ءيقصاد ربّي
             </Typography>
           </Button>
@@ -58,19 +57,18 @@ const Videos: FunctionalComponent = () => {
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-          <IconButton onClick={() => window.open('https://www.amsiggel.com')}>
-            <VideocamOutlinedIcon style={{fontSize: 30, color: '#000'}} />
-          </IconButton>
           <Button
-            style={{textTransform: 'inherit'}}
+            style={{textTransform: 'inherit', padding: 2}}
             onClick={() => window.open('https://www.amsiggel.com')}>
-            <Typography variant="h6">amuddu n-u msiggel</Typography>
+            <VideocamOutlinedIcon
+              style={{fontSize: 30, color: '#000', marginRight: 10}}
+            />
+            <Typography variant="h6">amuddu n-umsiggel</Typography>
           </Button>
-          <Button onClick={() => window.open('https://www.amsiggel.com')}>
-            <Typography
-              className={styles.arabic}
-              style={{marginBottom: 10}}
-              variant="h4">
+          <Button
+            style={{textTransform: 'inherit', padding: 5}}
+            onClick={() => window.open('https://www.amsiggel.com')}>
+            <Typography className={styles.arabic} style={{}} variant="h4">
               امودّو ن-ومسيگّل
             </Typography>
           </Button>
@@ -79,33 +77,26 @@ const Videos: FunctionalComponent = () => {
           </a>
         </Grid>
         <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-          <IconButton
-            onClick={() =>
-              window.open(
-                'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
-              )
-            }>
-            <VideocamOutlinedIcon style={{fontSize: 30, color: '#000'}} />
-          </IconButton>
           <Button
-            style={{textTransform: 'inherit'}}
+            style={{textTransform: 'inherit', padding: 2}}
             onClick={() =>
               window.open(
                 'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
               )
             }>
+            <VideocamOutlinedIcon
+              style={{fontSize: 30, color: '#000', marginRight: 10}}
+            />
             <Typography variant="h6">tudert l-lmasih</Typography>
           </Button>
           <Button
+            style={{textTransform: 'inherit', padding: 5}}
             onClick={() =>
               window.open(
                 'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
               )
             }>
-            <Typography
-              className={styles.arabic}
-              style={{marginBottom: 10}}
-              variant="h4">
+            <Typography className={styles.arabic} style={{}} variant="h4">
               تودرت لّماسيح
             </Typography>
           </Button>

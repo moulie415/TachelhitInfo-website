@@ -27,7 +27,7 @@ const AudioSection: FunctionalComponent = () => {
           textTransform: 'inherit',
           width: '100%',
           border: '1px solid #000',
-          marginBottom: 5,
+          marginBottom: 10,
         }}
         onClick={() => toggle(player1)}>
         <div
@@ -39,8 +39,12 @@ const AudioSection: FunctionalComponent = () => {
           }}>
           {player1.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
           <Typography
-            style={{textAlign: 'right'}}
-            className={styles.arabic}
+            style={{
+              textAlign: 'right',
+              fontFamily: 'ScheherazadeNew',
+              direction: 'rtl',
+              fontSize: 20,
+            }}
             variant="h4">
             ما-تسّنت ف-والّي را-د-ياشك؟
           </Typography>
@@ -57,7 +61,7 @@ const AudioSection: FunctionalComponent = () => {
           textTransform: 'inherit',
           width: '100%',
           border: '1px solid #000',
-          marginBottom: 5,
+          marginBottom: 10,
         }}
         onClick={() => toggle(player2)}>
         <div
@@ -69,8 +73,12 @@ const AudioSection: FunctionalComponent = () => {
           }}>
           {player2.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
           <Typography
-            style={{textAlign: 'right'}}
-            className={styles.arabic}
+            style={{
+              textAlign: 'right',
+              fontFamily: 'ScheherazadeNew',
+              direction: 'rtl',
+              fontSize: 20,
+            }}
             variant="h4">
             اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
           </Typography>
@@ -87,7 +95,7 @@ const AudioSection: FunctionalComponent = () => {
           textTransform: 'inherit',
           width: '100%',
           border: '1px solid #000',
-          marginBottom: 5,
+          marginBottom: 10,
         }}
         onClick={() => toggle(player3)}>
         <div
@@ -99,8 +107,12 @@ const AudioSection: FunctionalComponent = () => {
           }}>
           {player3.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
           <Typography
-            style={{textAlign: 'right'}}
-            className={styles.arabic}
+            style={{
+              textAlign: 'right',
+              fontFamily: 'ScheherazadeNew',
+              direction: 'rtl',
+              fontSize: 20,
+            }}
             variant="h4">
             ءيسقسيتن ف-وغاراس لّماسيح
           </Typography>
@@ -128,8 +140,12 @@ const AudioSection: FunctionalComponent = () => {
           }}>
           {player4.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
           <Typography
-            style={{textAlign: 'right'}}
-            className={styles.arabic}
+            style={{
+              textAlign: 'right',
+              fontFamily: 'ScheherazadeNew',
+              direction: 'rtl',
+              fontSize: 20,
+            }}
             variant="h4">
             سّا ن-تحونا غ-تگمّي-نك لّجديد
           </Typography>

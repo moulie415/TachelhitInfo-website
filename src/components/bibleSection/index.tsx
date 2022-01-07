@@ -117,7 +117,12 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{fontSize: 30, color: '#000', marginRight: 10}}
                   />
                   <ImportContactsTwoToneIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                    style={{
+                      fontSize: 25,
+                      color: '#000',
+                      marginRight: 10,
+                      marginBottom: 3,
+                    }}
                   />
                   <VideocamOutlinedIcon
                     style={{fontSize: 30, color: '#000', marginRight: 10}}
@@ -199,7 +204,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
                   <img src={arratn} width={150} alt="bible pdf" />
                   <ImportContactsTwoToneIcon
-                    style={{fontSize: 30, color: '#000'}}
+                    style={{fontSize: 25, color: '#000'}}
                   />
                 </div>
               </Grid>
@@ -243,7 +248,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
                   <img src={ikhbar} width={150} alt="bible pdf" />
                   <ImportContactsTwoToneIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                    style={{fontSize: 25, color: '#000', marginRight: 10}}
                   />
                 </div>
               </Grid>
