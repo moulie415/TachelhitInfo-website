@@ -138,7 +138,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{marginLeft: 10}}
                     variant="h4"
                     className={styles.arabic}>
-                    لعهد لّجدي
+                    لعهد لّجديد
                   </Typography>
                 </div>
               </div>

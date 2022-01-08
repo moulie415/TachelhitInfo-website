@@ -22,135 +22,141 @@ const AudioSection: FunctionalComponent = () => {
 
   return (
     <Grid item xs={12} sm={3} md={3}>
-      <Button
+      <div
         style={{
-          textTransform: 'inherit',
-          width: '100%',
-          border: '1px solid #000',
-          marginBottom: 10,
-        }}
-        onClick={() => toggle(player1)}>
-        <div
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-evenly',
+          height: '100%',
+          flex: 1,
+        }}>
+        <Button
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            textTransform: 'inherit',
             width: '100%',
-          }}>
-          {player1.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography
+            border: '1px solid #000',
+          }}
+          onClick={() => toggle(player1)}>
+          <div
             style={{
-              textAlign: 'right',
-              fontFamily: 'ScheherazadeNew',
-              direction: 'rtl',
-              fontSize: 20,
-            }}
-            variant="h4">
-            ما-تسّنت ف-والّي را-د-ياشك؟
-          </Typography>
-        </div>
-      </Button>
-      <audio
-        ref={player1}
-        style={{marginBottom: 5, width: '90%', display: 'none'}}
-        controls>
-        <source src={MATSSENT} type="audio/mpeg" />
-      </audio>
-      <Button
-        style={{
-          textTransform: 'inherit',
-          width: '100%',
-          border: '1px solid #000',
-          marginBottom: 10,
-        }}
-        onClick={() => toggle(player2)}>
-        <div
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+            }}>
+            {player1.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+            <Typography
+              style={{
+                textAlign: 'right',
+                fontFamily: 'ScheherazadeNew',
+                direction: 'rtl',
+                fontSize: 20,
+              }}
+              variant="h4">
+              ما-تسّنت ف-والّي را-د-ياشك؟
+            </Typography>
+          </div>
+        </Button>
+        <audio
+          ref={player1}
+          style={{marginBottom: 5, width: '90%', display: 'none'}}
+          controls>
+          <source src={MATSSENT} type="audio/mpeg" />
+        </audio>
+        <Button
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            textTransform: 'inherit',
             width: '100%',
-          }}>
-          {player2.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography
+            border: '1px solid #000',
+          }}
+          onClick={() => toggle(player2)}>
+          <div
             style={{
-              textAlign: 'right',
-              fontFamily: 'ScheherazadeNew',
-              direction: 'rtl',
-              fontSize: 20,
-            }}
-            variant="h4">
-            اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
-          </Typography>
-        </div>
-      </Button>
-      <audio
-        ref={player2}
-        style={{marginBottom: 5, width: '90%', display: 'none'}}
-        controls>
-        <source src={AZUZD} type="audio/mpeg" />
-      </audio>
-      <Button
-        style={{
-          textTransform: 'inherit',
-          width: '100%',
-          border: '1px solid #000',
-          marginBottom: 10,
-        }}
-        onClick={() => toggle(player3)}>
-        <div
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+            }}>
+            {player2.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+            <Typography
+              style={{
+                textAlign: 'right',
+                fontFamily: 'ScheherazadeNew',
+                direction: 'rtl',
+                fontSize: 20,
+              }}
+              variant="h4">
+              اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
+            </Typography>
+          </div>
+        </Button>
+        <audio
+          ref={player2}
+          style={{marginBottom: 5, width: '90%', display: 'none'}}
+          controls>
+          <source src={AZUZD} type="audio/mpeg" />
+        </audio>
+        <Button
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            textTransform: 'inherit',
             width: '100%',
-          }}>
-          {player3.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography
+            border: '1px solid #000',
+          }}
+          onClick={() => toggle(player3)}>
+          <div
             style={{
-              textAlign: 'right',
-              fontFamily: 'ScheherazadeNew',
-              direction: 'rtl',
-              fontSize: 20,
-            }}
-            variant="h4">
-            ءيسقسيتن ف-وغاراس لّماسيح
-          </Typography>
-        </div>
-      </Button>
-      <audio
-        ref={player3}
-        style={{marginBottom: 5, width: '90%', display: 'none'}}
-        controls>
-        <source src={ISEQSITN} type="audio/mpeg" />
-      </audio>
-      <Button
-        style={{
-          textTransform: 'inherit',
-          width: '100%',
-          border: '1px solid #000',
-        }}
-        onClick={() => toggle(player4)}>
-        <div
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+            }}>
+            {player3.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+            <Typography
+              style={{
+                textAlign: 'right',
+                fontFamily: 'ScheherazadeNew',
+                direction: 'rtl',
+                fontSize: 20,
+              }}
+              variant="h4">
+              ءيسقسيتن ف-وغاراس لّماسيح
+            </Typography>
+          </div>
+        </Button>
+        <audio
+          ref={player3}
+          style={{marginBottom: 5, width: '90%', display: 'none'}}
+          controls>
+          <source src={ISEQSITN} type="audio/mpeg" />
+        </audio>
+        <Button
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            textTransform: 'inherit',
             width: '100%',
-          }}>
-          {player4.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-          <Typography
+            border: '1px solid #000',
+          }}
+          onClick={() => toggle(player4)}>
+          <div
             style={{
-              textAlign: 'right',
-              fontFamily: 'ScheherazadeNew',
-              direction: 'rtl',
-              fontSize: 20,
-            }}
-            variant="h4">
-            سّا ن-تحونا غ-تگمّي-نك لّجديد
-          </Typography>
-        </div>
-      </Button>
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+            }}>
+            {player4.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+            <Typography
+              style={{
+                textAlign: 'right',
+                fontFamily: 'ScheherazadeNew',
+                direction: 'rtl',
+                fontSize: 20,
+              }}
+              variant="h4">
+              سّا ن-تحونا غ-تگمّي-نك لّجديد
+            </Typography>
+          </div>
+        </Button>
+      </div>
       <audio
         ref={player4}
         style={{marginBottom: 5, width: '90%', display: 'none'}}
