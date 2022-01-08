@@ -32,7 +32,7 @@ function Documents() {
                 <div>
                   <Button
                     onClick={() => {
-                      window.open('../../assets/pdfs/التراث المسيحي.pdf');
+                      window.open('../../assets/pdfs/THS-abc.pdf');
                     }}>
                     <Typography variant="h5" style={{fontSize: 28}}>
                       التراث المسيحي في شمال إفريقيا
@@ -53,9 +53,7 @@ function Documents() {
                   </Typography>
                 </div>
                 <a
-                  onClick={() =>
-                    window.open('../../assets/pdfs/التراث المسيحي.pdf')
-                  }
+                  onClick={() => window.open('../../assets/pdfs/THS-abc.pdf')}
                   style={{
                     display: 'flex',
                     justifyContent: 'center',
