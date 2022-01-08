@@ -31,3 +31,11 @@
   direction: rtl;
 }
 
+.button:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.buttonLink:hover {
+  text-decoration: none;
+}
+

@@ -148,7 +148,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 href="https://live.bible.is/bible/SHIRBD/MRK/1"
                 target="_blank"
                 rel="noreferrer">
-                <img style={{width: '100%'}} src={injil} alt="injil l-lmasih" />
+                <img style={{height: 225}} src={injil} alt="injil l-lmasih" />
               </a>
             </Button>
           </Grid>

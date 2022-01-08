@@ -27,22 +27,29 @@ const Videos: FunctionalComponent = () => {
   return (
     <div style={{paddingBottom: 15, marginTop: 5}}>
       <Grid justifyContent="space-evenly" container>
-        <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-          <Button
-            onClick={() => videoRef.current?.requestFullscreen()}
-            style={{textTransform: 'inherit', padding: 2}}>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={4} md={4}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
             <VideocamOutlinedIcon
               style={{fontSize: 30, color: '#000', marginRight: 10}}
             />
-            <Typography variant="h6">maylli iqsad rbbi</Typography>
-          </Button>
-          <Button
-            onClick={() => videoRef.current?.requestFullscreen()}
-            style={{textTransform: 'inherit', padding: 5}}>
-            <Typography className={styles.arabic} style={{}} variant="h4">
-              مايلّي ءيقصاد ربّي
-            </Typography>
-          </Button>
+            <Button
+              onClick={() => videoRef.current?.requestFullscreen()}
+              style={{textTransform: 'inherit', padding: 2}}>
+              <Typography variant="h6">maylli iqsad rbbi</Typography>
+            </Button>
+            <Button
+              onClick={() => videoRef.current?.requestFullscreen()}
+              style={{textTransform: 'inherit', padding: 5}}>
+              <Typography className={styles.arabic} style={{}} variant="h4">
+                مايلّي ءيقصاد ربّي
+              </Typography>
+            </Button>
+          </div>
           <video
             ref={videoRef}
             style={{width: '100%', display: fullScreen ? 'inherit' : 'none'}}
@@ -56,50 +63,64 @@ const Videos: FunctionalComponent = () => {
             <img style={{height: 225}} src={rbbi} alt="maylli iqsad rbbi" />
           </a>
         </Grid>
-        <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-          <Button
-            style={{textTransform: 'inherit', padding: 2}}
-            onClick={() => window.open('https://www.amsiggel.com')}>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={4} md={4}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
             <VideocamOutlinedIcon
               style={{fontSize: 30, color: '#000', marginRight: 10}}
             />
-            <Typography variant="h6">amuddu n-umsiggel</Typography>
-          </Button>
-          <Button
-            style={{textTransform: 'inherit', padding: 5}}
-            onClick={() => window.open('https://www.amsiggel.com')}>
-            <Typography className={styles.arabic} style={{}} variant="h4">
-              امودّو ن-ومسيگّل
-            </Typography>
-          </Button>
+            <Button
+              style={{textTransform: 'inherit', padding: 2}}
+              onClick={() => window.open('https://www.amsiggel.com')}>
+              <Typography variant="h6">amuddu n-umsiggel</Typography>
+            </Button>
+            <Button
+              style={{textTransform: 'inherit', padding: 5}}
+              onClick={() => window.open('https://www.amsiggel.com')}>
+              <Typography className={styles.arabic} style={{}} variant="h4">
+                امودّو ن-ومسيگّل
+              </Typography>
+            </Button>
+          </div>
           <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
             <img style={{height: 225}} src={amsiggel} alt="Amsiggel" />
           </a>
         </Grid>
-        <Grid style={{textAlign: 'center'}} item xs={12} sm={6} md={3}>
-          <Button
-            style={{textTransform: 'inherit', padding: 2}}
-            onClick={() =>
-              window.open(
-                'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
-              )
-            }>
+        <Grid style={{textAlign: 'center'}} item xs={12} sm={4} md={4}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
             <VideocamOutlinedIcon
               style={{fontSize: 30, color: '#000', marginRight: 10}}
             />
-            <Typography variant="h6">tudert l-lmasih</Typography>
-          </Button>
-          <Button
-            style={{textTransform: 'inherit', padding: 5}}
-            onClick={() =>
-              window.open(
-                'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
-              )
-            }>
-            <Typography className={styles.arabic} style={{}} variant="h4">
-              تودرت لّماسيح
-            </Typography>
-          </Button>
+            <Button
+              style={{textTransform: 'inherit', padding: 2}}
+              onClick={() =>
+                window.open(
+                  'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
+                )
+              }>
+              <Typography variant="h6">tudert l-lmasih</Typography>
+            </Button>
+            <Button
+              style={{textTransform: 'inherit', padding: 5}}
+              onClick={() =>
+                window.open(
+                  'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
+                )
+              }>
+              <Typography className={styles.arabic} style={{}} variant="h4">
+                تودرت لّماسيح
+              </Typography>
+            </Button>
+          </div>
           <a
             href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html"
             target="_blank"
