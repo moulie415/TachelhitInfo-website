@@ -165,6 +165,23 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             md={5}>
             <Grid container>
               <Grid item xs={12} sm={6} md={6}>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-evenly',
+                  }}>
+                  <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
+                  <img
+                    style={{margin: '10px 0'}}
+                    src={arratn}
+                    width={150}
+                    alt="bible pdf"
+                  />
+                  <ImportContactsTwoToneIcon
+                    style={{fontSize: 25, color: '#000'}}
+                  />
+                </div>
                 <Button
                   onClick={() => {
                     openModal();
@@ -195,6 +212,8 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     injil l-masiæ – aåaras n-tudert
                   </Typography>
                 </Button>
+              </Grid>
+              <Grid item xs={12} sm={6} md={6}>
                 <div
                   style={{
                     display: 'flex',
@@ -202,13 +221,16 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     justifyContent: 'space-evenly',
                   }}>
                   <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
-                  <img src={arratn} width={150} alt="bible pdf" />
+                  <img
+                    style={{margin: '10px 0'}}
+                    src={ikhbar}
+                    width={150}
+                    alt="bible pdf"
+                  />
                   <ImportContactsTwoToneIcon
-                    style={{fontSize: 25, color: '#000'}}
+                    style={{fontSize: 25, color: '#000', marginRight: 10}}
                   />
                 </div>
-              </Grid>
-              <Grid item xs={12} sm={6} md={6}>
                 <Button
                   onClick={() => {
                     openModal();
@@ -239,18 +261,6 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     arratn l-lanbya – ssfijjat f-mddn-inu
                   </Typography>
                 </Button>
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-evenly',
-                  }}>
-                  <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
-                  <img src={ikhbar} width={150} alt="bible pdf" />
-                  <ImportContactsTwoToneIcon
-                    style={{fontSize: 25, color: '#000', marginRight: 10}}
-                  />
-                </div>
               </Grid>
             </Grid>
           </Grid>
