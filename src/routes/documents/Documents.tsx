@@ -185,7 +185,7 @@ function Documents() {
                     fontFamily: 'ScheherazadeNew',
                     fontSize: 28,
                   }}>
-                  امودّو ن-ومسيگّل
+                  امودّو ن‑ومسيݣّل
                 </Typography>
               </Button>
             </div>
@@ -197,8 +197,8 @@ function Documents() {
                 fontSize: 18,
                 fontFamily: 'ScheherazadeNew',
               }}>
-              لقيست-اد، اي-ايتما، تگا تين يان ءيگومّين لهنا ت-تايري د-سّلامت،
-              ءيفتو ار-سرسن-يسيگّيل
+              لقيست ن-يان ءيݣومّين لهنا د-تايري د-سّلامت، ءيفتو ار-سرسن-يسيݣّيل.
+               
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
