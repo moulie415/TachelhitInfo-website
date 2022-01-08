@@ -32,10 +32,10 @@
 }
 
 .button:hover {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5) !important;
 }
 
 .buttonLink:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
