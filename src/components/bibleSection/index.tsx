@@ -101,12 +101,18 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
   };
 
   const matches = useMediaQuery('(min-width:600px)');
+  const desktop = useMediaQuery('(min-width:800px)');
 
   return (
     <div>
       <div style={{marginTop: 15}}>
         <Grid justifyContent="space-evenly" container>
-          <Grid style={{textAlign: 'center'}} item xs={12} sm={3} md={3}>
+          <Grid
+            style={{textAlign: 'center'}}
+            item
+            xs={12}
+            sm={desktop ? 3 : 12}
+            md={3}>
             <Button
               onClick={() =>
                 window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
@@ -161,10 +167,10 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             }}
             item
             xs={12}
-            sm={5}
+            sm={desktop ? 5 : 12}
             md={5}>
             <Grid container>
-              <Grid item xs={12} sm={6} md={6}>
+              <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
                 <div
                   style={{
                     display: 'flex',
@@ -213,7 +219,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   </Typography>
                 </Button>
               </Grid>
-              <Grid item xs={12} sm={6} md={6}>
+              <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
                 <div
                   style={{
                     display: 'flex',

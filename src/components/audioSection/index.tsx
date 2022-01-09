@@ -1,4 +1,4 @@
-import {Grid, Typography, Button} from '@material-ui/core';
+import {Grid, Typography, Button, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h, RefObject} from 'preact';
 import styles from '../../routes/home/styles.css';
 import {AZUZD, ISEQSITN, MATSSENT, NTHUNA} from '../../constants';
@@ -13,6 +13,8 @@ const AudioSection: FunctionalComponent = () => {
   const player4 = useRef<HTMLAudioElement>(null);
   const [_, setState] = useState(0);
 
+  const matches = useMediaQuery('(min-width:800px)');
+
   const toggle = (ref: RefObject<HTMLAudioElement | null>) => {
     if (ref.current) {
       ref.current.paused ? ref.current.play() : ref.current.pause();
@@ -21,7 +23,7 @@ const AudioSection: FunctionalComponent = () => {
   };
 
   return (
-    <Grid item xs={12} sm={3} md={3}>
+    <Grid item xs={12} sm={matches ? 3 : 12} md={3}>
       <div
         style={{
           display: 'flex',

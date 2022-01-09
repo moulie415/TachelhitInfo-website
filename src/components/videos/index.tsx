@@ -1,4 +1,11 @@
-import {Grid, Typography, Card, Button, IconButton} from '@material-ui/core';
+import {
+  Grid,
+  Typography,
+  Card,
+  Button,
+  IconButton,
+  useMediaQuery,
+} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
 import {useCallback, useEffect, useRef, useState} from 'preact/hooks';
 import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
@@ -24,10 +31,16 @@ const Videos: FunctionalComponent = () => {
   useEffect(() => {
     document.addEventListener('fullscreenchange', onFullScreenChange);
   }, [onFullScreenChange]);
+  const matches = useMediaQuery('(min-width:800px)');
   return (
     <div style={{paddingBottom: 15, marginTop: 5}}>
       <Grid justifyContent="space-evenly" container>
-        <Grid style={{textAlign: 'center'}} item xs={12} sm={4} md={4}>
+        <Grid
+          style={{textAlign: 'center'}}
+          item
+          xs={12}
+          sm={matches ? 4 : 12}
+          md={4}>
           <div
             style={{
               display: 'flex',
@@ -60,10 +73,19 @@ const Videos: FunctionalComponent = () => {
           <a
             style={{cursor: 'pointer'}}
             onClick={() => videoRef.current?.requestFullscreen()}>
-            <img style={{height: 225}} src={rbbi} alt="maylli iqsad rbbi" />
+            <img
+              style={{height: 225, maxWidth: '90vw'}}
+              src={rbbi}
+              alt="maylli iqsad rbbi"
+            />
           </a>
         </Grid>
-        <Grid style={{textAlign: 'center'}} item xs={12} sm={4} md={4}>
+        <Grid
+          style={{textAlign: 'center'}}
+          item
+          xs={12}
+          sm={matches ? 4 : 12}
+          md={4}>
           <div
             style={{
               display: 'flex',
@@ -87,10 +109,19 @@ const Videos: FunctionalComponent = () => {
             </Button>
           </div>
           <a href="https://www.amsiggel.com/" target="_blank" rel="noreferrer">
-            <img style={{height: 225}} src={amsiggel} alt="Amsiggel" />
+            <img
+              style={{height: 225, maxWidth: '90vw'}}
+              src={amsiggel}
+              alt="Amsiggel"
+            />
           </a>
         </Grid>
-        <Grid style={{textAlign: 'center'}} item xs={12} sm={4} md={4}>
+        <Grid
+          style={{textAlign: 'center'}}
+          item
+          xs={12}
+          sm={matches ? 4 : 12}
+          md={4}>
           <div
             style={{
               display: 'flex',
@@ -125,7 +156,11 @@ const Videos: FunctionalComponent = () => {
             href="https://www.jesusfilm.org/watch/jesus.html/tachelhit.html"
             target="_blank"
             rel="noreferrer">
-            <img style={{height: 225}} src={jesusFilm} alt="Jesus Film" />
+            <img
+              style={{height: 225, maxWidth: '90vw'}}
+              src={jesusFilm}
+              alt="Jesus Film"
+            />
           </a>
         </Grid>
       </Grid>

@@ -6,9 +6,21 @@
   font-size: 35px !important;
 }
 
+.titleSmall {
+  text-transform: lowercase;
+  margin-right: 10px;
+  font-size: 20px !important;
+}
+
 .titleArabic {
   font-family: Scheherazade !important;
   font-size: 45px !important;
+  direction: rtl;
+}
+
+.titleArabicSmall {
+  font-family: Scheherazade !important;
+  font-size: 30px !important;
   direction: rtl;
 }
 
@@ -16,6 +28,12 @@
   font-family: Tifinagh;
   margin-right: 35px;
   font-size: 30px !important;
+}
+
+.titleTifSmall {
+  font-family: Tifinagh;
+  margin-right: 10px;
+  font-size: 20px !important;
 }
 
 .link {
