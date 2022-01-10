@@ -23,7 +23,12 @@ const AudioSection: FunctionalComponent = () => {
   };
 
   return (
-    <Grid item xs={12} sm={matches ? 3 : 12} md={3}>
+    <Grid
+      item
+      xs={12}
+      sm={matches ? 3 : 12}
+      md={3}
+      style={{marginTop: matches ? 0 : 10}}>
       <div
         style={{
           display: 'flex',
