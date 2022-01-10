@@ -21,7 +21,7 @@ const AudioSection: FunctionalComponent = () => {
     }
     setState(Math.random());
   };
-
+  const marginBottom = matches ? 0 : 10;
   return (
     <Grid
       item
@@ -43,6 +43,7 @@ const AudioSection: FunctionalComponent = () => {
             textTransform: 'inherit',
             width: '100%',
             border: '1px solid #000',
+            marginBottom,
           }}
           onClick={() => toggle(player1)}>
           <div
@@ -76,6 +77,7 @@ const AudioSection: FunctionalComponent = () => {
             textTransform: 'inherit',
             width: '100%',
             border: '1px solid #000',
+            marginBottom,
           }}
           onClick={() => toggle(player2)}>
           <div
@@ -109,6 +111,7 @@ const AudioSection: FunctionalComponent = () => {
             textTransform: 'inherit',
             width: '100%',
             border: '1px solid #000',
+            marginBottom,
           }}
           onClick={() => toggle(player3)}>
           <div
@@ -142,6 +145,7 @@ const AudioSection: FunctionalComponent = () => {
             textTransform: 'inherit',
             width: '100%',
             border: '1px solid #000',
+            marginBottom,
           }}
           onClick={() => toggle(player4)}>
           <div
