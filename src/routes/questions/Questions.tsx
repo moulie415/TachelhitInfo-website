@@ -60,9 +60,9 @@ function Questions() {
         backgroundColor: colors.paleTurquoise,
         minHeight: '100vh',
       }}>
-      <Card style={{marginBottom: 20}}>
+      <Card style={{marginBottom: 15}}>
         <List style={{alignItems: 'center', textAlign: 'center', padding: 10}}>
-          {questionList.map(({question}, index) => {
+          {questionList.map(({question, questionArabic}, index) => {
             return (
               <ListItem
                 key={question}
@@ -78,20 +78,40 @@ function Questions() {
                     display: 'flex',
                     flex: 1,
                     justifyContent: 'center',
+                    alignItems: 'center',
                     maxWidth: '80%',
                     margin: 'auto',
-                    padding: 5,
                     textAlign: 'center',
-                    // fontFamily: 'Tashelhayt',
                   }}>
-                  <div>{question}</div>
-                  <div
-                    style={{
-                      color: colors.red,
-                      fontWeight: 'bold',
-                      marginRight: 5,
-                    }}>
-                    {index + 1}
+                  <div style={{marginRight: 5}}>
+                    <div
+                      style={{
+                        marginBottom: 5,
+                        fontFamily: 'ScheherazadeNew',
+                        display: 'flex',
+                        justifyContent: 'center',
+                      }}>
+                      {questionArabic}
+                      <div
+                        style={{
+                          color: colors.red,
+                          fontWeight: 'bold',
+                          marginLeft: 5,
+                        }}>
+                        {index + 1}
+                      </div>
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                      <div
+                        style={{
+                          color: colors.red,
+                          fontWeight: 'bold',
+                          marginRight: 5,
+                        }}>
+                        {index + 1}
+                      </div>
+                      {question}
+                    </div>
                   </div>
                 </div>
               </ListItem>
