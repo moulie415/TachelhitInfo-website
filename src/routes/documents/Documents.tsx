@@ -184,6 +184,7 @@ function Documents() {
                     textTransform: 'none',
                     fontFamily: 'ScheherazadeNew',
                     fontSize: 28,
+                    paddingBottom: 10,
                   }}>
                   امودّو ن‑ومسيݣّل
                 </Typography>
@@ -197,8 +198,7 @@ function Documents() {
                 fontSize: 18,
                 fontFamily: 'ScheherazadeNew',
               }}>
-              لقيست ن-يان ءيݣومّين لهنا د-تايري د-سّلامت، ءيفتو ار-سرسن-يسيݣّيل.
-               
+              لقيست ن-يان ءيݣومّين لهنا د-تايري د-سّلامت، ءيفتو ار-سرسن-يسيݣّيل
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
@@ -306,7 +306,7 @@ function Documents() {
                       fontSize: 23,
                     }}>
                     اسّ ف-واسّ ا-تاقرات يان-واوال ءيميمن غ-وارّاتن ن-سيدي ربّي،
-                    ار-تّزعامت س-رّجا ءيصحان.
+                    ار-تّزعامت س-رّجا ءيصحان
                   </Typography>
                 </div>
               </div>

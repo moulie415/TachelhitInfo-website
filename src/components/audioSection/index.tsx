@@ -155,7 +155,7 @@ const AudioSection: FunctionalComponent = () => {
                 fontSize: 20,
               }}
               variant="h4">
-              سّا ن-تحونا غ-تگمّي-نك لّجديد
+              سّا ن-تحونا غ-تݣمّي-نك لّجديد
             </Typography>
           </div>
         </Button>
