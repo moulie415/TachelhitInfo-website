@@ -29,6 +29,10 @@ canvas {
 	width: 100%;
 }
 
+.MuiLink-underlineHover:hover {
+  text-decoration: none !important;
+}
+
 @font-face {
   font-family: Scheherazade;
   src: url('../assets/fonts/ScheherazadeOTM2A.ttf') format('truetype');

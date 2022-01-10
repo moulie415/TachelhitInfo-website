@@ -118,6 +118,22 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
               }>
               <div>
+                <div style={{display: 'flex'}}>
+                  <Typography
+                    style={{
+                      textTransform: 'initial',
+                      marginRight: 10,
+                    }}
+                    variant="h6">
+                    lɛhd l-ljdid
+                  </Typography>
+                  <Typography
+                    style={{marginLeft: 10}}
+                    variant="h4"
+                    className={styles.arabic}>
+                    لعهد لّجديد
+                  </Typography>
+                </div>
                 <div>
                   <VolumeMuteIcon
                     style={{fontSize: 30, color: '#000', marginRight: 10}}
@@ -134,19 +150,6 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{fontSize: 30, color: '#000', marginRight: 10}}
                   />
                 </div>
-                <div style={{display: 'flex'}}>
-                  <Typography
-                    style={{textTransform: 'initial', marginRight: 10}}
-                    variant="h6">
-                    lɛhd l-ljdid
-                  </Typography>
-                  <Typography
-                    style={{marginLeft: 10}}
-                    variant="h4"
-                    className={styles.arabic}>
-                    لعهد لّجديد
-                  </Typography>
-                </div>
               </div>
             </Button>
             <Button>
@@ -154,7 +157,11 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 href="https://live.bible.is/bible/SHIRBD/MRK/1"
                 target="_blank"
                 rel="noreferrer">
-                <img style={{height: 225}} src={injil} alt="injil l-lmasih" />
+                <img
+                  style={{width: '75%', maxWidth: '100%'}}
+                  src={injil}
+                  alt="injil l-lmasih"
+                />
               </a>
             </Button>
           </Grid>
@@ -167,8 +174,8 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             }}
             item
             xs={12}
-            sm={desktop ? 5 : 12}
-            md={5}>
+            sm={desktop ? 6 : 12}
+            md={6}>
             <Grid container>
               <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
                 <div
@@ -177,18 +184,15 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     alignItems: 'center',
                     justifyContent: 'space-evenly',
                   }}>
-                  <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
                   <img
                     style={{margin: '10px 0'}}
                     src={arratn}
                     width={150}
                     alt="bible pdf"
                   />
-                  <ImportContactsTwoToneIcon
-                    style={{fontSize: 25, color: '#000'}}
-                  />
                 </div>
                 <Button
+                  style={{padding: 0}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/nt_abc.pdf');
@@ -205,6 +209,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   </Typography>
                 </Button>
                 <Button
+                  style={{padding: 0}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/nt_lat.pdf');
@@ -214,11 +219,13 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{
                       textTransform: 'initial',
                       fontSize: 18,
+                      fontFamily: 'Tashelhayt',
                     }}>
                     injil l-masiæ – aåaras n-tudert
                   </Typography>
                 </Button>
               </Grid>
+
               <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
                 <div
                   style={{
@@ -226,18 +233,15 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     alignItems: 'center',
                     justifyContent: 'space-evenly',
                   }}>
-                  <VolumeMuteIcon style={{fontSize: 30, color: '#000'}} />
                   <img
                     style={{margin: '10px 0'}}
                     src={ikhbar}
                     width={150}
                     alt="bible pdf"
                   />
-                  <ImportContactsTwoToneIcon
-                    style={{fontSize: 25, color: '#000', marginRight: 10}}
-                  />
                 </div>
                 <Button
+                  style={{padding: 0}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/ot_abc.pdf');
@@ -254,6 +258,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   </Typography>
                 </Button>
                 <Button
+                  style={{padding: 0}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/ot_lat.pdf');
@@ -263,6 +268,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{
                       textTransform: 'initial',
                       fontSize: 18,
+                      fontFamily: 'Tashelhayt',
                     }}>
                     arratn l-lanbya – ssfijjat f-mddn-inu
                   </Typography>

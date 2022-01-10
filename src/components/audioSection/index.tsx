@@ -31,6 +31,7 @@ const AudioSection: FunctionalComponent = () => {
           justifyContent: 'space-evenly',
           height: '100%',
           flex: 1,
+          marginLeft: '2vw',
         }}>
         <Button
           style={{

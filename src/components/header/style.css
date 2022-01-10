@@ -2,13 +2,11 @@
 
 .title {
   text-transform: lowercase;
-  margin-right: 30px;
   font-size: 35px !important;
 }
 
 .titleSmall {
   text-transform: lowercase;
-  margin-right: 10px;
   font-size: 20px !important;
 }
 
@@ -26,13 +24,11 @@
 
 .titleTif {
   font-family: Tifinagh;
-  margin-right: 35px;
   font-size: 30px !important;
 }
 
 .titleTifSmall {
   font-family: Tifinagh;
-  margin-right: 10px;
   font-size: 20px !important;
 }
 

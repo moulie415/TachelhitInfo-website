@@ -16,11 +16,12 @@ import {colors} from '../../constants';
 const Header: FunctionalComponent = () => {
   const matches = useMediaQuery('(min-width:800px)');
   const [showMenu, setShowMenu] = useState(false);
+  const marginRight = matches ? 10 : 30;
   return (
     <AppBar position="sticky">
       <Toolbar style={{paddingLeft: matches ? undefined : 0}}>
-        <Link href="/">
-          <Button>
+        <Link className={styles.buttonLink} href="/">
+          <Button className={styles.buttonLink}>
             <img
               style={{marginRight: matches ? 10 : 0}}
               src="/assets/icons/favicon-96x96.png"
@@ -30,15 +31,23 @@ const Header: FunctionalComponent = () => {
           </Button>
         </Link>
         <Link href="/" style={{flexGrow: 1}}>
-          <Button style={{color: '#fff', padding: 0}}>
+          <Button
+            className={styles.button}
+            style={{color: '#fff', padding: 0, marginRight}}>
             <div className={matches ? styles.title : styles.titleSmall}>
               tachelhit info
             </div>
+          </Button>
+          <Button
+            className={styles.button}
+            style={{color: '#fff', padding: 0, marginRight}}>
             <div
               style={{fontSize: matches ? 'inherit' : 20}}
               className={matches ? styles.titleTif : styles.titleTifSmall}>
               tacelpit infu
             </div>
+          </Button>
+          <Button className={styles.button} style={{color: '#fff', padding: 0}}>
             <div
               style={{fontSize: matches ? 'inherit' : 20}}
               className={
@@ -50,7 +59,7 @@ const Header: FunctionalComponent = () => {
         </Link>
         {matches ? (
           <Fragment>
-            <Link className={styles.buttonLink} href="psalms">
+            <Link href="psalms">
               <Button
                 className={styles.button}
                 style={{color: '#fff', display: 'block', padding: '0px 10px'}}>
@@ -58,7 +67,7 @@ const Header: FunctionalComponent = () => {
                 <div className={styles.linkArabic}>ءيموريگن</div>
               </Button>
             </Link>
-            <Link className={styles.buttonLink} href="questions">
+            <Link href="questions">
               <Button
                 className={styles.button}
                 style={{color: '#fff', display: 'block', padding: '0px 10px'}}>
@@ -66,7 +75,7 @@ const Header: FunctionalComponent = () => {
                 <div className={styles.linkArabic}>ءيسقسيتن</div>
               </Button>
             </Link>
-            <Link className={styles.buttonLink} href="documents">
+            <Link href="documents">
               <Button
                 className={styles.button}
                 style={{color: '#fff', display: 'block', padding: '0px 10px'}}>
@@ -74,7 +83,7 @@ const Header: FunctionalComponent = () => {
                 <div className={styles.linkArabic}>ارّاتن</div>
               </Button>
             </Link>
-            <Link className={styles.buttonLink} href="applications">
+            <Link href="applications">
               <Button
                 className={styles.button}
                 style={{color: '#fff', display: 'block', padding: '0px 10px'}}>
