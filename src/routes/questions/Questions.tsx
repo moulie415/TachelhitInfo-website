@@ -84,6 +84,7 @@ function Questions() {
                     textAlign: 'center',
                     // fontFamily: 'Tashelhayt',
                   }}>
+                  <div>{question}</div>
                   <div
                     style={{
                       color: colors.red,
@@ -92,7 +93,6 @@ function Questions() {
                     }}>
                     {index + 1}
                   </div>
-                  <div>{question}</div>
                 </div>
               </ListItem>
             );
