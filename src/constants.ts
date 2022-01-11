@@ -578,7 +578,7 @@ export const questionList: {
   questionArabic: string;
 }[] = [
   {
-    question: 'maç aylliå tumnem bahra s‑lmasiæ uggÐar l‑lanbya yaãni?',
+    question: 'maç aylliå tumnem bahra slmasiæ uggÐar llanbya yaãni?',
     questionArabic: 'ماخ ايلّيغ تومنم باهرا س-لماسيح، ءوݣُّار ن-لانبيا ياضني؟',
     body: `lɛjb a‑iga lmasiḥ ula kullu ma iskr. ur‑jji‑illi yan zund nttan. ur‑illi yan iluln ġmk lli‑d‑ilul lmasiḥ s‑lmuɛajiza n‑rbbi lliġ‑d‑igguz rruḥ lqudus n‑rbbi f‑maryam, taru s‑tḥkimt n‑rbbi bla argaz.
 
@@ -596,7 +596,7 @@ export const questionList: {
   },
   {
     question:
-      'tøámmer ddunit s-tmmara d-lhemm, mamnek a-s-ra-yaf bnadm asunfu d-rraæt?',
+      'tøámmer ddunit stmmara dlhemm, mamnek asrayaf bnadm asunfu drraæt?',
     questionArabic:
       'تعمّر دّونيت س-تمّارا د-لهمّ. مامنك ا-س-را-ياف بنادم اسونفو د-رّاحت؟',
     body: `ddunit urd ġmkad a‑tga zġ‑isizwur, wala ra‑bdda‑tġama ġmkad dima. ašku ddunit ar‑tzray ġ‑smmus izmaz.
@@ -622,12 +622,12 @@ export const questionList: {
        iẓḍar lmasiḥ a‑k‑ijjnjm. is‑tujadt ad‑dids‑tmnaggart? is‑srs‑tumnt? ara‑yaġ‑d f‑ma‑tswingimt ula ma‑ur‑tfhimt.`,
   },
   {
-    question: 'mamnek a-tñallam?',
+    question: 'mamnek atñallam?',
     questionArabic: 'مامنك ا-تژّالّام؟',
     body: `taẓallit‑nnġ tga ġmka. illa f‑yan a‑ijjujad iḫf‑ns, yissan is‑ra‑isawal d‑walli iḫlqn ignwan d‑wakal. ġakud nna‑nra a‑nẓẓall i‑rbbi, da‑zwar‑nsiggil ġ‑uwl‑nnġ a‑nissan is‑ginnġ‑illa kra issḥššamn. nẓẓall ilmma s‑ism l‑lmasiḥ lli‑d‑yuškan a‑yġ‑issġus zġ‑kullu ma‑yʷḫšnn.`,
   },
   {
-    question: 'ma-ttinim å-tñallit-nnun? izd s-tøárabt a-s-a-ttñallam?',
+    question: 'mattinim åtñallitnnun? izd støárabt asattñallam?',
     questionArabic: 'ما-تّينيم غ-تژالّيت-نّون؟ ءيزد س-تعرابت ا-س-ا-تژّالّام؟',
     body: `rbbi issn i‑kullu iwalyun, ifhm kraygatt lluġa. ar‑dids‑nsawal s‑tšlḥayt.
 
@@ -636,12 +636,12 @@ export const questionList: {
   yan‑wass illa lmasiḥ ġ‑yan‑udġar, ḍalbn zġ‑gis imḥḍarn‑ns: «ml‑aġ mamnk a‑ntẓalla.» yini‑asn «tẓallayt ġmkad, tinim i‑rbbi: wa‑babatnnġ lli‑illan ġ‑ignna, a‑yili luqr i‑ism‑nnk, tašk‑id‑tgldit‑nnk, yili ma‑k‑irḍan ġ‑ddunit ġmklli illa ġ‑ignna. fk‑aġ‑d ġassad aġrum lli‑nḥtajja i‑wass‑ad, tṣamḥt‑aġ f‑lḫʷšant lli‑nskr, ġmklli nṣamḥ nkkʷni i‑willi ginnġ iskrn lḫʷšant. tssanft fllannġ kullu ma‑rad‑aġ‑n‑ildi a‑nskr kra yʷḫšnn, tjjnjmt‑aġ zġ‑iblis» (matta 6:9‑13).`,
   },
   {
-    question: 'mennawt-twal a-ttñallam å-wass?',
+    question: 'mennawttwal attñallam åwass?',
     questionArabic: 'منّاوت-توال ا-تژّالّام غ-واسّ؟',
     body: `ur‑d‑fllannġ‑tyawfraḍnt tasaɛin, walaynni ġakud nna‑nra. ar‑ntḥmad rbbi ar‑t‑ntškar ġakud nna‑d‑nnkr zikk ṣbaḥ. d‑ġakud nna‑di‑ttrs lmunt ar‑t‑ntškar f‑lbaraka‑yan. ar‑ntẓalla t‑tarwa‑nnġ ġakud nna‑ra‑nffûġ s‑twuri‑nnġ. ar‑ntẓalla ġ‑uġaras ula ġ‑dar‑twuri, iġ‑nfta ula iġ‑nbídd. ar‑ntẓalla ur‑ta‑ngin. ar‑ntẓalla ula d‑imddukkʷal‑nnġ nna‑d‑darnnġ‑yuškan. ar‑aġ‑tssfraḥ‑tẓallit‑ad, ašku tga tajmmaɛt lli‑s‑a‑nsawal d‑babatnnġ.`,
   },
   {
-    question: 'is-ur-tbeddilm linjil lli-d-yiwi lmasiæ?',
+    question: 'isurtbeddilm linjil llidyiwi lmasiæ?',
     questionArabic: 'ءيس-ور-تبدّيلم لينجيل لّي-د-ييوي لماسيح؟',
     body: `is‑ti‑tġrit a‑gʷma? ma‑fllas‑tssnt? imḥḍarn nna‑illan d‑kra n‑nnabi, nis‑rad‑iẓḍarn ad‑bddln awal‑ns s‑kra n‑wawal yaḍni?
 
@@ -658,7 +658,7 @@ export const questionList: {
   linjil‑ad a‑gʷma, ur‑a‑yġ‑issaggug zġ‑rbbi, walaynni ar‑aġ‑imala mamnk a‑n‑srs‑ntakmur, nissan is‑illa‑bdda‑didnnġ a‑ginnġ‑ibark.`,
   },
   {
-    question: 'is-a-tmmaån imasiæin d-mddn yaãni?',
+    question: 'isatmmaån imasiæin dmddn yaãni?',
     questionArabic: 'ءيس-ا-تمّاغن يماسيحين د-مدّن ياضني؟',
     body: ` iban ġ‑warratn l‑linjil d‑win ttariḫ f‑imasiḥiyn imzwura is‑a‑bdda‑skarn f‑sslamt. ur‑a‑tasin ssif ula da‑tmmaġn d‑míddn yaḍni. ur‑a‑ttirin ad‑nrun wiyyaḍ, ula da‑tn‑traran s‑bzzíz ad‑amnn. ar‑ġir‑sawaln d‑míddn f‑uġaras l‑lmasiḥ, ar‑tn‑tɛawann ula ġ‑išabukn n‑kraygatt ass, aylliġ ilkm‑wawal‑nsn ddunit kullutt.
 
@@ -666,7 +666,7 @@ export const questionList: {
   },
   {
     question:
-      'rbbi ur-a-itetahal ula da-itaru. maç aylliå a-ttinim i-lmasiæ «yus n-rbbi»?',
+      'rbbi uraitetahal ula daitaru. maç aylliå attinim ilmasiæ «yus nrbbi»?',
     questionArabic:
       'ربّي ءور-ا-يتّاهل ءولا دا-يتارو. ماخ ايلّيغ ا-تّينيم ءي-لماسيح «يوس ن-ربّي»؟',
     body: ` s‑ṣaḥḥt a‑gʷma, rbbi ur‑igi zund bnadm, ur‑a‑ittahal ula da‑itaru. lmɛna‑yad, urd ġmklli iswingim bnadm a‑tga. lliġ‑d‑ilul lmasiḥ, yazn‑d rbbi lmalak jibrayyil s‑yat‑tfruḫt ism‑ns maryam. yini‑as lmalak: «hati ra‑trbut, tarut yan‑warraw.» tini‑as maryam i‑lmalak: «mamnk a‑ra‑yyi‑yili mayad? ur‑dari argaz.» yini‑as: «ra‑d‑fllam‑igguz rruḥ n‑rbbi, tdl‑km‑tḥkimt n‑rbbi. mayad a‑f‑ra‑nttini i‑warraw‑an amẓlay lli‑ra‑tarut
@@ -681,7 +681,7 @@ export const questionList: {
   },
   {
     question:
-      'ggutn middn ar-ttinin «ur-immut lmasiæ». maç aylliå a-ttinim kunni n-imasiæin «immut inker-d zå-lmut»?',
+      'ggutn middn arttinin «urimmut lmasiæ». maç aylliå attinim kunni n-imasiæin «immut inker-d zå-lmut»?',
     questionArabic:
       'ݣّوتن مدّن ار-تّينين: «ءور-يمّوت لماسيح.» ماخ ايلّيغ ا-تّينيم: «ءيمّوت ءينكر-د زغ-لموت»؟',
     body: ` ẓr, a‑gʷma, lmasiḥ mayd inna f‑iḫf‑ns ur‑ta‑iruḥ‑uzmz lli‑ġ‑ra‑immt. inna: «ra‑nddu s‑tmdint n‑urušalim. ra‑yyi‑n‑dḥin s‑gr ifassn n‑inmġurn n‑uwdayn. rad‑flla‑ḥkamn s‑lmut. ra‑gigi‑tṭnaẓn ssufsn flla lḫḍn‑iyi nġn‑iyi. walaynni ġ‑wis kraḍ‑uwssan rad‑d‑nkrġ zġ‑lmut» (matta 20:18‑19). issn lmasiḥ ma‑ra‑ys‑ijru, inna‑yasn awal‑ad kraṭṭ‑twal afad a‑ur‑t‑ttun.
@@ -690,7 +690,7 @@ export const questionList: {
   },
   {
     question:
-      'maç aylliå ra-yadj rbbi yan igan nnabi neåd yus a-immt zund yan igan ameççar?',
+      'maç aylliå ra-yadj rbbi yan igan nnabi neåd yus aimmt zund yan igan ameççar?',
     questionArabic:
       'ماخ ايلّيغ را-يادج ربّي يان ءيݣان نّابي نغد يوس ا-يمّت زوبد يان ءيݣان امخّار؟',
     body: `ašku a‑gʷma mayan rbbi iqṣad‑t zġ‑isizwur. ityara kullu mayan ġ‑warratn l‑lanbya n‑zman, imla‑ysn rbbi nis‑ra‑immt lmasiḥ. ašku ira a‑iskr s‑idammn l‑lmasiḥ yal‑lɛhd l‑ljdid ġ‑gras d‑bnadm. d‑lmut‑ns a‑s‑yusi lmasiḥ lḥukm lli‑ittutn f‑ddunit. izri nttan ġ‑lɛdab l‑lqbr afad a‑ur‑zġ‑gis‑nzri nkkʷni. inna nttan «lḥqq ayad, lḥqq a‑rad‑awn‑iniġ. iġ‑ur‑iḍr‑waqqa n‑irdn ġ‑wakal immt, waḥdut a‑ra‑iqama. walaynni iġ‑immut ra‑d‑yawi ṣṣabt iggutn» (yuḥanna 12:24). ur‑iqama waḥdut nttan, ašku inkr‑d ġ‑wis kraḍ‑uwssan ġmklli‑s‑inna i‑imḥḍarn‑ns. yall‑t ilmma rbbi s‑ignna, ar isiggʷra n‑ddunit ra‑d‑yuwrri. ra‑issmun kullu willi srs umnnin, ar‑skarn s‑luṣiyyat‑ns ġmklli iskar.
@@ -698,7 +698,7 @@ export const questionList: {
       yawi‑tn dids ilmma s‑tudrt idumn. ġwin a‑igan ṣṣabt‑ns iggutn.`,
   },
   {
-    question: 'liman n-imasiæin, mamnek a-iga?',
+    question: 'liman nimasiæin, mamnek aiga?',
     questionArabic: 'ليمان ن-يماسيحين، مامنك ا-يݣا؟',
     body: ` iġ‑a‑iṣwaḍ‑waḍu itjhhdn a‑gʷma, da‑issukuf tuga iqqurn zġ‑wakal. han iwalyun l‑lanbya zund aḍu ad‑gan,
 

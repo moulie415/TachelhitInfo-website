@@ -81,7 +81,10 @@ function Questions() {
                           `../../assets/audio/questions/Q${index + 1}.mp3`,
                         );
                       }}
-                      style={{textTransform: 'initial'}}>
+                      style={{
+                        textTransform: 'initial',
+                        fontFamily: 'Tashelhayt',
+                      }}>
                       {question}
                     </Button>
                   </Grid>
@@ -104,7 +107,7 @@ function Questions() {
                           `../../assets/audio/questions/Q${index + 1}.mp3`,
                         );
                       }}
-                      style={{fontFamily: 'ScheherazadeNew'}}>
+                      style={{fontFamily: 'ScheherazadeNew', fontSize: 20}}>
                       {questionArabic}
                     </Button>
                   </Grid>
