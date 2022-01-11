@@ -16,7 +16,7 @@ import {colors} from '../../constants';
 const Header: FunctionalComponent = () => {
   const matches = useMediaQuery('(min-width:800px)');
   const [showMenu, setShowMenu] = useState(false);
-  const marginRight = matches ? 10 : 30;
+  const marginRight = matches ? 30 : 10;
   return (
     <AppBar position="sticky">
       <Toolbar style={{paddingLeft: matches ? undefined : 0}}>
@@ -31,23 +31,17 @@ const Header: FunctionalComponent = () => {
           </Button>
         </Link>
         <Link href="/" style={{flexGrow: 1}}>
-          <Button
-            className={styles.button}
-            style={{color: '#fff', padding: 0, marginRight}}>
-            <div className={matches ? styles.title : styles.titleSmall}>
+          <Button className={styles.button} style={{color: '#fff', padding: 0}}>
+            <div
+              style={{marginRight}}
+              className={matches ? styles.title : styles.titleSmall}>
               tachelhit info
             </div>
-          </Button>
-          <Button
-            className={styles.button}
-            style={{color: '#fff', padding: 0, marginRight}}>
             <div
-              style={{fontSize: matches ? 'inherit' : 20}}
+              style={{fontSize: matches ? 'inherit' : 20, marginRight}}
               className={matches ? styles.titleTif : styles.titleTifSmall}>
               tacelpit infu
             </div>
-          </Button>
-          <Button className={styles.button} style={{color: '#fff', padding: 0}}>
             <div
               style={{fontSize: matches ? 'inherit' : 20}}
               className={
