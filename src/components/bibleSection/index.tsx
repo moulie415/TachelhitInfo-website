@@ -222,9 +222,8 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{
                       textTransform: 'initial',
                       fontSize: 18,
-                      fontFamily: 'Tashelhayt',
                     }}>
-                    injil l-masiæ – aåaras n-tudert
+                    injil-lmasih - agharas n-tudert
                   </Typography>
                 </Button>
                 <div>
@@ -286,7 +285,6 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     style={{
                       textTransform: 'initial',
                       fontSize: 18,
-                      fontFamily: 'Tashelhayt',
                     }}>
                     arratn l-lanbya – ssfijjat f-mddn-inu
                   </Typography>
