@@ -36,9 +36,9 @@ const AudioSection: FunctionalComponent = () => {
           justifyContent: 'space-evenly',
           height: '100%',
           flex: 1,
-          marginLeft: '2vw',
         }}>
         <Button
+          className={styles.textButton}
           style={{
             textTransform: 'inherit',
             width: '100%',
@@ -73,6 +73,7 @@ const AudioSection: FunctionalComponent = () => {
           <source src={MATSSENT} type="audio/mpeg" />
         </audio>
         <Button
+          className={styles.textButton}
           style={{
             textTransform: 'inherit',
             width: '100%',
@@ -107,6 +108,7 @@ const AudioSection: FunctionalComponent = () => {
           <source src={AZUZD} type="audio/mpeg" />
         </audio>
         <Button
+          className={styles.textButton}
           style={{
             textTransform: 'inherit',
             width: '100%',
@@ -141,6 +143,7 @@ const AudioSection: FunctionalComponent = () => {
           <source src={ISEQSITN} type="audio/mpeg" />
         </audio>
         <Button
+          className={styles.textButton}
           style={{
             textTransform: 'inherit',
             width: '100%',

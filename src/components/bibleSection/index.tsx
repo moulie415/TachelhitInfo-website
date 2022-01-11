@@ -114,6 +114,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             sm={desktop ? 3 : 12}
             md={3}>
             <Button
+              className={styles.textButton}
               onClick={() =>
                 window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
               }>
@@ -158,7 +159,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 target="_blank"
                 rel="noreferrer">
                 <img
-                  style={{width: '75%', maxWidth: '100%'}}
+                  style={{width: '85%', maxWidth: '100%'}}
                   src={injil}
                   alt="injil l-lmasih"
                 />
@@ -174,8 +175,8 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             }}
             item
             xs={12}
-            sm={desktop ? 6 : 12}
-            md={6}>
+            sm={desktop ? 5 : 12}
+            md={5}>
             <Grid container>
               <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
                 <div
@@ -192,6 +193,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   />
                 </div>
                 <Button
+                  className={styles.textButton}
                   style={{padding: 0}}
                   onClick={() => {
                     openModal();
@@ -209,6 +211,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   </Typography>
                 </Button>
                 <Button
+                  className={styles.textButton}
                   style={{padding: 0}}
                   onClick={() => {
                     openModal();
@@ -224,6 +227,19 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     injil l-masiæ – aåaras n-tudert
                   </Typography>
                 </Button>
+                <div>
+                  <VolumeMuteIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                  <ImportContactsTwoToneIcon
+                    style={{
+                      fontSize: 25,
+                      color: '#000',
+                      marginRight: 10,
+                      marginBottom: 3,
+                    }}
+                  />
+                </div>
               </Grid>
 
               <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
@@ -241,6 +257,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   />
                 </div>
                 <Button
+                  className={styles.textButton}
                   style={{padding: 0}}
                   onClick={() => {
                     openModal();
@@ -258,6 +275,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   </Typography>
                 </Button>
                 <Button
+                  className={styles.textButton}
                   style={{padding: 0}}
                   onClick={() => {
                     openModal();
@@ -273,6 +291,19 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     arratn l-lanbya – ssfijjat f-mddn-inu
                   </Typography>
                 </Button>
+                <div>
+                  <VolumeMuteIcon
+                    style={{fontSize: 30, color: '#000', marginRight: 10}}
+                  />
+                  <ImportContactsTwoToneIcon
+                    style={{
+                      fontSize: 25,
+                      color: '#000',
+                      marginRight: 10,
+                      marginBottom: 3,
+                    }}
+                  />
+                </div>
               </Grid>
             </Grid>
           </Grid>

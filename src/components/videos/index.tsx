@@ -51,6 +51,7 @@ const Videos: FunctionalComponent = () => {
               style={{fontSize: 30, color: '#000', marginRight: 10}}
             />
             <Button
+              className={styles.textButton}
               onClick={() => videoRef.current?.requestFullscreen()}
               style={{textTransform: 'inherit', padding: 2}}>
               <Typography style={{marginRight: 10}} variant="h6">
@@ -94,6 +95,7 @@ const Videos: FunctionalComponent = () => {
               style={{fontSize: 30, color: '#000', marginRight: 10}}
             />
             <Button
+              className={styles.textButton}
               style={{textTransform: 'inherit', padding: 2}}
               onClick={() => window.open('https://www.amsiggel.com')}>
               <Typography style={{marginRight: 10}} variant="h6">
@@ -128,6 +130,7 @@ const Videos: FunctionalComponent = () => {
               style={{fontSize: 30, color: '#000', marginRight: 10}}
             />
             <Button
+              className={styles.textButton}
               style={{textTransform: 'inherit', padding: 2}}
               onClick={() =>
                 window.open(
