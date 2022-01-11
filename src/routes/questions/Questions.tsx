@@ -1,6 +1,7 @@
 import {
   Button,
   Card,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -64,57 +65,51 @@ function Questions() {
         <List style={{alignItems: 'center', textAlign: 'center', padding: 10}}>
           {questionList.map(({question, questionArabic}, index) => {
             return (
-              <ListItem
-                key={question}
-                button
-                onClick={() => {
-                  setQuestion(index);
-                  setModalIsOpen(true);
-                  openModal();
-                  setAudio(`../../assets/audio/questions/Q${index + 1}.mp3`);
-                }}>
-                <div
-                  style={{
-                    display: 'flex',
-                    flex: 1,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    maxWidth: '80%',
-                    margin: 'auto',
-                    textAlign: 'center',
-                  }}>
-                  <div style={{marginRight: 5}}>
-                    <div
-                      style={{
-                        marginBottom: 5,
-                        fontFamily: 'ScheherazadeNew',
-                        display: 'flex',
-                        justifyContent: 'center',
-                      }}>
-                      {questionArabic}
-                      <div
-                        style={{
-                          color: colors.red,
-                          fontWeight: 'bold',
-                          marginLeft: 5,
-                        }}>
-                        {index + 1}
-                      </div>
-                    </div>
-                    <div style={{display: 'flex', justifyContent: 'center'}}>
-                      <div
-                        style={{
-                          color: colors.red,
-                          fontWeight: 'bold',
-                          marginRight: 5,
-                        }}>
-                        {index + 1}
-                      </div>
+              <div key={question}>
+                <Grid
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  style={{marginBottom: 5}}>
+                  <Grid item>
+                    <Button
+                      onClick={() => {
+                        setQuestion(index);
+                        setModalIsOpen(true);
+                        openModal();
+                        setAudio(
+                          `../../assets/audio/questions/Q${index + 1}.mp3`,
+                        );
+                      }}
+                      style={{textTransform: 'initial'}}>
                       {question}
-                    </div>
-                  </div>
-                </div>
-              </ListItem>
+                    </Button>
+                  </Grid>
+                  <Grid
+                    item
+                    style={{
+                      color: colors.red,
+                      fontWeight: 'bold',
+                      margin: 5,
+                    }}>
+                    {index + 1}
+                  </Grid>
+                  <Grid item>
+                    <Button
+                      onClick={() => {
+                        setQuestion(index);
+                        setModalIsOpen(true);
+                        openModal();
+                        setAudio(
+                          `../../assets/audio/questions/Q${index + 1}.mp3`,
+                        );
+                      }}
+                      style={{fontFamily: 'ScheherazadeNew'}}>
+                      {questionArabic}
+                    </Button>
+                  </Grid>
+                </Grid>
+              </div>
             );
           })}
         </List>
