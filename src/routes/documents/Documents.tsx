@@ -197,6 +197,7 @@ function Documents() {
                 textAlign: 'center',
                 fontSize: 18,
                 fontFamily: 'ScheherazadeNew',
+                lineHeight: 2,
               }}>
               لقيست ن-يان ءيݣومّين لهنا د-تايري د-سّلامت، ءيفتو ار-سرسن-يسيݣّيل
             </Typography>
