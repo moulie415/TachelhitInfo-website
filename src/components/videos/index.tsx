@@ -53,12 +53,10 @@ const Videos: FunctionalComponent = () => {
             <Button
               onClick={() => videoRef.current?.requestFullscreen()}
               style={{textTransform: 'inherit', padding: 2}}>
-              <Typography variant="h6">maylli iqsad rbbi</Typography>
-            </Button>
-            <Button
-              onClick={() => videoRef.current?.requestFullscreen()}
-              style={{textTransform: 'inherit', padding: 5}}>
-              <Typography className={styles.arabic} style={{}} variant="h4">
+              <Typography style={{marginRight: 10}} variant="h6">
+                maylli iqsad rbbi
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
                 مايلّي ءيقصاد ربّي
               </Typography>
             </Button>
@@ -98,12 +96,10 @@ const Videos: FunctionalComponent = () => {
             <Button
               style={{textTransform: 'inherit', padding: 2}}
               onClick={() => window.open('https://www.amsiggel.com')}>
-              <Typography variant="h6">amuddu n-umsiggel</Typography>
-            </Button>
-            <Button
-              style={{textTransform: 'inherit', padding: 5}}
-              onClick={() => window.open('https://www.amsiggel.com')}>
-              <Typography className={styles.arabic} style={{}} variant="h4">
+              <Typography style={{marginRight: 10}} variant="h6">
+                amuddu n-umsiggel
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
                 امودّو ن-ومسيگّل
               </Typography>
             </Button>
@@ -138,16 +134,10 @@ const Videos: FunctionalComponent = () => {
                   'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
                 )
               }>
-              <Typography variant="h6">tudert l-lmasih</Typography>
-            </Button>
-            <Button
-              style={{textTransform: 'inherit', padding: 5}}
-              onClick={() =>
-                window.open(
-                  'https://www.jesusfilm.org/watch/jesus.html/tachelhit.html',
-                )
-              }>
-              <Typography className={styles.arabic} style={{}} variant="h4">
+              <Typography style={{marginRight: 10}} variant="h6">
+                tudert l-lmasih
+              </Typography>
+              <Typography className={styles.arabic} variant="h4">
                 تودرت لّماسيح
               </Typography>
             </Button>
