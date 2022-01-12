@@ -4,17 +4,16 @@ import {
   Grid,
   IconButton,
   List,
-  ListItem,
   Typography,
   useMediaQuery,
 } from '@material-ui/core';
-import {FunctionalComponent, h} from 'preact';
+import {h} from 'preact';
 import {useRef, useState} from 'preact/hooks';
 import CloseIcon from '@material-ui/icons/Close';
 import Modal from 'react-modal';
-import SocialsFooter from '../../components/socialsFooter';
 import {colors, questionList} from '../../constants';
 import useMusicPlayer from '../../components/useMusicPlayer';
+import styles from './styles.css';
 
 const customStyles = {
   content: {
@@ -66,52 +65,45 @@ function Questions() {
           {questionList.map(({question, questionArabic}, index) => {
             return (
               <div key={question}>
-                <Grid
-                  container
-                  justifyContent="center"
-                  alignItems="center"
-                  style={{marginBottom: 5}}>
-                  <Grid item>
-                    <Button
-                      onClick={() => {
-                        setQuestion(index);
-                        setModalIsOpen(true);
-                        openModal();
-                        setAudio(
-                          `../../assets/audio/questions/Q${index + 1}.mp3`,
-                        );
-                      }}
-                      style={{
-                        textTransform: 'initial',
-                        fontFamily: 'Tashelhayt',
-                      }}>
-                      {question}
-                    </Button>
-                  </Grid>
+                <Button
+                  className={styles.textButton}
+                  style={{border: '1px solid #000', marginBottom: 2}}
+                  onClick={() => {
+                    setQuestion(index);
+                    setModalIsOpen(true);
+                    openModal();
+                    setAudio(`../../assets/audio/questions/Q${index + 1}.mp3`);
+                  }}>
                   <Grid
-                    item
-                    style={{
-                      color: colors.red,
-                      fontWeight: 'bold',
-                      margin: 5,
-                    }}>
-                    {index + 1}
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    style={{marginBottom: 5}}>
+                    <Grid item>
+                      <div
+                        style={{
+                          textTransform: 'initial',
+                          fontFamily: 'Tashelhayt',
+                        }}>
+                        {question}
+                      </div>
+                    </Grid>
+                    <Grid
+                      item
+                      style={{
+                        fontWeight: 'bold',
+                        margin: '5px 10px',
+                      }}>
+                      {index + 1}
+                    </Grid>
+                    <Grid item>
+                      <div
+                        style={{fontFamily: 'ScheherazadeNew', fontSize: 20}}>
+                        {questionArabic}
+                      </div>
+                    </Grid>
                   </Grid>
-                  <Grid item>
-                    <Button
-                      onClick={() => {
-                        setQuestion(index);
-                        setModalIsOpen(true);
-                        openModal();
-                        setAudio(
-                          `../../assets/audio/questions/Q${index + 1}.mp3`,
-                        );
-                      }}
-                      style={{fontFamily: 'ScheherazadeNew', fontSize: 20}}>
-                      {questionArabic}
-                    </Button>
-                  </Grid>
-                </Grid>
+                </Button>
               </div>
             );
           })}
