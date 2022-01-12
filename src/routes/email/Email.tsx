@@ -81,12 +81,52 @@ function Email() {
             marginBottom: 20,
             textAlign: 'center',
           }}>
-          <Typography style={{marginRight: 10, color: '#fff'}} variant="h4">
-            Ara-yaghd - ⴰⵔⴰ ⵢⴰⵖⴷ
-          </Typography>
-          <Typography style={{color: '#fff'}} variant="h6">
-            Contact us - Contactez-nous - اتصل بنا
-          </Typography>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Typography
+              style={{marginRight: 40, color: '#fff', fontFamily: 'Tashelhayt'}}
+              variant="h4">
+              ara-yagh-d
+            </Typography>
+            <Typography style={{marginRight: 40, color: '#fff'}} variant="h4">
+              ⴰⵔⴰ-ⵢⴰⵖ-ⴷ
+            </Typography>
+            <Typography
+              style={{
+                marginRight: 40,
+                color: '#fff',
+                fontFamily: 'ScheherazadeNew',
+              }}
+              variant="h4">
+              ارا-ياغ-د
+            </Typography>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Typography style={{color: '#fff', marginRight: 20}} variant="h6">
+              Contact us
+            </Typography>
+            <Typography style={{color: '#fff', marginRight: 20}} variant="h6">
+              Contactez-nous
+            </Typography>
+            <Typography
+              style={{
+                color: '#fff',
+                marginRight: 20,
+                fontFamily: 'ScheherazadeNew',
+              }}
+              variant="h6">
+              اتصل بنا
+            </Typography>
+          </div>
         </div>
         <div className="email-form" style={{padding: 20}}>
           <form id="contact-form" onSubmit={handleSubmit} method="POST">
