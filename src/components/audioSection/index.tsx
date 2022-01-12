@@ -26,8 +26,8 @@ const AudioSection: FunctionalComponent = () => {
     <Grid
       item
       xs={12}
-      sm={matches ? 3 : 12}
-      md={3}
+      sm={matches ? 4 : 12}
+      md={4}
       style={{marginTop: matches ? 0 : 10}}>
       <div
         style={{
@@ -36,6 +36,7 @@ const AudioSection: FunctionalComponent = () => {
           justifyContent: 'space-evenly',
           height: '100%',
           flex: 1,
+          marginLeft: '2vw',
         }}>
         <Button
           className={styles.textButton}

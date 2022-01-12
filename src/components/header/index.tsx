@@ -21,9 +21,10 @@ const Header: FunctionalComponent = () => {
     <AppBar position="sticky">
       <Toolbar style={{paddingLeft: matches ? undefined : 0}}>
         <Link className={styles.buttonLink} href="/">
-          <Button className={styles.buttonLink}>
+          <Button
+            style={{marginRight: matches ? 30 : 0}}
+            className={styles.buttonLink}>
             <img
-              style={{marginRight: matches ? 10 : 0}}
               src="/assets/icons/favicon-96x96.png"
               alt="logo"
               width={matches ? 50 : 30}

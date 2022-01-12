@@ -111,55 +111,56 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             style={{textAlign: 'center'}}
             item
             xs={12}
-            sm={desktop ? 3 : 12}
-            md={3}>
-            <Button
-              className={styles.textButton}
-              onClick={() =>
-                window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
-              }>
-              <div>
-                <div style={{display: 'flex'}}>
-                  <Typography
-                    style={{
-                      textTransform: 'initial',
-                      marginRight: 10,
-                    }}
-                    variant="h6">
-                    lɛhd l-ljdid
-                  </Typography>
-                  <Typography
-                    style={{marginLeft: 10}}
-                    variant="h4"
-                    className={styles.arabic}>
-                    لعهد لّجديد
-                  </Typography>
-                </div>
-                <div>
-                  <VolumeMuteIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
-                  />
-                  <ImportContactsTwoToneIcon
-                    style={{
-                      fontSize: 25,
-                      color: '#000',
-                      marginRight: 10,
-                      marginBottom: 3,
-                    }}
-                  />
-                  <VideocamOutlinedIcon
-                    style={{fontSize: 30, color: '#000', marginRight: 10}}
-                  />
-                </div>
-              </div>
-            </Button>
+            sm={desktop ? 4 : 12}
+            md={4}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Button
+                className={styles.textButton}
+                onClick={() =>
+                  window.open('https://live.bible.is/bible/SHIRBD/MRK/1')
+                }>
+                <Typography
+                  style={{
+                    textTransform: 'initial',
+                    marginRight: 10,
+                  }}
+                  variant="h6">
+                  lɛhd l-ljdid
+                </Typography>
+                <Typography
+                  style={{marginLeft: 10}}
+                  variant="h4"
+                  className={styles.arabic}>
+                  لعهد لّجديد
+                </Typography>
+              </Button>
+              <VolumeMuteIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
+              <ImportContactsTwoToneIcon
+                style={{
+                  fontSize: 25,
+                  color: '#000',
+                  marginRight: 10,
+                  marginBottom: 3,
+                }}
+              />
+              <VideocamOutlinedIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
+            </div>
             <Button>
               <a
                 href="https://live.bible.is/bible/SHIRBD/MRK/1"
                 target="_blank"
                 rel="noreferrer">
                 <img
-                  style={{width: '85%', maxWidth: '100%'}}
+                  style={{width: '75%', maxWidth: '100%'}}
                   src={injil}
                   alt="injil l-lmasih"
                 />
@@ -175,8 +176,8 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
             }}
             item
             xs={12}
-            sm={desktop ? 5 : 12}
-            md={5}>
+            sm={desktop ? 4 : 12}
+            md={4}>
             <Grid container>
               <Grid item xs={12} sm={desktop ? 6 : 12} md={6}>
                 <div
@@ -194,7 +195,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 </div>
                 <Button
                   className={styles.textButton}
-                  style={{padding: 0}}
+                  style={{padding: 0, display: 'block', margin: 'auto'}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/nt_abc.pdf');
@@ -207,12 +208,12 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
-                    ءينجيل لّماسيح – اغاراس ن-تودرت
+                    ءينجيل ن-لماسيح
                   </Typography>
                 </Button>
                 <Button
                   className={styles.textButton}
-                  style={{padding: 0}}
+                  style={{padding: 0, display: 'block', margin: 'auto'}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/nt_lat.pdf');
@@ -223,7 +224,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                       textTransform: 'initial',
                       fontSize: 18,
                     }}>
-                    injil-lmasih - agharas n-tudert
+                    injil n-lmasih
                   </Typography>
                 </Button>
                 <div>
@@ -257,7 +258,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 </div>
                 <Button
                   className={styles.textButton}
-                  style={{padding: 0}}
+                  style={{padding: 0, display: 'block', margin: 'auto'}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/ot_abc.pdf');
@@ -270,12 +271,12 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
-                    ارّاتن لّانبيا – سّفجّيجات ف-مدّن-ينو
+                    ارّاتن ن-لانبيا
                   </Typography>
                 </Button>
                 <Button
                   className={styles.textButton}
-                  style={{padding: 0}}
+                  style={{padding: 0, display: 'block', margin: 'auto'}}
                   onClick={() => {
                     openModal();
                     setPdfSrc('../../assets/pdfs/ot_lat.pdf');
@@ -286,7 +287,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                       textTransform: 'initial',
                       fontSize: 18,
                     }}>
-                    arratn l-lanbya – ssfijjat f-mddn-inu
+                    arratn n-lanbya
                   </Typography>
                 </Button>
                 <div>
