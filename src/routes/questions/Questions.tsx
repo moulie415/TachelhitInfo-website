@@ -21,9 +21,12 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-25%',
+    marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '80%',
+    width: '90%',
+  },
+  overlay: {
+    zIndex: 9999,
   },
 };
 
@@ -69,7 +72,7 @@ function Questions() {
               xs={12}
               sm={4}
               md={3}
-              style={{height: matches ? 400 : '90vw'}}>
+              style={{height: matches ? 275 : '90vw'}}>
               <div style={{textAlign: 'center'}}>
                 <Button
                   onClick={() => {
@@ -80,7 +83,7 @@ function Questions() {
                   }}>
                   <img
                     style={{
-                      maxWidth: matches ? '23vw' : '90vw',
+                      maxWidth: matches ? '18vw' : '90vw',
                     }}
                     src={`../../assets/images/questions/iseqsitn${
                       index + 1
@@ -113,22 +116,22 @@ function Questions() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="question modal">
-        <div style={{maxHeight: '70vh'}}>
-          <div style={{display: 'flex'}}>
-            <audio style={{width: '100%'}} controls ref={player}>
-              <source src={audio} type="audio/mpeg" />
-            </audio>
-            <IconButton onClick={closeModal}>
-              <CloseIcon />
-            </IconButton>
-          </div>
-          <Typography variant="h4" gutterBottom>{`Aseqsi ${
-            question + 1
-          }`}</Typography>
-          <Typography variant="h6" style={{color: colors.red}} gutterBottom>
-            {questionList[question].question}
-          </Typography>
-          <Typography gutterBottom>{questionList[question].body}</Typography>
+        <div style={{maxHeight: '90vh', textAlign: 'center'}}>
+          <IconButton
+            style={{position: 'absolute', top: 0, right: 0}}
+            onClick={closeModal}>
+            <CloseIcon />
+          </IconButton>
+
+          <img
+            style={{
+              maxHeight: '80vh',
+            }}
+            src={`../../assets/images/questions/iseqsitn${question + 1}.gif`}
+          />
+          <audio style={{width: '100%'}} controls ref={player}>
+            <source src={audio} type="audio/mpeg" />
+          </audio>
         </div>
       </Modal>
       <Player />
