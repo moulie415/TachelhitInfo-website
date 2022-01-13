@@ -60,55 +60,53 @@ function Questions() {
         backgroundColor: colors.paleTurquoise,
         minHeight: '100vh',
       }}>
-      <Card style={{marginBottom: 15}}>
-        <List style={{alignItems: 'center', textAlign: 'center', padding: 10}}>
-          {questionList.map(({question, questionArabic}, index) => {
-            return (
-              <div key={question}>
+      <Grid container justifyContent="space-evenly" alignItems="center">
+        {questionList.map(({question}, index) => {
+          return (
+            <Grid
+              key={question}
+              item
+              xs={12}
+              sm={4}
+              md={3}
+              style={{height: matches ? 400 : '90vw'}}>
+              <div style={{textAlign: 'center'}}>
                 <Button
-                  className={styles.textButton}
-                  style={{border: '1px solid #000', marginBottom: 2}}
                   onClick={() => {
                     setQuestion(index);
                     setModalIsOpen(true);
                     openModal();
                     setAudio(`../../assets/audio/questions/Q${index + 1}.mp3`);
                   }}>
-                  <Grid
-                    container
-                    justifyContent="center"
-                    alignItems="center"
-                    style={{marginBottom: 5}}>
-                    <Grid item>
-                      <div
-                        style={{
-                          textTransform: 'initial',
-                          fontFamily: 'Tashelhayt',
-                        }}>
-                        {question}
-                      </div>
-                    </Grid>
-                    <Grid
-                      item
-                      style={{
-                        fontWeight: 'bold',
-                        margin: '5px 10px',
-                      }}>
-                      {index + 1}
-                    </Grid>
-                    <Grid item>
-                      <div
-                        style={{fontFamily: 'ScheherazadeNew', fontSize: 20}}>
-                        {questionArabic}
-                      </div>
-                    </Grid>
-                  </Grid>
+                  <img
+                    style={{
+                      maxWidth: matches ? '23vw' : '90vw',
+                    }}
+                    src={`../../assets/images/questions/iseqsitn${
+                      index + 1
+                    }.gif`}
+                  />
                 </Button>
               </div>
-            );
-          })}
-        </List>
-      </Card>
+              <Button
+                className={styles.textButton}
+                style={{textTransform: 'initial'}}
+                onClick={() => {
+                  setQuestion(index);
+                  setModalIsOpen(true);
+                  openModal();
+                  setAudio(`../../assets/audio/questions/Q${index + 1}.mp3`);
+                }}>
+                <Typography
+                  style={{textAlign: 'left', fontFamily: 'Tashelhayt'}}>{`${
+                  index + 1
+                }. ${question}`}</Typography>
+              </Button>
+            </Grid>
+          );
+        })}
+      </Grid>
+
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
