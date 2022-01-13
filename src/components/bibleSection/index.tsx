@@ -119,6 +119,20 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
+              <VolumeMuteIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
+              <ImportContactsTwoToneIcon
+                style={{
+                  fontSize: 25,
+                  color: '#000',
+                  marginRight: 10,
+                  marginBottom: 3,
+                }}
+              />
+              <VideocamOutlinedIcon
+                style={{fontSize: 30, color: '#000', marginRight: 10}}
+              />
               <Button
                 className={styles.textButton}
                 onClick={() =>
@@ -139,20 +153,6 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                   لعهد لّجديد
                 </Typography>
               </Button>
-              <VolumeMuteIcon
-                style={{fontSize: 30, color: '#000', marginRight: 10}}
-              />
-              <ImportContactsTwoToneIcon
-                style={{
-                  fontSize: 25,
-                  color: '#000',
-                  marginRight: 10,
-                  marginBottom: 3,
-                }}
-              />
-              <VideocamOutlinedIcon
-                style={{fontSize: 30, color: '#000', marginRight: 10}}
-              />
             </div>
             <Button>
               <a
@@ -160,7 +160,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                 target="_blank"
                 rel="noreferrer">
                 <img
-                  style={{width: '75%', maxWidth: '100%'}}
+                  style={{height: 235, maxWidth: '90vw'}}
                   src={injil}
                   alt="injil l-lmasih"
                 />
@@ -187,7 +187,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     justifyContent: 'space-evenly',
                   }}>
                   <img
-                    style={{margin: '10px 0'}}
+                    style={{margin: '25px 0 10px'}}
                     src={arratn}
                     width={150}
                     alt="bible pdf"
@@ -250,7 +250,7 @@ const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
                     justifyContent: 'space-evenly',
                   }}>
                   <img
-                    style={{margin: '10px 0'}}
+                    style={{margin: '25px 0 10px'}}
                     src={ikhbar}
                     width={150}
                     alt="bible pdf"
