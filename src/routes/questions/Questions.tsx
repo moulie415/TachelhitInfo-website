@@ -108,7 +108,7 @@ function Questions() {
       </Grid>
       {modalIsOpen && (
         <IconButton
-          style={{position: 'absolute', top: 0, right: 0, zIndex: 99999}}
+          style={{position: 'fixed', top: 0, right: 0, zIndex: 99999}}
           onClick={closeModal}>
           <CloseIcon style={{color: '#fff'}} />
         </IconButton>
