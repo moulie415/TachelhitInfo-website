@@ -626,7 +626,7 @@ export const questionList: {
     body: `taẓallit‑nnġ tga ġmka. illa f‑yan a‑ijjujad iḫf‑ns, yissan is‑ra‑isawal d‑walli iḫlqn ignwan d‑wakal. ġakud nna‑nra a‑nẓẓall i‑rbbi, da‑zwar‑nsiggil ġ‑uwl‑nnġ a‑nissan is‑ginnġ‑illa kra issḥššamn. nẓẓall ilmma s‑ism l‑lmasiḥ lli‑d‑yuškan a‑yġ‑issġus zġ‑kullu ma‑yʷḫšnn.`,
   },
   {
-    question: 'mma-ttinim å-tñallit-nnun?',
+    question: 'ma-ttinim å-tñallit-nnun?',
     questionArabic: 'ما-تّينيم غ-تژالّيت-نّون؟ ءيزد س-تعرابت ا-س-ا-تژّالّام؟',
     body: `rbbi issn i‑kullu iwalyun, ifhm kraygatt lluġa. ar‑dids‑nsawal s‑tšlḥayt.
 

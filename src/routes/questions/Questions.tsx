@@ -23,10 +23,13 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '90%',
+    width: '100%',
+    backgroundColor: '#000',
+    borderWidth: 0,
   },
   overlay: {
     zIndex: 9999,
+    backgroundColor: '#000',
   },
 };
 
@@ -60,19 +63,13 @@ function Questions() {
     <div
       style={{
         padding: 15,
-        backgroundColor: colors.paleTurquoise,
+        backgroundColor: '#fff',
         minHeight: '100vh',
       }}>
-      <Grid container justifyContent="space-evenly" alignItems="center">
+      <Grid container>
         {questionList.map(({question}, index) => {
           return (
-            <Grid
-              key={question}
-              item
-              xs={12}
-              sm={4}
-              md={3}
-              style={{height: matches ? 275 : '90vw'}}>
+            <Grid key={question} item xs={12} sm={3} md={3}>
               <div style={{textAlign: 'center'}}>
                 <Button
                   onClick={() => {
@@ -83,11 +80,11 @@ function Questions() {
                   }}>
                   <img
                     style={{
-                      maxWidth: matches ? '18vw' : '90vw',
+                      maxWidth: matches ? '23vw' : '90vw',
                     }}
                     src={`../../assets/images/questions/iseqsitn${
                       index + 1
-                    }.gif`}
+                    }.png`}
                   />
                 </Button>
               </div>
@@ -109,27 +106,27 @@ function Questions() {
           );
         })}
       </Grid>
-
+      {modalIsOpen && (
+        <IconButton
+          style={{position: 'absolute', top: 0, right: 0, zIndex: 99999}}
+          onClick={closeModal}>
+          <CloseIcon style={{color: '#fff'}} />
+        </IconButton>
+      )}
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="question modal">
-        <div style={{maxHeight: '90vh', textAlign: 'center'}}>
-          <IconButton
-            style={{position: 'absolute', top: 0, right: 0}}
-            onClick={closeModal}>
-            <CloseIcon />
-          </IconButton>
-
+        <div style={{maxHeight: '100vh', textAlign: 'center'}}>
           <img
             style={{
-              maxHeight: '80vh',
+              maxHeight: '90vh',
             }}
-            src={`../../assets/images/questions/iseqsitn${question + 1}.gif`}
+            src={`../../assets/images/questions/iseqsitn${question + 1}.png`}
           />
-          <audio style={{width: '100%'}} controls ref={player}>
+          <audio style={{width: '75%'}} controls ref={player}>
             <source src={audio} type="audio/mpeg" />
           </audio>
         </div>
