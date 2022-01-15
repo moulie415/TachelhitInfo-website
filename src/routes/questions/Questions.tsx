@@ -56,7 +56,7 @@ function Questions() {
   return (
     <div
       style={{
-        padding: 15,
+        padding: 10,
         backgroundColor: '#fff',
         minHeight: '100vh',
       }}>
@@ -66,6 +66,7 @@ function Questions() {
             <Grid key={question} item xs={12} sm={3} md={3}>
               <div style={{textAlign: 'center'}}>
                 <Button
+                  style={{padding: 0}}
                   onClick={() => {
                     setQuestion(index);
                     setModalIsOpen(true);
@@ -84,7 +85,11 @@ function Questions() {
               </div>
               <Button
                 className={styles.textButton}
-                style={{textTransform: 'initial'}}
+                style={{
+                  textTransform: 'initial',
+                  padding: '0px 10px',
+                  margin: '5px 0',
+                }}
                 onClick={() => {
                   setQuestion(index);
                   setModalIsOpen(true);
@@ -92,9 +97,11 @@ function Questions() {
                   setAudio(`../../assets/audio/questions/Q${index + 1}.mp3`);
                 }}>
                 <Typography
-                  style={{textAlign: 'left', fontFamily: 'Tashelhayt'}}>{`${
-                  index + 1
-                }. ${question}`}</Typography>
+                  style={{
+                    textAlign: 'left',
+                    fontFamily: 'Tashelhayt',
+                    fontSize: 14,
+                  }}>{`${index + 1}. ${question}`}</Typography>
               </Button>
             </Grid>
           );
@@ -105,41 +112,55 @@ function Questions() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              flexDirection: 'column',
               height: '100%',
             }}>
-            <Typography style={{fontFamily: 'Tashelhayt', marginRight: 5}}>
-              azn-aå-d awal å-
+            <Typography
+              style={{
+                fontFamily: 'Scheherazade',
+                fontSize: 27,
+                direction: 'rtl',
+              }}>
+              ءيس-دارك كرا ن-يسقسيتن ياضني؟
             </Typography>
-            <Link href="applications">
-              <Button
-                className={styles.button}
-                style={{
-                  color: '#fff',
-                  display: 'block',
-                  padding: '0px 10px',
-                  backgroundColor: colors.red,
-                  lineHeight: 1,
-                  paddingTop: 5,
-                  paddingBottom: 5,
-                }}>
-                <div
+            <Typography style={{fontFamily: 'Tashelhayt', marginBottom: 20}}>
+              is-dark kra n-iseqsitn yaãni?
+            </Typography>
+            <div style={{display: 'flex', alignItems: 'center'}}>
+              <Typography style={{fontFamily: 'Tashelhayt', marginRight: 5}}>
+                azn-aå-d awal å-
+              </Typography>
+              <Link href="applications">
+                <Button
+                  className={styles.button}
                   style={{
-                    textTransform: 'lowercase',
-                    fontSize: 20,
+                    color: '#fff',
+                    display: 'block',
+                    padding: '0px 10px',
+                    backgroundColor: colors.red,
+                    lineHeight: 1,
+                    paddingTop: 5,
+                    paddingBottom: 5,
                   }}>
-                  izdayn
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'Scheherazade',
-                    fontSize: 27,
-                    direction: 'rtl',
-                  }}>
-                  ءيزداين
-                </div>
-              </Button>
-            </Link>
-            <Typography style={{marginLeft: 5}}>-ازن-غ-د اوال غ</Typography>
+                  <div
+                    style={{
+                      textTransform: 'lowercase',
+                      fontSize: 20,
+                    }}>
+                    izdayn
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: 'Scheherazade',
+                      fontSize: 27,
+                      direction: 'rtl',
+                    }}>
+                    ءيزداين
+                  </div>
+                </Button>
+              </Link>
+              <Typography style={{marginLeft: 5}}>-ازن-غ-د اوال غ</Typography>
+            </div>
           </div>
         </Grid>
       </Grid>
