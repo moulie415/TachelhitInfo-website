@@ -159,7 +159,14 @@ function Questions() {
                   </div>
                 </Button>
               </Link>
-              <Typography style={{marginLeft: 5}}>-ازن-غ-د اوال غ</Typography>
+              <Typography
+                style={{
+                  marginLeft: 5,
+                  fontSize: 27,
+                  fontFamily: 'Scheherazade',
+                }}>
+                -ازن-غ-د اوال غ
+              </Typography>
             </div>
           </div>
         </Grid>

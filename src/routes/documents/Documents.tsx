@@ -17,8 +17,8 @@ function Documents() {
           <div>
             <Card
               style={{
-                padding: 5,
                 marginRight: 10,
+                padding: 10,
               }}>
               <div
                 style={{
@@ -38,9 +38,8 @@ function Documents() {
                   <Typography
                     style={{
                       paddingBottom: 10,
-                      textAlign: 'center',
-                      marginLeft: '5%',
                       fontSize: 21,
+                      textAlign: 'right',
                     }}>
                     في كثير من أجزاء شمال إفريقيا توجد أطلال بنايات مسيحية
                     عريقة. ترى ماذا نعرف عن الحضارة المتقدِّمة والدِّين المتطور
@@ -55,12 +54,27 @@ function Documents() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    margin: '0 2%',
+                    marginLeft: 10,
                     cursor: 'pointer',
                   }}>
                   <img src="../../assets/images/13.png" height={160} />
                 </a>
               </div>
+              <Button
+                style={{padding: '0px 5px', width: '100%'}}
+                onClick={() => {
+                  window.open('../../assets/pdfs/afrique-du-nord.pdf');
+                }}>
+                <Typography
+                  variant="h6"
+                  style={{
+                    textTransform: 'none',
+                    fontSize: 24,
+                    textAlign: 'center',
+                  }}>
+                  L'héritage chrétien en Afrique du Nord
+                </Typography>
+              </Button>
               <div
                 style={{
                   width: '100%',
@@ -68,22 +82,10 @@ function Documents() {
                   display: 'flex',
                 }}>
                 <div>
-                  <Button
-                    onClick={() => {
-                      window.open('../../assets/pdfs/afrique-du-nord.pdf');
-                    }}>
-                    <Typography
-                      variant="h6"
-                      style={{textTransform: 'none', fontSize: 24}}>
-                      L'héritage chrétien en Afrique du Nord
-                    </Typography>
-                  </Button>
-
                   <Typography
                     style={{
                       paddingBottom: 10,
-                      textAlign: 'center',
-                      marginLeft: '5%',
+                      textAlign: 'left',
                       fontSize: 16,
                     }}>
                     Dans bien des régions de l’Afrique du Nord subsistent des
@@ -105,7 +107,7 @@ function Documents() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    margin: '0 2%',
+                    marginLeft: 10,
                     cursor: 'pointer',
                   }}>
                   <img src="../../assets/images/L'heritage.png" height={160} />
@@ -119,6 +121,7 @@ function Documents() {
                 }}>
                 <div>
                   <Button
+                    style={{padding: '0px 5px'}}
                     onClick={() => {
                       window.open('../../assets/pdfs/this-holy-seed.pdf');
                     }}>
@@ -132,8 +135,7 @@ function Documents() {
                   <Typography
                     style={{
                       paddingBottom: 10,
-                      marginLeft: '5%',
-                      textAlign: 'center',
+                      textAlign: 'left',
                       fontSize: 16,
                     }}>
                     One of the great centres of evangelical Christianity in the
@@ -152,7 +154,7 @@ function Documents() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    margin: '0 2%',
+                    marginLeft: 10,
                     cursor: 'pointer',
                   }}>
                   <img src="../../assets/images/THS png.png" height={160} />
@@ -192,7 +194,7 @@ function Documents() {
                 paddingBottom: 5,
                 margin: '0 2%',
                 textAlign: 'center',
-                fontSize: 18,
+                fontSize: 20,
                 fontFamily: 'ScheherazadeNew',
                 lineHeight: 2.5,
               }}>
@@ -301,10 +303,11 @@ function Documents() {
                       margin: '0 2%',
                       textAlign: 'center',
                       fontFamily: 'Scheherazade',
-                      fontSize: 23,
+                      fontSize: 26,
                     }}>
-                    اسّ ف-واسّ ا-تاقرات يان-واوال ءيميمن غ-وارّاتن ن-سيدي ربّي،
-                    ار-تّزعامت س-رّجا ءيصحان
+                    اسّ ف&#8209;واسّ ا&#8209;تاقرات يان&#8209;واوال ءيميمن
+                    غ&#8209;وارّاتن ن&#8209;سيدي ربّي، ار&#8209;تّزعامت
+                    س&#8209;رّجا ءيصحان
                   </Typography>
                 </div>
               </div>
