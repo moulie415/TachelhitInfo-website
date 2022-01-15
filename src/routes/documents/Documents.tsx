@@ -1,12 +1,9 @@
 import {Button, Card, Grid, Typography, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h} from 'preact';
-import useMusicPlayer from '../../components/useMusicPlayer';
 import {colors} from '../../constants';
 
 function Documents() {
   const matches = useMediaQuery('(min-width:600px)');
-
-  const {Player} = useMusicPlayer('../../assets/audio/documents_intro.mp3');
 
   return (
     <div
@@ -454,7 +451,6 @@ function Documents() {
           </Card>
         </Grid>
       </Grid>
-      <Player />
     </div>
   );
 }

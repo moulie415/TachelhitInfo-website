@@ -44,9 +44,7 @@ const customStyles = {
 
 Modal.setAppElement('#preact_root');
 
-const BibleSection: FunctionalComponent<{ref: RefObject<HTMLAudioElement>}> = ({
-  ref,
-}) => {
+const BibleSection: FunctionalComponent = () => {
   const [book, setBook] = useState<number>();
   const [chapter, setChapter] = useState<number>();
   const [playingBible, setPlayingBible] = useState(false);

@@ -1,9 +1,7 @@
 import {
   Button,
-  Card,
   Grid,
   IconButton,
-  List,
   Typography,
   useMediaQuery,
 } from '@material-ui/core';
@@ -12,7 +10,6 @@ import {useRef, useState} from 'preact/hooks';
 import CloseIcon from '@material-ui/icons/Close';
 import Modal from 'react-modal';
 import {colors, questionList} from '../../constants';
-import useMusicPlayer from '../../components/useMusicPlayer';
 import styles from './styles.css';
 
 const customStyles = {
@@ -39,10 +36,6 @@ function Questions() {
   const player = useRef<HTMLAudioElement>(null);
   const [audio, setAudio] = useState('');
   const [autoPlay, setAutoPlay] = useState(true);
-  const {Player} = useMusicPlayer(
-    '../../assets/audio/questions_intro.mp3',
-    autoPlay,
-  );
 
   function openModal() {
     setModalIsOpen(true);
@@ -131,7 +124,6 @@ function Questions() {
           </audio>
         </div>
       </Modal>
-      <Player />
     </div>
   );
 }

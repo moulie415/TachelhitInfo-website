@@ -6,14 +6,12 @@ import Videos from '../../components/videos';
 import {CustomHistory} from 'preact-router';
 import Welcome from './Welcome';
 import {colors} from '../../constants';
-import useMusicPlayer from '../../components/useMusicPlayer';
 
 const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
   const [ready, setReady] = useState(false);
   useEffect(() => {
     setReady(true);
   }, []);
-  const {ref} = useMusicPlayer('../../assets/audio/homepage_intro.mp3');
   return (
     <div
       style={{
@@ -24,7 +22,7 @@ const Home: FunctionalComponent<{history: CustomHistory}> = ({history}) => {
       {ready ? (
         <div>
           <Welcome />
-          <BibleSection ref={ref} />
+          <BibleSection />
           <Videos />
         </div>
       ) : (

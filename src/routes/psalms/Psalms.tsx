@@ -6,7 +6,6 @@ import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {colors, psalmData, psalms} from '../../constants';
 import styles from '../../routes/home/styles.css';
-import useMusicPlayer from '../../components/useMusicPlayer';
 
 const customStyles = {
   content: {
@@ -33,10 +32,6 @@ function Psalms() {
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [musicIndex, setMusicIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  const {Player} = useMusicPlayer(
-    '../../assets/audio/psalms_intro.mp3',
-    autoPlay,
-  );
   const music = `./assets/audio/psalms/musical/ps${psalms[musicIndex]}.mp3`;
 
   function openModal() {
@@ -391,7 +386,6 @@ function Psalms() {
         }}>
         <source src={music} type="audio/mpeg" />
       </audio>
-      <Player />
     </div>
   );
 }
