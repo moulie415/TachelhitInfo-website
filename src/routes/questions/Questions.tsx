@@ -100,7 +100,7 @@ function Questions() {
                   style={{
                     textAlign: 'left',
                     fontFamily: 'Tashelhayt',
-                    fontSize: 14,
+                    fontSize: 13,
                   }}>{`${index + 1}. ${question}`}</Typography>
               </Button>
             </Grid>
