@@ -73,7 +73,7 @@ function Questions() {
                   }}>
                   <img
                     style={{
-                      maxWidth: matches ? '23vw' : '90vw',
+                      maxWidth: matches ? '22vw' : '90vw',
                     }}
                     src={`../../assets/images/questions/iseqsitn${
                       index + 1
