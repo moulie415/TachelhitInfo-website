@@ -14,11 +14,12 @@ function Documents() {
       }}>
       <Grid container style={{marginBottom: 20}}>
         <Grid item xs={12} sm={5} md={5}>
-          <div>
+          <div style={{height: '100%'}}>
             <Card
               style={{
                 marginRight: 10,
                 padding: 10,
+                height: '100%',
               }}>
               <Button
                 style={{padding: '0px 5px', width: '100%'}}
@@ -174,6 +175,7 @@ function Documents() {
             style={{
               padding: 5,
               marginRight: 10,
+              height: '100%',
             }}>
             <div style={{textAlign: 'center'}}>
               <img src="../../assets/images/15.png" height={200} />
