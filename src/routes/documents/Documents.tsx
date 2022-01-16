@@ -239,8 +239,7 @@ function Documents() {
                 fontFamily: 'Tifinagh',
                 textAlign: 'center',
               }}>
-              lqist-ad, ay-aytma, tga tin yan igummin lhna t-tayri d-sslamt,
-              iftu ar-sersn-isiggil.
+              lqist n-yan igummin lhna t-tayri d-sslamt, iftu ar-sersn-isiggil.
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
