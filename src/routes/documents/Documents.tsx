@@ -183,7 +183,6 @@ function Documents() {
                     textTransform: 'none',
                     fontFamily: 'ScheherazadeNew',
                     fontSize: 28,
-                    paddingBottom: 10,
                   }}>
                   امودّو ن‑ومسيݣّل
                 </Typography>
@@ -196,9 +195,9 @@ function Documents() {
                 textAlign: 'center',
                 fontSize: 20,
                 fontFamily: 'ScheherazadeNew',
-                lineHeight: 2.5,
               }}>
-              لقيست ن-يان ءيݣومّين لهنا د-تايري د-سّلامت، ءيفتو ار-سرسن-يسيݣّيل
+              لقيست ن&#8209;يان ءيݣومّين لهنا د&#8209;تايري د&#8209;سّلامت،
+              ءيفتو ار&#8209;سرسن&#8209;يسيݣّيل
             </Typography>
             <div style={{width: '100%', textAlign: 'center'}}>
               <Button
