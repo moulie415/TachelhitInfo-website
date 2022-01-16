@@ -20,6 +20,17 @@ function Documents() {
                 marginRight: 10,
                 padding: 10,
               }}>
+              <Button
+                style={{padding: '0px 5px', width: '100%'}}
+                onClick={() => {
+                  window.open('../../assets/pdfs/THS-abc.pdf');
+                }}>
+                <Typography
+                  variant="h5"
+                  style={{fontSize: 28, textAlign: 'center'}}>
+                  التراث المسيحي في شمال إفريقيا
+                </Typography>
+              </Button>
               <div
                 style={{
                   width: '100%',
@@ -27,14 +38,6 @@ function Documents() {
                   display: 'flex',
                 }}>
                 <div>
-                  <Button
-                    onClick={() => {
-                      window.open('../../assets/pdfs/THS-abc.pdf');
-                    }}>
-                    <Typography variant="h5" style={{fontSize: 28}}>
-                      التراث المسيحي في شمال إفريقيا
-                    </Typography>
-                  </Button>
                   <Typography
                     style={{
                       paddingBottom: 10,
@@ -110,9 +113,24 @@ function Documents() {
                     marginLeft: 10,
                     cursor: 'pointer',
                   }}>
-                  <img src="../../assets/images/L'heritage.png" height={160} />
+                  <img src="../../assets/images/L'heritage.png" height={170} />
                 </a>
               </div>
+              <Button
+                style={{padding: '0px 5px', width: '100%'}}
+                onClick={() => {
+                  window.open('../../assets/pdfs/this-holy-seed.pdf');
+                }}>
+                <Typography
+                  variant="h6"
+                  style={{
+                    textTransform: 'none',
+                    fontSize: 24,
+                    textAlign: 'center',
+                  }}>
+                  This Holy Seed
+                </Typography>
+              </Button>
               <div
                 style={{
                   width: '100%',
@@ -120,18 +138,6 @@ function Documents() {
                   display: 'flex',
                 }}>
                 <div>
-                  <Button
-                    style={{padding: '0px 5px'}}
-                    onClick={() => {
-                      window.open('../../assets/pdfs/this-holy-seed.pdf');
-                    }}>
-                    <Typography
-                      variant="h6"
-                      style={{textTransform: 'none', fontSize: 24}}>
-                      This Holy Seed
-                    </Typography>
-                  </Button>
-
                   <Typography
                     style={{
                       paddingBottom: 10,
@@ -157,7 +163,7 @@ function Documents() {
                     marginLeft: 10,
                     cursor: 'pointer',
                   }}>
-                  <img src="../../assets/images/THS png.png" height={160} />
+                  <img src="../../assets/images/THS png.png" height={170} />
                 </a>
               </div>
             </Card>
