@@ -118,12 +118,17 @@ function Questions() {
             <Typography
               style={{
                 fontFamily: 'Scheherazade',
-                fontSize: 27,
+                fontSize: 24,
                 direction: 'rtl',
               }}>
               ءيس-دارك كرا ن-يسقسيتن ياضني؟
             </Typography>
-            <Typography style={{fontFamily: 'Tashelhayt', marginBottom: 20}}>
+            <Typography
+              style={{
+                fontFamily: 'Tashelhayt',
+                marginBottom: 20,
+                fontSize: 14,
+              }}>
               is-dark kra n-iseqsitn yaãni?
             </Typography>
             <div style={{display: 'flex', alignItems: 'center'}}>
@@ -131,7 +136,7 @@ function Questions() {
                 style={{
                   fontFamily: 'Tashelhayt',
                   marginRight: 5,
-                  fontSize: 16,
+                  fontSize: 14,
                 }}>
                 azn-aå-d awal å-
               </Typography>
