@@ -11,8 +11,8 @@ import {
 } from '@material-ui/core';
 import {FunctionalComponent, h, RefObject} from 'preact';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CloseIcon from '@material-ui/icons/Close';
 import PlayArrow from '@material-ui/icons/PlayArrow';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {useEffect, useRef, useState} from 'preact/hooks';
@@ -35,10 +35,14 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '90%',
+    width: '100%',
+    backgroundColor: colors.paleTurquoise,
+    borderWidth: 0,
+    overflow: 'hidden',
   },
   overlay: {
     zIndex: 9999,
+    backgroundColor: colors.paleTurquoise,
   },
 };
 
@@ -314,18 +318,18 @@ const BibleSection: FunctionalComponent = () => {
         style={customStyles}
         contentLabel="pdf modal">
         <div>
-          <IconButton
-            aria-label="close"
-            onClick={closeModal}
-            style={{position: 'absolute', top: -11, right: -11, zIndex: 9}}>
-            <CloseIcon />
-          </IconButton>
           <Grid container style={{overflowY: 'scroll'}}>
-            <Grid xs={12} sm={2} item style={{textAlign: 'center'}}>
+            <Grid
+              xs={12}
+              sm={2}
+              item
+              style={{
+                textAlign: 'center',
+              }}>
               <div
                 style={{
                   overflowY: 'scroll',
-                  height: matches ? '80vh' : '30vh',
+                  height: matches ? '85vh' : '30vh',
                 }}>
                 {Object.keys(bookType).map(item => (
                   <Accordion key={item}>
@@ -388,6 +392,14 @@ const BibleSection: FunctionalComponent = () => {
         <audio style={{display: 'none'}} controls ref={audioRef}>
           <source src={bibleURL} type="audio/mpeg" />
         </audio>
+      )}
+      {modalIsOpen && (
+        <IconButton
+          aria-label="close"
+          onClick={closeModal}
+          style={{position: 'absolute', top: 0, left: 0, zIndex: 999999}}>
+          <ArrowBackIcon />
+        </IconButton>
       )}
     </div>
   );
