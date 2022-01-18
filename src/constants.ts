@@ -107,7 +107,7 @@ export const oldTestament: {[book: number]: Book} = {
   },
   12: {
     name: '2 igldan',
-    arabicName: '2 ءوسّان ',
+    arabicName: '2 ءيگلدان',
     chapters: [2, 4, 5, 6, 16, 17, 18, 19, 20, 21, 22, 23],
   },
   13: {
@@ -387,7 +387,7 @@ export const newTestament: {[book: number]: Book} = {
   },
   62: {
     name: '1 yuæanna',
-    arabicName: '1 يوحانّ',
+    arabicName: '1 يوحانّا',
     chapters: [1, 2, 3, 4, 5],
   },
   63: {
@@ -397,12 +397,12 @@ export const newTestament: {[book: number]: Book} = {
   },
   64: {
     name: '3 yuæanna',
-    arabicName: '3 يوحا',
+    arabicName: '3 يوحانّا',
     chapters: [1],
   },
   65: {
     name: 'yahuda',
-    arabicName: 'ياهود',
+    arabicName: 'ياهودا',
     chapters: [1],
   },
   66: {
