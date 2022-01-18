@@ -47,6 +47,8 @@ function Psalms() {
   const [autoPlay, setAutoPlay] = useState(true);
   const music = `./assets/audio/psalms/musical/ps${psalms[musicIndex]}.mp3`;
 
+  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
   function openModal() {
     setIsOpen(true);
   }
@@ -387,7 +389,11 @@ function Psalms() {
         style={customStyles}
         contentLabel="pdf modal">
         <div style={{height: matches ? '80vh' : '30vh'}}>
-          <iframe src={`${pdfSrc}#view=Fit`} width="100%" height="100%" />
+          <iframe
+            src={`${pdfSrc}${isFirefox ? '#zoom=Fit' : '#view=Fit'}`}
+            width="100%"
+            height="100%"
+          />
         </div>
         <audio style={{width: '100%'}} controls ref={player}>
           <source src={audio} type="audio/mpeg" />
