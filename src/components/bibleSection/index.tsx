@@ -397,7 +397,7 @@ const BibleSection: FunctionalComponent = () => {
         <IconButton
           aria-label="close"
           onClick={closeModal}
-          style={{position: 'absolute', top: 0, left: 0, zIndex: 999999}}>
+          style={{position: 'fixed', top: 0, left: 0, zIndex: 999999}}>
           <ArrowBackIcon />
         </IconButton>
       )}

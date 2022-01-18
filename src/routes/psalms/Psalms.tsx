@@ -1,6 +1,15 @@
-import {Button, Card, Grid, Tab, Tabs, useMediaQuery} from '@material-ui/core';
-import {FunctionalComponent, h} from 'preact';
+import {
+  Button,
+  Card,
+  Grid,
+  IconButton,
+  Tab,
+  Tabs,
+  useMediaQuery,
+} from '@material-ui/core';
+import {h} from 'preact';
 import {useEffect, useRef, useState} from 'preact/hooks';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
@@ -15,10 +24,14 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '90%',
+    width: '100%',
+    backgroundColor: colors.paleTurquoise,
+    borderWidth: 0,
+    overflow: 'hidden',
   },
   overlay: {
     zIndex: 9999,
+    backgroundColor: colors.paleTurquoise,
   },
 };
 
@@ -121,6 +134,14 @@ function Psalms() {
         minHeight: '100vh',
         backgroundColor: colors.paleTurquoise,
       }}>
+      {modalIsOpen && (
+        <IconButton
+          aria-label="close"
+          onClick={closeModal}
+          style={{position: 'fixed', top: 0, left: 0, zIndex: 99999}}>
+          <ArrowBackIcon />
+        </IconButton>
+      )}
       <Card>
         <div
           style={{
