@@ -24,7 +24,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '100%',
+    width: '90%',
     backgroundColor: colors.paleTurquoise,
     borderWidth: 0,
     overflow: 'hidden',
@@ -388,7 +388,7 @@ function Psalms() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="pdf modal">
-        <div style={{height: matches ? '80vh' : '30vh'}}>
+        <div style={{height: matches ? '92vh' : '30vh'}}>
           <iframe
             src={`${pdfSrc}${isFirefox ? '#zoom=Fit' : '#view=Fit'}`}
             width="100%"

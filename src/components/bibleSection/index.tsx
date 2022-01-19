@@ -35,7 +35,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '100%',
+    width: '90%',
     backgroundColor: colors.paleTurquoise,
     borderWidth: 0,
     overflow: 'hidden',
@@ -329,7 +329,7 @@ const BibleSection: FunctionalComponent = () => {
               <div
                 style={{
                   overflowY: 'scroll',
-                  height: matches ? '85vh' : '30vh',
+                  height: matches ? '100vh' : '30vh',
                 }}>
                 {Object.keys(bookType).map(item => (
                   <Accordion key={item}>
