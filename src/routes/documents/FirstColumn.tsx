@@ -28,7 +28,9 @@ function FirstColumn() {
                 <Button
                   style={{padding: '0px 5px', width: '100%'}}
                   onClick={() => {
-                    window.open('../../assets/pdfs/THS-abc.pdf');
+                    window.open(
+                      '../../assets/pdfs/التوراث المسيحي في شمال إفريقيا.pdf',
+                    );
                   }}>
                   <Typography
                     variant="h5"
@@ -51,7 +53,11 @@ function FirstColumn() {
                 </Typography>
               </div>
               <a
-                onClick={() => window.open('../../assets/pdfs/THS-abc.pdf')}
+                onClick={() =>
+                  window.open(
+                    '../../assets/pdfs/التوراث المسيحي في شمال إفريقيا.pdf',
+                  )
+                }
                 style={{
                   display: 'flex',
                   justifyContent: 'center',
