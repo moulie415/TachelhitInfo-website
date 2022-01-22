@@ -147,7 +147,7 @@ function Psalms() {
           <ArrowBackIcon />
         </IconButton>
       )}
-      {modalIsOpen && psalmIndex < psalmData.length && (
+      {modalIsOpen && psalmIndex < psalmData.length - 1 && (
         <IconButton
           aria-label="close"
           onClick={() => {
