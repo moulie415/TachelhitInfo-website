@@ -1,4 +1,4 @@
-import {FunctionalComponent, h} from 'preact';
+import {h} from 'preact';
 import axios from 'axios';
 import {useState} from 'preact/hooks';
 import {
