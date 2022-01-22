@@ -117,7 +117,7 @@ function Psalms() {
 
   const matches = useMediaQuery('(min-width:600px)');
 
-  const getFontSize = () => (tab === 2 ? 20 : 'inherit');
+  const getFontSize = () => (tab === 2 ? 25 : 'inherit');
 
   const getFontFamily = () => {
     if (tab === 1) {
@@ -217,6 +217,8 @@ function Psalms() {
                         }
                         style={{
                           textTransform: 'inherit',
+                          paddingTop: tab === 2 ? 0 : undefined,
+                          paddingBottom: tab === 2 ? 0 : undefined,
                         }}>
                         <span style={{color: colors.red}}>{psalm}</span>
                         <span>&nbsp;</span>
@@ -259,6 +261,8 @@ function Psalms() {
                         }
                         style={{
                           textTransform: 'inherit',
+                          paddingTop: tab === 2 ? 0 : undefined,
+                          paddingBottom: tab === 2 ? 0 : undefined,
                         }}>
                         <span style={{color: colors.red}}>{psalm}</span>
                         <span>&nbsp;</span>
@@ -306,6 +310,8 @@ function Psalms() {
                       }}
                       style={{
                         textTransform: 'inherit',
+                        paddingTop: tab === 2 ? 0 : undefined,
+                        paddingBottom: tab === 2 ? 0 : undefined,
                       }}>
                       {index === musicIndex && musicPlaying ? (
                         <Pause />
@@ -358,6 +364,8 @@ function Psalms() {
                       }}
                       style={{
                         textTransform: 'inherit',
+                        paddingTop: tab === 2 ? 0 : undefined,
+                        paddingBottom: tab === 2 ? 0 : undefined,
                       }}>
                       {actualIndex === musicIndex && musicPlaying ? (
                         <Pause />
