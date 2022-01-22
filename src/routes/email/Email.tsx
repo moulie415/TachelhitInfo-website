@@ -1,7 +1,13 @@
 import {FunctionalComponent, h} from 'preact';
 import axios from 'axios';
 import {useState} from 'preact/hooks';
-import {Button, Card, Snackbar, Typography} from '@material-ui/core';
+import {
+  Button,
+  Card,
+  CircularProgress,
+  Snackbar,
+  Typography,
+} from '@material-ui/core';
 import {colors} from '../../constants';
 
 function validEmail(email: string) {
@@ -17,6 +23,7 @@ function Email() {
   const [message, setMessage] = useState('');
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event: Event) => {
     event.preventDefault();
@@ -47,11 +54,12 @@ function Email() {
       formData.append('country', country);
       formData.append('message', message);
       formData.append('surname', surname);
-
+      setLoading(true);
       const response = await axios.post(
-        'https://www.tachelhit.info/contact.php',
+        `https://www.${location.hostname}/contact.php`,
         formData,
       );
+      setLoading(false);
       setSnackbarMessage('Message sent');
       setSnackbarOpen(true);
       setName('');
@@ -62,6 +70,7 @@ function Email() {
       // @ts-ignore
       setSnackbarMessage(e.message);
       setSnackbarOpen(true);
+      setLoading(false);
     }
   };
 
@@ -210,12 +219,14 @@ function Email() {
             </div>
             <Button
               variant="contained"
+              disabled={loading}
               style={{margin: 10}}
               data-callback="onSubmit"
               data-action="submit"
               type="submit">
               Azn - ⴰⵣⵏ - Submit - Envoyer - الارسال
             </Button>
+            {loading && <CircularProgress style={{color: colors.red}} />}
           </form>
           <Snackbar
             open={snackbarOpen}
