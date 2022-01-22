@@ -56,7 +56,7 @@ function Email() {
       formData.append('surname', surname);
       setLoading(true);
       const response = await axios.post(
-        `https://www.${location.hostname}/contact.php`,
+        `https://www.tachelhit.info/contact.php`,
         formData,
       );
       setLoading(false);
