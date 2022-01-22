@@ -8,8 +8,9 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import {h} from 'preact';
-import {useEffect, useRef, useState} from 'preact/hooks';
+import {useEffect, useMemo, useRef, useState} from 'preact/hooks';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
@@ -38,13 +39,12 @@ const customStyles = {
 function Psalms() {
   const [tab, setTab] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [pdfSrc, setPdfSrc] = useState('');
   const player = useRef<HTMLAudioElement>(null);
   const musicPlayer = useRef<HTMLAudioElement>(null);
-  const [audio, setAudio] = useState('');
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [musicIndex, setMusicIndex] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
+  const [psalmIndex, setPsalmIndex] = useState(0);
+  const [audio, setAudio] = useState('');
   const music = `./assets/audio/psalms/musical/ps${psalms[musicIndex]}.mp3`;
 
   const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
@@ -68,7 +68,6 @@ function Psalms() {
   useEffect(() => {
     if (musicPlaying) {
       if (musicPlayer.current) {
-        setAutoPlay(false);
         musicPlayer.current.pause();
         musicPlayer.current.load();
         musicPlayer.current.play();
@@ -78,27 +77,23 @@ function Psalms() {
     }
   }, [musicPlaying, musicIndex]);
 
-  const handleClick = (
-    lat: string,
-    arabic: string,
-    tif: string,
-    audio: string,
-  ) => {
-    if (tab === 0) {
-      // window.open(lat);
-      setPdfSrc(lat);
+  const pdfSrc = useMemo(() => {
+    const psalm = psalmData[psalmIndex];
+    let pdfSrc = '';
+    if (psalm) {
+      if (tab === 0) {
+        pdfSrc = psalm.pdfLat;
+      }
+      if (tab === 1) {
+        pdfSrc = psalm.pdfTif;
+      }
+      if (tab === 2) {
+        pdfSrc = psalm.pdfArabic;
+      }
+      return pdfSrc;
     }
-    if (tab === 1) {
-      // window.open(tif);
-      setPdfSrc(tif);
-    }
-    if (tab === 2) {
-      // window.open(arabic);
-      setPdfSrc(arabic);
-    }
-    setAudio(audio);
-    openModal();
-  };
+    return pdfSrc;
+  }, [psalmIndex, tab]);
 
   const getName = (
     tab: number,
@@ -129,6 +124,14 @@ function Psalms() {
     return 'inherit';
   };
 
+  useEffect(() => {
+    if (player.current && audio) {
+      player.current.pause();
+      player.current.load();
+      player.current.play();
+    }
+  }, [audio]);
+
   return (
     <div
       style={{
@@ -142,6 +145,17 @@ function Psalms() {
           onClick={closeModal}
           style={{position: 'fixed', top: 0, left: 0, zIndex: 99999}}>
           <ArrowBackIcon />
+        </IconButton>
+      )}
+      {modalIsOpen && psalmIndex < psalmData.length && (
+        <IconButton
+          aria-label="close"
+          onClick={() => {
+            setPsalmIndex(psalmIndex + 1);
+            setAudio(psalmData[psalmIndex + 1].audio);
+          }}
+          style={{position: 'fixed', top: 0, right: 0, zIndex: 99999}}>
+          <ArrowForwardIcon />
         </IconButton>
       )}
       <Card>
@@ -199,22 +213,27 @@ function Psalms() {
             {psalmData
               .slice(0, psalmData.length / 2)
               .map(
-                ({
-                  psalm,
-                  name,
-                  arabicName,
-                  tifName,
-                  pdfLat,
-                  pdfArabic,
-                  pdfTif,
-                  audio,
-                }) => {
+                (
+                  {
+                    psalm,
+                    name,
+                    arabicName,
+                    tifName,
+                    pdfLat,
+                    pdfArabic,
+                    pdfTif,
+                    audio,
+                  },
+                  index,
+                ) => {
                   return (
                     <div key={psalm}>
                       <Button
-                        onClick={() =>
-                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                        }
+                        onClick={() => {
+                          setPsalmIndex(index);
+                          setAudio(audio);
+                          openModal();
+                        }}
                         style={{
                           textTransform: 'inherit',
                           paddingTop: tab === 2 ? 0 : undefined,
@@ -241,24 +260,29 @@ function Psalms() {
             {psalmData
               .slice(psalmData.length / 2)
               .map(
-                ({
-                  psalm,
-                  name,
-                  arabicName,
-                  tifName,
-                  pdfLat,
-                  pdfArabic,
-                  pdfTif,
-                  audio,
-                }) => {
+                (
+                  {
+                    psalm,
+                    name,
+                    arabicName,
+                    tifName,
+                    pdfLat,
+                    pdfArabic,
+                    pdfTif,
+                    audio,
+                  },
+                  index,
+                ) => {
                   return (
                     <div
                       key={psalm}
                       style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
                       <Button
-                        onClick={() =>
-                          handleClick(pdfLat, pdfArabic, pdfTif, audio)
-                        }
+                        onClick={() => {
+                          setPsalmIndex(index + 12);
+                          setAudio(audio);
+                          openModal();
+                        }}
                         style={{
                           textTransform: 'inherit',
                           paddingTop: tab === 2 ? 0 : undefined,
