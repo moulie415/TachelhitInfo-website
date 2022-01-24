@@ -1,8 +1,12 @@
 <?php
 
+header("Access-Control-Allow-Headers: Authorization, Content-Type");
+header("Access-Control-Allow-Origin: https://tachelhit-info.stackstaging.com");
+header('content-type: application/json; charset=utf-8');
+
 // get posted data into local variables
 $EmailFrom = trim(stripslashes($_POST['email'])); 
-$EmailTo = "contact@tachelhit.info";
+$EmailTo = "amsiggel@yahoo.fr";
 $Subject = "Contact form tachelhit.info";
 $Name = trim(stripslashes($_POST['name'])); 
 $Country = trim(stripslashes($_POST['country'])); 
