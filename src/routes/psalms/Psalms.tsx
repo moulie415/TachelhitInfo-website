@@ -16,6 +16,10 @@ import Pause from '@material-ui/icons/Pause';
 import Modal from 'react-modal';
 import {colors, psalmData, psalms} from '../../constants';
 import styles from '../../routes/home/styles.css';
+import Column1 from './Column1';
+import Column2 from './Column2';
+import Column3 from './Column3';
+import Column4 from './Column4';
 
 const customStyles = {
   content: {
@@ -209,209 +213,70 @@ function Psalms() {
           }}
           justifyContent="space-evenly"
           container>
-          <Grid xs={12} sm={3} md={3} item>
-            {psalmData
-              .slice(0, psalmData.length / 2)
-              .map(
-                (
-                  {
-                    psalm,
-                    name,
-                    arabicName,
-                    tifName,
-                    pdfLat,
-                    pdfArabic,
-                    pdfTif,
-                    audio,
-                  },
-                  index,
-                ) => {
-                  return (
-                    <div key={psalm}>
-                      <Button
-                        onClick={() => {
-                          setPsalmIndex(index);
-                          setAudio(audio);
-                          openModal();
-                        }}
-                        style={{
-                          textTransform: 'inherit',
-                          paddingTop: tab === 2 ? 0 : undefined,
-                          paddingBottom: tab === 2 ? 0 : undefined,
-                        }}>
-                        <span style={{color: colors.red}}>{psalm}</span>
-                        <span>&nbsp;</span>
-                        <span> </span>
-                        <span
-                          style={{
-                            fontSize: getFontSize(),
-                            fontFamily: getFontFamily(),
-                            direction: tab === 2 ? 'rtl' : 'inherit',
-                          }}>
-                          {getName(tab, name, arabicName, tifName)}
-                        </span>
-                      </Button>
-                    </div>
-                  );
-                },
-              )}
-          </Grid>
-          <Grid xs={12} sm={3} md={3} item style={{paddingBottom: 40}}>
-            {psalmData
-              .slice(psalmData.length / 2)
-              .map(
-                (
-                  {
-                    psalm,
-                    name,
-                    arabicName,
-                    tifName,
-                    pdfLat,
-                    pdfArabic,
-                    pdfTif,
-                    audio,
-                  },
-                  index,
-                ) => {
-                  return (
-                    <div
-                      key={psalm}
-                      style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                      <Button
-                        onClick={() => {
-                          setPsalmIndex(index + 12);
-                          setAudio(audio);
-                          openModal();
-                        }}
-                        style={{
-                          textTransform: 'inherit',
-                          paddingTop: tab === 2 ? 0 : undefined,
-                          paddingBottom: tab === 2 ? 0 : undefined,
-                        }}>
-                        <span style={{color: colors.red}}>{psalm}</span>
-                        <span>&nbsp;</span>
-                        <span> </span>
-                        <span
-                          style={{
-                            fontSize: getFontSize(),
-                            fontFamily: getFontFamily(),
-                            direction: tab === 2 ? 'rtl' : 'inherit',
-                          }}>
-                          {getName(tab, name, arabicName, tifName)}
-                        </span>
-                      </Button>
-                    </div>
-                  );
-                },
-              )}
-          </Grid>
-          <Grid
-            style={{
-              border: '1px solid',
-              borderColor: colors.red,
-              backgroundColor: colors.cream,
-              textAlign: 'center',
-            }}
-            xs={12}
-            sm={3}
-            md={3}
-            item>
-            {psalmData
-              .slice(0, psalmData.length / 2)
-              .map(({psalm, name, arabicName, tifName}, index) => {
-                return (
-                  <div
-                    key={psalm}
-                    style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                    <Button
-                      onClick={() => {
-                        if (index === musicIndex) {
-                          setMusicPlaying(!musicPlaying);
-                        } else {
-                          setMusicIndex(index);
-                          setMusicPlaying(true);
-                        }
-                      }}
-                      style={{
-                        textTransform: 'inherit',
-                        paddingTop: tab === 2 ? 0 : undefined,
-                        paddingBottom: tab === 2 ? 0 : undefined,
-                      }}>
-                      {index === musicIndex && musicPlaying ? (
-                        <Pause />
-                      ) : (
-                        <PlayArrow />
-                      )}
-                      <span style={{color: colors.red}}>{psalm}</span>
-                      <span>&nbsp;</span>
-                      <span> </span>
-                      <span
-                        style={{
-                          fontSize: getFontSize(),
-                          fontFamily: getFontFamily(),
-                          direction: tab === 2 ? 'rtl' : 'inherit',
-                        }}>
-                        {getName(tab, name, arabicName, tifName)}
-                      </span>
-                    </Button>
-                  </div>
-                );
-              })}
-          </Grid>
-          <Grid
-            style={{
-              border: '1px solid',
-              borderColor: colors.red,
-              backgroundColor: colors.cream,
-              textAlign: 'center',
-            }}
-            xs={12}
-            sm={3}
-            md={3}
-            item>
-            {psalmData
-              .slice(psalmData.length / 2)
-              .map(({psalm, name, arabicName, tifName}, index) => {
-                const actualIndex = index + 12;
-                return (
-                  <div
-                    key={psalm}
-                    style={{fontSize: tab === 2 ? 20 : 'inherit'}}>
-                    <Button
-                      onClick={() => {
-                        if (actualIndex === musicIndex) {
-                          setMusicPlaying(!musicPlaying);
-                        } else {
-                          setMusicIndex(actualIndex);
-                          setMusicPlaying(true);
-                        }
-                      }}
-                      style={{
-                        textTransform: 'inherit',
-                        paddingTop: tab === 2 ? 0 : undefined,
-                        paddingBottom: tab === 2 ? 0 : undefined,
-                      }}>
-                      {actualIndex === musicIndex && musicPlaying ? (
-                        <Pause />
-                      ) : (
-                        <PlayArrow />
-                      )}
-                      <span style={{color: colors.red}}>{psalm}</span>
-                      <span>&nbsp;</span>
-                      <span> </span>
-                      <span
-                        style={{
-                          fontSize: getFontSize(),
-                          fontFamily: getFontFamily(),
-                          direction: tab === 2 ? 'rtl' : 'inherit',
-                        }}>
-                        {getName(tab, name, arabicName, tifName)}
-                      </span>
-                    </Button>
-                  </div>
-                );
-              })}
-          </Grid>
+          {tab === 2 ? (
+            <Column2
+              setPsalmIndex={setPsalmIndex}
+              setAudio={setAudio}
+              openModal={openModal}
+              tab={tab}
+            />
+          ) : (
+            <Column1
+              setPsalmIndex={setPsalmIndex}
+              setAudio={setAudio}
+              openModal={openModal}
+              tab={tab}
+            />
+          )}
+          {tab === 2 ? (
+            <Column1
+              setPsalmIndex={setPsalmIndex}
+              setAudio={setAudio}
+              openModal={openModal}
+              tab={tab}
+            />
+          ) : (
+            <Column2
+              setPsalmIndex={setPsalmIndex}
+              setAudio={setAudio}
+              openModal={openModal}
+              tab={tab}
+            />
+          )}
+          {tab === 2 ? (
+            <Column4
+              setMusicIndex={setMusicIndex}
+              musicIndex={musicIndex}
+              musicPlaying={musicPlaying}
+              setMusicPlaying={setMusicPlaying}
+              tab={tab}
+            />
+          ) : (
+            <Column3
+              setMusicIndex={setMusicIndex}
+              musicIndex={musicIndex}
+              musicPlaying={musicPlaying}
+              setMusicPlaying={setMusicPlaying}
+              tab={tab}
+            />
+          )}
+          {tab === 2 ? (
+            <Column3
+              setMusicIndex={setMusicIndex}
+              musicIndex={musicIndex}
+              musicPlaying={musicPlaying}
+              setMusicPlaying={setMusicPlaying}
+              tab={tab}
+            />
+          ) : (
+            <Column4
+              setMusicIndex={setMusicIndex}
+              musicIndex={musicIndex}
+              musicPlaying={musicPlaying}
+              setMusicPlaying={setMusicPlaying}
+              tab={tab}
+            />
+          )}
         </Grid>
       </Card>
       <Modal
