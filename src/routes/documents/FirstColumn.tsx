@@ -29,7 +29,7 @@ function FirstColumn() {
                   style={{padding: '0px 5px', width: '100%'}}
                   onClick={() => {
                     window.open(
-                      '../../assets/pdfs/التوراث المسيحي في شمال إفريقيا.pdf',
+                      '../../assets/pdfs/التراث المسيحي في شمال إفريقيا.pdf',
                     );
                   }}>
                   <Typography
@@ -55,7 +55,7 @@ function FirstColumn() {
               <a
                 onClick={() =>
                   window.open(
-                    '../../assets/pdfs/التوراث المسيحي في شمال إفريقيا.pdf',
+                    '../../assets/pdfs/التراث المسيحي في شمال إفريقيا.pdf',
                   )
                 }
                 style={{
