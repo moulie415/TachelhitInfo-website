@@ -59,6 +59,8 @@ const BibleSection: FunctionalComponent = () => {
   const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf');
   const bookType = pdfSrc.includes('nt') ? newTestament : oldTestament;
 
+  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
   function openModal() {
     setIsOpen(true);
   }
@@ -206,7 +208,7 @@ const BibleSection: FunctionalComponent = () => {
                   <Typography
                     variant="h4"
                     style={{
-                      fontFamily: 'ScheherazadeNew',
+                      fontFamily: isFirefox ? 'ScheherazadeNew' : undefined,
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
@@ -269,7 +271,7 @@ const BibleSection: FunctionalComponent = () => {
                   <Typography
                     variant="h4"
                     style={{
-                      fontFamily: 'ScheherazadeNew',
+                      fontFamily: isFirefox ? 'ScheherazadeNew' : undefined,
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
