@@ -273,7 +273,10 @@ const BibleSection: FunctionalComponent = () => {
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
-                    ارّاتن ن-لانبيا
+                    ارّاتن{' '}
+                    <span style={{fontFamily: 'Ariel', fontSize: 21}}>
+                      ن-لانبيا
+                    </span>
                   </Typography>
                 </Button>
                 <Button

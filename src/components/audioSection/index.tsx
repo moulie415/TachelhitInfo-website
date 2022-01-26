@@ -98,7 +98,9 @@ const AudioSection: FunctionalComponent = () => {
                 fontSize: 20,
               }}
               variant="h4">
-              اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
+              اژوژض{' '}
+              <span style={{fontFamily: 'Ariel', fontSize: 21}}>ن-يمجلان</span>{' '}
+              ءي-وغاراس ن-تودرت
             </Typography>
           </div>
         </Button>
