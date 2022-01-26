@@ -15,8 +15,6 @@ const AudioSection: FunctionalComponent = () => {
 
   const matches = useMediaQuery('(min-width:800px)');
 
-  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
   const toggle = (ref: RefObject<HTMLAudioElement | null>) => {
     if (ref.current) {
       ref.current.paused ? ref.current.play() : ref.current.pause();
@@ -60,9 +58,9 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: isFirefox ? 'ScheherazadeNew' : undefined,
+                fontFamily: 'ScheherazadeNew',
                 direction: 'rtl',
-                fontSize: isFirefox ? 20 : 22,
+                fontSize: 20,
               }}
               variant="h4">
               ما-تسّنت ف-والّي را-د-ياشك؟
@@ -95,9 +93,9 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: isFirefox ? 'ScheherazadeNew' : undefined,
+                fontFamily: 'ScheherazadeNew',
                 direction: 'rtl',
-                fontSize: isFirefox ? 20 : 22,
+                fontSize: 20,
               }}
               variant="h4">
               اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
@@ -130,9 +128,9 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: isFirefox ? 'ScheherazadeNew' : undefined,
+                fontFamily: 'ScheherazadeNew',
                 direction: 'rtl',
-                fontSize: isFirefox ? 20 : 22,
+                fontSize: 20,
               }}
               variant="h4">
               ءيسقسيتن ف-وغاراس لّماسيح
@@ -165,9 +163,9 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: isFirefox ? 'ScheherazadeNew' : undefined,
+                fontFamily: 'ScheherazadeNew',
                 direction: 'rtl',
-                fontSize: isFirefox ? 20 : 22,
+                fontSize: 20,
               }}
               variant="h4">
               سّا ن-تحونا غ-تݣمّي-نك لّجديد
