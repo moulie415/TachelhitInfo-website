@@ -57,7 +57,13 @@ const Videos: FunctionalComponent = () => {
               <Typography style={{marginRight: 10}} variant="h6">
                 maylli iqsad rbbi
               </Typography>
-              <Typography className={styles.arabic} variant="h4">
+              <Typography
+                style={{
+                  fontFamily: 'Calibri',
+                  direction: 'rtl',
+                  margin: '5px 0',
+                }}
+                variant="h5">
                 مايلّي ءيقصاد ربّي
               </Typography>
             </Button>
@@ -101,8 +107,14 @@ const Videos: FunctionalComponent = () => {
               <Typography style={{marginRight: 10}} variant="h6">
                 amuddu n-umsiggel
               </Typography>
-              <Typography className={styles.arabic} variant="h4">
-                امودّو ن-ومسيگّل
+              <Typography
+                style={{
+                  fontFamily: 'Calibri',
+                  direction: 'rtl',
+                  margin: '5px 0',
+                }}
+                variant="h5">
+                امودّو ن-ومسيݣّل
               </Typography>
             </Button>
           </div>
@@ -140,7 +152,13 @@ const Videos: FunctionalComponent = () => {
               <Typography style={{marginRight: 10}} variant="h6">
                 tudert l-lmasih
               </Typography>
-              <Typography className={styles.arabic} variant="h4">
+              <Typography
+                style={{
+                  fontFamily: 'Calibri',
+                  direction: 'rtl',
+                  margin: '5px 0',
+                }}
+                variant="h5">
                 تودرت لّماسيح
               </Typography>
             </Button>

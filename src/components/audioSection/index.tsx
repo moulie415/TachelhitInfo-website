@@ -58,7 +58,7 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: 'ScheherazadeNew',
+                fontFamily: 'Calibri',
                 direction: 'rtl',
                 fontSize: 20,
               }}
@@ -93,7 +93,7 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: 'ScheherazadeNew',
+                fontFamily: 'Calibri',
                 direction: 'rtl',
                 fontSize: 20,
               }}
@@ -128,12 +128,12 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: 'ScheherazadeNew',
+                fontFamily: 'Calibri',
                 direction: 'rtl',
                 fontSize: 20,
               }}
               variant="h4">
-              ءيسقسيتن ف-وغاراس لّماسيح
+              ءيسقسيتن ف-وغاراس ن-لماسيح
             </Typography>
           </div>
         </Button>
@@ -163,7 +163,7 @@ const AudioSection: FunctionalComponent = () => {
             <Typography
               style={{
                 textAlign: 'right',
-                fontFamily: 'ScheherazadeNew',
+                fontFamily: 'Calibri',
                 direction: 'rtl',
                 fontSize: 20,
               }}

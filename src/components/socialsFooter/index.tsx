@@ -21,7 +21,10 @@ const SocialsFooter: FunctionalComponent<{history: CustomHistory}> = ({
             rel="noreferrer">
             <Facebook style={{color: '#4267B2', fontSize: 75}} />
           </a>
-          <Typography style={{marginLeft: 5, fontSize: 25}}>فيسبوك</Typography>
+          <Typography
+            style={{marginLeft: 5, fontSize: 25, fontFamily: 'Calibri'}}>
+            فيسبوك
+          </Typography>
         </Button>
       </Grid>
       <Grid item style={{marginRight: 10, marginLeft: 10}}>
@@ -45,7 +48,10 @@ const SocialsFooter: FunctionalComponent<{history: CustomHistory}> = ({
           <a style={{color: 'inherit'}} href="email">
             <Email style={{fontSize: 75}} />
           </a>
-          <Typography style={{marginLeft: 5, fontSize: 25}}>تابرات</Typography>
+          <Typography
+            style={{marginLeft: 5, fontSize: 25, fontFamily: 'Calibri'}}>
+            تابرات
+          </Typography>
         </Button>
       </Grid>
     </Grid>

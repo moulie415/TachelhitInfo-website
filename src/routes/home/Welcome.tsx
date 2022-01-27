@@ -6,7 +6,7 @@ const Welcome: FunctionalComponent = () => {
     <div style={{margin: 10, marginTop: 0}}>
       <Typography
         style={{
-          fontFamily: 'ScheherazadeNew',
+          fontFamily: 'Calibri',
           fontSize: 25,
           textAlign: 'center',
         }}>

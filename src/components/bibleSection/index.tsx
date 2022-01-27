@@ -149,9 +149,12 @@ const BibleSection: FunctionalComponent = () => {
                   lɛhd l-ljdid
                 </Typography>
                 <Typography
-                  style={{marginLeft: 10}}
-                  variant="h4"
-                  className={styles.arabic}>
+                  style={{
+                    marginLeft: 10,
+                    fontFamily: 'Calibri',
+                    direction: 'rtl',
+                  }}
+                  variant="h5">
                   لعهد لّجديد
                 </Typography>
               </Button>
@@ -206,7 +209,7 @@ const BibleSection: FunctionalComponent = () => {
                   <Typography
                     variant="h4"
                     style={{
-                      fontFamily: 'ScheherazadeNew',
+                      fontFamily: 'Calibri',
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
@@ -269,7 +272,7 @@ const BibleSection: FunctionalComponent = () => {
                   <Typography
                     variant="h4"
                     style={{
-                      fontFamily: 'ScheherazadeNew',
+                      fontFamily: 'Calibri',
                       direction: 'rtl',
                       fontSize: 20,
                     }}>
