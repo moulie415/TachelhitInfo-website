@@ -10,8 +10,8 @@ const Welcome: FunctionalComponent = () => {
           fontSize: 25,
           textAlign: 'center',
         }}>
-        اشكيد ا-ݣما <span style={{fontFamily: 'Ariel', fontSize: 26}}>ءولا </span>كمّي ا-ولّتما، تكشمت س-تݣمّي-نغ تسونفوت، تافت دارنغ
-        رّاحت <span style={{fontFamily: 'Ariel', fontSize: 26}}>د-سّلامت،</span> ار-تسفليدت ءي-لخبار ءيفولكين
+        اشكيد ا-ݣما ءولا كمّي ا-ولّتما، تكشمت س-تݣمّي-نغ تسونفوت، تافت دارنغ
+        رّاحت د-سّلامت، ار-تسفليدت ءي-لخبار ءيفولكين
       </Typography>
     </div>
   );
