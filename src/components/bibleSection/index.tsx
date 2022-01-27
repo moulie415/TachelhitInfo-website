@@ -155,7 +155,7 @@ const BibleSection: FunctionalComponent = () => {
                     direction: 'rtl',
                   }}
                   variant="h5">
-                  لعهد لّجديد
+                  لعهد &nbsp;لّجديد
                 </Typography>
               </Button>
             </div>
@@ -211,9 +211,9 @@ const BibleSection: FunctionalComponent = () => {
                     style={{
                       fontFamily: 'Calibri',
                       direction: 'rtl',
-                      fontSize: 20,
+                      fontSize: 22,
                     }}>
-                    ءينجيل ن-لماسيح
+                    ءينجيل &nbsp;ن-لماسيح
                   </Typography>
                 </Button>
                 <Button
@@ -274,9 +274,9 @@ const BibleSection: FunctionalComponent = () => {
                     style={{
                       fontFamily: 'Calibri',
                       direction: 'rtl',
-                      fontSize: 20,
+                      fontSize: 22,
                     }}>
-                    ارّاتن ن-لانبيا
+                    ارّاتن &nbsp;ن-لانبيا
                   </Typography>
                 </Button>
                 <Button

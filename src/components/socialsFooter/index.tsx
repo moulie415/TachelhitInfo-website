@@ -36,7 +36,10 @@ const SocialsFooter: FunctionalComponent<{history: CustomHistory}> = ({
           <a href={`whatsapp://send?phone=${PHONE_NUMBER}`}>
             <WhatsApp style={{color: '#075e54', fontSize: 75}} />
           </a>
-          <Typography style={{marginLeft: 5, fontSize: 25}}>واتساب</Typography>
+          <Typography
+            style={{marginLeft: 5, fontSize: 25, fontFamily: 'Calibri'}}>
+            واتساب
+          </Typography>
         </Button>
       </Grid>
       <Grid item style={{marginRight: 10, marginLeft: 10}}>

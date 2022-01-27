@@ -26,22 +26,23 @@ function ThirdColumn() {
                   variant="h4"
                   style={{
                     textTransform: 'none',
-                    fontFamily: 'Scheherazade',
-                    fontSize: 36,
+                    fontFamily: 'Calibri',
+                    fontSize: 34,
                   }}>
-                  اوال ءي-واسّ
+                  اوال &nbsp;ءي&#8209;واسّ
                 </Typography>
               </Button>
               <Typography
                 style={{
                   margin: '0 2%',
                   textAlign: 'center',
-                  fontFamily: 'Scheherazade',
-                  fontSize: 26,
+                  fontFamily: 'Calibri',
+                  fontSize: 24,
                 }}>
-                اسّ ف&#8209;واسّ ا&#8209;تاقرات يان&#8209;واوال ءيميمن
-                غ&#8209;وارّاتن ن&#8209;سيدي ربّي، ار&#8209;تّزعامت س&#8209;رّجا
-                ءيصحان
+                اسّ &nbsp;ف&#8209;واسّ &nbsp;ا&#8209;تاقرات
+                &nbsp;يان&#8209;واوال &nbsp;ءيميمن &nbsp;غ&#8209;وارّاتن
+                &nbsp;ن&#8209;سيدي &nbsp;ربّي، &nbsp;ار&#8209;تّزعامت
+                &nbsp;س&#8209;رّجا &nbsp;ءيصحان
               </Typography>
             </div>
           </div>
@@ -131,8 +132,12 @@ function ThirdColumn() {
               }}>
               <Typography
                 variant="h5"
-                style={{textTransform: 'none', fontSize: 30}}>
-                المرشد للإيمان المسيحي والحياة المسيحية
+                style={{
+                  textTransform: 'none',
+                  fontSize: 28,
+                  fontFamily: 'Calibri',
+                }}>
+                المرشد &nbsp;للإيمان &nbsp;المسيحي &nbsp;والحياة &nbsp;المسيحية
               </Typography>
             </Button>
           </div>
@@ -149,8 +154,12 @@ function ThirdColumn() {
             }}>
             <Typography
               variant="h5"
-              style={{textTransform: 'none', fontSize: 30}}>
-              هل أنت مُستَعِدٌّ ؟
+              style={{
+                textTransform: 'none',
+                fontSize: 28,
+                fontFamily: 'Calibri',
+              }}>
+              هل &nbsp;أنت &nbsp;مُستَعِدٌّ &nbsp;؟
             </Typography>
           </Button>
         </div>
@@ -163,8 +172,12 @@ function ThirdColumn() {
             }}>
             <Typography
               variant="h5"
-              style={{textTransform: 'none', fontSize: 30}}>
-              حياتي بحال زربية
+              style={{
+                textTransform: 'none',
+                fontSize: 28,
+                fontFamily: 'Calibri',
+              }}>
+              حياتي &nbsp;بحال &nbsp;زربية
             </Typography>
           </Button>
         </div>
@@ -180,8 +193,13 @@ function ThirdColumn() {
             }}>
             <Typography
               variant="h5"
-              style={{textTransform: 'none', fontSize: 30}}>
-              المسيحية في شمال إفريقيا: دروس من التاريخ
+              style={{
+                textTransform: 'none',
+                fontSize: 28,
+                fontFamily: 'Calibri',
+              }}>
+              المسيحية &nbsp;في &nbsp;شمال &nbsp;إفريقيا: &nbsp;دروس &nbsp;من
+              &nbsp;التاريخ
             </Typography>
           </Button>
         </div>

@@ -22,10 +22,10 @@ function SecondColumn() {
               variant="h4"
               style={{
                 textTransform: 'none',
-                fontFamily: 'ScheherazadeNew',
+                fontFamily: 'Calibri',
                 fontSize: 28,
               }}>
-              امودّو ن‑ومسيݣّل
+              امودّو &nbsp;ن&#8209;ومسيݣّل
             </Typography>
           </Button>
         </div>
@@ -35,12 +35,13 @@ function SecondColumn() {
             margin: '0 2%',
             textAlign: 'center',
             fontSize: 20,
-            fontFamily: 'ScheherazadeNew',
+            fontFamily: 'Calibri',
             direction: 'rtl',
           }}>
-          لقيست ن&#8209;يان ءيݣومّين لهنا د&#8209;تايري د&#8209;سّلامت،
+          لقيست &nbsp;ن&#8209;يان &nbsp;ءيݣومّين &nbsp;لهنا &nbsp;د&#8209;تايري
+          &nbsp;د&#8209;سّلامت،
           <br />
-          ءيفتو ار&#8209;سرسن&#8209;يسيݣّيل
+          ءيفتو &nbsp;ار&#8209;سرسن&#8209;يسيݣّيل
         </Typography>
 
         <div style={{width: '100%', textAlign: 'center'}}>

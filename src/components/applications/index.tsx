@@ -56,12 +56,14 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             src={qr2}
             alt="qr code"
           />
-          <Typography variant="h6" className={styles.appTitleArabic}>
-            اوال ءي‑واسّ
+          <Typography  className={styles.appTitleArabic}>
+            اوال &nbsp;ءي‑واسّ
           </Typography>
           <Typography className={styles.appBodyArabic}>
-            اسّ ف&#8209;واسّ راد&#8209;اك&#8209;نتازن اوال ءيميمن غ&#8209;وارّاتن ن&#8209;سيدي ربّي. سفلد&#8209;اس
-            ار&#8209;تّزعامت س&#8209;رّجا ءيصحان.
+            اسّ &nbsp;ف&#8209;واسّ &nbsp;راد&#8209;اك&#8209;نتازن &nbsp;اوال
+            &nbsp;ءيميمن &nbsp;غ&#8209;وارّاتن &nbsp;ن&#8209;سيدي &nbsp;ربّي.
+            &nbsp;سفلد&#8209;اس &nbsp;ار&#8209;تّزعامت &nbsp;س&#8209;رّجا
+            &nbsp;ءيصحان.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
             <img
@@ -96,11 +98,13 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             src={qr4}
             alt="qr code"
           />
-          <Typography variant="h6" className={styles.appTitleArabic}>
-            امودّو ن&#8209;ومسيݣّل
+          <Typography className={styles.appTitleArabic}>
+            امودّو &nbsp;ن&#8209;ومسيݣّل
           </Typography>
           <Typography className={styles.appBodyArabic}>
-            لقيست ن&#8209;يان ءيݣومّين لهنا د&#8209;تايري د&#8209;سّلامت، ءيفتو ار&#8209;سرسن&#8209;يسيݣّيل.
+            لقيست &nbsp;ن&#8209;يان &nbsp;ءيݣومّين &nbsp;لهنا
+            &nbsp;د&#8209;تايري &nbsp;د&#8209;سّلامت، &nbsp;ءيفتو
+            ار&#8209;سرسن&#8209;يسيݣّيل.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
             <img
@@ -136,12 +140,14 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             src={qr6}
             alt="qr code"
           />
-          <Typography variant="h6" className={styles.appTitleArabic}>
-            تاشلحيت ءينفو
+          <Typography className={styles.appTitleArabic}>
+            تاشلحيت &nbsp;ءينفو
           </Typography>
           <Typography className={styles.appBodyArabic}>
-            كشم س&#8209;تݣمّي&#8209;نغ تسونفوت، ار&#8209;تسفليدت ءي&#8209;لخبار ءيسّفراحن، ار&#8209;تاقرات
-            ءيواليون ميمنين، ار&#8209;تسّموقولت لفيديوات فولكينين.
+            كشم &nbsp;س&#8209;تݣمّي&#8209;نغ &nbsp;تسونفوت،
+            &nbsp;ار&#8209;تسفليدت &nbsp;ءي&#8209;لخبار &nbsp;ءيسّفراحن،
+            ار&#8209;تاقرات &nbsp;ءيواليون &nbsp;ميمنين،
+            &nbsp;ار&#8209;تسّموقولت &nbsp;لفيديوات &nbsp;فولكينين.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
             <img

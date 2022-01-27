@@ -60,10 +60,10 @@ const AudioSection: FunctionalComponent = () => {
                 textAlign: 'right',
                 fontFamily: 'Calibri',
                 direction: 'rtl',
-                fontSize: 20,
+                fontSize: 22,
               }}
               variant="h4">
-              ما-تسّنت ف-والّي را-د-ياشك؟
+              ما-تسّنت &nbsp;ف-والّي&nbsp; را-د-ياشك؟
             </Typography>
           </div>
         </Button>
@@ -95,10 +95,10 @@ const AudioSection: FunctionalComponent = () => {
                 textAlign: 'right',
                 fontFamily: 'Calibri',
                 direction: 'rtl',
-                fontSize: 20,
+                fontSize: 22,
               }}
               variant="h4">
-              اژوژض ن-يمجلان ءي-وغاراس ن-تودرت
+              اژوژض ن-يمجلان &nbsp;ءي-وغاراس &nbsp;ن-تودرت
             </Typography>
           </div>
         </Button>
@@ -130,10 +130,10 @@ const AudioSection: FunctionalComponent = () => {
                 textAlign: 'right',
                 fontFamily: 'Calibri',
                 direction: 'rtl',
-                fontSize: 20,
+                fontSize: 22,
               }}
               variant="h4">
-              ءيسقسيتن ف-وغاراس ن-لماسيح
+              ءيسقسيتن &nbsp;ف-وغاراس &nbsp;ن-لماسيح
             </Typography>
           </div>
         </Button>
@@ -165,10 +165,10 @@ const AudioSection: FunctionalComponent = () => {
                 textAlign: 'right',
                 fontFamily: 'Calibri',
                 direction: 'rtl',
-                fontSize: 20,
+                fontSize: 22,
               }}
               variant="h4">
-              سّا ن-تحونا غ-تݣمّي-نك لّجديد
+              سّا ن-تحونا &nbsp;غ-تݣمّي-نك &nbsp;لّجديد
             </Typography>
           </div>
         </Button>

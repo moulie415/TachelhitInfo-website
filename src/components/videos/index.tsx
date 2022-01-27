@@ -64,7 +64,7 @@ const Videos: FunctionalComponent = () => {
                   margin: '5px 0',
                 }}
                 variant="h5">
-                مايلّي ءيقصاد ربّي
+                مايلّي &nbsp;ءيقصاد &nbsp;ربّي
               </Typography>
             </Button>
           </div>
@@ -114,7 +114,7 @@ const Videos: FunctionalComponent = () => {
                   margin: '5px 0',
                 }}
                 variant="h5">
-                امودّو ن-ومسيݣّل
+                امودّو &nbsp;ن-ومسيݣّل
               </Typography>
             </Button>
           </div>
@@ -159,7 +159,7 @@ const Videos: FunctionalComponent = () => {
                   margin: '5px 0',
                 }}
                 variant="h5">
-                تودرت لّماسيح
+                تودرت &nbsp;لّماسيح
               </Typography>
             </Button>
           </div>

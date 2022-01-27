@@ -34,8 +34,12 @@ function FirstColumn() {
                   }}>
                   <Typography
                     variant="h5"
-                    style={{fontSize: 28, textAlign: 'center'}}>
-                    التراث المسيحي في شمال إفريقيا
+                    style={{
+                      fontSize: 28,
+                      textAlign: 'center',
+                      fontFamily: 'Calibri',
+                    }}>
+                    التراث &nbsp;المسيحي &nbsp;في &nbsp;شمال &nbsp;إفريقيا
                   </Typography>
                 </Button>
                 <Typography
@@ -44,12 +48,20 @@ function FirstColumn() {
                     fontSize: 21,
                     textAlign: 'right',
                     marginLeft: 10,
+                    fontFamily: 'Calibri',
+                    direction: 'rtl'
                   }}>
-                  في كثير من أجزاء شمال إفريقيا توجد أطلال بنايات مسيحية عريقة.
-                  ترى ماذا نعرف عن الحضارة المتقدِّمة والدِّين المتطور الذين
-                  تشهد لهما هذه الآثار؟ وعلى رفوف خزاناتنا كتابات علماء مسيحيين
-                  من شمال إفريقيا كأُغسطينوس وكبريانوس وترتوليانوس. ترى بماذا
-                  كان أسلافنا هؤلاء يؤمنون؟
+                  في &nbsp;كثير &nbsp;من &nbsp;أجزاء &nbsp;شمال &nbsp;إفريقيا
+                  &nbsp;توجد &nbsp;أطلال &nbsp;بنايات &nbsp;مسيحية &nbsp;عريقة.
+                  ترى &nbsp;ماذا &nbsp;نعرف &nbsp;عن &nbsp;الحضارة
+                  &nbsp;المتقدِّمة &nbsp;والدِّين &nbsp;المتطور &nbsp;الذين
+                  &nbsp;تشهد لهما &nbsp;هذه &nbsp;الآثار؟ &nbsp;وعلى &nbsp;رفوف
+                  &nbsp; &nbsp;كتابات &nbsp;علماء &nbsp;مسيحيين &nbsp;من
+                  &nbsp;شمال &nbsp;إفريقيا &nbsp;كأُغسطينوس &nbsp;وكبريانوس
+                  &nbsp;وترتوليانوس. &nbsp;ترى &nbsp;بماذا &nbsp;كان
+                  &nbsp;أسلافنا &nbsp;هؤلاء &nbsp;يؤمنون؟ &nbsp;هذا &nbsp;الكتاب
+                  &nbsp;الممتع &nbsp;يفتح &nbsp;باباً &nbsp;على &nbsp;جزء
+                  &nbsp;مهمّ &nbsp;من &nbsp;تراثنا &nbsp;الثقافي &nbsp;والديني.
                 </Typography>
               </div>
               <a
