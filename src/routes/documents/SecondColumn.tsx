@@ -25,7 +25,9 @@ function SecondColumn() {
                 fontFamily: 'Calibri',
                 fontSize: 30,
               }}>
-              امودّو &nbsp;ن&#8209;ومسيݣّل
+              امودّو &nbsp;ن
+              <span style={{fontFamily: 'sans-serif'}}>&#8209;</span>
+              ومسيݣّل
             </Typography>
           </Button>
         </div>
@@ -38,10 +40,13 @@ function SecondColumn() {
             fontFamily: 'Calibri',
             direction: 'rtl',
           }}>
-          لقيست &nbsp;ن&#8209;يان &nbsp;ءيݣومّين &nbsp;لهنا &nbsp;د&#8209;تايري
-          &nbsp;د&#8209;سّلامت،
+          لقيست &nbsp;ن<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>يان
+          &nbsp;ءيݣومّين &nbsp;لهنا &nbsp;د
+          <span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تايري &nbsp;د
+          <span style={{fontFamily: 'sans-serif'}}>&#8209;</span>سّلامت،
           <br />
-          ءيفتو &nbsp;ار&#8209;سرسن&#8209;يسيݣّيل
+          ءيفتو &nbsp;ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>سرسن
+          <span style={{fontFamily: 'sans-serif'}}>&#8209;</span>يسيݣّيل
         </Typography>
 
         <div style={{width: '100%', textAlign: 'center'}}>

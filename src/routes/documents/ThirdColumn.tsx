@@ -29,7 +29,7 @@ function ThirdColumn() {
                     fontFamily: 'Calibri',
                     fontSize: 34,
                   }}>
-                  اوال &nbsp;ءي&#8209;واسّ
+                  اوال &nbsp;ءي<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>واسّ
                 </Typography>
               </Button>
               <Typography
@@ -39,10 +39,10 @@ function ThirdColumn() {
                   fontFamily: 'Calibri',
                   fontSize: 24,
                 }}>
-                اسّ &nbsp;ف&#8209;واسّ &nbsp;ا&#8209;تاقرات
-                &nbsp;يان&#8209;واوال &nbsp;ءيميمن &nbsp;غ&#8209;وارّاتن
-                &nbsp;ن&#8209;سيدي &nbsp;ربّي، &nbsp;ار&#8209;تّزعامت
-                &nbsp;س&#8209;رّجا &nbsp;ءيصحان
+                اسّ &nbsp;ف<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>واسّ &nbsp;ا<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تاقرات
+                &nbsp;يان<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>واوال &nbsp;ءيميمن &nbsp;غ<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>وارّاتن
+                &nbsp;ن<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>سيدي &nbsp;ربّي، &nbsp;ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تّزعامت
+                &nbsp;س<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>رّجا &nbsp;ءيصحان
               </Typography>
             </div>
           </div>

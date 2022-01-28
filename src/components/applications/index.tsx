@@ -38,11 +38,11 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             src={qr1}
             alt="qr code"
           />
-          <Typography variant="h6">awal i&#8209;wass</Typography>
+          <Typography variant="h6">awal i<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>wass</Typography>
           <Typography className={styles.appBody}>
-            ass f&#8209;wass rad&#8209;ak&#8209;ntazn awal imimn
-            gh&#8209;warratn n&#8209;sidi rbbi. sfeld&#8209;as ar&#8209;ttzaamt
-            s&#8209;rrja ishan.
+            ass f<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>wass rad<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>ak<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>ntazn awal imimn
+            gh<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>warratn n<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>sidi rbbi. sfeld<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>as ar<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>ttzaamt
+            s<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>rrja ishan.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday">
             <img src={playStore} height={GOOGLE_PLAY_SIZE} alt="play store" />
@@ -57,12 +57,12 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             alt="qr code"
           />
           <Typography  className={styles.appTitleArabic}>
-            اوال &nbsp;ءي‑واسّ
+            اوال &nbsp;ءي<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>واسّ
           </Typography>
           <Typography className={styles.appBodyArabic}>
-            اسّ &nbsp;ف&#8209;واسّ &nbsp;راد&#8209;اك&#8209;نتازن &nbsp;اوال
-            &nbsp;ءيميمن &nbsp;غ&#8209;وارّاتن &nbsp;ن&#8209;سيدي &nbsp;ربّي.
-            &nbsp;سفلد&#8209;اس &nbsp;ار&#8209;تّزعامت &nbsp;س&#8209;رّجا
+            اسّ &nbsp;ف<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>واسّ &nbsp;راد<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>اك<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>نتازن &nbsp;اوال
+            &nbsp;ءيميمن &nbsp;غ<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>وارّاتن &nbsp;ن<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>سيدي &nbsp;ربّي.
+            &nbsp;سفلد<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>اس &nbsp;ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تّزعامت &nbsp;س<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>رّجا
             &nbsp;ءيصحان.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.wordofgodforeachday.arabic">
@@ -81,10 +81,10 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             src={qr3}
             alt="qr code"
           />
-          <Typography variant="h6">amuddu n&#8209;umsiggel</Typography>
+          <Typography variant="h6">amuddu n<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>umsiggel</Typography>
           <Typography className={styles.appBody}>
-            lqist n&#8209;yan igummin lehna d&#8209;tayri d&#8209;sslamt, iftu
-            ar&#8209;sersn&#8209;isiggil.
+            lqist n<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>yan igummin lehna d<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>tayri d<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>sslamt, iftu
+            ar<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>sersn<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>isiggil.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel">
             <img src={playStore} height={GOOGLE_PLAY_SIZE} alt="play store" />
@@ -99,12 +99,12 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             alt="qr code"
           />
           <Typography className={styles.appTitleArabic}>
-            امودّو &nbsp;ن&#8209;ومسيݣّل
+            امودّو &nbsp;ن<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>ومسيݣّل
           </Typography>
           <Typography className={styles.appBodyArabic}>
-            لقيست &nbsp;ن&#8209;يان &nbsp;ءيݣومّين &nbsp;لهنا
-            &nbsp;د&#8209;تايري &nbsp;د&#8209;سّلامت، &nbsp;ءيفتو
-            ار&#8209;سرسن&#8209;يسيݣّيل.
+            لقيست &nbsp;ن<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>يان &nbsp;ءيݣومّين &nbsp;لهنا
+            &nbsp;د<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تايري &nbsp;د<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>سّلامت، &nbsp;ءيفتو
+            ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>سرسن<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>يسيݣّيل.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.amsiggel.arabic">
             <img
@@ -124,9 +124,9 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
           />
           <Typography variant="h6">tachelhit info</Typography>
           <Typography className={styles.appBody}>
-            kchem s&#8209;tgmmi&#8209;negh tsunfut, ar&#8209;tsflidt
-            i&#8209;lkhbar issfrahn, ar&#8209;taqrat iwaliwn mimnin,
-            ar&#8209;tssmuqqult lfidyuwat fulkinin.
+            kchem s<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>tgmmi<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>negh tsunfut, ar<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>tsflidt
+            i<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>lkhbar issfrahn, ar<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>taqrat iwaliwn mimnin,
+            ar<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>tssmuqqult lfidyuwat fulkinin.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo">
             <img src={playStore} height={GOOGLE_PLAY_SIZE} alt="play store" />
@@ -144,10 +144,10 @@ const Applications: FunctionalComponent<{history: CustomHistory}> = ({
             تاشلحيت &nbsp;ءينفو
           </Typography>
           <Typography className={styles.appBodyArabic}>
-            كشم &nbsp;س&#8209;تݣمّي&#8209;نغ &nbsp;تسونفوت،
-            &nbsp;ار&#8209;تسفليدت &nbsp;ءي&#8209;لخبار &nbsp;ءيسّفراحن،
-            ار&#8209;تاقرات &nbsp;ءيواليون &nbsp;ميمنين،
-            &nbsp;ار&#8209;تسّموقولت &nbsp;لفيديوات &nbsp;فولكينين.
+            كشم &nbsp;س<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تݣمّي<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>نغ &nbsp;تسونفوت،
+            &nbsp;ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تسفليدت &nbsp;ءي<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>لخبار &nbsp;ءيسّفراحن،
+            ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تاقرات &nbsp;ءيواليون &nbsp;ميمنين،
+            &nbsp;ار<span style={{fontFamily: 'sans-serif'}}>&#8209;</span>تسّموقولت &nbsp;لفيديوات &nbsp;فولكينين.
           </Typography>
           <a href="https://play.google.com/store/apps/details?id=com.tachelhitinfo.arabic">
             <img
