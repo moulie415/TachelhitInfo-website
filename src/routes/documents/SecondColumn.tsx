@@ -23,7 +23,7 @@ function SecondColumn() {
               style={{
                 textTransform: 'none',
                 fontFamily: 'Calibri',
-                fontSize: 28,
+                fontSize: 30,
               }}>
               امودّو &nbsp;ن&#8209;ومسيݣّل
             </Typography>
@@ -34,7 +34,7 @@ function SecondColumn() {
             paddingBottom: 5,
             margin: '0 2%',
             textAlign: 'center',
-            fontSize: 20,
+            fontSize: 22,
             fontFamily: 'Calibri',
             direction: 'rtl',
           }}>

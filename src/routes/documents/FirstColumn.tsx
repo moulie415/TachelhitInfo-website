@@ -49,19 +49,20 @@ function FirstColumn() {
                     textAlign: 'right',
                     marginLeft: 10,
                     fontFamily: 'Calibri',
-                    direction: 'rtl'
+                    direction: 'rtl',
                   }}>
-                  في &nbsp;كثير &nbsp;من &nbsp;أجزاء &nbsp;شمال &nbsp;إفريقيا
-                  &nbsp;توجد &nbsp;أطلال &nbsp;بنايات &nbsp;مسيحية &nbsp;عريقة.
-                  ترى &nbsp;ماذا &nbsp;نعرف &nbsp;عن &nbsp;الحضارة
+                  في &nbsp;كثير&nbsp; من&nbsp; أجزاء&nbsp; شمال&nbsp;
+                  إفريقيا&nbsp; توجد&nbsp; أطلال&nbsp; بنايات&nbsp; مسيحية&nbsp;
+                  عريقة. &nbsp;ترى &nbsp;ماذا &nbsp;نعرف &nbsp;عن &nbsp;الحضارة
                   &nbsp;المتقدِّمة &nbsp;والدِّين &nbsp;المتطور &nbsp;الذين
-                  &nbsp;تشهد لهما &nbsp;هذه &nbsp;الآثار؟ &nbsp;وعلى &nbsp;رفوف
-                  &nbsp; &nbsp;كتابات &nbsp;علماء &nbsp;مسيحيين &nbsp;من
-                  &nbsp;شمال &nbsp;إفريقيا &nbsp;كأُغسطينوس &nbsp;وكبريانوس
-                  &nbsp;وترتوليانوس. &nbsp;ترى &nbsp;بماذا &nbsp;كان
-                  &nbsp;أسلافنا &nbsp;هؤلاء &nbsp;يؤمنون؟ &nbsp;هذا &nbsp;الكتاب
-                  &nbsp;الممتع &nbsp;يفتح &nbsp;باباً &nbsp;على &nbsp;جزء
-                  &nbsp;مهمّ &nbsp;من &nbsp;تراثنا &nbsp;الثقافي &nbsp;والديني.
+                  &nbsp;تشهد &nbsp;لهما &nbsp;هذه &nbsp;الآثار؟ &nbsp;وعلى
+                  &nbsp;رفوف &nbsp;خزاناتنا &nbsp;كتابات &nbsp;علماء
+                  &nbsp;مسيحيين &nbsp;من &nbsp;شمال &nbsp;إفريقيا
+                  &nbsp;كأُغسطينوس &nbsp;وكبريانوس &nbsp;وترتوليانوس. &nbsp;ترى
+                  &nbsp;بماذا &nbsp;كان &nbsp;أسلافنا &nbsp;هؤلاء &nbsp;يؤمنون؟
+                  &nbsp;هذا &nbsp;الكتاب &nbsp;الممتع &nbsp;يفتح &nbsp;باباً
+                  &nbsp;على&nbsp;جزء &nbsp;مهمّ&nbsp; من &nbsp;تراثنا
+                  &nbsp;الثقافي &nbsp;والديني.
                 </Typography>
               </div>
               <a
