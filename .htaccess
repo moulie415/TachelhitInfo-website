@@ -26,5 +26,6 @@ Redirect /pdf/ths-heritagechretien.pdf /assets/pdfs/afrique-du-nord.pdf
 Redirect /pdf/thisholyseed.pdf /assets/pdfs/this-holy-seed.pdf
 Redirect /pdf/awaliwass-ar.pdf /assets/pdfs/awal-i-wass-abc.pdf
 Redirect /pdf/awaliwass-lat.pdf /assets/pdfs/awal-i-wass-lat.pdf
+Redirect /fidyu2.html https://www.amsiggel.com/videos/Gods_story.mp4
 
 AddType image/x-icon .ico
