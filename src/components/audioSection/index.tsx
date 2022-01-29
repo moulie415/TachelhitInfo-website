@@ -98,7 +98,7 @@ const AudioSection: FunctionalComponent = () => {
                 fontSize: 22,
               }}
               variant="h4">
-              اژوژض ن-يمجلان &nbsp;ءي-وغاراس &nbsp;ن-تودرت
+              اژوژض &nbsp;ن-يمجلان &nbsp;ءي-وغاراس &nbsp;ن-تودرت
             </Typography>
           </div>
         </Button>
@@ -168,7 +168,7 @@ const AudioSection: FunctionalComponent = () => {
                 fontSize: 22,
               }}
               variant="h4">
-              سّا ن-تحونا &nbsp;غ-تݣمّي-نك &nbsp;لّجديد
+              سّا &nbsp;ن-تحونا &nbsp;غ-تݣمّي-نك &nbsp;لّجديد
             </Typography>
           </div>
         </Button>

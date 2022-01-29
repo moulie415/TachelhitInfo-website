@@ -7,12 +7,12 @@ const Welcome: FunctionalComponent = () => {
       <Typography
         style={{
           fontFamily: 'Calibri',
-          fontSize: 25,
+          fontSize: 27,
           textAlign: 'center',
         }}>
         اشكيد &nbsp;ا-ݣما &nbsp;ءولا &nbsp;كمّي &nbsp;ا-ولّتما، &nbsp;تكشمت
-        &nbsp;س-تݣمّي-نغ تسونفوت، &nbsp;تافت &nbsp;دارنغ رّاحت &nbsp;د-سّلامت،
-        &nbsp;ار-تسفليدت &nbsp;ءي-لخبار &nbsp;ءيفولكين
+        &nbsp;س-تݣمّي-نغ &nbsp;تسونفوت، &nbsp;تافت &nbsp;دارنغ &nbsp;رّاحت
+        &nbsp;د-سّلامت، &nbsp;ار-تسفليدت &nbsp;ءي-لخبار &nbsp;ءيفولكين
       </Typography>
     </div>
   );
