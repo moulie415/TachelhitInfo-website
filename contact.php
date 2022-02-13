@@ -1,7 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Headers: Authorization, Content-Type");
-header("Access-Control-Allow-Origin: https://tachelhit-info.stackstaging.com");
+header("Access-Control-Allow-Origin: https://tachelhit.info");
 header('content-type: application/json; charset=utf-8');
 
 // get posted data into local variables
@@ -14,11 +14,11 @@ $Message = trim(stripslashes($_POST['message']));
 $Surname = trim(stripslashes($_POST['surname'])); 
 
 // validation
-if (trim($EmailFrom)=="") {
-print("Email missing - you will be redirected in a moment");  
-print "<meta http-equiv=\"refresh\" content=\"3;URL=http://www.tachelhit.info/index.html\">";
-  die();
-}
+// if (trim($EmailFrom)=="") {
+// print("Email missing - you will be redirected in a moment");  
+// print "<meta http-equiv=\"refresh\" content=\"3;URL=http://www.tachelhit.info/index.html\">";
+//   die();
+// }
 
 // prepare email body text
 $Body = "";

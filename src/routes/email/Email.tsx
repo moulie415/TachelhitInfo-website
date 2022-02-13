@@ -10,10 +10,13 @@ import {
 } from '@material-ui/core';
 import {colors} from '../../constants';
 
-function validEmail(email: string) {
-  const regex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
-  return regex.test(email);
-}
+const validateEmail = (email: string) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    );
+};
 
 function Email() {
   const [name, setName] = useState('');
@@ -33,7 +36,7 @@ function Email() {
         setSnackbarOpen(true);
         return;
       }
-      if (!email || !validEmail(email)) {
+      if (email && !validateEmail(email)) {
         setSnackbarMessage('Invalid email');
         setSnackbarOpen(true);
         return;
@@ -146,6 +149,7 @@ function Email() {
               <input
                 type="text"
                 className="form-control"
+                style={{fontFamily: 'Calibri'}}
                 id="name"
                 value={name}
                 onChange={e => {
@@ -161,6 +165,7 @@ function Email() {
               <input
                 type="text"
                 className="form-control"
+                style={{fontFamily: 'Calibri'}}
                 id="surname"
                 value={surname}
                 onChange={e => {
@@ -176,6 +181,7 @@ function Email() {
               <input
                 type="text"
                 className="form-control"
+                style={{fontFamily: 'Calibri'}}
                 id="country"
                 value={country}
                 onChange={e => {
@@ -193,6 +199,7 @@ function Email() {
                 className="form-control"
                 id="email"
                 aria-describedby="emailHelp"
+                style={{fontFamily: 'Calibri'}}
                 value={email}
                 onChange={e => {
                   // @ts-ignore
@@ -206,7 +213,7 @@ function Email() {
                 message - رسالتك
               </div>
               <textarea
-                style={{width: '25%', minWidth: 300}}
+                style={{width: '25%', minWidth: 300, fontFamily: 'Calibri'}}
                 className="form-control"
                 rows={5}
                 id="message"
