@@ -62,6 +62,10 @@ function Email() {
         `https://www.tachelhit.info/contact.php`,
         formData,
       );
+
+      if (response.status !== 200) {
+        throw new Error('Error sending message');
+      }
       setLoading(false);
       setSnackbarMessage('Message sent');
       setSnackbarOpen(true);
