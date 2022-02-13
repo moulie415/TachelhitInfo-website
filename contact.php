@@ -42,9 +42,11 @@ if (!$Surname) {
 
 // redirect to success page 
 if ($success || $Surname){
-  print("Tqad ac - Tqad am - Thank you - you're message has been sent. Tezri tbrat nnek - Please close this window.");  
+  print("Tqad ac - Tqad am - Thank you - you're message has been sent. Tezri tbrat nnek."); 
+  http_response_code(200);
 }
 else{
-  print("We apologize, there has been an error. Please close this window.");  
+  print("We apologize, there has been an error.");
+  http_response_code(400);
 }
 ?>
