@@ -6,7 +6,7 @@ header('content-type: application/json; charset=utf-8');
 
 // get posted data into local variables
 $EmailFrom = trim(stripslashes($_POST['email'])); 
-$EmailTo = "amsiggel@yahoo.fr";
+$EmailTo = "tachelhit.info@gmail.com";//"amsiggel@yahoo.fr";
 $Subject = "Contact form tachelhit.info";
 $Name = trim(stripslashes($_POST['name'])); 
 $Country = trim(stripslashes($_POST['country'])); 
