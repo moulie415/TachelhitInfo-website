@@ -1,5 +1,6 @@
 # tachelhit info
 
+create a .env file in the root and copy over the .env.example file then add the values in from the firebase config
 ## CLI Commands
 
 - `npm install`: Installs dependencies

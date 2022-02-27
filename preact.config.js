@@ -1,18 +1,5 @@
-export default {
-  webpack(config, env, helpers, options) {
+import envVars from 'preact-cli-plugin-env-vars';
 
-    const publicPath = process.env.GITHUB_PAGES
-      ? `/${process.env.GITHUB_PAGES}/`
-      : '/';
-    const ghEnv = process.env.GITHUB_PAGES
-      && JSON.stringify(`${process.env.GITHUB_PAGES}`);
-
-    config.output.publicPath = publicPath;
-    const { plugin } = helpers.getPluginsByName(config, 'DefinePlugin')[0];
-    Object.assign(
-      plugin.definitions,
-      { ['process.env.GITHUB_PAGES']: ghEnv }
-    );
-
-  },
-};
+export default function (config, env, helpers) {
+  envVars(config, env, helpers);
+}
