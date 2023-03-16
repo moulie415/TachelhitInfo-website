@@ -59,6 +59,7 @@ const BibleSection: FunctionalComponent = () => {
   const [pdfSrc, setPdfSrc] = useState('../../assets/pdfs/nt_lat.pdf');
   const bookType = pdfSrc.includes('nt') ? newTestament : oldTestament;
 
+
   function openModal() {
     setIsOpen(true);
   }

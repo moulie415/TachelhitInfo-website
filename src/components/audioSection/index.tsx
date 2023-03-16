@@ -4,7 +4,10 @@ import styles from '../../routes/home/styles.css';
 import {AZUZD, ISEQSITN, MATSSENT, NTHUNA} from '../../constants';
 import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import PlayArrow from '@material-ui/icons/PlayArrow';
+import Pause from '@material-ui/icons/Pause';
 import {useRef, useState} from 'preact/hooks';
+import AudioItem from './AudioItem';
 
 const AudioSection: FunctionalComponent = () => {
   const player1 = useRef<HTMLAudioElement>(null);
@@ -21,7 +24,9 @@ const AudioSection: FunctionalComponent = () => {
     }
     setState(Math.random());
   };
+
   const marginBottom = matches ? 0 : 10;
+
   return (
     <Grid
       item
@@ -143,42 +148,12 @@ const AudioSection: FunctionalComponent = () => {
           controls>
           <source src={ISEQSITN} type="audio/mpeg" />
         </audio>
-        <Button
-          className={styles.textButton}
-          style={{
-            textTransform: 'inherit',
-            width: '100%',
-            border: '1px solid #000',
-            marginBottom,
-          }}
-          onClick={() => toggle(player4)}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              width: '100%',
-            }}>
-            {player4.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-            <Typography
-              style={{
-                textAlign: 'right',
-                fontFamily: 'Calibri',
-                direction: 'rtl',
-                fontSize: 22,
-              }}
-              variant="h4">
-              سّا &nbsp;ن-تحونا &nbsp;غ-تݣمّي-نك &nbsp;لّجديد
-            </Typography>
-          </div>
-        </Button>
+        <AudioItem
+          player={player4}
+          src={NTHUNA}
+          title="سّا &nbsp;ن-تحونا &nbsp;غ-تݣمّي-نك &nbsp;لّجديد"
+        />
       </div>
-      <audio
-        ref={player4}
-        style={{marginBottom: 5, width: '90%', display: 'none'}}
-        controls>
-        <source src={NTHUNA} type="audio/mpeg" />
-      </audio>
     </Grid>
   );
 };
