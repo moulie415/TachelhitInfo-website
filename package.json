@@ -11,6 +11,9 @@
     "test": "jest ./tests",
     "postinstall": "patch-package"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "extends": [
