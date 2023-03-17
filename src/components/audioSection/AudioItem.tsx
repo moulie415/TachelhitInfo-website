@@ -2,9 +2,9 @@ import {Button, Typography, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h, Fragment, RefObject} from 'preact';
 import styles from '../../routes/home/styles.css';
 import {useRef, useState} from 'preact/hooks';
-import PlayArrow from '@material-ui/icons/PlayArrow';
-import Pause from '@material-ui/icons/Pause';
 import moment from 'moment';
+import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 
 const AudioItem: FunctionalComponent<{
   player: RefObject<HTMLAudioElement>;
@@ -43,7 +43,7 @@ const AudioItem: FunctionalComponent<{
             width: '100%',
           }}>
           {/* <div onClick={() => toggle(player)}> */}
-          {player.current?.paused ? <PlayArrow /> : <Pause />}
+          {player.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
           {/* </div> */}
           <Typography
             style={{
@@ -58,7 +58,7 @@ const AudioItem: FunctionalComponent<{
           </Typography>
         </div>
         <div style={{display: 'flex', marginTop: 10}}>
-          <Typography style={{marginRight: 10}}>
+          <Typography style={{marginRight: 5}}>
             {moment()
               .startOf('day')
               .add({seconds: currentTime})
