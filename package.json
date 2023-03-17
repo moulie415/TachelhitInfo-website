@@ -29,7 +29,7 @@
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.22.0",
     "canvas": "^2.8.0",
-    "firebase": "^9.6.7",
+    "moment": "^2.29.4",
     "preact": "^10.6.4",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",

@@ -1,11 +1,6 @@
 import {Grid, Typography, Button, useMediaQuery} from '@material-ui/core';
 import {FunctionalComponent, h, RefObject} from 'preact';
-import styles from '../../routes/home/styles.css';
 import {AZUZD, ISEQSITN, MATSSENT, NTHUNA} from '../../constants';
-import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
-import VolumeUpIcon from '@material-ui/icons/VolumeUp';
-import PlayArrow from '@material-ui/icons/PlayArrow';
-import Pause from '@material-ui/icons/Pause';
 import {useRef, useState} from 'preact/hooks';
 import AudioItem from './AudioItem';
 
@@ -14,19 +9,7 @@ const AudioSection: FunctionalComponent = () => {
   const player2 = useRef<HTMLAudioElement>(null);
   const player3 = useRef<HTMLAudioElement>(null);
   const player4 = useRef<HTMLAudioElement>(null);
-  const [_, setState] = useState(0);
-
   const matches = useMediaQuery('(min-width:800px)');
-
-  const toggle = (ref: RefObject<HTMLAudioElement | null>) => {
-    if (ref.current) {
-      ref.current.paused ? ref.current.play() : ref.current.pause();
-    }
-    setState(Math.random());
-  };
-
-  const marginBottom = matches ? 0 : 10;
-
   return (
     <Grid
       item
@@ -43,111 +26,9 @@ const AudioSection: FunctionalComponent = () => {
           flex: 1,
           marginLeft: '2vw',
         }}>
-        <Button
-          className={styles.textButton}
-          style={{
-            textTransform: 'inherit',
-            width: '100%',
-            border: '1px solid #000',
-            marginBottom,
-          }}
-          onClick={() => toggle(player1)}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              width: '100%',
-            }}>
-            {player1.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-            <Typography
-              style={{
-                textAlign: 'right',
-                fontFamily: 'Calibri',
-                direction: 'rtl',
-                fontSize: 22,
-              }}
-              variant="h4">
-              ما-تسّنت &nbsp;ف-والّي&nbsp; را-د-ياشك؟
-            </Typography>
-          </div>
-        </Button>
-        <audio
-          ref={player1}
-          style={{marginBottom: 5, width: '90%', display: 'none'}}
-          controls>
-          <source src={MATSSENT} type="audio/mpeg" />
-        </audio>
-        <Button
-          className={styles.textButton}
-          style={{
-            textTransform: 'inherit',
-            width: '100%',
-            border: '1px solid #000',
-            marginBottom,
-          }}
-          onClick={() => toggle(player2)}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              width: '100%',
-            }}>
-            {player2.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-            <Typography
-              style={{
-                textAlign: 'right',
-                fontFamily: 'Calibri',
-                direction: 'rtl',
-                fontSize: 22,
-              }}
-              variant="h4">
-              اژوژض &nbsp;ن-يمجلان &nbsp;ءي-وغاراس &nbsp;ن-تودرت
-            </Typography>
-          </div>
-        </Button>
-        <audio
-          ref={player2}
-          style={{marginBottom: 5, width: '90%', display: 'none'}}
-          controls>
-          <source src={AZUZD} type="audio/mpeg" />
-        </audio>
-        <Button
-          className={styles.textButton}
-          style={{
-            textTransform: 'inherit',
-            width: '100%',
-            border: '1px solid #000',
-            marginBottom,
-          }}
-          onClick={() => toggle(player3)}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              width: '100%',
-            }}>
-            {player3.current?.paused ? <VolumeMuteIcon /> : <VolumeUpIcon />}
-            <Typography
-              style={{
-                textAlign: 'right',
-                fontFamily: 'Calibri',
-                direction: 'rtl',
-                fontSize: 22,
-              }}
-              variant="h4">
-              ءيسقسيتن &nbsp;ف-وغاراس &nbsp;ن-لماسيح
-            </Typography>
-          </div>
-        </Button>
-        <audio
-          ref={player3}
-          style={{marginBottom: 5, width: '90%', display: 'none'}}
-          controls>
-          <source src={ISEQSITN} type="audio/mpeg" />
-        </audio>
+        <AudioItem player={player1} src={MATSSENT} title="ما-تسّنت &nbsp;ف-والّي&nbsp; را-د-ياشك؟"/>
+        <AudioItem player={player2} src={AZUZD} title="اژوژض &nbsp;ن-يمجلان &nbsp;ءي-وغاراس &nbsp;ن-تودرت" />
+        <AudioItem player={player3} src={ISEQSITN} title="ءيسقسيتن &nbsp;ف-وغاراس &nbsp;ن-لماسيح" />
         <AudioItem
           player={player4}
           src={NTHUNA}

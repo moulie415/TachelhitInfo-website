@@ -4,6 +4,7 @@ import styles from '../../routes/home/styles.css';
 import {useRef, useState} from 'preact/hooks';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
+import moment from 'moment';
 
 const AudioItem: FunctionalComponent<{
   player: RefObject<HTMLAudioElement>;
@@ -21,6 +22,7 @@ const AudioItem: FunctionalComponent<{
   const marginBottom = matches ? 0 : 10;
   const progressRef = useRef<HTMLInputElement>(null);
   const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
   return (
     <Fragment>
       <Button
@@ -55,22 +57,30 @@ const AudioItem: FunctionalComponent<{
             {title}
           </Typography>
         </div>
-        <input
-          type="range"
-          ref={progressRef}
-          style={{width: '100%', marginTop: 10}}
-          value={progress}
-          className={styles.progressBar}
-          onClick={e => e.stopPropagation()}
-          onChange={e => {
-            // @ts-ignore
-            const val = e.target?.value;
-            if (player.current) {
-              player.current.currentTime =
-                (player.current?.duration / 100) * val;
-            }
-          }}
-        />
+        <div style={{display: 'flex', marginTop: 10}}>
+          <Typography style={{marginRight: 10}}>
+            {moment()
+              .startOf('day')
+              .add({seconds: currentTime})
+              .format('mm:ss')}
+          </Typography>
+          <input
+            type="range"
+            ref={progressRef}
+            style={{width: '100%'}}
+            value={progress}
+            className={styles.progressBar}
+            onClick={e => e.stopPropagation()}
+            onChange={e => {
+              // @ts-ignore
+              const val = e.target?.value;
+              if (player.current) {
+                player.current.currentTime =
+                  (player.current?.duration / 100) * val;
+              }
+            }}
+          />
+        </div>
       </Button>
       <audio
         ref={player}
@@ -78,7 +88,7 @@ const AudioItem: FunctionalComponent<{
           const prog =
             (player.current?.currentTime || 0) /
             (player.current?.duration || 0);
-
+          setCurrentTime(player.current?.currentTime || 0);
           setProgress(prog * 100);
         }}
         style={{marginBottom: 5, width: '90%', display: 'none'}}
